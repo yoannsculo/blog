@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<section id="toto">
+	<div class="container">
+		<div class="well">
+			<img style="float:right;width:100px;margin-left:10px;" src="{{ blog.url }}/images/me.jpg" alt="" />
+			<h2>A propos</h2>
+			<p>Je m'appelle Yoann Sculo, je suis ingénieur Linux embarqué, actuellement en poste chez <a href="http://www.archos.com">Archos</a>.</p>
+
+			<p>Diplômé de l’Université de Technologie de Troyes (UTT) en 2009, j’ai axé ma formation sur les systèmes embarqués et les technologies mobiles et plus particulièrement sur les systèmes Linux embarqués. J’ai pu notamment réaliser mon stage de fin d’études au Centre National d’Etudes Spatiales (CNES) où j’ai travaillé sur le robot de la mission Exomars.
+
+Je suis passionné par tout ce qui touche à l’informatique et aux hautes technologies. Le monde de l’embarqué m’attire particulièrement ainsi que tous les domaines et applications qui gravitent autour (robotique, domotique, transport, multimédia, …)
+
+Ce site est l’occasion pour moi de présenter mes travaux et projets, discuter de thèmes qui me tiennent à coeur ainsi que réagir sur l’actualité hi-tech et des systèmes embarqués.</p>
+		</div>
+		<div class="well">
+			<h2>Contact</h2>
+			contact me
+		</div>
+	</div>
+</section>
+

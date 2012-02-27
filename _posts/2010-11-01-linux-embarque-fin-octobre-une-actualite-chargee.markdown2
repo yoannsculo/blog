@@ -1,0 +1,151 @@
+---
+layout: post
+title: Linux embarqué - Fin octobre, une actualité chargée
+categories: CELF, Consumer Electronics Linux Forum, ELC, ELCE 2010, Embedded Linux Conference, fusion, Linaro, linux, Linux Foundation, MeeGo, merge, Poky, Poky Platform Builder, Yocto, Yocto project
+---
+
+Je regrettais de ne pas avoir pu aller à l'ELC Europe 2010, et il
+semblerait que j'ai raté plein de choses. Ô désespoir ! Mais merci
+Internet, j'ai "presque" le sentiment d'y avoir été avec les différentes
+informations que j'ai pu glaner sur le web. D'ailleurs l'actualité
+autour du microcosme Linux embarqué est encore une fois assez chargée.
+
+### Fusion de la Linux Foundation et le Consumer Electronics Linux Forum (CELF)
+
+![The Linux Foundation](http://www.yoannsculo.fr/wp-content/uploads/2010/10/the-linux-foundation-300x115.gif)
+
+La Linux Foundation a annoncé la fusion de son organisation avec sa
+petite soeur embarquée, le [CELF](http://www.celinuxforum.org/). En
+conséquence, le CE Linux Forum devient un groupe de travail dépendant de
+la Linux Foundation. Le [CELF](http://www.celinuxforum.org/) est un
+consortium dédié au développement et à l'amélioration de produits basés
+sur du Linux embarqué. Il est, entre autres, le principal organisateur
+de l'Embedded Linux Conference (ELC). C'est d'ailleurs à ce titre que
+Tim Bird a annoncé la nouvelle en ouverture de l'ELC Europe 2010 cette
+semaine à Cambridge.
+
+L'augmentation phénoménale de Linux dans les produits embarqués depuis
+quelques années associé au chevauchement de membres entre les deux
+groupes ont été les raisons de cette fusion. En effet, le CELF et la
+Linux Foundation estiment qu'un tel rapprochement sera bénéfique à
+l'adoption de Linux dans l'industrie de l'électronique grand public et
+de façon générale au développement du marché Linux embarqué.
+
+Alors que les hautes sphères du CELF se réjouissent de la fusion, tout
+le monde n'est [pas forcément du même
+avis](http://landley.net/notes.html#27-10-2010). Nous avons reçu [un
+mail](http://tree.celinuxforum.org/pipermail/celinux-dev/2010-October/002058.html),
+sur la mailing list du CELF il y a 4 jours, de Rob Landley, assez triste
+de la nouvelle. Il est vrai que du point de vue hobbyist, on peut se
+poser des questions sur la pertinence de la fusion avec une organisation
+qui a tout l'air de voir les intérêts des entreprises avant tout. "De
+l'open source sans hobbyists n'est pas vraiment très intéressant".
+
+A lire sur le sujet :
+
+-   [Linux Foundation and Consumer Electronics Linux Forum to
+    Merge](http://www.linuxfoundation.org/news-media/announcements/2010/10/linux-foundation-and-consumer-electronics-linux-forum-merge)
+-   [Embedded Linux group merged into Linux
+    Foundation](http://www.linuxfordevices.com/c/a/News/CELF-merged-into-Linux-Foundation/?kc=rss)
+-   [CELF is Joining the Linux
+    Foundation](http://www.linux.com/news/enterprise/biz-enterprise/375019:celf-is-joining-the-linux-foundation)
+
+### The Yocto Project
+
+![The Yocto Project](http://www.yoannsculo.fr/wp-content/uploads/2010/10/logo.png "yocto_project")
+
+L'annonce de cette fusion de la LF et du CELF n'est pas anodine, car
+elle vient avec celle d'un nouveau projet, "[The Yocto
+Project](http://www.yoctoproject.org/)".
+
+La LF a donc profité de l'annonce de cette fusion pour annoncer la
+formation d'un nouveau groupe de travail autour de ce nouveau projet. Le
+projet Yocto va fournir des outils open source pour aider le
+développement de systèmes Linux custom pour des produits embarqués. La
+linux Foundation encourage d'ailleurs les développeurs à
+[contribuer](http://www.yoctoproject.org/) au projet.
+
+La LF nous explique que le projet Yocto apporte les éléments nécessaires
+pour faciliter le processus de développement Linux embarqué. En d'autres
+mots, le projet aurait pour but de standardiser la construction de
+système Linux embarqué.
+
+![Poky Platform Builder](http://www.yoannsculo.fr/wp-content/uploads/2010/11/poky.png)
+
+L'intérêt de la plateforme serait d'intégrer des environnements
+d'émulation à base de QEMU, des debuggeurs et un générateur de SDK. Le
+projet Yocto est basé sur [Poky Platform
+Builder](http://www.pokylinux.org/). Projet que je découvre par la même
+occasion ! Il s'agit d'un environnement de développement pour la
+création d'appareils sous Linux. Poky est basé sur GNOME et utilise le
+même fonctionnement que notre ami OpenEmbedded. Mais c'est que ça
+commence à être [un sacré
+bazar](http://yoctoproject.org/blogs/rpurdie/2010/10/7/embedded-all-so-messy-quote-linus)
+l'embarqué mine de rien ! Enfin voilà, nous avons droit à un joli petit
+graphique de présentation de Yocto.
+
+![Architecture de Yocto](http://www.yoannsculo.fr/wp-content/uploads/2010/11/lf_yocto_arch1.png)
+
+Mais... c'est que tout cela cela m'a tout l'air d'une version "embarqué"
+de Linaro !
+Enfin, comme l'explique l'[article de
+linuxfordevices](http://www.linuxfordevices.com/c/a/News/CELF-merged-into-Linux-Foundation)
+à ce sujet, Linaro est un projet d'entreprise, en opposition à un projet
+communautaire tel que celui de Yocto. De plus, Linaro cible uniquement
+les plateformes ARM, alors que le projet Yocto s'ouvre à d'autres
+plateformes. Tout ça n'est pas étonnant lorsque l'on découvre qu'Intel
+est entre autres derrière l'initiative. Tiens, tiens ! D'ailleurs il ne
+s'agit pas d'un petit coup de pouce, le projet Yocto est composé en
+grande partie d'employés d'Intel. Quand on consulte l[es commentaires de
+LWN](http://lwn.net/Articles/412128/) à ce sujet, l'analyse est faite
+assez vite. Face à ses compétiteurs, Intel se devait de réagir. Donc à
+voir qui gagnera la gueguerre de l'embraqué, Linaro ou Yocto. Au final,
+ils pourraient peut-être très bien cohabiter. A voir donc !
+
+A lire sur le sujet :
+
+-   [Yocto Project](http://www.yoctoproject.org/)
+-   [Yocto Project aims to standardize embedded Linux
+    builds](http://www.linuxfordevices.com/c/a/News/Linux-Foundation-Yocto-Project/)
+
+### Et l'Embedded Linux Conference dans tout ça ?
+
+Yann E. MORIN, nous a fait un sympathique petit [compte-rendu de
+l'ELC](http://linuxfr.org/2010/10/30/27525.html) sur LinuxFr. De plus,
+[une grande partie des
+présentations](http://elinux.org/ELC_Europe_2010_Presentations) est
+d'ailleurs, comme à son habitude, déjà en ligne sur le wiki eLinux.org.
+Nous devrions avoir à l'occasion les vidéos prises par Free Electrons
+:-)
+
+A lire sur le sujet :
+
+-   [Interview : ELC-E 2010 : un compte rendu libre
+    !](http://linuxfr.org/2010/10/30/27525.html)
+
+### Sortie de la release 1.1 de MeeGo
+
+Quelques news de MeeGo qui a sorti sa [release
+1.1](http://meego.com/community/blogs/valhalla/2010/meego-1.1-release)
+le 28 octobre dernier. Nous avons droit aux mises à jours de ses
+différentes déclinaisons :
+
+-   Core OS 1.1
+-   Netbook UX 1.1
+-   In-Vehicle Infotainment (IVI) UX 1.1
+-   Handset UX 1.1
+-   SDK 1.1 Beta
+
+Il va vraiment falloir que je teste cela plus en détail à l'occasion.
+Histoire d'aller plus loin que [mon premier
+test](http://www.yoannsculo.fr/test-de-meego-pour-netbook-v1-0/) de la
+version Netbook 1.0. J'aimerais notamment tester la version Handset à
+l'occasion :-)
+
+![MeeGo v1.1 Netbook](http://www.yoannsculo.fr/wp-content/uploads/2010/11/meego-netbook-myzone.png)
+
+A lire sur le sujet :
+
+-   [MeeGo 1.1
+    Release](http://meego.com/community/blogs/valhalla/2010/meego-1.1-release)
+

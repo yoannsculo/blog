@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<section id="toto">
+	<div class="container">
+		<div class="well">
+			<h2>Projets</h2>
+			<p>Voici comment il m'arrive d'occuper mon temps libre :)</p>
+
+			<h4>Open Source</h4>
+			<ul>
+				<li>2012 - <a href="https://github.com/yoannsculo/ucblog"> ucblog : Générateur de site statique en C.</a></li>
+				<li>2010 - <a href="https://github.com/yoannsculo/SHOUTcast-Recorder"> SHOUTcast recorder : Application d’enregistrement de flux MP3 Shoutcast.</a></li>
+			</ul>
+
+			<h4>Hacking, Robotique et systèmes embarqués</h4>
+			<ul>	
+				<li>2009 / 2010 - <a href="#">Robert : ROBot d'Exploration et de Recherche Technologique - Robot mobile autonome d'exploration.</a></li>
+				<li>2009 - <a href="#">Genesis : Mon premier robot mobile wifi commandé par wiimote</a></li>
+				<li>2009 - <a href="#">Serveur GSM : Envoi de sms depuis un modem GSM installé sur un système linux embarqué.</a></li>
+			</ul>
+
+			<h4>Jeux vidéo</h4>
+			<ul>
+				<li>2005 / 2009 - <a href="#">Simerion : Jeu web en ligne en PHP</a></li>
+				<li>2009 - <a href="#">Interface d’un MMORPG en Delphi</a></li>
+				<li>2008 - <a href="#">Bloodbox : RPG diablo-like en C#</a></li>
+				<li>2003 - <a href="#">Gaia’s Fight : Jeu en réseau GTA2-like où s’affrontent animaux et chasseurs.</a></li>
+			</ul>
+
+			<h4>Divers</h4>
+			<ul>
+				<li><a href="#">Fox Board G20 : small GPIO Library</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+

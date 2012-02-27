@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+<div class="container">
+	<div class="well">
+
+		{% for s_post in site.posts %}
+			{%- if s_post is sameas post %}
+				{%- if loop.first == False %}
+					<span style="float:right;"><a href="{{ blog.url }}/{{ site.posts[loop.index-2].url }}">Précédent &#62;</a></span>
+				{% endif %}
+
+				{%- if loop.last == False %}
+					<a href="{{ blog.url }}/{{ site.posts[loop.index].url }}">&#60; Suivant</a>
+				{% endif %}
+
+			{% endif %}
+		{% endfor %}
+		
+		<h1>{{ post.title | escape }}</h1>
+		<div style="width: 100%;text-align:right;">{{ post.date | dateFormat }}</div>
+		{{ content }}
+	</div>
+
+	<div class="well">
+		<h6>Mots clés</h6>
+		<p>
+			{% for category in post.categories %}
+			<a href="">{{ category }}</a>{%- if loop.last == False %}, {% endif %}
+			{% endfor %}
+		</p>
+	</div>
+
+</div>
+

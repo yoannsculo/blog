@@ -1,0 +1,43 @@
+---
+layout: post
+title: Juillet 2011 – Quelques news en vrac sur l’actualité de l’embarqué
+categories: actualité, Armadeus, Armadeus Project, embarqué, Freedom Box, Freedom Box Foundation, Open Silicium, Shoutcast
+---
+
+Délaissé depuis juin, mon blog était très bien triste de ne plus parler
+d’embarqué. Voici donc quelques informations intéressantes dont je
+voulais parler. Je suis pas mal en retard ! Mais ce n’est pas grave ! :)
+
+Donc en vrac !
+-   Open Silicium sort son [numéro
+    3](http://www.editions-diamond.com/opensilicium/index.php/opensilicium-magazine-n°3-juilletaoutseptembre-2011),
+    toujours aussi intéressant
+-   Buildroot a sorti sa version
+    [2011.05](http://old.nabble.com/Buildroot-2011.05-released-td31716992.html).
+    J’ai oublié il y a quelques mois de traiter mon dossier de mails de
+    listes de diffusion. L’annonce de sortie s’est perdue dans mes
+    plusieurs milliers de mails que j’ai aujourd’hui en attente. Dès que
+    l’on arrête de consulter au fur et à mesure ces listes un peu trop
+    prolifiques ... c’est le début la fin !
+-   Le [projet
+    Armadeus](http://www.armadeus.com/wiki/index.php?title=Main_Page) a
+    sorti la
+    [V4](http://sourceforge.net/projects/armadeus/files/armadeus/armadeus-4.0/)
+    de son système (voir
+    [LinuxFr](http://linuxfr.org/news/sortie-de-la-version-40-du-projet-armadeus)
+    à ce propos)
+-   La Freedom Box Foundation, dont je parlais [il y a 6
+    mois](http://www.yoannsculo.fr/freedom-box-–-reparons-internet-pour-plus-de-libertes/)
+    donne [des nouvelles de son
+    projet](http://www.freedomboxfoundation.org/news/Update_12_July_2011/index.en.html).
+    On voit que ça bouge, c’est chouette :)
+-   Oh, et puis [un article
+    intéressant](http://www.embedded-bits.co.uk/2011/writeanmlo/) sur
+    les fichiers MLO pour les bootloaders de type X-loader
+
+Sinon, je me suis lancé dans le développement d’un [petit projet open
+source](https://github.com/yoannsculo/SHOUTcast-Recorder) , dont je
+devrais parler bientôt ici. Je me cherche une licence en ce moment. J’ai
+repris un de mes anciens projets, sur l'enregistrement de flux
+SHOUTcast, que j’ai recommencé from scratch. C’est fou ce que ça va plus
+vite après quelques années d’expérience supplémentaires :)

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="fr-FR">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+	<title>{{ blog.title }}</title>
+
+	<link rel="alternate" type="application/rss+xml" title="{{ blog.title }} RSS Feed" href="{{ blog.url }}/feed/" />
+	<link rel="alternate" type="application/atom+xml" title="{{ blog.title }} Atom Feed" href="{{ blog.url }}/feed/atom/" />
+
+	<meta name="keywords" content="{{ blog.keywords }}"/>
+	<link rel="canonical" href="{{ blog.url }}" />
+
+	<link href="{{ blog.url }}/css/bootstrap.css" type="text/css" rel="stylesheet">
+	<link href="{{ blog.url }}/css/custom.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<a href="http://github.com/yoannsculo"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+
+<div class="container">
+	
+	<h1><img style="width:20px;" src="{{ blog.url }}/images/logo.gif" alt="" /> Yoann Sculo <span>Ingénieur Linux embarqué</span></h1>
+
+	<div class="navbar">
+		<div style="float:right;padding-top:10px;padding-right:10px;">
+			<a href="http://twitter.com/yoannsculo"><img style="width:20px;" src="{{ blog.url }}/images/logos/twitter-32x32.png" alt="" /></a>
+			<a href="http://www.linkedin.com/in/yoannsculo"><img style="width:20px;" src="{{ blog.url }}/images/logos/linkedin-32x32.png" alt="" /></a>
+			<a href="http://www.viadeo.com/fr/profile/yoann.sculo"><img style="width:20px;" src="{{ blog.url }}/images/logos/viadeo-32x32.png" alt="" /></a>
+			<a href="http://yoannsculo.developpez.com/"><img style="width:20px;" src="{{ blog.url }}/images/logos/developpez-32x32.png" alt="" /></a>
+			<a href="https://github.com/yoannsculo"><img style="width:20px;" src="{{ blog.url }}/images/logos/github-32x32.png" alt="" /></a>
+			<a href="http://twitter.com/yoannsculo"><img style="width:20px;" src="{{ blog.url }}/images/logos/skype-32x32.png" alt="" /></a>
+			<a href="{{ blog.url }}/feed"><img style="width:20px;" src="{{ blog.url }}/images/logos/rss-32x32.png" alt="" /></a>
+		</div>
+
+	<div class="navbar-inner">
+		<div class="container-fluid">
+			<div class="nav-collapse">
+				<ul class="nav">
+					<li><a href="{{ blog.url }}/index.html">Home</a></li>
+					<li><a href="{{ blog.url }}/projets.html">Projets</a></li>
+					<li><a href="{{ blog.url }}/wiki.html">Wiki</a></li>
+					<li><a href="{{ blog.url }}/about.html">A propos</a></li>
+					<li><a href="{{ blog.url }}/cv.html">CV</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{ content }}
+
+<div class="container">
+	<footer>
+		<div class="well">
+			<h6>Site</h6>
+			<ul>
+				<li>magiquement propulsé par <a href="http://github.com/xfire/growl">growl</a></li>
+				<li>gentiment hébergé sur une mignone petite carte embarquée <a href="http://www.acmesystems.it/?id=FOXG20">Foxboard G20</a>.</li>
+				<li>nourri à la fibre optique</li>
+			</ul>
+			
+			</div>
+	</footer>
+</div>
+
+<div class="container">
+	<pre>EMAIL=$(python -c "print 'eW9hbm4uc2N1bG9AZ21haWwuY29t'.decode('base64')")</pre>
+</div>
+
+</html>

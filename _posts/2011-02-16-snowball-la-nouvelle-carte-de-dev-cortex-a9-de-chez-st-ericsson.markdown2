@@ -1,0 +1,53 @@
+---
+layout: post
+title: Snowball - La nouvelle carte de dev Cortex A9 de chez ST-Ericsson
+categories: Android, ARM, board, Cortex-A9, Igloo, Igloo Community, linux, linux embarqué, MeeGo, Snowball, Snowball Board, ST-Ericsson
+---
+
+Youpi ! Après la Fox Board, la Beagle Board, la Panda Board, voici la
+**Snowball Board** ! Décidémment, ces cartes de dev sont à la mode. Nous
+sommes traités aux petits oignons depuis quelques temps. La Snowball
+Board, au processeur ARM Dual Cortex A9 de chez ST-Ericsson arrive avec
+un joli site pour fédérer les utilisateurs de la carte :
+[Igloo Community](http://www.igloocommunity.org/).
+![Snowball Board](http://www.yoannsculo.fr/wp-content/uploads/2011/02/board.png)
+
+Deux versions sont prévues
+
+-   la PDK : Product Development Kit version pour $300
+-   la SDK : Software Development Kit version pour $200
+
+Avec tout plein d'éléments intéressants dans le ventre :
+
+-   ARM Dual Cortex A9 @ 1GHz,
+-   4 / 8GB e-MMC,
+-   1GB LP-DDR2,
+-   1x Micro-SD,
+-   1x RTC Battery Backup,
+-   1x HDMI Full HD,
+-   1x Ethernet 10/100Mbits,
+-   1x CVBS Video OUT,
+-   1x Audio OUT,
+-   1x Audio IN,
+-   1x USB OTG HS (480Mbits),
+-   1x DC IN +5V,
+-   1x Li-Ion Battery Charger,
+-   1x Serial Port (RS232 / Over USB
+-   1x JTAG Connector,
+-   1x MiPi34 Debug Connector,
+-   1x IEEE 802.11 b/g/n Wireless LA
+-   1 x Bluetooth 2.1+EDR (Ex. Anten
+-   1 x GPS (Ex. Antenna),
+-   1x 3 Axis Accelerometer,
+-   1x 3 Axis Magnetometer,
+-   1x 3 Axis Gyrometer,
+-   1x Pressure sensor (300-1100 mb
+-   3x Expansion Connectors (FSMC HSI, Audio, MiPi CSI / Camera, LC MiPi
+    DSI, UART, SPI, I2C, GPIO).
+
+La carte devrait être vendue chez [Calao
+Systems](http://www.calao-store.com). C'est maaal de convoiter sur ce
+genre ce carte alors qu'on en a déjà plusieurs en attente. C'est maaaal
+la gourmandise de geek ! :D
+
+[Source](http://www.linaro.org/snowball-announcement)

@@ -1,0 +1,54 @@
+---
+layout: post
+title: GNU/Linux Magazine HS N°5 sur Android
+categories: Android, Gnu, Hors série, JAVA, Linux Magazine, magazine
+---
+
+Petite info sympathique ! Le [nouveau GNU/Linux Magazine HS
+N°5](http://www.gnulinuxmag.com/index.php/2011/01/07/gnulinux-magazine-hs-n°52-janvier-fevrier-2011-chez-votre-marchand-de-journaux)
+dédié au développement sur Android est sorti.
+![GNU/Linux Magazine HS N°5](http://www.yoannsculo.fr/wp-content/uploads/2011/01/damag-000001.jpg)
+
+En voici le sommaire :
+
+**INTRODUCTION**
+
+-   4 INTRODUCTION À ANDROID
+
+**SYSTÈME**
+
+-   7 L’ARCHITECTURE LOGICIELLE DU SYSTÈME ANDROID
+-   8 INTER PROCESS CALL
+
+**INTÉGRATION**
+
+-   12 1 : LES STRATÉGIES D’INTÉGRATION
+-   14 2 : LA DÉCOUVERTE DE L’API DES CONTACTS
+-   16 3 : MANIPULER L’APPLICATION CONTACTS
+-   19 4 : GESTION D’UNE LISTE DE CONTACTS
+-   31 5 : GESTION DES COMPTES ET SYNCHRONISATION
+-   38 6 : WIZARD ET CLUF
+-   40 INTÉGRATION DE L’ANNUAIRE LDAP ET DES PHOTOS
+-   44 OUVERTURE VERS LES AUTRES
+-   48 QUALIFICATION SUR TOUS LES ENVIRONNEMENTS
+-   53 OPTIMISATION SOUS ANDROID
+-   60 LE MARKETING DE L’APPLICATION
+-   64 PUBLICATION DE L’APPLICATION
+-   67 SÉCURITÉ
+-   70 SYNTHÈSE DE L’INTÉGRATION
+-   72 CONCLUSION
+
+**LIVRES**
+
+-   74 CRITIQUES LIVRES
+
+**BONUS**
+
+-   76 HTML5 POUR LA PLUPART DES APPLICATIONS
+
+En parlant d’Android, l’article "Introduction au développement Android à
+l’attention de ceux qui n’aiment pas Eclipse" du [premier numéro d'Open
+Silicium
+Magazine](http://www.yoannsculo.fr/sortie-dopensilicium-magazine-n°1-magazine-de-lopen-source-pour-lelectronique-et-lembarque/)
+est super intéressant ! ;)
+

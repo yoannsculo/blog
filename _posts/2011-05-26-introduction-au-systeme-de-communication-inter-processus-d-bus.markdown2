@@ -1,0 +1,602 @@
+---
+layout: post
+title: Introduction au système de communication inter-processus D-Bus
+categories: Bus, D-Bus, dbus-daemon, IPC, libdbus, linux, processus
+---
+
+![dbus-schema-1](http://www.yoannsculo.fr/wp-content/uploads/2011/05/dbus-schema-1-150x150.png)
+Cela faisait quelques temps que je souhaitais rédiger une documentation
+sur D-Bus et ses concepts (en français). Je n'ai pas trouvé énormément
+d'informations sur lefonctionnement détaillé de ce Bus quand j'en avais
+besoin. Du coup, je me suis lancé dans la rédaction d'un tutoriel pour
+les personnes qui se retrouveront tôt ou tard dans le même cas que moi.
+Et puis ça me sert aussi de gros aide mémoire :) Vous pouvez consulter
+l'article [sur developpez.com](http://yoannsculo.developpez.com/tutoriels/linux/introduction-dbus/),
+mais également [au format pdf](ftp://ftp-developpez.com/yoannsculo/tutoriels/linux/introduction-dbus/introduction-dbus.pdf).
+
+> D-Bus est un système de communication inter-processus initié en 2002
+> offrant un moyen simple de dialoguer entre applications. Aujourd'hui
+> il est présent sur de très nombreux projets. Il fait partie intégrante
+> d'Ubuntu, et sait être assez obscur pour les personnes souhaitant
+> l'utiliser ou le comprendre. Cet article s'adresse aux personnes
+> souhaitant comprendre le fonctionnement de D-Bus et éventuellement
+> mettre en place une architecture logicielle basée sur ce bus.
+
+### Introduction
+
+#### I-A. Qu'est-ce que D-Bus ?
+
+D-Bus est un système de communication inter-processus (IPC :
+interprocess communication) offrant un moyen simple de dialoguer entre
+applications. D-Bus permet aux processus qui se sont enregistrés sur le
+bus d'exposer des services sur un ou plusieurs bus (système ou session)
+afin de communiquer entre eux. En outre, D-Bus est en mesure de démarrer
+des applications et daemons à la demande, lorsque leurs services exposés
+sur le bus sont demandés.
+Démarré en 2002, D-Bus fait partie du projet freedesktop.org, et est
+maintenu principalement par RedHat. Il est
+[distribué](http://dbus.freedesktop.org/doc/COPYING) sous [double
+licence](http://dbus.freedesktop.org/doc/dbus-faq.html#id562905) [GPL V2](http://www.opensource.org/licenses/gpl-2.0) /
+[AFL](http://www.opensource.org/licenses/afl-3.0.php).
+Vous pouvez retrouver les spécifications détaillées du protocole sur [le
+site de freedesktop](http://dbus.freedesktop.org/doc/dbus-specification.html).
+Le but de cet article est avant tout de présenter le fonctionnement de
+D-Bus sans rentrer dans le détail de ses différentes implémentations.
+L'article ne requiert pas de prérequis particuliers si ce n'est quelques
+connaissances basique de fonctionnement d'un système Linux. A l'issue de
+cet article, l'idée est d'être en mesure de comprendre les
+particularités de D-Bus et d'avoir les bases pour mettre en place une
+architecture logicielle construite sur D-Bus.
+Il existe différents "*bindings*" pour D-Bus. C'est à dire des
+bibliothèques développées dans d'autres langages plus haut niveau que
+celui de D-Bus, en l'occurrence le C. Ces bindings s'avèrent très utiles
+et d'adaptent aux besoins des développeurs selon les langages des
+logiciels à lier à D-Bus. Toutefois, les bindings D-Bus ne seront
+abordés que dans de futurs articles.
+J'ai récemment mis en place une architecture logicielle basée sur D-Bus.
+Et j'ai vraiment manqué de documentation claire lors de la mise en place
+de D-Bus. Par conséquent j'ai souhaité partager mon expérience acquise
+sur le sujet, dans l'espoir d'aider un "*futur moi*" dans le besoin.
+D-Bus est partout, dans nos desktops, nos smartphones et appareils
+communicants sous Linux. Et nous allons voir en quoi D-Bus est vraiment
+utile pour le développement de systèmes multi processus.
+
+#### I-B. Projets utilisant D-Bus
+
+Les projets utilisant D-Bus sont relativement nombreux, on peut lister :
+
+-   Gnome
+-   MeeGo, anciennement Maemo / Moblin
+-   Android
+-   Skype
+-   Telepathy
+-   Evolution
+-   Pidgin
+-   Nautilus
+-   Connman
+-   network-manager
+-   HAL
+-   ...
+
+Pour prendre un exemple concret, au sein d'Ubuntu, D-Bus permet, entre
+autres :
+
+-   à Nautilus de lancer un fichier multimedia via Rhythmbox au passage
+    de la souris sur l'icone du fichier.
+-   à Pidgin d'afficher des popups de notification via Gnome à la
+    réception de messages.
+-   à Evolution d'afficher des popups de notification via Gnome en cas
+    de réception d'email.
+-   à Network-manager de gérer dans Gnome l'icone de gestion du réseau
+    en haut à droite de l'écran
+
+### II. D-Bus : Les concepts
+
+L'implémentation du protocole D-Bus offre différents outils :
+
+-   Une bibliothèque, **libdbus**, permettant aux applications de
+    communiquer entre elles.
+-   Un exécutable **dbus-daemon** basé sur libdbus, dont le rôle est de
+    créer le support de communication entre les processus. Le daemon va
+    s'occuper de router et acheminer les messages vers un ou plusieurs
+    processus connectées au bus.
+-   Des wrappers et bindings permettant de travailler avec certains
+    langages ou framework particuliers. Il existe des bindings pour le C
+    et la glib, le C++ et le framework QT, Python, etc. A cela s'ajoute
+    une API low-level en C permettant de créer ses propres bindings.
+
+D-Bus peut être vu comme une sorte de routeur auquel chacun des
+processus est connecté par une connexion bidirectionnelle.
+![Connexions multiples d'un processus](http://www.yoannsculo.fr/wp-content/uploads/2011/05/dbus-schema-1.png)
+
+La connexion (sockets sur le schéma) peut prendre différentes formes :
+
+-   Unix Domain Sockets (IPC Sockets)
+-   launchd sous Mac OS X
+-   TCP/IP sockets
+
+Il s'agit d'un protocole binaire, non textuel, qui s'affranchit donc des
+problèmes de sérialisation et de parsing de données formatées tel que le
+XML. On gagne donc en vitesse. (Hélas je n'ai pas eu l'occasion de
+tester et mesure cet aspect). Si vous êtes courageux, vous pouvez
+retrouver les spécifications de D-Bus sur [le site de
+freedesktop](http://dbus.freedesktop.org/doc/dbus-specification.html).
+
+D-Bus offre deux types de bus :
+
+-   Le bus **session**, il est utilisé pour la communication au sein
+    d'une session utilisateur. Plus particulièrement au sein d'une
+    session graphique de X. Il est créé à l'ouverture de session de
+    l'utilisateur et perdure tant qu'elle est ouverte.
+-   Le bus **système**, comme son nom l'indique est dédié au transport
+    d'information système bas niveau telles que les events kernel sous
+    Linux, les notifications de connexion à un réseau, le
+    (dé)branchement d'un périphérique USB, le statut de la batterie,
+    etc. Des messages qui concernent donc tous les utilisateurs
+    connectés au système. N'importe quel processus est en mesure de se
+    connecter au bus système. Cependant, cette instance de bus possède
+    une couche de sécurité autorisant ou refusant les messages qu'on lui
+    demande de transmettre. A noter, que seul un seul bus système peut
+    fonctionner à la fois. Le bus système est créé au démarrage du
+    système dans une distribution de type Ubuntu.
+
+Rien ne nous empêche de connecter une application à plusieurs bus. Par
+exemple à plusieurs bus session et au bus système. On peut par exemple
+séparer plusieurs bus de session pour des questions de sécurité. Mais
+nous aborderons la notion de sécurité un peu plus loin.
+![dbus-schema-2](http://www.yoannsculo.fr/wp-content/uploads/2011/05/dbus-schema-2.png "dbus-schema-2")
+
+Pour information, je déconseille fortement de tenter un /etc/init.d/dbus
+restart dans une session Ubuntu. Le résultat est juste catastrophique
+pour votre session. Vous n'avez plus qu'à redémarrer votre session ! :)
+Il existe aujourd'hui de nombreux systèmes de bus. D-Bus se démarque par
+sa conception orientée communication entre applications d'une session de
+type "Desktop", mais aussi pour la communication entre le Desktop et le
+système d'exploitation. D-Bus peut très bien être utilisé pour des
+systèmes n'ayant pas forcément de partie graphique, ni d'aspect
+"Desktop". C'est à dire qu'il est parfaitement envisageable d'utiliser
+D-Bus en embarqué pour faire dialoguer ses applications entre elles.
+Les mécanismes de D-Bus ne se résument pas qu'à une simple ouverture de
+socket entre le processus et le daemon. D-Bus permet d'identifier de
+façon unique les services qu'expose une application sur le bus. Rentrons
+dans les détails !
+
+#### II-A. Messages
+
+Il existe différents types de messages :
+
+-   les signaux
+-   les méthodes
+-   les messages d'erreur
+
+Les **signaux** sont des notifications d'événements. Le signal est à
+sens unique et n'attend pas de retour. Son expéditeur ne précise pas le
+destinataire du message. Plusieurs processus peuvent s'abonner à ce
+signal. De plus, il peut contenir des paramètres.
+
+Les **méthodes** permettent à des applications d'invoquer les méthodes
+d'objets distants. Les méthodes peuvent êtres invoquées avec des
+paramètres. Ces dernières peuvent être synchrones ou asynchrones et
+surtout en mesure de remonter de l'information à l'appelant en renvoyant
+un ou plusieurs paramètres (qui restent optionnels).
+
+Les **messages d'erreur** offrent des exceptions dans le cas
+d'invocations de méthodes.
+Du fait que D-Bus est un mécanisme de communication inter-processus, ce
+dernier supporte nativement plusieurs types pour les données échangés
+sur le bus (boolean, int32, string, ...). D-Bus gère également des
+containers pour ces types : tableau, structure, dictionnaire et variant.
+Pour une liste exhaustive, se référer [aux
+spécifications](http://dbus.freedesktop.org/doc/dbus-specification.html#message-protocol)
+de D-Bus. Toutefois l'utilisation du typage de données est intimement
+liée au "binding" choisi lors du développement de l'application. Ces
+points seront abordés plus en détail dans de futurs articles.
+
+#### II-B. Services
+
+Un processus enregistre un service auprès du daemon D-Bus. Tous les
+clients souhaitant utiliser ce service vont pour cella créer un proxy
+(voir après). Lorsque des clients vont appeler des méthodes de l'objet
+du proxy, ce dernier va convertir ces méthodes en appels D-Bus qui sont
+reçus et exécutés par le processus qui a enregistré le service.
+De plus, D-Bus fournit un mécanisme capable de démarrer automatiquement
+des applications à partir d'un simple appel. Une application peut
+exposer des services sur un bus. Si un des services est demandé par un
+autre processus, alors D-Bus est en mesure de démarrer l'application
+pour avoir accès au service en question.
+
+Prenons l'exemple du service org.gnome.Rhythmbox sous Linux (lecteur
+multimédia d'Ubuntu). Il est possible de lui demander de lire une
+musique, voir de lire la suivante dans une liste de lecture, la stopper,
+etc. Tout cela par D-Bus. Si un appel D-Bus demande de lire une musique,
+et que le service Rythmbox n'est pas enregistré sur le Bus, alors, il va
+être automatiquement lancé et le message en question sera transmis à
+Rythmbox une fois que ce dernier sera opérationnel. Toutes ces étapes
+sont transparentes pour le processus à l'initiative de l'appel.
+Nous pourrons voir un peu plus loin un exemple d'utilisation de Rythmbox
+par Dbus en ligne de commande.
+
+Généralement, la plupart des applications utilisant D-Bus sont définies
+commes services. Sous Linux, la liste des services est située dans le
+dossier */usr/share/dbus-1/services*. On y retrouve notamment à
+l'intérieur le nom du service et le binaire à démarrer à l'appel du
+service.
+
+#### II-C. Objets
+
+Chaque message D-Bus possède une source et une destination. Ces adresses
+sont définies par des "object paths". Chaque processus connecté à un bus
+peut avoir enregistré un ou plusieurs objets. Les messages sont alors
+envoyés entre objets, mais pas directement par les applications.
+![Discussion entre deux applications sur D-Bus](http://www.yoannsculo.fr/wp-content/uploads/2011/05/dbus-schema-3.png)
+
+Le PATH d'un objet est similaire à celui d'un filesystem UNIX, par
+exemple un objet pourrait être nommé /com/developpez/exemple/objetDBus.
+Il s'agit là d'une convention de nommage, nous sommes libres de créer
+des PATH de notre choix.
+
+D-Bus permet ainsi aux applications d'exporter leurs objets et leurs
+fonctionnalités en tant que méthodes, que les applications peuvent
+utiliser pour communiquer entre elles. Elles utilisent pour cela les
+messages D-Bus.
+
+Si l'on fait une comparaison avec un programme écrit en C++ qui
+implémente un service réseau, alors le nom du bus est l'hostname de la
+machine exécutant le programme. L'object path peut alors être vu comme
+un pointeur d'objet C++
+
+#### II-D. Interfaces
+
+D-Bus utilise également le principe d'interfaces, ce qui autorise
+l'utilisation d'un même nom de méthode plusieurs fois au sein d'un objet
+pour différents contextes. C'est une sorte de “namespace” pour les noms
+de méthodes, un groupe de méthodes et de signaux.
+Si l'on reprend notre analogie au C++, l'interface peut être vue comme
+une classe C++
+On peut prendre l'exemple de l'interface
+**org.freedesktop.Introspectable** qui permet aux instances d'objets de
+récupérer la description d'un objet (interfaces, signaux, méthodes et
+mêmes propriétés) et donc de faire ce que l'on appelle de
+l'introspection sur le bus. Très pratique ! (je ne vais pas plus loin,
+c'est juste un exemple. Vous avez [plus d'informations à ce sujet](http://dbus.freedesktop.org/doc/dbus-specification.html#standard-interfaces-introspectable)
+dans les spécifications.)
+
+#### II-E. Proxies
+
+Les proxies sont des éléments haut niveau dans D-Bus, utilisés par les
+bindings pour simplifier l'utilisation du protocole. Ils permettent
+d'accéder aux objets à distance tout en travaillant au sein de notre
+programme. L'utilisation sera plus ou moins transparente pour le
+développeurs suivant les bindings. Le binding Glib n'est pas le plus
+simple hélas, mais permet de comprendre eu peu plus en détail le
+fonctionnement de D-Bus. Le binding Java, par exemple ne fait pas de
+différence entre les objets et les proxies. On a alors l'impression de
+travailler directement avec un objet. Nous pourrons aborder cette petite
+différence dans les prochains tutoriaux relatifs aux différents
+bindings.
+
+Il est intéressant de noter qu'un proxy (pour certains bindings comme la
+Glib) permet de travailler avec un objet distant même en cas de
+"déconnexion" de celui-ci. Les proxies se comportant de cette façon,
+gèrent une sorte de "failover". La reconnexion à l'objet distant est
+alors transparente, ce qui est relativement pratique. Prenons l'exemple
+du fichier **org.gnome.Rhythmbox.service** :
+
+	[D-BUS Service]
+	Name=org.gnome.Rhythmbox Exec=/usr/bin/rhythmbox
+
+### III. Fonctionnement et utilisation de D-Bus
+
+Avec une installation clé en main classique, D-Bus se créé un script de
+démarrage dans /etc/init.d qui permet de démarrer et stopper le daemon.
+Tout est démarré de façon automatique et presque transparente pour
+l'utilisateur. Nous allons toutefois décortiquer les étapes de lancement
+de D-Bus.
+Avant toute chose D-Bus ne nécessite pas beaucoup de dépendances, on
+peut librement choisir la dépendance à libexpat ou libxml2. Le package
+sous Ubuntu utilise expat par défaut, mais la recompilation nécessaire
+pour passer à libxml2 n'est pas bien méchante.
+
+D-Bus arrive avec un lot d'exécutables :
+
+-   **dbus-launch** : permet de démarrer un bus session depuis un script
+    shell
+-   **dbus-cleanup-sockets** : fait le ménage dans les sockets ouverts
+    par des bus et qui ne sont plus utilisés.
+-   **dbus-send** : permet d'envoyer un message sur le bus depuis un
+    script shell
+-   **dbus-daemon** : Le plus important, le daemon D-Bus
+-   **dbus-monitor** : Permet d'observer ce qui transite sur un ou
+    plusieurs bus
+-   **dbus-uuidgen** : génère des uuids pour les sessions de D-Bus
+
+et de fichiers de configuration par défaut (/etc/dbus-1/ sous Linux)
+
+#### III-A. Lancement de D-Bus
+
+Pour lancer D-Bus lorsqu'il n'est pas déjà lancé (attention, les
+distributions récentes le lancent au démarrage), la première chose à
+faire est de lancer :
+
+	dbus-uuidgen --ensure
+
+qui va aller vérifier l'existence du fichier /var/lib/dbus/machine-id.
+S'il n'existe pas il va générer un nouvel
+[uuid](http://fr.wikipedia.org/wiki/Universal_Unique_Identifier) (un
+identifiant unique). Le comportement est similaire à la commande
+uuidgen. Attention toutefois, l'uuid généré n'est pas un uuid standard.
+
+L'étape suivante est le démarrage du bus system :
+
+	/usr/bin/dbus-daemon --system
+
+Il existe tout un lot d'options avancées à *dbus-daemon* que vous pouvez
+retrouver sur le man de celui-ci. A noter cependant, qu'écrire
+*dbus-daemon --system* revient à écrire l'option
+"*--config-file=/etc/dbus-1/system.conf*", même chose pour *--session*
+avec "*/etc/dbus-1/session.conf*"
+Cela me permet alors d'introduire la notion de configuration de D-Bus.
+En effet, ce dernier est paramétrable grâce aux fichiers de
+configuration suivants
+-   /etc/dbus-1/system.conf
+-   /etc/dbus-1/session.conf
+
+Ils permettent de préciser des limites de ressources, paramètres de
+sécurité, tailles de messages, timeout, ... Je vous invite à consulter
+le man de dbus-daemon pour en savoir plus.
+Le lancement d'une session est "légèrement" plus compliqué. Comme il
+peut y avoir plusieurs bus session, il faut être en mesure de distinguer
+sur quel bus nous allons discuter. Nous utilisons pour cela la commande
+*dbus-launch*. Celle-ci va alors lancer une instance de bus de session
+en définissant les variables d'environnement nécessaires pour que les
+futurs programmes soient en mesure de trouver le bus.
+Il suffit alors de lancer la commande suivante
+
+	dbus-launch --sh-syntax
+
+qui nous retourne ces quelques lignes sur la sortie standard
+
+	DBUS_SESSION_BUS_ADDRESS='unix:abstract=/tmp/dbus-pV37oOMDlR,guid=90f13303a628db51a40b63454d14b6e7';
+	export DBUS_SESSION_BUS_ADDRESS;
+	DBUS_SESSION_BUS_PID=10440;
+	DBUS_SESSION_BUS_WINDOWID=62914561;
+
+*dbus-launch* fait tout simplement appel à *dbus-daemon --session* et se
+charge de définir les variables de session que nous avons là.
+DBUS\_SESSION\_BUS\_ADDRESS nous permet alors d'identifier le bus que
+nous venons de créer (on y retrouve les information sur le socket ouvert
+ainsi que l'uuid du bus). Sans la variable DBUS\_SESSION\_BUS\_ADDRESS
+de définie dans votre environnement, vous aurez le droit à une erreur.
+J'utilise ici l'option *--sh-syntax* qui permet d'afficher les
+informations du bus sur la sortie standard à destination d'un shell de
+type sh. Il existe d'autres options de formatage : *--csh-syntax*,
+*--binary-syntax*, ou *--auto-syntax*. Car par défaut, dbus-launch écrit
+de simples clés/valeurs sur la sortie standard et ne les exporte pas.
+Je vous invite à regarder les man de chacune de ces commande si vous
+souhaitez avoir accès aux options avancées. A noter que la commande
+dbus-cleanup-sockets permet de faire du ménage dans les sockets ouverts
+par les bus et qui n'auraient pas été fermés correctement (en cas de
+fermeture intempestive par exemple.)
+Sur un système clé en main de type Ubuntu, tout est lancé
+automatiquement et le bus est intimement lié à la session de Gnome. Donc
+avec un Ubuntu fraichement démarré, nous avons les bus system et session
+qui tournent. Par conséquent, nous n'avons pas à nous soucier des
+variables d'environnement déjà définies au démarrage de la session.
+
+#### III-B. Utilisation de D-Bus par l'exemple
+
+Nous pouvons à présent nous intéresser à d'autres commandes déjà plus
+concrètes.
+
+-   ***dbus-monitor***, comme son nom l'indique, permet à la façon
+    “wireshark” d'observer ce qui transite sur le bus.
+-   ***dbus-monitor --system*** permet d'observer le bus system
+-   ***dbus-monitor --session*** permet d'observer le bus session
+
+Sans paramètre donné, dbus-monitor observera le bus session.
+Vous pouvez alors voir qu'au sein d'une session Ubuntu énormément
+d'information transite sur le bus. En observant le bus system, on peut
+remarquer que des informations transitent lorsque l'on branche ou
+débranche une souris par exemple.
+Il est possible filtrer les messages en spécifiant le type, l'émetteur,
+l'interface, ... Par exemple observer les signaux envoyés par l'objet
+org.gnome.TypingMonitor:
+
+	dbus-monitor type=signal sender=org.gnome.TypingMonitor interface=org.gnome.TypingMonitor
+
+Ou pour espionner les signaux de Pidgins, nous pouvons utiliser la
+syntaxe suivante :
+
+	dbus-monitor type=signal interface=im.pidgin.purple.PurpleInterface
+
+Les outils graphiques :
+
+-   [d-feet](http://live.gnome.org/DFeet)
+-   [bustle](http://willthompson.co.uk/bustle/)
+-   [DBusExplorer](http://www.ndesk.org/DBusExplorer)
+-   [dbus-inspector](http://www.vitavonni.de/projekte/dbus-inspector.html.de)
+-   [QDBusViewer](http://doc.qt.nokia.com/4.5/qdbusviewer.html)
+
+permettent également d'observer ce qui transite sur D-Bus et de
+communiquer avec les processus. Mais d'autres applications existent,
+comme
+[dbus-daemon-proxy](http://alban.apinc.org/blog/2010/04/01/d-bus-debugging-how-to-use-d-feet-on-n900/)
+développée par Alban Créquy qui redirige tout le trafic D-Bus par TCP.
+Outil initialement prévu pour teléphone nokia N900, pratique pour
+débugger à distance.
+Pour terminer, le plus intéressant, l'outil dbus-send. Cette commande
+permet tout simplement d'envoyer un message depuis un script shell, et
+va me permettre d'illustrer concrètement mes précédentes explications.
+
+*dbus-send* attend au minimum les arguments suivants :
+
+-   le nom du destinataire
+-   l'object path
+-   le nom du message
+-   et dans certains cas le type de message est requis
+
+Prenons quelques exemples sous Ubuntu
+
+	dbus-send --dest='org.gnome.Rhythmbox' /org/gnome/Rhythmbox/Player org.gnome.Rhythmbox.Player.next
+
+envoie le message next au logiciel Rythmbox ce qui fait passer à la
+musique suivante
+
+	dbus-send --dest=org.freedesktop.PowerManagement /org/freedesktop/PowerManagement/Backlight org.freedesktop.PowerManagement.Backlight.SetBrightness uint32:25
+
+réduit à 25% la luminosité de votre écran
+
+	dbus-send --print-reply --dest=org.freedesktop.PowerManagement /org/freedesktop/PowerManagement/Backlight org.freedesktop.PowerManagement.Backlight.GetBrightness
+
+retourne la valeur de la luminosité de votre écran
+
+	dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
+
+verrouille votre écran
+
+	dbus-send --type=method_call --dest=org.freedesktop.PowerManagement /org/freedesktop/PowerManagement org.freedesktop.PowerManagement.Shutdown
+
+éteint votre ordinateur
+    dbus-send --system --print-reply --dest=org.freedesktop.Hal /org/freedesktop/Hal/devices/computer org.freedesktop.Hal.Device.GetAllProperties
+
+retourne toutes les propriétés de HAL (hardware abstraction layer),
+c'est à dire de votre matériel.
+Etc.
+
+### IV. Gestion de la sécurité avec D-Bus
+
+D-Bus a également été développé dans un soucis de sécurité lors de
+l'échanges de messages. Les politiques de sécurité de D-Bus permettent
+de spécifier qui a le droit de parler à qui, ce qui est réellement
+pratique.
+
+La politique de sécurité de D-Bus se précise dans les dossiers :
+
+-   le dossier /etc/dbus-1/system.d pour le bus système
+-   le dossier /etc/dbus-1/session.d pour le bus session
+
+Elle se présente sous la force de fichiers XML à placer directement dans
+les dossier cités précédemment. Peu importe le nom des fichiers, seul le
+contenu va jouer ici.
+
+Voici un exemple très simple qui autorise l'utilisateur root à
+
+-   posséder l'objet com.developpez.exemple.ObjetA
+-   envoyer des messages à l'object com.developpez.exemple.ObjetA
+-   appeler l'interface com.developpez.exemple.ObjectInterface
+
+    <!DOCTYPE busconfig PUBLIC
+     "-//freedesktop//DTD D-BUS Bus Configuration 1.0//EN"
+     "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
+    <busconfig>
+        <policy user="root">
+            <allow own="com.developpez.exemple.ObjetA"/>
+            <allow send_destination="com.developpez.exemple.ObjetA"/>
+            <allow send_interface="com.developpez.exemple.ObjectInterface"/>
+        </policy>
+    </busconfig>
+
+Il est alors possible de restreindre les accès suivant les utilisateurs,
+mais surtout de dire qui a droit de parler avec qui et sur quelles
+interfaces. Pour des explications détaillées sur la configuration des
+politiques de sécurité, se référer au man de dbus-daemon.
+Dans certains cas, la sécurité de D-Bus n'est pas suffisante, et peut
+être couplée à SELinux. SELinux apporte la possibilité de restreindre
+l'accès d'applications spéficiques à des services donnés. Je n'ai jamais
+eu l'occasion d'aller jusque là, mais sa configuration se fait grâce à
+la balise <selinux\>. Pour plus d'information, se référer également au
+man ou à [la documentation de
+Redhat](http://www.redhat.com/magazine/003jan05/features/dbus).
+
+### V. Les avantages et inconvénients de D-Bus
+
+#### V-A. Les avantages
+
+-   D-Bus est léger
+-   D-Bus est un simple bus partagé par tout le système. Ce qui offre la
+    possibilité de faire communiquer énormément d'applications entre
+    elles, qu'elles soient au niveau de la session X ou du noyau.
+-   D-Bus permet une communication synchrone/asynchrone.
+-   Dans certains cas (comme Telepathy), D-Bus peut-être utile pour
+    faire cohabiter des programmes dont les licences seraient
+    contaminantes si elles ne passaient pas par un bus intermédiaire.
+-   D-Bus est multiplateforme et présent sur les 3 OS principaux
+    (Windows, Mac, Linux)
+-   D-Bus peut être détourné de son utilisation "desktop" classique et
+    adaptée aux besoins des systèmes embarqués.
+-   D-Bus permet de travailler de façon modulaire et développer des
+    applications découpées en briques communicantes. Une brique peut
+    planter sans impacter les autres et se reconnecter au bus d'elle
+    même sans que tout le système s'écroule.
+
+#### V-B. Les inconvénients
+
+-   Suivant le binding choisi D-Bus peut-être contaminant du fait de sa
+    license. Prenons l'exemple du binding glib, sous license [GPL
+    V2](http://www.opensource.org/licenses/gpl-2.0). Il peut être
+    "embêtant" de lier un projet dont on ne souhaite pas publier le code
+    métier sous license open source. Ce genre de désagrément sera abordé
+    dans un futur article dédié au binding glib. Cependant il faut
+    néanmoins bien prendre en compte la question des licenses lorsque
+    l'on part sur des projets industriels avec D-Bus. Les très mauvaises
+    surprises sont très vite arrivées.
+-   Selon le binding, l'apport de bibliothèques partagées assez lourdes
+    peut-être assez problématique selon les projets. Pour des cibles de
+    type embarqué par exemple, embarquer le binding glib et ses
+    libdbus.so\* n'est pas un choix à prendre à la légère et peut être
+    même rédhibitoire selon les contraintes de ressources et de place.
+-   Je n'en trouve pas d'autres ! :)
+
+### VI. Les différents bindings D-Bus
+
+Il existe [différents bindings](http://www.freedesktop.org/wiki/Software/DBusBindings) D-Bus
+pour utiliser le protocole avec différents langages :
+L'API C "low-level" de D-Bus existe pour créer de nouveaux bindings. La
+librairie permet de travailler de façon très bas niveau sur le
+protocole. Mais comme la documentation le précise "*If you use this
+low-level API directly, you're signing up for some pain.*" "*Si vous
+utilisez directement l'API bas niveau, vous vous engagez à souffrir*" :)
+Mais pour travailler avec des langages un peu plus haut niveau, des
+bindings existent pour les langages suivants. En C avec Glib et Vala, en
+Python avec
+[dbus-python](http://dbus.freedesktop.org/doc/dbus-python/doc/tutorial.html)
+, en C++ avec [dbus-cxx](http://dbus-cxx.sourceforge.net/) ou le module
+[QtDBus de QT](http://doc.trolltech.com/4.7/qtdbus.html), mais aussi en
+[Java](http://dbus.freedesktop.org/doc/dbus-java/),
+[C\#](http://cgit.freedesktop.org/dbus/dbus-mono/),[enlightenment](http://download.enlightenment.org/snapshots/LATEST/),
+[Perl](http://search.cpan.org/~danberr/Net-DBus-0.33.3/lib/Net/DBus.pm),
+[PHP](http://pecl.php.net/package/DBus), Pascal,
+[Ruby](https://trac.luon.net/ruby-dbus/),
+[Haskell](http://hackage.haskell.org/package/dbus-core),
+[OCaml](http://obus.forge.ocamlcore.org/), Objective-C, ...
+
+### VII. Conclusion
+
+Aujourd'hui, une très grande part des applications GNOME et KDE utilise
+D-Bus comme support de communication. Les possibilités d'interfaçage sur
+de nombreux langages offre de de belles possibilités de développement
+multiprocessus. Si j'arrive à trouver le temps, je rédigerai un prochain
+article sur des bindings D-Bus en particulier, histoire d'illustrer
+encore plus mes propos. En attendant, si vous avez des questions, ou
+remarques, n'hésitez pas !
+
+### VIII. Remerciements
+
+Je remercie beaucoup [bizulk](http://www.developpez.net/forums/u54119/bizulk/) pour sa
+relecture méticuleuse et ses remarques constructives qui m'ont été très
+utiles.
+
+### IX. Bibliographie
+
+-   [http://library.gnome.org/devel/platform-overview/stable/dbus.html.en](http://library.gnome.org/devel/platform-overview/stable/dbus.html.en)
+-   [http://www.ibm.com/developerworks/linux/library/l-dbus.html](http://www.ibm.com/developerworks/linux/library/l-dbus.html)
+-   [http://freedesktop.org/wiki/IntroductionToDBus](http://freedesktop.org/wiki/IntroductionToDBus)
+-   [http://dbus.freedesktop.org/doc/dbus-tutorial.html](http://dbus.freedesktop.org/doc/dbus-tutorial.html)
+-   [http://dbus.freedesktop.org/doc/dbus-specification.html](http://dbus.freedesktop.org/doc/dbus-specification.html)
+-   [http://www.redhat.com/magazine/003jan05/features/dbus](http://www.redhat.com/magazine/003jan05/features/dbus)
+-   [http://www.unixgarden.com/index.php/programmation/decouvertes-et-experimentation-avec-d-bus](http://www.unixgarden.com/index.php/programmation/decouvertes-et-experimentation-avec-d-bus)
+-   [http://www.linuxjournal.com/article/7744](http://www.linuxjournal.com/article/7744)
+-   [http://doc.ubuntu-fr.org/dbus](http://doc.ubuntu-fr.org/dbus)
+-   [http://www.linuxforu.com/teach-me/d-bus-the-smart-simple-powerful-ipc](http://www.linuxforu.com/teach-me/d-bus-the-smart-simple-powerful-ipc)
+-   Sans compter la mailing-list de D-Bus :)
+

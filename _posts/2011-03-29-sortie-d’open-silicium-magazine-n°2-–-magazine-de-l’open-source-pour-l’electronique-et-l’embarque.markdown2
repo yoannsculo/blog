@@ -1,0 +1,48 @@
+---
+layout: post
+title: Sortie d’Open Silicium Magazine N°2 – Magazine de l’open source pour l’électronique et l’embarqué
+categories: embarqué, linux, linux embarqué, Linux Magazine, magazine, Open Silicium, système embarqué, Systèmes Embarqués
+---
+
+![Open_Silicium_2](http://www.yoannsculo.fr/wp-content/uploads/2011/03/500____os2_436-231x300.jpg)
+Héhé ! Le numéro 2 d'Open Silicium vient de sortir ! Billet avec un peu de
+retard, mais mon ami le facteur ne me l'a amené qu'aujourd'hui ! Voici
+le sommaire :
+
+-   4 News
+
+**Labo**
+
+-   6 Mini2440 : Utilisation de la sonde JTAG
+-   10 Utilisation des cartes magnétiques sous GNU/Linux
+-   18 Parlez 1-Wire, I2C, SPI, MIDI et bien plus avec un seul outil :
+    Bus Pirate v3
+
+**Mobilité**
+
+-   28 Faites parler vos montages en bluetooth
+-   30 ARCHOS 70 internet tablet : aussi pour les développeurs... ou pas !
+
+**Système**
+
+-   37 Instrumentation du noyau Linux et utilisation de Ftrace
+-   44 Le microcontrôleur : un ordinateur sur une puce
+-   48 Arduino : le microcontrôleur AVR pour tous
+-   52 Débuter avec son Arduino : des premiers pas au bord de
+    l'environnement Arduino
+-   64 Allez plus loin avec votre module Arduino
+
+**Expérimentation**
+
+-   76 ReadyNAS : et si on s'occupait un peu du noyau ?
+
+**Repère**
+
+-   80 Apprenez à utiliser les Makefiles pour faciliter vos
+    développements
+-   84 Implémentation efficace d'algorithmes sur FPGA : Machines à état
+
+**Réseau**
+
+-   90 Exploration et modification d'un NAS LaCie BigDisk Network
+

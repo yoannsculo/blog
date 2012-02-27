@@ -1,0 +1,58 @@
+---
+layout: post
+title: Concours de création de système Linux embarqué sur carte Mini2440
+categories: boot, concours, linux, linux embarqué, Mini2440, Open Wide Ingénierie, optimisation
+---
+
+![Open Wide](http://www.yoannsculo.fr/wp-content/uploads/2011/08/ow.png)[Open
+Wide Ingénierie](http://ingenierie.openwide.fr/), par l'intermédiaire de
+son blog [Linux Embedded](http://www.linuxembedded.fr) dédié à
+l'embarqué, vient de lancer un truc vraiment sympa ! [Un
+concours](http://www.linuxembedded.fr/concours/) de création de système
+Linux embarqué. Les participants doivent réussir à booter sous Linux, se
+connecter au net, afficher une interface graphique, et tout ça le plus
+vite possible ! La plateforme choisie pour le concours est la[carte
+Mini2440 de FriendlyARM](http://friendlyarm.net/products/mini2440).
+
+A la [clef](http://www.linuxembedded.fr/concours/recompenses.php), des
+cartes Mini2440, des tablettes Archos et du fun !
+
+Ouvert aux étudiants et aux individuels, le concours se divise en deux
+parties.
+
+-   Dans un premier temps, le but est de faire fonctionner le système en
+    le simulant sous qemu. Ce qui permet de gagner une carte Mini2440 et
+    de passer à l'étape suivante. Les participants ont jusqu'à fin
+    octobre pour gagner une carte.
+-   La finale se passe ensuite sur les cartes Mini2440. Où le but est
+    cette fois d'optimiser au maximum le boot du système sur la
+    plateforme choisie. Cette seconde phase se terminera fin décembre.
+
+Les contraintes techniques se résument en quelques lignes :
+> Le système devra fonctionner avec un noyau Linux sur une carte
+> Mini2440, obtenir une adresse IP par DHCP et l'afficher en grand dans
+> une application graphique. Un bouton tactile devra également permettre
+> de déclencher l'affichage du nom du ou des auteurs, ainsi que le nom
+> d'équipe s'il y a lieu.
+>
+> Le temps sera compté à partir du démarrage électrique (à froid)
+> jusqu'à l'affichage graphique.
+>
+> Il est possible d'optimiser le bootloader, le noyau et l'espace
+> utilisateur (également appelé applicatif ou rootfs).
+
+Donc, seule contrainte, utiliser Linux. En dehors de ça, libre aux
+participants de bidouiller/hacker à mort leur système pour arriver à
+leurs fins :) Le but est de se faire plaisir !
+
+Juste besoin d'envoyer un email [pour
+s'inscrire](http://www.linuxembedded.fr/concours/). [Un
+Wiki](http://www.linuxembedded.fr/concours/wiki/) a été mis en place,
+ainsi qu'un
+[Forum](https://groups.google.com/group/concours-linuxembedded) et un
+channel IRC.
+
+Je n'ai pas pu résister au défi, je me suis inscrit, en espérant que je
+trouverai le temps nécessaire pour faire tout ça !
+
+Sur ce ! Au boulot ! :)

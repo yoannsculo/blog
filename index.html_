@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<div class="container">
+	<div class="well">
+	{% for post in site.posts|reverse %}
+		{{ post.date|dateFormat }} » <a href="{{ post.url }}">{{ post.title }}</a><br>
+	{% endfor %}
+	</div>
+</div>
