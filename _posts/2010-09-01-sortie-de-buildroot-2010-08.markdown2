@@ -1,0 +1,21 @@
+---
+layout: post
+title: Sortie de Buildroot 2010.08
+categories: 2010.08, Buildroot, linux, release
+---
+
+![Buildroot](http://www.yoannsculo.fr/wp-content/uploads/2010/06/logo_small.png)
+Je suis tellement en retard dans les billets que je souhaiterais écrire que
+j'ai failli rater la sortie aujourd'hui de
+[Buildroot](http://www.buildroot.org/download.html) 2010.08. Les
+modifications sont toutefois moins visibles que la [dernière
+release](http://www.yoannsculo.fr/sortie-de-buildroot-2010-05/) de mai
+dernier. On peut retrouver les détails de la nouvelle version sur [la
+mailing
+list](http://lists.busybox.net/pipermail/buildroot/2010-August/037078.html)
+(qui spamme ma boîte mail avec toujours autant de ferveur :-)) La
+prochaine version est annoncé pour fin novembre 2010 !
+
+Après quelques semaines extrêmement chargées, je vais enfin pouvoir
+rattraper mon retard sur une actualité Linux embarqué plutôt chargée. A
+très bientôt donc.

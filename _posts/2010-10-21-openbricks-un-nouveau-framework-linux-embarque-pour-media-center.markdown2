@@ -1,0 +1,69 @@
+---
+layout: post
+title: OpenBricks - Un nouveau Framework Linux embarqué pour Media Center
+categories: Buildroot, distribution, framework, GeeXboX, linux, linux embarqué, Media Center, OpenBricks, OpenEmbedded
+---
+
+![image](http://www.yoannsculo.fr/wp-content/uploads/2010/10/openbricks-400.png)
+
+Depuis quelques semaines un nouveau framework appelé
+[OpenBricks](http://www.openbricks.org/) a fait son apparition sur le
+net. En tant que grand curieux j'ai été fouiner sur leur site pour
+savoir de quoi il s'agissait réellement.
+
+OpenBricks s'annonce comme Framework Linux embarqué pour la création de
+distributions personnalisées pour des systèmes embarqués industriels. Le
+projet est issu du media center open source
+[GeeXboX](http://www.geexbox.org/). L'initiative part d'un très bon
+sentiment, du coup j'ai continué à fouiner en allant regarder le code
+présent sur leur dépôt mercurial. Mais très rapidement la question
+suivante me vient à l'esprit. "Super ! Mais en quoi est-ce différent de
+Buildroot ?"
+
+Linux FR [a abordé le sujet](http://linuxfr.org/2010/10/19/27485.html)
+il y a quelques jours. Je reste néanmoins assez sceptique sur l'apport
+du projet par rapport à l'existant. Bien qu'annonçant une approche
+différente de ses "concurrents"
+([OpenEmbedded](http://wiki.openembedded.net/index.php/Main_Page) ou
+[Buildroot](http://buildroot.uclibc.org/)) la finalité semble exactement
+la même que Buildroot.
+
+Je ne vais pas me lancer dans un comparatif détaillé entre OpenBricks et
+Buildroot. Cependant, ils permettent de construire une distribution
+custom, et choisir les paquets à installer. Du point de vue interface de
+configuration, les deux projets se basent sur un menu ncurses où l'on va
+configurer à la main tout notre système. Choix d'architecture, de
+toolchain, de packages, tout fonctionne de la même façon. Honnêtement la
+seule différence réside dans le choix des packages. OpenBricks est
+indéniablement axé media center, alors que Buildroot quant à lui est
+orienté distribution généraliste. Des packages très intéressants
+présents sur OpenBricks ne sont pas présents sur Buildroot et
+inversement. On remarque toutefois qu'OpenBricks est déjà plus
+user-friendly au niveau de la distribution finale et propose un panel
+plus diversifié d'interfaces graphiques que dans Buildroot.
+
+Je tiens à préciser tout de même que je trouve l'initiative toutefois
+très intéressante. Fort de leur expérience sur GeeXboX les développeurs
+ont eu l'idée d'adapter leur travail pour permettre la création de
+distributions personnalisées. Si l'on prend le projet OpenBricks comme
+un générateur de distribution media center, il est clair qu'il fait son
+travail et mieux (comprendre plus facilement) que Buildroot. Si on le
+prend comme un générateur de distribution Linux embarqué custom, je ne
+suis pas certain que OpenBricks permette la génération d'un système
+aussi poussé qu'avec Buildroot. En fait, tout dépend de la direction qui
+va être choisie pour le développement futur d'OpenBricks. S'ils se
+cantonnent à des distributions de type media center je pense que
+Buildroot et OpenBricks peuvent cohabiter sans aucun problème. Par
+contre, s'ils briguent la distribution Linux embarqué classique, je
+pense que nous aurions tout à gagner à fusionner les projets. Car il est
+certain que chacun des deux a ses inconvénients et ses avantages. Nous
+aurions beaucoup à gagner à rapprocher ces projets complémentaires.
+
+Dans l'état actuel des choses, OpenBricks propose une assez longue liste
+d'outils non disponibles dans Buildroot. Du coup, je pense qu'il va
+trouver sa place au sein dans la communauté Linux embarqué. Reste à voir
+comment il va évoluer et surtout dans quelle mesure il va être adopté
+par des projets professionnels. Donc wait and see ! En attendant, je
+suis en train de me paramétrer un système pour tester ça sur une de mes
+cartes ARM :)
+

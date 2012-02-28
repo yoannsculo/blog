@@ -1,0 +1,31 @@
+---
+layout: post
+title: Projet Armadeus – Sortie de la version 3.3
+categories: ARM, Armadeus, Armadeus Project, association, Buildroot, Busybox, carte, linux, U-Boot, uClibc
+---
+
+![image](http://www.yoannsculo.fr/wp-content/uploads/2010/09/logo.png)
+Je profite de la sortie de la [version
+3.3](http://sourceforge.net/projects/armadeus/files/) du [projet
+Armadeus](http://www.armadeus.org) il y a un peu plus d'un mois pour
+parler d'une association mulhousienne originale.
+
+Le Projet Armadeus est une association française, mais ouverte à
+l'international, dont le but est de faciliter le développement de
+systèmes embarqués à base de logiciels Libres.
+
+Il permet aux membres d'acquérir, à tarif préférentiel, des cartes ARM
+distribuées par la société [Armadeus Systems](http://www.armadeus.fr).
+Basé sur les outils [U-Boot](http://en.wikipedia.org/wiki/Das_U-Boot),
+Linux et
+[Buildroot](buildroot.uclibc.org)/[Busybox](http://en.wikipedia.org/wiki/BusyBox)/[uClibc](http://en.wikipedia.org/wiki/UClibc)
+(ce qui fait la force du projet) le système permet de prototyper,
+bidouiller et se lancer dans des applications concrètes très
+intéressantes, et cela très rapidement. En tant que grand adepte de
+Buildroot, je ne peux que saluer l'idée du projet initié en 2006.
+Armadeus apporte une composante matérielle et communautaire qui peut
+favoriser l'émergence de projets innovants !
+
+Cela fait un moment que je suis leurs activités, et je me demande si je
+ne vais pas finir par adhérer à l'association :)
+
