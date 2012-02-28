@@ -4,6 +4,10 @@ layout: default
 
 <div class="container">
 	<div class="well">
+		
+		<h1>{{ post.title | escape }}</h1>
+		<div style="width: 100%;text-align:right;">{{ post.date | dateFormat }}</div>
+		{{ content }}
 
 		{% for s_post in site.posts %}
 			{%- if s_post is sameas post %}
@@ -17,10 +21,7 @@ layout: default
 
 			{% endif %}
 		{% endfor %}
-		
-		<h1>{{ post.title | escape }}</h1>
-		<div style="width: 100%;text-align:right;">{{ post.date | dateFormat }}</div>
-		{{ content }}
+
 	</div>
 
 	<div class="well">
