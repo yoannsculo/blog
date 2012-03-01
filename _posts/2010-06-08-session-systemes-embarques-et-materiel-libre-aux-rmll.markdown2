@@ -1,0 +1,73 @@
+---
+layout: post
+title: Session "Systèmes embarqués et matériel libre" aux RMLL
+categories: Bordeaux, embarqué, Libre, linux, RMLL, Systèmes Embarqués
+---
+
+Du 11 juillet 2010, auront lieu les [Rencontres Mondiales du
+Logiciel Libre](http://2010.rmll.info/) (RMLL) à Bordeaux. A cette
+occasion, un ensemble de conférences fort intéressantes et relatives au
+monde de l'embarqué seront proposées. Voici le programme :
+
+**Le mardi 6**
+
+-   [Développement pour Apple iPod sous
+    GNU/Linux](http://2010.rmll.info/Developpement-pour-Apple-iPod-sous-GNU-Linux.html?lang=fr)
+    (Gwenhael Goavec-Merou, Jean-Michel Friedt) ;
+-   [Noyau Linux : architecture des pilotes et device
+    model](http://2010.rmll.info/Noyau-Linux-architecture-des-drivers-et-device-model.html?lang=fr)
+    (Thomas Petazzoni) ;
+-   [Développement de bibliothèques d’instruments radiofréquences sur
+    FPGA](http://2010.rmll.info/Developpement-de-bibliotheques-d-instruments-radiofrequences-sur-FPGA.html?lang=fr)
+    (Marc Lamothe, Nicolas Chrétien, Gwenhael Goavec-Merou, Jean-Michel
+    Friedt) ;
+-   [Robotique et logiciels libres : le robot humanoïde
+    NAO](http://2010.rmll.info/Robotique-et-logiciels-libres-le-robot-humanoide-NAO.html?lang=fr)
+    (Bothari Ganhir) :
+-   [Milkymist : un System-on-Chip libre et orienté vidéo temps
+    réel](http://2010.rmll.info/Milkymist-un-System-on-Chip-libre-et-oriente-video-temps-reel.html?lang=fr)
+    (Sébastien Bourdeauducq).
+
+**Le mercredi 7**
+
+-   [En quoi les logiciels libres peuvent rendre du matériel portable
+    (encore plus) utilisable par les personnes déficientes
+    visuelles](http://2010.rmll.info/En-quoi-les-logiciels-libres-peuvent-rendre-du-materiel-portable-encore-plus-utilisable-par-les-personnes-deficientes-visuelles.html?lang=fr)
+    (Sébastien Hinderer, conférence croisée avec le thème accessibilité)
+    ;
+-   [ConnMan, un gestionnaire de connexion pour systèmes
+    embarqués](http://2010.rmll.info/ConnMan-un-gestionnaire-de-connexion-pour-systemes-embarques.html?lang=fr)
+    (Samuel Ortiz) ;
+-   [Vers une plage braille ’libre’
+    ?](http://2010.rmll.info/Vers-une-plage-braille-libre.html?lang=fr)
+    (Mario Lang, conférence croisée avec le thème accessibilité) ;
+-   [Enlightenment Foundation
+    Library](http://2010.rmll.info/Enlightenment-Foundation-Library.html?lang=fr)
+    (Carsten Haitzler, Cédric Bail) ;
+-   [Ebook hacking](http://2010.rmll.info/Ebook-hacking.html?lang=fr)
+    (Jesse Vincent) ;
+-   [Archos mobile
+    platform](http://2010.rmll.info/Archos-mobile-platform,391.html?lang=fr)
+    (Chidambar Zinnoury).
+
+**Le jeudi 8**
+
+-   [Enna/Geekbox : un logiciel pour
+    mediacenter](http://2010.rmll.info/Enna-Geekbox-un-logiciel-pour-mediacenter.html?lang=fr)
+    (Nicolas Aguirre) ;
+-   [Ajout de support matériel à
+    Buildroot](http://2010.rmll.info/Ajout-de-support-materiel-a-Buildroot.html?lang=fr)
+    (Pierre Ficheux) ;
+-   [Détection de pollution maritime avec
+    GNU/Linux](http://2010.rmll.info/Detection-de-pollution-maritime-avec-GNU-Linux.html?lang=fr)
+    (Eric Bénard) ;
+-   [Intégration d'OpenWrt sur la Neufbox
+    4](http://2010.rmll.info/Integration-d-OpenWrt-sur-la-Neufbox-4.html?lang=fr)
+    (Arnaud André, Raphaël Huck, Miguel Gaio) ;
+-   [USB3/Linux
+    introduction](http://2010.rmll.info/Nouvelle-traduction-USB3-Linux-introduction-Sarah-Sharp.html?lang=fr)
+    (Sarah Sharp) et [USB3/Linux
+    advanced](http://2010.rmll.info/USB3-Linux-advanced.html?lang=fr)
+    (Sarah Sharp)
+
+source [DLFP](http://linuxfr.org/2010/06/07/26959.html)

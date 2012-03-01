@@ -1,0 +1,18 @@
+---
+layout: post
+title: Sortie de Vim 7.3
+categories: 7.3, éditeur, ide, logiciel, vim
+---
+
+![vim_logo](http://www.yoannsculo.fr/wp-content/uploads/2010/08/vim_logo-300x300.png)
+Praise Vim ! La version 7.3 de mon éditeur de texte de prédilection est sortie
+dimanche 15 août. Je viens juste de le découvrir ! A cheval entre une
+"minor" et "major" release, vim 7.3 est plus une "between" release, mais
+non moins attendue :)
+
+Ça me fait penser qu'il faudrait que je mette en ligne à l'occasion mon
+vimrc pimpé et tout mon paquet de plugins associés.
+
+Voici
+[l'annonce](https://groups.google.com/group/vim_announce/browse_thread/thread/66c02efd1523554b?pli=1)
+

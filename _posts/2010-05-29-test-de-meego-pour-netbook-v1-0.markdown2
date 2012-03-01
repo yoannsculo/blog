@@ -1,0 +1,60 @@
+---
+layout: post
+title: Test de MeeGo pour Netbook v1.0
+categories: linux, linux embarqué, Maemo, MeeGo, Moblin, netbook
+---
+
+![MeeGo](http://www.yoannsculo.fr/wp-content/uploads/2010/05/site_name.png)
+
+[MeeGo](http://meego.com/) est un nouveau système d'exploitation basé sous Linux à destination des
+appareils mobiles tels que les netbooks, smartphones, télévisions et
+autres systèmes embarqués. Annoncé en février dernier, MeeGo est issu du
+rapprochement d'Intel et de Nokia et de leurs bébés respectifs, Moblin
+et Maemo. Mercredi dernier, la release de la v1.0 a été annoncée. Je
+prends enfin le temps de tester ce nouvel OS sur mon EeePC 1000H.
+
+Première impression, c'est rapide ! Très rapide ! Boot en quelques
+secondes depuis une clé USB. Je suis très impressionné. Cela démarre
+plus vite que mon téléphone Android. Tout mon matériel est reconnu, en
+quelques clics de souris :
+
+-   Je me connecte à Internet.
+-   Je paramètre Empathy et me connecte à Jabber et MSN
+-   Je lance Chrome
+-   Je configure l'interface de réseaux sociaux de MeeGo et intègre
+    Tweeter
+-   Je configure mon calendrier et connecte mon Google Calendar
+-   Je lis mes mails
+-   Je fais le geek en lançant le Terminal
+-   Je lis ma musique avec Banshee
+-   ... et je m'arrache les cheveux car le clavier est en qwerty et que
+    je n'arrive pas à activer le clavier français :-P
+
+Je n'avais jamais eu l'occasion de tester Moblin. Par conséquent, mon
+sentiment de nouveauté doit être légèrement biaisé. Cependant, je suis
+vraiment conquis par MeeGo. J'ai tout simplement hâte de le tester avec
+un écran tactile et voir si l'expérience utilisateur est encore
+meilleure. Je trouve que l'interface est vraiment bien pensée et
+ergonomique. Je me vois tout à fait utiliser cet OS sur n'importe quel
+appareil multimédia maintenant. Bref, je sens que MeeGo a un très fort
+potentiel, et je vais commencer dès maintenant à regarder plus en détail
+tout ça. Et cela en commençant par me plonger dans le [SDK proposé aux
+développeurs](http://meego.com/developers). En tant que développeur
+Linux embarqué, je vois tout de suite les possibilités d'un tel OS, j'ai
+vraiment hâte de pouvoir travailler avec !
+
+Et voici pour la route quelques screenshots pris sur mon EeePC :
+
+![Accueil de Meego](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot6.png)
+![L'interface "réseaux sociaux" de MeeGo](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot1.png)
+![Internet avec Chrome](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot5.png)
+![Gestionnaire multitâches](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot4.png)
+![Terminal de Meego](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot7.png)
+![Calendrier et TodoList](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot8.png)
+![Interface Périphériques](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot9.png)
+![Explorateur de fichiers](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot10.png)
+![Interface réseaux](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot11.png)
+
+Sinon voici un screencast du fonctionnement de MeeGo
+
+<object class="aligncenter" width="480" height="385"><param name="movie" value="http://www.youtube.com/v/1P5DHjSLj8s&hl=fr_FR&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/1P5DHjSLj8s&hl=fr_FR&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>

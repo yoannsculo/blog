@@ -1,0 +1,54 @@
+---
+layout: post
+title: Je suis diplômé ! Au revoir l'UTT
+categories: CNES, stage, UTT
+---
+
+J'ai reçu fin mars un courrier de mon école attestant que je suis
+maintenant ingénieur. Je n'avais pas trouvé le temps jusque là d'écrire
+sur mon blog à ce sujet. Et donc voilà ! Les études sont terminées pour
+de bon. Je peux maintenant tourner une page, me voilà pour de bon dans
+le monde du travail !
+
+J'ai d'ailleurs à ce titre passé ma soutenance de stage de fin d'études
+le mois dernier. Et j'ai eu la bonne surprise de décrocher un A. Je
+réalise que je n'en avais pas parlé sur mon blog depuis que [j'avais
+annoncé](http://www.yoannsculo.fr/fin-de-mes-etudes-a-lutt/) avoir
+trouvé un stage au CNES. J'ai donc fait mon stage de 6 mois au sein du
+Centre National d'Etudes Spatiales à Toulouse. J'ai plus
+particulièrement travaillé au sein du laboratoire de robotique mobile
+qui réalise la navigation long terme pour le robot de la mission Exomars
+(qui partira maintenant en 2018). Mon stage a consisté en l'étude et
+l'implémentation des algorithmes de fusion des cartes topographiques
+issues du terrain. Pour simplifier, le robot fait une acquisition de son
+environnement régulièrement lors de son déplacement. Il doit être en
+mesure de fusionner les informations sur la nature du terrain pour
+éviter notamment de tomber dans des culs-de-sac. Le grand intérêt du
+stage a résidé dans le fait que l'environnement de développement
+imposait de fortes contraintes embarquées. J'ai donc pu développer en C
+pour une cible de type Linux embarqué tout en travaillant sur des
+algorithmes optimisées pour les faibles ressources disponibles. Stage
+aussi complexe que passionnant.
+
+Sinon, chose intéressante ! J'ai quitté l'UTT juste avant un gros
+remaniement de la branche informatique. L'idée est de scinder la
+formation en deux dès la 3eme année de l'UTT:
+
+-   les systèmes d'information et le génie logiciel
+-   le réseau et les systèmes embarqués
+
+au lieu de proposer jusque là une année d'enseignement commun (TCBR).
+L'UTT attend la décision de la CTI pour la fin avril il me semble.
+J'espère que ce changement sera validé car c'est à mon sens une très
+bonne chose de commencer à faire de l'embarqué dès sa 3eme année à
+l'UTT. Mon seul regret à l'UTT est d'avoir fait un peu trop de théorie
+et pas suffisamment de pratique. A moins de combler par des projets
+personnels et ou de l'associatif comme j'ai pu le faire, il est
+difficile de ressortir de l'école avec un forte expérience technique. Il
+est vrai aussi que l'UTT formait jusque là essentiellement des
+ingénieurs en systèmes d'information, donc l'opposé de la technique
+pure. Mais avec l'ouverture de la branche systèmes embarqué, la
+technique est devenue obligatoire voire primordiale. C'est pourquoi je
+trouve cela réellement intéressant de ne plus perdre un an à faire des
+diagrammes UML. Croisons les doigts pour que les changements soient
+validés !

@@ -1,0 +1,65 @@
+---
+layout: post
+title: Sortie du nouveau modèle de carte BeagleBoard, la BeagleBoard-xM
+categories: ARM, Beagle Board, Cortex, embarqué, système embarqué
+---
+
+Légèrement plus grosse que la [carte
+Fox](http://www.yoannsculo.fr/la-nouvelle-carte-fox-g20/), la
+[BeagleBoard-xM](http://beagleboard.org/hardware-xM) est le nouveau
+modèle de la carte low-cost [Beagle Board](http://beagleboard.org/)
+normalement sortie ce lundi 7 juin 2010.
+
+Concurrente directe de la carte Fox (si l'on peut dire), la Beagle Board
+a été développée par des[ingénieurs de chez Texas
+Instruments](http://www.linuxfordevices.com/c/a/News/150-board-sports-CortexA8/)
+afin d'offrir aux développeurs de systèmes embarqués un système
+mono-puce (System on Chip) basé sur une architecture ARM. Le tout dans
+une optique de développement Open Source. J'avais entendu parler en bien
+de cette carte il y a quelques temps, largement plébicitée dans le monde
+l'électronique et des systèmes embarqués. Le nouveau modèle, plus
+puissant que l'actuel, est légèrement plus cher que la carte Fox, 174€
+(semblerait-il) contre 139€ mais a de quoi lui demander d'aller se
+rhabiller.
+
+![Spécifications de la BeagleBoard-xM](http://www.yoannsculo.fr/wp-content/uploads/2010/06/4644432552_2fb4280336.jpg)
+
+En effet, le hardware annoncé est le suivant :
+
+-   Super-scalar ARM Cortex ^TM^ -A8
+-   512-MB LPDDR RAM
+-   High-speed USB 2.0 OTG port optionally powers the board
+-   On-board four-port high-speed USB 2.0 hub with 10/100 Ethernet
+-   DVI-D (digital computer monitors and HDTVs)
+-   S-video (TV out)
+-   Stereo audio out/in
+-   High-capacity microSD slot and 4-GB microSD card
+-   JTAG
+-   Camera port
+
+Digi-Key, le distributeur de la carte propose quelques applications
+possibles pour la BeagleBoard-xM
+
+-   Web services
+-   3-D gaming
+-   3-D UI
+-   Linux kernel and driver development
+-   Boot loaders and firmware
+-   UI framework
+-   ARM ^®^ NEON codecs
+-   Codec plug-ins for GStreamers
+-   OpenGL ^®^ applications
+-   OpenMAX ^TM^ IL applications
+-   Ubuntu ^TM^ , Android ^TM^ , MeeGo ^TM^ , WinCE ^TM^ , QNX ^TM^ ,
+    Angstrom, Symbian ^TM^ , Debian, Gentoo and others
+-   Home media centers
+-   In-vehicle entertainment
+-   Robotics
+-   Web kiosks
+-   And many more...!
+
+Il est d'ailleurs très intéressant d'aller jeter un oeil aux [projets
+Beagle Board](http://beagleboard.org/project) référencés sur leur site.
+Pour conclure, cette carte est vraiment puissante et très intéressante
+pour le développement de systèmes embarqués assez gourmands. Je finirai
+très certainement par m'en commander une :-)

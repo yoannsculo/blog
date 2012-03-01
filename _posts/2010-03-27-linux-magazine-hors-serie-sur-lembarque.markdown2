@@ -1,0 +1,36 @@
+---
+layout: post
+title: Linux Magazine Hors-Série sur l'embarqué
+categories: Buildroot, linux embarqué, Linux Magazine
+---
+
+![ug_lmhs47](http://www.yoannsculo.fr/wp-content/uploads/2010/03/ug_lmhs47.jpg)
+
+Cela faisait deux semaines que je le cherchais, je l'ai enfin trouvé ! (en
+même temps que le dernier Planète Robots !) On peut donc trouver en
+kiosque en ce moment un [numéro spécial linux
+embarqué](http://www.gnulinuxmag.com/index.php/2010/03/12/gnulinux-magazine-hs-n°47-avrilmai-2010-chez-votre-marchand-de-journaux),
+qui traite entre autres d'Android, Buildroot et de la carte Fox. Les
+deux articles de Pierre Ficheux sur Buildroot tombaient à point nommé
+pour moi. Bref, un super magazine avec tout plein d'articles
+intéressants dont voici le sommaire :
+
+**CRÉEZ UNE APPLICATION :**
+
+- p. 4 Ma première application Android – 1ère partie
+- p. 11 Ma première application Android – 2nde partie
+- p. 16 Développez des applications pour Symbian en Python
+
+**CONSTRUISEZ UN SYSTÈME :**
+
+- p. 20 Introduction à Buildroot
+- p. 34 Cas pratique d’utilisation de Buildroot
+- p. 43 OpenWrt sur ACME Fox
+- p. 48 Mise en œuvre de Linux embarqué sur le processeur softcore libre LEON
+
+**DÉVELOPPEZ POUR LE MATÉRIEL :**
+
+- p. 58 Étude d’un système d’exploitation pour microcontrôleur faible consommation (TI
+MSP430) : pilote pour le stockage de masse au format FAT sur carte SD
+- p. 78 Le VHDL pour les débutants
+
