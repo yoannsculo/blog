@@ -1,0 +1,38 @@
+---
+layout: post
+title: Les entrées sorties en C avec la Foxboard, suite et fin
+categories: carte fox, entrée, foxboard, G20, sortie, SRF05
+---
+
+J'ai profité de ce mercredi 11 novembre pour bidouiller un peu la fox :)
+
+J'ai donc pu terminer mes fonctions d'entrée/sortie. J'en ai profité
+pour mettre un makefile et mettre [une archive en
+ligne](http://www.yoannsculo.fr/docs/foxboard/foxg20_io.tar.gz) où vous
+pouvez télécharger mon code. Je pense que cela mérite quelques petites
+finitions, mais le code fonctionne bien chez moi en tout cas. Par
+défaut, mon main, dans led.c fait clignoter la ligne 9 du port J7. Pour
+faire clignoter la led rouge il suffira de changer PB0 par PC7. Je
+mettrai donc à jour l'archive tar.gz au fur et à mesure de mes
+modifications.
+
+![Capteur ultrason](http://www.yoannsculo.fr/wp-content/uploads/2009/09/24500n-opt.jpg)
+
+Je me suis également essayé à l'intégration de mes capteurs ultrasons
+[SRF05](http://www.robot-electronics.co.uk/htm/srf05tech.htm), mais je
+me heurte encore à plusieurs problèmes. J'arrive à émettre mes salves
+d'ultrasons sans soucis, mais c'est la récupération des données de
+distance qui est un peu plus compliquée. Le capteur renvoie un signal à
+l'état haut, de la durée correspondant à la distance mesurée. Avec un
+changement d'échelle on obtient alors la distance en cm. Seul soucis,
+les signaux à manipuler ici sont de l'ordre de la microsecondes, et je
+n'arrive pas encore à estimer la durée reçue. J'utilise la fonction
+clock() pour travailler sur une différence de cycles d'horloge, fonction
+qui semble être la plus précise en C. Cependant, la durée de l'état haut
+relevé grâce à cette fonction me retourne 0 en permanence... Soit la
+fonction est trop précise, soit quelque chose ne va pas dans mon
+implémentation. Je vais essayer de me renseigner s'il n'existe pas mieux
+que la fonction clock() pour mesurer des durées de l'ordre de la
+dizaine/centaine de microsecondes. J'espère donc pouvoir utiliser
+rapidement ces capteurs, ils sont à la base du repérage de
+[Robert](http://www.yoannsculo.fr/tag/robert/).

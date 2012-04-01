@@ -1,0 +1,23 @@
+---
+layout: post
+title: Mise en place des moteurs de Robert
+categories: encodeur, Lynxmotion, moteur, quadrature, Robert, robot
+---
+
+Robert a tout de même bien plus d'allure avec ses moteurs montés ! Après
+un long moment d'attente, nos moteurs sont arrivés des états unis. Je
+viens enfin de prendre le temps de les monter, ainsi que leurs
+[encodeurs en
+quadrature](http://www.lynxmotion.com/Product.aspx?productID=448&CategoryID=)
+(pour l'odométrie) spécialement faits pour eux. La carte moteur devrait
+bientôt suivre, il me manque encore quelques composants importants. Il y
+a donc de fortes chances que le robot soit en état de marche ce week-end
+:) A suivre !
+
+![Les moteurs Lynxmotion du Robert](http://www.yoannsculo.fr/wp-content/uploads/2009/10/DSC07023_small.jpg)
+
+![Les encodeurs en quadrature de chez Lynxmotion](http://www.yoannsculo.fr/wp-content/uploads/2009/10/DSC07026_small.jpg)
+
+![Les encodeurs montés](http://www.yoannsculo.fr/wp-content/uploads/2009/10/DSC07028_small.jpg)
+
+![Robert enfin motorisé !](http://www.yoannsculo.fr/wp-content/uploads/2009/10/DSC07032_small.jpg)

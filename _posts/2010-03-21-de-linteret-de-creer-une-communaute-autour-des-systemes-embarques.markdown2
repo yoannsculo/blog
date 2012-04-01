@@ -1,0 +1,90 @@
+---
+layout: post
+title: De l'intérêt de créer une communauté autour des systèmes embarqués
+categories: communauté, linux, linux embarqué, Systèmes Embarqués
+---
+
+Je suis tombé progressivement dans les systèmes embarqués grâce à mes
+études à l'UTT. Les projets sur lesquels j'ai pu travailler m'ont fait
+réaliser à quel point ce secteur est prometteur. Cependant, après de
+nombreuses recherches que cela soit pour moi ou dans le cadre de mon
+travail, je ressens comme un gros manque en terme de communauté
+francophone et même anglophone autour des systèmes embarqués. Il existe
+aujourd'hui quelques sites tels que :
+
+-   Le [Wiki
+    d'Armadeus](%20http://www.armadeus.com/wiki/index.php?title=Main_Page)
+-   [CE Linux Forum](http://celinuxforum.org/) avec ses différents Wiki
+    ([CE Linux Developer
+    Wiki](http://tree.celinuxforum.org/CelfPubWiki/FrontPage) |
+    [Embedded Linux Wiki](http://elinux.org/Main_Page))
+-   [Linux Devices](http://www.linuxfordevices.com) et
+    [Embedded.com](http://www.embedded.com/), leurs articles, news et
+    forum.
+-   Le site de la société [Free-Electrons](http://free-electrons.com)
+    qui propose des supports de formations très utiles.
+-   La très petite partie embarquée de
+    [developpez.com](http://linux.developpez.com/cours/)
+
+Du point de vue de la littérature technique, je réalise que très peu de
+ressources sont en français, à part [les
+articles](http://pficheux.free.fr/) et le livre [Linux
+Embarqué](http://www.amazon.fr/Linux-embarqué-Pierre-Ficheux/dp/2212116748)
+de Pierre Ficheux. En anglais, nous bénéficions d'un peu plus de
+ressources de qualité, tels que les livres [Building Embedded Linux
+Systems](http://www.amazon.fr/gp/product/0596529686), [Embedded Linux
+System Design And
+Development](http://www.amazon.fr/gp/product/0849340586). et tout une
+flopée de livres sur le développement noyau Linux.
+
+Fréquentant le site developpez.com, j'ai essayé d'amorcer un début de
+discussion autour des systèmes embarqués, quitte à créer une section
+embarquée si les gens répondent à l'appel. Cependant, je réalise que
+très très peu de monde s'intéresse à l'embarqué sur developpez.com et
+que finalement la ligne "éditoriale" ne s'y prête pas forcément.
+L'embarqué n'implique pas que du code, mais aussi de l'électronique, ce
+qui n'est pas tellement le créneau de leur site.
+
+Intéressé par la robotique, je me suis mis à fréquenter également les
+forum de [Robot Passion](http://www.robot-passion.com/) et [Planète
+Sciences](http://www.planete-sciences.org/forums/viewforum.php?f=5&sid=61fb206831b05d5c8169bb2b0ef806d7).
+On y trouve des gens très compétents, mais cela reste de l'ordre de
+l'amateurisme (comprendre non professionnel et pas forcément intéressés
+par du Linux Embarqué plus couteux que du développement sur PIC). A
+l'inverse, quand je me rends sur des sites anglophones tels que Linux
+Devices ou Embedded je tombe sur des portails trop généralistes et pas
+particulièrement techniques (du moins pas assez à mon goût). Encore que
+Linux Devices propose quelques tutoriaux très intéressants.
+
+A côté de ça, je vis dans le monde des logiciels libres et de l'open
+source depuis quelques années. J'en bénéficie dans mon travail de tous
+les jours et je ressens une envie et besoin d'y participer à mon tour.
+Tout d'abord pour remercier de l'aide apportée par les logiciels libres,
+mais aussi pour participer à leur essor et leur amélioration. Je ne suis
+encore que débutant, ainsi je me vois mal (pour l'instant) intervenir
+sur le développement du noyau Linux, ou bien sur des projets tels que
+Buildroot, Scratchbox, Busybox, gcc, ... que sais-je ! J'en ai fortement
+envie, mais j'aimerais gagner en expérience tout d'abord.
+
+Ainsi, je me demande s'il ne pourrait pas être profitable à beaucoup de
+monde de tenter de regrouper les acteurs francophones des systèmes
+embarqués autour d'un portail, à l'instar de developpez.com Nous
+pourrions ainsi proposer ensemble des articles techniques, tutoriaux et
+formations, documents, conseils, liens, voir l'hébergement de projets
+libres... Tous les outils utiles pour le développement de systèmes
+embarqués sous Linux. L'idée étant de pouvoir regrouper en un endroit
+unique une communauté autour des systèmes Linux embarqués.
+
+Je me pose donc beaucoup de questions sur la pertinence d'une telle
+démarche.
+
+-   Est-ce vraiment utile ? Suis-je le seul à ressentir ce besoin ?
+-   Est-ce judicieux de se lancer dans un portail en français ?
+    L'anglais ne serait-il pas plutôt de rigueur dans notre domaine ?
+
+Je suis prêt à me lancer dans l'aventure, mais j'aimerais savoir ce que
+vous (si vous me lisez) en pensez. N'hésitez pas à réagir sur ce sujet !
+Cela m'intéresse vraiment. EDIT : J'ai lancé une discussion sur le forum
+de
+[coder-studio.com](http://www.coder-studio.com/forum2/viewtopic.php?pid=31754)
+à ce sujet afin de compléter cet article et avoir d'autres avis.
