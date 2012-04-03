@@ -1,0 +1,285 @@
+---
+layout: post
+title: Simerion – Retour de développement
+categories: Ajax, Jeu en ligne alternatif, Jeu web, Nainwak, PHP, Simerion
+---
+
+![Logo Simerion](http://www.yoannsculo.fr/wp-content/uploads/2009/05/simerion.jpg)
+
+Je me suis lancé en 2005 avec un ami dans le développement d’un jeu par
+navigateur web: [Simerion](http://www.simerion.fr "Simerion") pour les
+gens qui ne connaissent pas. Il s’agit d’un jeu mélangeant à la fois le
+genre RPG et gestion. L’idée étant d’endosser le rôle d’un colon
+fraichement envoyé sur de nouvelles planètes. Chaque joueur choisit un
+métier, et le principe est simple : du RolePlay, tout le monde fait ce
+qu’il veut, tout est possible. Bref, dans le principe, le jeu idéal,
+mais hélas pas forcément en pratique.
+
+J’ai quitté l’équipe de Simerion, après 5 ans de conception et
+développement, il y a un peu plus d’un mois pour différentes raisons que
+j’aborderai plus loin. Mais je profite de ce billet pour faire une sorte
+de bilan du projet, de mon point de vue. L’idée étant de faire un retour
+d’expérience afin de pointer du doigt ce que nous avons pu apprendre
+mais aussi afin de mettre en évidence les erreurs que nous avons
+commises. Le tout dans l’espoir de pouvoir aider des personnes
+s’engageant dans un projet similaire. Tout d’abord, je précise que le
+jeu n’est pas arrêté. Il est toujours en développement, je n’ai fait que
+quitter l’équipe. Donc si mon article vous donne envie d’en savoir plus
+ou de rejoindre l’équipe de développement, n’hésitez pas à vous rendre
+sur [www.simerion.fr](http://www.simerion.fr "Simerion")
+
+Tout d’abord, un rapide historique :
+
+**2005** : Wett et moi-même avons ressorti du fond d’un tiroir les bases
+d’un projet que j’avais esquissé 2 ans plus tôt. Durant 5 mois nous
+mettons ainsi à plat toutes nos idées sur un forum et wiki. Mais très
+rapidement nos études respectives (classes prépa) nous ont poussées à
+mettre en pause le projet.
+
+**Juillet 2006** : Un an plus tard nous
+reprenons notre projet en main et continuons à travailler sur la
+conception durant un mois de manière soutenue.
+
+**Août 2006** : Nous
+commençons enfin le développement et devenons membre de l’association
+[Nainwak](http://www.nainwak.org "Nainwak")qui nous hébergera par la
+suite.
+
+**Août 2007** : Un an plus tard, avec l’aide d’Altheran qui nous
+a rejoint en mars, nous sortons notre première version alpha avec une
+cinquantaine de joueurs.
+
+**Mars 2009** : Plus d’un an et demi plus tard,
+la beta alors que je quitte l’équipe. Voici donc une suite de points,
+qui maintenant avec le recul me semblent importants à souligner.
+
+### Travailler en équipe
+
+A travers ce projet j’ai pu découvrir la nécessité de travailler à
+plusieurs. Et cela pour plusieurs raisons. Tout d’abord afin de
+s’entre-motiver lorsque certains d’entre nous sont démotivés. Voir
+d’autres personnes travailler sur le projet peut très facilement nous
+remonter à bloc. Le développement d’un jeu web comme Simerion ne doit
+pas se faire en comité réduit. Attention l’effet inverse n’est pas pour
+autant une bonne idée. S’entourer de trop de monde peut être néfaste
+pour le projet. Il faut prendre le juste nombre de programmeurs, en
+prenant en compte leurs disponibilités et leurs compétences.
+
+### Bien choisir son langage
+
+Notre choix s’est porté initialement sur le PHP couplé à de l’Ajax afin
+de bénéficier d’un jeu accessible partout depuis Internet avec une
+grande interaction avec les joueurs. Pourquoi le PHP ? Parce que ce
+langage m’était déjà familier et était simple à prendre en main.
+Cependant avec le recul, nous n’aurions sans doute pas dû employer
+celui-ci préférant sans doute le JAVA ou le C++ afin de réaliser un
+véritable MMORPG. A maintes reprises nous nous sommes mordus les doigts
+quant à notre choix de technologie. Nous avons très rapidement atteint
+les limites du PHP et de l’Ajax. Nous avons été bridés par nos choix
+initiaux qui nous ne ont pas permis pleinement de faire ce que nous
+souhaitions réaliser. Mais il était trop tard pour changer. Je conseille
+vraiment au départ de faire le tour de toutes les technologies lorsque
+l’on s’aventure dans un projet web d’ampleur. Chaque langage possède ses
+avantages et inconvénients qu’il faut comparer. Nous ne l’avons pas
+fait, et cela nous a desservis.
+
+### Ne pas réinventer la roue
+
+Une autre erreur que nous avons commise a été de ne pas faire le tour
+des Frameworks PHP et Ajax existants. En jeunes fous que nous étions,
+nous avons créé notre propre moteur de jeu de A à Z et notre propre
+Framework Ajax. Nous avons réinventé la roue et avons perdu un temps
+fou. D’un autre côté, nous ne savions pas forcément que des outils tout
+fait existaient, cela nous a toutefois permis de comprendre le
+fonctionnement d’un certain nombre de techniques et technologies. Mais
+si c’était à refaire j’utiliserais au maximum des outils déjà
+disponibles. Avant de commencer un projet conséquent. Je pense qu’il
+faut vraiment regarder, comparer les outils à sa disposition et ne pas
+fonce dans le tas tête baissée. Utiliser des outils déjà faits peut
+faire réellement gagner un temps précieux.
+
+### Utiliser des schémas et diagrammes UML
+
+L’utilisation de diagrammes UML est assez primordiale. Il est difficile
+d’être rigoureux sur la durée afin de mettre sur papier les idées avant
+de coder. Mais c’est un mal pour un bien au final, car c’est un gain de
+temps non négligeable. Toutefois les diagrammes UML ne sont utiles que
+si l’on ne change pas d’idée en permanence. Auquel cas, les diagrammes
+sont en permanence remis en cause, ce qui est pour ce coup-ci une grosse
+perte de temps.
+
+### Eviter l’approche du « tout objet »
+
+L’approche objet d’un jeu web est assez complexe. A première vue, le «
+tout objets » peut sembler être une bonne chose, mais les objets ne sont
+pas les amis des bases de données. Qui dit objets, dit attributs, et qui
+dit attributs dit base de données derrière chargée et mise à jour en
+permanence. Travailler avec les objets et leurs instances implique
+d’optimiser en permanence le code afin que le serveur ne s’écroule pas
+sous les requêtes SQL. Par exemple, si je veux charger une instance
+d’appartement d’un joueur dans Simerion, nous devons charger un objet
+qui va définir son type (classe), puis un objet qui va définir son
+instance de conteneur (bâtiment) ainsi que la classe de celui-ci. Vu que
+nous avons besoin parfois de localiser cet appartement, nous avons
+besoin de charger la région dans laquelle se trouve notre bâtiment (une
+table supplémentaire). Comme il y a plusieurs planètes il faut également
+charger sur quelle planète se trouve cette région (une table de plus).
+Au final la création d’un objet devient pharamineuse en terme de
+ressources, nécessitant une flopée de requêtes SQL. Imaginez comment
+charger des collections entières d’appartements... De quoi mettre à
+terre le serveur. Nous sommes alors obligés d’optimiser en nous
+éloignant peu à peu du système classique d’objets. Travailler en objet
+est intéressant, mais dès que l’on se met à travailler sur des pages qui
+vont recevoir énormément de visites, l’intérêt en prend un sérieux coup.
+Je pense qu’il n’y a pas de solution absolue et qu’il faut privilégier
+les objets pour la maintenabilité du code. Par contre, en ce qui
+concerne le lien avec les BDD, il faut trouver un compromis et essayer
+de s’éloigner du schéma classique qui consiste à tout charger lors de la
+création de l’objet. Je pense qu’il suffirait de regarder du côté des
+gros Frameworks ce qu’il se fait en la matière. La liaison avec la BDD
+est une chose assez pointilleuse et complexe, je pense que même au bout
+de 5 ans, le code n’est pas optimisé au maximum de ce côté-là. Par
+conséquent, aller voir les outils qui existent déjà peut être d’une très
+grande aide.
+
+### Ne pas remettre en question son code en permanence
+
+Une des choses qui nous a fait le plus perdre de temps a été la
+permanente remise en question de notre code. C’est bien plus facile à
+dire qu’à faire, mais il faut à tout pris se contenter au plus tôt de
+son travail pour avancer de l’avant. De la même façon, il faut éviter
+d’optimiser à mort tout et tout de suite, il faut le faire au fur et à
+mesure en trouvant un juste milieu. J’aborderai plus loin la question du
+travail étape par étape, mais il est très très important, d’après
+l’expérience que j’ai tirée de Simerion, de se contenter de ce qui
+fonctionne et aller de l’avant pour avoir du concret et non pas du code
+en permanence remanié. Une fois que le code fonctionne il est alors
+possible de l’optimiser, mais il faut viser à mon sens le fonctionnel
+avant de foncer tête baissée sur la sécurité et l’optimisation du jeu.
+
+### Bien choisir son cycle de développement
+
+Le choix de notre cycle de développement n’a définitivement pas été le
+bon. Et ce dernier est à mon sens la raison de notre (mon) échec. 5 ans
+! Nous avons passé 5 ans sur ce projet et toujours pas de jeu jouable en
+version publique à mon départ … C’est entre autres une des raisons de
+mon arrêt. C’est même un exploit d’avoir tenu aussi longtemps. Nous
+avons choisi en effet de n’ouvrir le jeu que lorsqu’une version du jeu
+serait suffisamment jouable pour retenir le joueur. Or, le principe de
+Simerion est de pouvoir tout faire. Tout est interdépendant, et tout
+s’équilibre. Il est alors impossible de sortir une version jouable tant
+que TOUT le jeu n’a pas été programmé. Quelle erreur nous avons faite
+ici ! Dès que le concept est posé sur papier un jeu amateur doit, selon
+moi, sortir au plus vite en production. A la fois pour avoir des retours
+des joueurs, mais aussi afin de se motiver dans son travail de
+développement. C’est extrêmement déprimant de ne pas avoir de retour de
+joueurs avant des mois, voir des années dans notre cas. La motivation
+est naturellement en constante baisse, et pas un joueur pour vous
+rebooster. Il ne faut compter que sur les membres de l’équipe qui eux
+aussi sont en manque de motivation. Donc vraiment je conseille vivement
+de développer les jeux web sur des versions fréquentés par les joueurs
+(tout du moins pour les jeux amateurs). Il faut sortir régulièrement les
+versions de développement et surtout ne pas attendre aussi longtemps que
+nous entre chaque version. En faisant cela on entretient la communauté
+de joueurs qui nous supporte et nous est très utile, et on entretient
+notre motivation dans le projet. Sans cela, tout s’effondre au bout de X
+mois ou années. Et tout l’investissement aura été vain.
+
+### Créer une communauté autour de son jeu
+
+Comme je le disais précédemment, il est nécessaire de s’entourer dès le
+début d’une communauté de joueurs. Ces derniers pourront tester votre
+jeu, donner leur avis, proposer leurs idées d’améliorations etc. N’ayant
+pas lancé de version jouable durable de Simerion, nous n’avons pas eu de
+communauté derrière nous pour nous soutenir dans notre développement. Et
+c’est une conséquence très négative, qui va avec notre mauvais choix de
+cycle de développement. Je conseille donc vraiment de travailler dès le
+début à la création d’une communauté entourant le projet à la fois pour
+y puiser de la motivation, mais aussi afin de se faire aider. Car bien
+souvent, la communauté gravitant autour de votre jeu est source de
+nouveaux membres pour votre équipe de développement.
+
+### Les amateurs ne peuvent pas rivaliser avec les pros
+
+Cela fait mal à dire, mais la création d’un jeu RPG complexe n’est pas à
+la portée d’une équipe d’amateurs. Qu’on me montre le contraire et j’en
+serais ravis ! Mais le fait est que la création d’images, de décors,
+d’histoires, de scénarios, de quêtes et de missions nécessite un travail
+pharaonique. J’ai les 95% du temps endossé le rôle du développeur, du
+scénariste et de l’illustrateur à la fois. Ceci est quasiment impossible
+à gérer dans un tel projet. Idéalement il faudrait avoir dans son équipe
+au moins un graphiste / illustrateur et plusieurs scénaristes pour
+remplir le jeu. Mais il s’agit d’atouts rares, et il faut bien souvent
+ne compter que sur soi même. Sur cet aspect je suis assez pessimiste
+hélas, je pense qu’un jeu de l’envergure de type Fallout, Baldur’s gate,
+Final Fantasy, ou même Zelda n’auraient pas pu être réalisés par des
+amateurs. Cela demande trop de travail en dehors de la partie
+programmation. Le jeu ultime est à mon sens impossible à développer par
+des amateurs, hélas… A mon sens, un jeu amateur ne doit pas voir trop
+gros dès le départ. Il faut y aller au fur et à mesure, en se faisant
+plaisir et tout en gardant à l’esprit que nous ne pouvons pas rivaliser
+avec les grands. Le jeu ultime amateur n’est pas réalisable, cela
+demande beaucoup trop de travail. Avec Simerion nous sommes partis sur
+un concept trop complexe, trop utopique … La clé de la réussite est un
+cadrage dès le départ qui trouve un compromis entre un concept novateur
+et le minium de code possible.
+
+### Tenir un cahier des charges et une documentation à jour
+
+Un point important dans le cycle de développement réside dans la tenue
+d’un cahier des charges et d’une documentation à jour. En effet, il
+n’est pas rare de mettre en pause le projet pendant X mois. Et reprendre
+le code après une période d’inactivité est vraiment très difficile (même
+pour du code tapé soi même). Le cahier des charges permet de garder une
+vue globale sur le projet avec un certain recul, il vous permet de poser
+au clair toutes les idées et mieux structurer ses idées. La
+documentation permet, elle de son côté d’expliquer le fonctionnement du
+jeu (aspect technique) mais aussi d’expliquer pourquoi tel ou tel choix
+d’algorithme. La documentation peut vous faire gagner un temps fou pour
+vous remettre dans votre code, ou pour comprendre le code d’un autre
+programmeur. Ces deux outils permettent également l’intégration de
+nouveaux membres à l’équipe de développement (chose à laquelle on ne
+pense pas forcément). Le fait est que Simerion est devenu une véritable
+usine à gaz et que plusieurs personnes se sont cassées les dents à
+essayer de comprendre notre code pas toujours commenté ni expliqué. Le
+manque d’explication peut alors être un frein au recrutement de nouveaux
+développeurs.
+
+### Se faire soutenir
+
+![Association Nainwak](http://www.nainwak.org/images/stories/nainwaksmall8vc.png)
+
+Nous avons rejoint dès le départ l’association
+[Nainwak](http://www.nainwak.org "Nainwak"), qui nous a hébergés,
+soutenus et conseillés. Nous n’aurions sans doute pas tenu autant de
+temps sans elle. Nous avons même eu la chance grâce à elle d’être
+exposant à 2 reprises au festival du jeu vidéo. Nous avons pu rencontrer
+des professionnels qui ont été intéressés par notre jeu. Cela fut une
+expérience très enrichissante. Je conseille vivement à toute personne se
+lançant dans un jeu web sérieux de contacter Nainwak. La mission de
+cette association est d’aider les amateurs, et elle y travaille à
+merveille.
+
+### Bilan
+
+J’ai complètement arrêté Simerion tout d’abord parce que je ne prenais
+plus aucun plaisir à travailler dessus. Le développement était devenu
+interminable et j’avais besoin de passer à autre chose. A cela se sont
+ajoutés des problèmes de santés plus une saturation du web en général.
+Abandonner Simerion alors que ce projet me tenait tellement à cœur a été
+une chose très difficile, mais je pense qu’au bout de 5 ans, il fallait
+simplement passer à autre chose. Simerion a été une expérience vraiment
+très enrichissante. J’ai pu apprendre énormément et rencontrer beaucoup
+de monde. Mais je pense que si nous nous étions pris autrement dès le
+départ nous aurions sans doute bien mieux réussi, et je serais encore
+sur le projet. Mais tout cela fait partie de l’apprentissage. C’est
+chuter pour mieux se relever et mieux démarrer mes prochains projets.
+Toutefois, nous nous sommes lancés dans un concept dément, où tout
+devait être possible. Le jeu ultime en quelques sortes. Un tel jeu n’est
+tout bonnement pas réalisable et complètement utopique (A moins d’être
+un studio de jeu vidéo avec de la monnaie sonnante et trébuchante pour
+assurer le coup). Mauvais choix de départ, concept trop ambitieux,
+mauvaise démarche de développement, réinvention de la roue ont été
+autant d’erreurs qui ont amenés Simerion à ne pas arriver au point
+escompté. On apprend de ses erreurs et j’espère que les nôtres pourront
+vous êtes bénéfiques également.

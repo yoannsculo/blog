@@ -1,0 +1,123 @@
+---
+layout: post
+title: Mon premier robot wifi
+categories: C, camera, carte fox, foxboard, Genesis, libwiimote, robot, wifi, wiimote
+---
+
+<object width="425" height="344" data="http://www.youtube.com/v/eSErBSeCOCU&amp;hl=fr&amp;fs=1" type="application/x-shockwave-flash"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/eSErBSeCOCU&amp;hl=fr&amp;fs=1" /><param name="allowfullscreen" value="true" /></object>
+
+Voilà des années que je rêve de créer mon propre robot, j'ai enfin
+franchi le pas ! Je développe, depuis Février dernier et avec un autre
+étudiant, un robot wifi commandé par wiimote doté d'une
+[caméra](http://eshop.acmesystems.it/?id=5) 360° pour retransmettre ce
+que voit le robot dans les moindres recoins. Nous utilisons une [carte
+fox](http://foxlx.acmesystems.it/?id=4) pour le coeur du robot et une
+carte [SSC-32](http://www.lynxmotion.com/Product.aspx?productID=395)
+pour le contrôle des servomoteurs. Le tout relié en wifi à un PC
+débarqué qui s'occupe de l'envoi des commandes au robot. Une manette de
+wii étant reliée au PC en bluetooth pour commander le robot. Je profite
+donc de ce premier article pour présenter un peu ce projet, qui sera
+j'espère, le premier de tout une lignée.
+
+J'avais la possibilité de travailler sur un projet libre sur les
+systèmes embarqués dans le cadre de mes études. J'ai sauté sur
+l'occasion pour développer le robot wifi de mes rêves. Et révélation !
+Ce n'est pas aussi dur que l'on pourrait imaginer.
+
+Notre ami le robot
+
+![Notre ami le robot](http://www.yoannsculo.fr/wp-content/uploads/2009/05/dsc06935_small.jpg)
+
+Au départ nous pensions utiliser un pc portable, lui mettre des roues et
+en faire un robot autonome. Nous avons réalisé :
+
+-   qu'un pc tel quel n'a pas d'entrée / sorties utilisables. Il faut se
+    concocter une carte électronique pour gérer tout ça depuis l'usb et
+    ça revient à prendre un marteau piqueur pour écraser une mouche
+    finalement.
+-   qu'il est mieux de dissocier l'électronique logique de celle de
+    puissance. Donc l'alimentation des servos doit se faire à part.
+
+Par conséquent, nous avons abandonné l'idée du robot-pc et sommes passés
+à la carte fox, que nous connaissons déjà bien et qui bénéficie d'une
+multitude de ports d'entrée sortie :) Nettement plus intéressant pour un
+robot embarqué.
+
+Nous étions initialement partis sur un robot à moteurs brushless
+(moteurs d'avions) pour la direction. La première étape a consisté à
+produire un signal PWM (signal carré servant à faire marcher les
+moteurs). Comme de gros débutants, nous avons essayé de produire un PWM
+depuis la carte fox. Premier échec, la fréquence de la carte fox ne nous
+permettait pas de descendre en dessous de 1 seconde de sleep pour
+générer notre signal PWM. Ce qui était fort embêtant, vu que la période
+du signal recherché est de l'ordre des millisecondes. Nous avons feinté
+et avons travaillé directement avec les cycles d'horloge. Miracle, cela
+a très bien fonctionné. Nous avions notre moteur qui démarrait comme on
+l'entendait... sauf que malins comme nous étions nous n'avions pas pensé
+qu'en lançant d'autres processus le programme ne pouvait plus
+fonctionner. Tout notre travail était donc réduit à néant.
+
+Qu'à cela ne tienne, nous sommes passé au développement sur PIC18 pour
+gérer N signaux PWM en communiquant en série avec la carte fox. Malgré
+de nombreuses tentatives infructueuses, nous n'avons pas réussi à
+obtenir une communication série stable entre le PC et le PIC. Au grés de
+nos recherches sur Internet, nous sommes tombés sur la carte SSC-32 que
+l'on peut voir juste en dessous sur la photo.
+
+Intérieur du robot avec une vue directe sur la carte SSC-32
+
+![Intérieur du robot](http://www.yoannsculo.fr/wp-content/uploads/2009/05/dsc06934_small.jpg)
+
+Cette petite carte (pour les fainéants) sort jusqu'à 32 PWM et peut
+communiquer avec un PC en série par commandes ASCII. Il n'y a qu'à
+l'alimenter. Déjà beaucoup plus simple ! Nous sommes passés également
+aux servomoteurs au passage, laissant tomber les moteurs brushless, plus
+complexes à utiliser et beaucoup plus chers. Mais ce n'est que partie
+remise ;)
+
+Quand nous avons pu faire bouger notre premier servo, nous nous sommes
+attelés au client serveur entre la fox et le pc débarqué (un eeepc).
+Dans l'absolu rien de bien complexe, il s'agit d'un client/serveur
+basique en C qui envoie les commandes à la fox qui à son tour dialogue
+avec la SSC-32. Le plus ajouté étant la wiimote, que nous avons choisie
+pour commander notre robot. Après avoir luté pour compiler la librairie
+[libwiimote](http://libwiimote.sourceforge.net/) nous avons réussi à
+transmettre les infos de la manette, du PC à la fox. Miracle ! Notre
+robot fonctionne :)
+
+Je vous passe les photos de notre premier prototype en carton ! Nous
+nous sommes créé un chassis un peu plus digne en lego et avons installé
+tout notre bazar. Hormis le fait que les câbles (série et Ethernet) font
+3m de long (on cherche des câbles beaucoup plus courts) et qu'il est
+encore alimenté par fils, le robot se déplace sans problème et bouge sa
+caméra.
+
+J'oubliais ! Nous avons opté, bourrins que nous sommes, pour un routeur
+wifi branché en Ethernet à la carte fox. Il s'est avéré que la
+transmission du flux vidéo depuis le serveur vidéo de la fox descendait
+à moins d'une image par seconde lorsque nous utilisions une clé wifi usb
+... assez embêtant. Pas de problèmes, nous avons carrément embarqué le
+routeur. Maintenant, il s'avère que [certains
+routeurs](http://www.civade.com/2007/03/31/22-serveur-nas-linksys-nslu2-un-serveur-linux-complet-qui-consomme-5-watts)
+peuvent carrément être utilisés comme systèmes embarqués avec un noyau
+linux. Donc à terme, si l'on souhaite optimiser, il faudra trouver une
+solution et virer soit la fox, soit le routeur pour ne pas avoir 2 fois
+le même appareil.
+
+Donc actuellement nous travaillons sur l'autonomie du robot, c'est à
+dire la mise en place de batteries pour alimenter tout ça. Nous pensons
+peut être également nous procurer une [FONERA
+2.0](http://www.fon.com/fr) pour remplacer le gros routeur. Elle ne
+consomme que 5 V, comme la fox, ce qui nous facilite la tâche et est
+carrément moins encombrante. Ensuite il va falloir résoudre un certain
+nombre de bugs du robot, qui a la fâcheuse habitude de recevoir des
+commandes fantômes et donc à faire NIMPORTE QUOI. Cela semble venir de
+mon code \^\^ donc nous ne sommes pas perdus. L'étape suivante sera sans
+doute de se faire une interface sur le pc serveur débarqué et d'essayer
+de faire quelques bidouilles en traitement d'images pour que le robot
+repère un peu son entourage.
+
+Voilà pour aujourd'hui. La suite au prochain épisode !
+
+N'hésitez pas à venir réagir à cet article.
+

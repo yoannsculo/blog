@@ -1,0 +1,48 @@
+---
+layout: post
+title: Minoru, la caméra stéréovision qu'il me faut !
+categories: camera, minoru, Robert, stéréovision
+---
+
+Voilà quelques temps que je cherche 2 caméras pour faire de la
+stéréovision sur mon prochain robot
+([Robert](http://r19649.ovh.net/robert/)). Je me suis heurté à plusieurs
+problèmes. J'ai tout d'abord réalisé à mon grand dam que 98% des webcam
+du marchés n'était pas fixes sur leur supports, mais bénéficiaient
+toutes d'un ou plusieurs axes de liberté pour pouvoir les diriger dans
+la direction souhaitée. Pas moyen d'en trouver une fixe ! Or la
+stéréovision (si on ne souhaite pas trop se compliquer la tâche) doit se
+faire à partir de 2 caméras parfaitement alignées selon le même axe. Ma
+première idée a été d'aller regarder les caméras industrielles comme on
+en utilise au travail ... Bien que motivé, les 300€ et quelques l'unité
+accompagnés d'une durée de vie assez courte m'ont pas mal refroidi.
+
+J'ai ensuite jeté mon dévolu sur une [mini caméra
+numérique](http://www.lextronic.fr/P5734-camera-miniature-numerique-a-sortie-jpeg.html)
+de chez 4dsystems. Je l'ai commandé, et j'attends toujours mon colis :D
+Cependant , finalement, je ne pense pas qu'elle conviendra à mes
+besoins. Cependant, j'ai hâte de pouvoir bidouiller avec, je songe
+certainement à l'utiliser pour l'odométrie optique ou pour en faire un
+gadget d'espionnage.
+
+Et j'ai récemment découvert [Minoru](http://www.minoru3d.com/), une
+caméra stéréovision filmant directement en 3D en superposant les 2
+images en une seule (rouge et bleu) afin de pouvoir la voir en relief
+avec des lunettes 3D. Cette caméra a fait parlé d'elle en début d'année,
+mais ce n'est pas le gadget geek en lui même qui m'intéresse ici (bien
+que j'aimerais bien tester également :P), mais plutôt les
+caractéristiques techniques du produit.
+
+Minoru semblerait être reconnue comme 2 caméras distinctes de
+résolutions variables : 800x600 / 640x480(VGA) / 352x288 / 320x240
+pixels pour 30 images par secondes. Pour 80 €, cette caméra vaut
+carrément le coup d'être détournée de son but initial afin d'en faire un
+capteur de vision pour mon robot :) En terme de rapport qualité/prix je
+n'ai pas encore vu mieux et je songe à me la commander dans les jours
+qui viennent. Pour couronner le tout, [des chercheurs
+japonais](http://nma.web.nitech.ac.jp/fukushima/minoru/minoru3D-e.html)
+ont déjà travaillé avec cette caméra sous OpenCV. De quoi partir sur de
+très bonnes bases. J'ai donc hâte de pouvoir bidouiller tout ça et
+m'essayer à la stéréovision !
+
+![Minoru, la caméra 3D qu'il me faut !](http://www.yoannsculo.fr/wp-content/uploads/2009/09/minoru.jpg)

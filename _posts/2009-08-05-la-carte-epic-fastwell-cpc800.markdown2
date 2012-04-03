@@ -1,0 +1,27 @@
+---
+layout: post
+title: La carte EPIC Fastwell CPC800
+categories: CPC800, EPIC
+---
+
+![Carte CPC800](http://www.yoannsculo.fr/wp-content/uploads/2009/08/376124500x0-300x199.jpg)
+
+Enfin ! Après plusieurs semaines de bricolage avec mon alimentation ATX, mes
+cartes EPIC fonctionnent enfin !
+
+J'ai en effet récupéré deux super cartes au format EPIC de la marque
+Fastwell. Pentium M à 1.8GHz, 1Go de RAM avec tout un paquet de
+connectiques intéressantes. Il s'agit de cartes endurcies faites pour
+résister à un choc de 50g ... je pense que j'ai de la marge. Quoi qu'il
+en soit, elles vont faire des cerveaux idéaux pour mes nouveaux robots.
+Avec de telles cartes je vais pouvoir faire du traitement d'images sans
+trop de soucis. Je commence du coup à me renseigner pour faire de la
+stéréoscopie :) Ce n'est pas le genre de choses que je pouvais faire
+avec la Fox :P
+
+Seul hic, la carte consomme 7A sur 5V, ce qui fait quand même 35W, ce
+qui n'est pas rien comparé à mes précédents robots. Il va falloir que je
+me trouve une batterie au plomb à l'ampérage suffisant... En attendant
+je vais pouvoir travailler sur secteur avec mon alimentation ATX, ce qui
+me permettra déjà de tester ce que cette carte a dans le ventre. Reste à
+savoir quelle distribution linux y installer :]

@@ -1,0 +1,33 @@
+---
+layout: post
+title: Premier test de la Fox Board G20
+categories: Acmesystems, carte fox, foxboard, G20
+---
+
+![Carte fox G20](http://www.yoannsculo.fr/wp-content/uploads/2009/10/DSC07015_small.jpg)
+
+Me voici enfin en la possession de la Fox Board G20 de chez Acmesystems.
+Je tiens à remercier le constructeur, qui m'a envoyé gratuitement une
+combo box, ayant pris connaissance de mes projets :) J'ai donc reçu un
+sympathique colis d'Italie par Fedex mardi dernier. Et je viens juste de
+trouver le temps de tester la carte.
+
+Tout d'abord, l'adresse ip par défaut de la G20 est **192.168.1.92**, un
+simple
+
+	ifconfig eth0 192.168.1.111 netmask 255.255.255.0
+
+suffit alors à configurer la connexion au PC. J'essaierai plus tard de
+brancher la carte directement à ma Neufbox pour ne pas avoir à
+configurer ma connexion à chaque fois.
+
+On boote alors sur un Gentoo fraichement installée. Ça change pas mal de
+l'ancienne Fox, mais n'ayant pas de projet précis sous la main pour
+l'instant, il ne m'est pas possible de tester ses performances. Je songe
+certainement développer prochainement un driver linux pour ma caméra
+série ! Je testerai donc petit à petit ce qu'elle a dans le ventre et
+commence dès à présent à rédiger un nouveau tutoriel pour faire suite à
+mon [introduction à la carte
+fox](http://yoannsculo.developpez.com/tutoriels/linux/introduction-carte-fox-lx832/).
+Bref, plus d'infos et de découvertes au prochain épisode ! ;)
+

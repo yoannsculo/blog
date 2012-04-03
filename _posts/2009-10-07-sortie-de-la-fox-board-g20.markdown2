@@ -1,0 +1,23 @@
+---
+layout: post
+title: Sortie de la Fox Board G20
+categories: Acmesystems, carte fox, foxboard, G20, Gentoo, OpenWRT
+---
+
+![Fox Board G20](http://www.yoannsculo.fr/wp-content/uploads/2009/08/foxg20.jpg)
+
+La tant attendue carte fox G20 est enfin disponible sur le magasin en
+ligne d'[Acmesystems](http://eshop.acmesystems.it/?id=netusg20).
+On peut également remarquer que le [nouveau
+wiki](http://foxg20.acmesystems.it/doku.php?id=documentation) qui lui
+est dédié se remplit progressivement de contenu fort intéressant. On y
+apprend notamment que la compilation sous Gentoo se fera directement sur
+la FOX Board G20 et ne nécessite plus de SDK, la chaîne de compilation
+étant présente sur le système. On y trouve aussi un certain nombre
+d'info pour installer le SDK d'OpenWRT et travailler avec.
+
+Bref, j'ai vraiment hâte de pouvoir la tester, héhé !
+
+J'imagine que nous devrions la voir bientôt apparaître chez Lextronic,
+revendeur français d'Acmesystems.
+
