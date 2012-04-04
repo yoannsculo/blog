@@ -7,7 +7,6 @@
     <id>{{ blog.url }}</id>
     <author>
         <name>{{ blog.author }}</name>
-        <email>{{ blog.mailto }}</email>
     </author>
     <updated>{{ site.now.date() }}</updated>
 
