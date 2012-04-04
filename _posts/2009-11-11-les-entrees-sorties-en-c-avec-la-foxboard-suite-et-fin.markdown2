@@ -7,8 +7,7 @@ categories: carte fox, entrée, foxboard, G20, sortie, SRF05
 J'ai profité de ce mercredi 11 novembre pour bidouiller un peu la fox :)
 
 J'ai donc pu terminer mes fonctions d'entrée/sortie. J'en ai profité
-pour mettre un makefile et mettre [une archive en
-ligne](http://www.yoannsculo.fr/docs/foxboard/foxg20_io.tar.gz) où vous
+pour mettre un makefile et mettre [le code en ligne](https://github.com/yoannsculo/foxg20-gpio) où vous
 pouvez télécharger mon code. Je pense que cela mérite quelques petites
 finitions, mais le code fonctionne bien chez moi en tout cas. Par
 défaut, mon main, dans led.c fait clignoter la ligne 9 du port J7. Pour
