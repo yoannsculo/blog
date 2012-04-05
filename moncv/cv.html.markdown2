@@ -1,0 +1,263 @@
+---
+layout: page
+title: Ingénieur Systèmes Embarqués - Recherche d'Emploi
+categories: C, CV, Emploi, ingénieur, ingénieur C embarqué, ingénieur linux embarqué, ingénieur logiciel embarqué, ingénieur systèmes embarqués, linux, système embarqué, Systèmes Embarqués, technologies mobiles
+---
+
+## Expérience professionnelle
+
+#### Archos (Août 2011)
+Ingénieur Développement Logiciel - Linux/Android
+
+** **
+
+#### Mindscape (2011 - 5 mois)
+Responsable équipe embarqué - [Karotz](http://www.karotz.com)
+
+- Equipe de 3 personnes.
+- Rédaction des spécifications (Software et Hardware) du prochain produit.
+- Maintenance et évolution du produit Karotz, gestion de la communauté de développeurs.
+
+** **
+
+#### Mindscape (2010 - 13 mois)
+Ingénieur systèmes embarqués - [Karotz](http://www.karotz.com) (Nabaztag V3)
+
+- Rédaction des spécifications, conception et développement de l’architecture logicielle
+embarquée de Karotz
+- Création et mise en place From Scratch du système
+Linux embarqué / BSP sur ARM 920T et kernel 2.6.28
+- Utilisation de Buildroot, uClibC, Busybox et cross-compilation d’applications pour ARM
+- Mise en place : de l'environnement de dev., du YAFFS, du système de
+restauration d'usine et de mise à jour automatique, de la découpe du
+système en briques D-Bus, du protocole serie de configuration du
+produit, de la connexion réseau Wifi/Ethernet, du mass storage, choix du
+moteur de VM du SDK, des applications utilisateurs, ...
+- Optimisation (temps de boot, performances, ...) et développement Kernel Linux
+- Participation active aux prises de décisions sur l’architecture, les
+choix d’applications et les différents protocoles (UML, benchmarks,
+rapports, brainstormings et veille technologique)
+- Participation au CES 2011 à Las Vegas en tant qu'exposant
+
+`C/C++`, `Bash`, `Python`, `JavaScript`, `Buildroot`, `Busybox`, `Crosstool-NG`, `GCC`,
+`Makefile`, `ddd`, `valgrind`, `D-Bus`, `Glib`, `V8`, `Gstreamer`, `Protocol Buffers`,
+`Wifi`, `RFID`, `VoIP/SIP`, `Linux`, `vim`, `GIT`, `SVN`
+
+** **
+
+#### Centre National d'Études Spatiales (2009 - 6 mois)
+Stage de fin d'études.
+
+Navigation long terme pour un **robot d’exploration
+planétaire** - Mission Exomars
+
+- Etude et implémentation des algorithmes
+de fusion de cartes topographiques issues du modèle numérique du terrain
+(stéréovision).
+- Intégration au simulateur d’environnement martien puis
+directement sur le robot sur le terrain d'essai du CNES. Développement
+en **C** et optimisation pour une cible de type calculateur **linux
+embarqué**.
+- Amélioration des algorithmes de segmentation des modèles
+numériques de terrain.
+
+`C`, `Linux`, `GTK`, `ddd`, `valgrind`, `vim`, `SVN`
+
+** **
+
+#### Viveris Technologies (2008 - 6 mois)
+Stage de développement web.
+
+- **Développement du site Internet du C.E.** : Utilisation du framework
+Zend pour l'intégration de modules métiers de gestion du CE au sein de
+Joomla.
+- **Développement pour le compte de Thalès** d’un module de
+génération de fichier XML en C\# et SQL Server pour une application de
+gestion de titres de transport pour la ville de Toronto - Spécifications
+et programmation en anglais
+- **Traduction Visual Basic vers C\#** des
+sources d'une application de gestion de contacts client de Viveris
+Technologies.
+
+`PHP 5`, `Zend`, `Joomla`, `CVS/SVN`,
+`Eclipse`, `Linux`, `Framework .NET`, `C#`, `Visual Basic`, `SQL Server`, `Tests
+unitaires`
+
+** **
+
+#### EDF (2007 - 2 mois)
+Employé à la Direction Recherche & Développement
+
+- Travail d’adaptation et de mise en forme de
+l’interface graphique d’un logiciel de simulation de réseaux électriques
+(EMTPWorks)
+
+`DHTML`, `Javascript`, `ActiveX`, `CSS`, `XML`
+
+** **
+
+#### EDF (2006 - 2 mois)
+Stage d'analyse de log à la Direction Informatique et Télécommunications d’EDF
+
+- Listing et analyse des messages de log du périmètre coupe-feu afin de
+repérer d'éventuels problèmes des éléments du réseau.
+
+** **
+
+#### SNECMA MOTEURS (2006 - 1 mois)
+Stage ouvrier
+
+- Pilotage d’une chaîne de décontamination Grenaillage et sablage sec.
+
+** **
+
+#### EDF (2005 - 1 mois)
+Employé au service des ressources humaines
+
+- Classification, aide à la gestion des paies et des formations des agents.
+
+** **
+
+## Formation
+
+**2009**
+Diplôme d'ingénieur en **Systèmes d'Information et Télécommunications**
+à l’**Université de Technologie de Troyes** (UTT) - Spécialité
+**Technologies Mobiles et Systèmes Embarqués**
+
+**2004**
+6 mois de CPGE PCSI au lycée Jean-Baptiste Corot (91)
+
+**2004**
+Lycée Marcel Pagnol (91) Bac S - Spécialité Physique/Chimie - Section
+européenne allemand - Mention AB
+
+## Connaissances informatiques
+
+#### Langages
+
+**C/C++**, Bash/Sh, Python, JAVA (SE/ME/EE/Android), CGI, LaTeX
+
+#### Langages Web
+
+PHP 5, Perl, AJAX, JavaScript, CSS/HTML – MySQL Serveurs Apache, Tomcat,
+IIS/SQL Server - Administration de serveur Linux
+
+#### Outils
+
+GIT, SVN, CVS, Trac, Gforge, Jira, Wiki, UML, Méthode AGILE / SCRUM
+
+#### Linux embarqué
+
+Bonnes connaissances de Linux embarqué : architecture, fonctionnement du
+kernel et outils GNU/Linux Processeurs x86, ARM (ARM 920T, 926, SAM9G20,
+OMAP), AXIS et microcontrôleurs PIC et Atmel Chaînes de compilation
+croisée et développement Linux (make, gcc, gdb, gdbserver, ddd,
+valgrind,uClibc, glibc, Busybox, crosstool-NG, qemu, bootloaders,
+U-Boot, fileystems, etc.)Chaînes de compilation croisée et développement
+Linux (make, gcc, gdb, gdbserver, ddd, valgrind,uClibc, glibc, Busybox,
+crosstool-NG, qemu, bootloaders, U-Boot, fileystems, etc.) Buildroot,
+OpenEmbedded /Ångström - Systèmes Android et MeeGo Création de Linux
+From Scratch - Configuration, recompilation, optimisation de kernel -
+drivers Développement multimédia, audio, réseau
+
+#### Protocoles & Bus
+
+TCP/IP, Wifi, Bluetooth, RFID, Zigbee, GPS, GSM/GPRS/EDGE - USB, I2C,
+RS232/FTDI, JTAG
+
+#### Outils et libs
+
+Glib, D-Bus, Protocol buffers, Gstreamer, OpenCV - Vim - Scilab/Matlab
+
+#### Autres ####
+
+Connaissance des licenses open source - Electronique numérique - Notions
+de traitement d’images
+
+## Projets significatifs
+
+**2009**
+Développement d'un [robot mobile](http://r19649.ovh.net/robert)
+autonome.
+
+`C`, `Linux`, `Capteurs de distance`, `Odométrie`, `Stéréovision`
+
+**2009**
+Développement d'un [robot mobile](http://www.yoannsculo.fr/genesis/)
+commandé par manette de Wii
+
+`C`, `Linux`, `Wiimote`, `SDL`, `serveur vidéo`, `RS232`, `Bluetooth`, `Wifi`, `PIC18`,
+`électronique numérique`
+
+**2009**
+Développement d'un [planificateur d'activités
+touristiques](http://www.yoannsculo.fr/tourismo/) sous Android.
+
+`JAVA`, `Android`
+
+**2009**
+Mise en place d’un serveur SMS embarqué. Envoi des résultats des examens
+de l’UTT aux étudiants par SMS.
+
+`C`, `Linux`, `commandes AT sur modem GSM`, `scripts CGI`, `serveur
+web embarqué`
+
+**2005 - 2009**
+Création et développement du [jeu par navigateur web -
+www.simerion.fr](http://www.yoannsculo.fr/simerion/) Travail amateur en
+équipe Spécification, conception, développement et administration du jeu
+Exposant aux festivals du jeu vidéo en 2007 et 2008 à Paris
+
+`PHP / MySQL`, `Ajax
+(Framework perso)`, `Javascript`, `SVN`, `Trac` et `serveur Debian`
+
+## Langues
+
+**Anglais**
+Courant - **TOEIC : 890/990 **(Août 2009) - Pratique quotidienne
+(lecture/écoute/écriture)
+
+**Allemand**
+Courant - **ZERTIFIKAT DEUTSCH : 267/300** (2005) - Niveau facilement
+réactivable 6 mois d'études en **Allemagne (Berlin)** à la **Technische
+Fachhochschule **(TFH Berlin)
+
+## Associatif
+
+**Aujourd'hui**
+Rédacteur Linux / Systèmes embarqués pour le site
+[Developpez.com](http://yoannsculo.developpez.com/)
+
+**2009**
+Membre de l'association des jeux vidéo amateurs
+([AJVA](http://www.ajva-online.com/))
+
+**2008/2009**
+Membre du club de robotique de l'UTT - C embarqué / Linux / Electronique
+
+**2008**
+Membre de la fédération des créateurs indépendants de jeux en ligne
+alternatifs (SYNAPSE).
+
+**2006/2009**
+Membre de l'association [Nainwak](http://www.nainwak.org) (Aide aux jeux
+web amateurs)
+
+**2005/2006**
+Président du club de dessin et d'infographie de l'UTT.
+
+## Divers
+
+**Autres**
+
+- Forte curiosité technique, intérêt prononcé pour le monde du libre et le
+partage de connaissances
+- Veille technologique - Séminaires, salons et
+conférences - Listes de diffusion – Implication dans la communauté
+
+**Loisirs**
+
+- Robotique, électronique, programmation
+- Badminton, Footing, Série/Cinéma
+- Pratique du dessin et de la bande dessinée

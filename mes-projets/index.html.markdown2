@@ -1,0 +1,56 @@
+---
+layout: page
+---
+
+## Projets
+
+Voici comment il m'arrive d'occuper mon temps libre :)
+
+### Open Source
+
+#### ucblog (2012) (<a href="https://github.com/yoannsculo/ucblog">Page du projet</a>)
+ucblog est un générateur de site statique en C. Inspiré de jekyll et growl, il a pour vocation d'être très simple à utiliser, avec un minimum de dépendences. Et comme je vis dans le monde de l'embarqué, il est en partie prédestiné à l'embarqué et à l'autohébergement. Donc juste un Linux, un serveur web et ucblog ! Pas d'autre trucs pénibles à installer comme jekyll.
+
+#### SHOUTcast recorder (2010) (<a href="https://github.com/yoannsculo/SHOUTcast-Recorder">Page du projet</a>)
+SHOUTcast recorder est une application d’enregistrement de flux MP3 Shoutcast.
+
+#### Foxboard G20 GPIOs (2009) (<a href="https://github.com/yoannsculo/foxg20-gpio">Page du projet</a>)
+Quelques lignes de code assez simple pour manipuler en C les GPIOs de la Foxboard G20.
+
+** **
+ 
+### Hacking et bricolage
+
+#### Robert (2009/2010) (<a href="{{ blog.url }}/{{ blog.projects_dir }}/robert">Page du projet</a>)
+Robert, pour ROBot d'Exploration et de Recherche Technologique - Robot mobile autonome d'exploration.
+
+#### Genesis (2009) (<a href="{{ blog.url }}/{{ blog.projects_dir }}/genesis">Page du projet</a>)
+Mon premier robot mobile wifi commandé par wiimote
+
+#### Serveur GSM (2009) (<a href="{{ blog.url }}/interface-gsm-sur-carte-fox-et-envoi-de-sms">Page du projet</a>)
+Envoi de sms depuis un modem GSM installé sur un système linux embarqué.
+
+** **
+
+### Jeux vidéo
+
+#### Simerion (2005/2009) (<a href="{{ blog.url }}/{{ blog.projects_dir }}/simerion">Page du projet</a>)
+Jeu web en ligne en PHP
+
+#### Interface d’un MMORPG en Delphi (2009) (<a href="{{ blog.url }}/{{ blog.projects_dir }}/interface-mmorpg">Page du projet</a>)
+Interface d’un MMORPG en Delphi réalisée en cours d'ergonomie des terminaux à l'UTT.
+
+#### Bloodbox (2008) (<a href="{{ blog.url }}/{{ blog.projects_dir }}/bloodbox">Page du projet</a>)
+RPG diablo-like en C#
+
+#### Gaia’s Fight (2003) (<a href="{{ blog.url }}/{{ blog.projects_dir }}/gaias-fight">Page du projet</a>)
+Jeu en réseau GTA2-like où s’affrontent animaux et chasseurs.
+
+** **
+
+### Web
+
+Voir la <a href="{{ blog.url }}/{{ blog.projects_dir }}/mes-sites-web">liste de mes différentes réalisations</a>
+
+
+
