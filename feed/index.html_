@@ -1,23 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
- 
-    <title>{{ blog.title }}</title>
-    <link href="{{ blog.url }}/atom.xml" rel="self"/>
-    <link href="{{ blog.url }}"/>
-    <id>{{ blog.url }}</id>
-    <author>
-        <name>{{ blog.author }}</name>
-    </author>
-    <updated>{{ site.now.date() }}</updated>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+
+<channel>
+	<title>{{ blog.title }}</title>
+	<atom:link href="{{ blog.url }}/feed/" rel="self" type="application/rss+xml" />
+	<link>{{ blog.url }}</link>
+	<description>{{ blog.description }}</description>
+	<lastBuildDate>{{ site.now.date()|xmldatetime }}</lastBuildDate>
+	<language>{{ blog.language }}</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
 
     {% for post in site.posts|reverse %}
-    <entry>
-	<title>{{ post.title }}</title>
-	<updated>{{ post.date.date() }}</updated>
-        <link href="{{ blog.url }}/{{ post.url }}"/>
-        <id>{{ post.url }}</id>
-        <content type="html">{{ post.content|escape }}</content>
-    </entry>
+	<item>
+		<title>{{ post.title }}</title>
+		<link>{{ blog.url }}/{{ post.url }}</link>
+		<pubDate>{{ post.date.date() }}</pubDate>
+		<dc:creator>{{ post.author }}</dc:creator>
+		<guid isPermaLink="false">{{ blog.url }}/{{ post.url }}</guid>
+		<description>
+			<![CDATA[{{ post.content }}]]>
+		</description>
+	</item>
     {% endfor %}
  
-</feed>
+</channel>
