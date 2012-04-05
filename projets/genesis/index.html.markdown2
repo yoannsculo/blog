@@ -1,0 +1,49 @@
+---
+layout: page
+---
+
+## Genesis
+
+Genesis est mon premier robot. Il s'agit d'un robot mobile sans fil
+commandé par connexion wifi. Je l'ai développé dans le cadre de ma
+dernière année d'études à l'UTT avec un autre étudiant. Ses fonctions
+sont relativement simples.
+
+Le châssis est réalisé en lego, il est motorisé par deux servomoteurs
+continus commandés par une carte SSC-32. Une webcam est placée sur une
+tourelle pan/tilt, offrant une vision embarquée du robot et lui
+permettant d'avoir un champ de vision amélioré. La carte SSC-32 permet
+de commander les différents servomoteurs. Elle est reliée à la carte Fox
+en série, qui fait office de servo du robot. La carte fox centralise et
+dispatche les informations reçues de l'extérieur. En effet, cette carte
+est reliée en Ethernet à un routeur wifi. Un second ordinateur peut
+alors se connecter au robot par une simple application client/serveur.
+Le robot peut alors être commandé par le biais du clavier, d'un
+joystick, ou d'une wiimote. J'utilise à la fois les bibliothèques SDL et
+libcwiimote pour la phase d'acquisition de commandes.
+
+A cela s'ajoutent une pince commandée par un servomoteur ainsi qu'un
+buzzer qui fait office de klaxon.
+
+Côté droit du robot
+
+![Côté droit du robot](http://www.yoannsculo.fr/wp-content/uploads/2009/06/dsc06986_small-300x225.jpg)
+
+Côté gauche du robot
+
+![Côté gauche du robot](http://www.yoannsculo.fr/wp-content/uploads/2009/06/dsc06984_small-300x225.jpg)
+
+Le schéma du robot est le suivant:
+
+![Schéma global du robot Wifi](http://www.yoannsculo.fr/wp-content/uploads/2009/06/schema_global-242x300.jpg)
+
+- [Rapport de projet](http://yoannsculo.fr/docs/genesis/Rapport%20TX%20Robot%20Wifi.pdf)
+- [Code source](http://yoannsculo.fr/docs/genesis/TX%20-%20Robot%20Wifi.tar.gz)
+
+Nous avons réalisé différentes vidéos du robot:
+
+<object width="425" height="344" data="http://www.youtube.com/v/rzsYxudxMRQ&amp;hl=fr&amp;fs=1&amp;" type="application/x-shockwave-flash"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/rzsYxudxMRQ&amp;hl=fr&amp;fs=1&amp;" /><param name="allowfullscreen" value="true" /></object>
+
+<object width="425" height="344" data="http://www.youtube.com/v/CM0XtpQLot8&amp;hl=fr&amp;fs=1&amp;" type="application/x-shockwave-flash"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/CM0XtpQLot8&amp;hl=fr&amp;fs=1&amp;" /><param name="allowfullscreen" value="true" /></object>
+
+
