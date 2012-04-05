@@ -4,7 +4,6 @@ title: Introduction au système de communication inter-processus D-Bus
 categories: Bus, D-Bus, dbus-daemon, IPC, libdbus, linux, processus
 ---
 
-![dbus-schema-1](http://www.yoannsculo.fr/wp-content/uploads/2011/05/dbus-schema-1-150x150.png)
 Cela faisait quelques temps que je souhaitais rédiger une documentation
 sur D-Bus et ses concepts (en français). Je n'ai pas trouvé énormément
 d'informations sur lefonctionnement détaillé de ce Bus quand j'en avais
@@ -107,7 +106,8 @@ L'implémentation du protocole D-Bus offre différents outils :
 
 D-Bus peut être vu comme une sorte de routeur auquel chacun des
 processus est connecté par une connexion bidirectionnelle.
-![Connexions multiples d'un processus](http://www.yoannsculo.fr/wp-content/uploads/2011/05/dbus-schema-1.png)
+
+![Connexions multiples d'un processus](../images/dbus/dbus-schema-1.png)
 
 La connexion (sockets sur le schéma) peut prendre différentes formes :
 
@@ -144,7 +144,8 @@ Rien ne nous empêche de connecter une application à plusieurs bus. Par
 exemple à plusieurs bus session et au bus système. On peut par exemple
 séparer plusieurs bus de session pour des questions de sécurité. Mais
 nous aborderons la notion de sécurité un peu plus loin.
-![dbus-schema-2](http://www.yoannsculo.fr/wp-content/uploads/2011/05/dbus-schema-2.png "dbus-schema-2")
+
+![dbus-schema-2](../images/dbus/dbus-schema-2.png)
 
 Pour information, je déconseille fortement de tenter un /etc/init.d/dbus
 restart dans une session Ubuntu. Le résultat est juste catastrophique
@@ -228,7 +229,8 @@ Chaque message D-Bus possède une source et une destination. Ces adresses
 sont définies par des "object paths". Chaque processus connecté à un bus
 peut avoir enregistré un ou plusieurs objets. Les messages sont alors
 envoyés entre objets, mais pas directement par les applications.
-![Discussion entre deux applications sur D-Bus](http://www.yoannsculo.fr/wp-content/uploads/2011/05/dbus-schema-3.png)
+
+![Discussion entre deux applications sur D-Bus](../images/dbus/dbus-schema-3.png)
 
 Le PATH d'un objet est similaire à celui d'un filesystem UNIX, par
 exemple un objet pourrait être nommé /com/developpez/exemple/objetDBus.

@@ -28,7 +28,7 @@ En voici les specs détaillées :
 -   General-purpose I/O
 -   Open software (Ubuntu, Iceweasel, KOffice, Python)
 
-![Le système Raspberry Pi avec un module caméra](http://www.yoannsculo.fr/wp-content/uploads/2011/05/pcb.jpg "pcb")
+![Le système Raspberry Pi avec un module caméra](../images/raspberry_pi_pcb.jpg)
 
 Sachant ce que l'on peut faire avec un tel matériel, cela pourrait bien
 devenir un produit révolutionnaire pour la communauté de la bidouille et

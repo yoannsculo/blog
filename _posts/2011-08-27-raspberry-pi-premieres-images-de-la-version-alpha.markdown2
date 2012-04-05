@@ -7,11 +7,12 @@ categories: alpha, board, Eben Upton, Raspberry, Raspberry Pi, Raspberry Pi Foun
 Et voici quelques news de la Raspberry Pi dont j’[avais parlé](http://www.yoannsculo.fr/raspberry-pi-revolution-du-do-it-yourself/) en mai dernier.
 [Un blog](http://www.raspberrypi.org) a été ouvert il y a un mois. Et depuis, quelques informations arrivent au compte goûte. Après le schéma du PCB,
 
-![raspberry](http://www.yoannsculo.fr/wp-content/uploads/2011/08/raspberry1-300x292.png)
+![raspberry](../images/raspberry1-300x292.png)
 
 Voici les premiers modèles alpha de la Raspberry Pi.
 
-![Raspberry Pi Alpha](http://www.yoannsculo.fr/wp-content/uploads/2011/08/DSCF1808-1024x768.jpg)
+![Raspberry Pi Alpha](../images/DSCF1808-300x225.jpg)
+
 20 % plus grands que les modèles finaux, qui seront de la taille d’une carte de crédit. Eben Upton, le président de la Raspberry Pi foundation, nous présente la carte [en vidéo](http://www.youtube.com/watch?v=Or1-kN2z1iM), qui tourne dès à
 présent sous Debian.
 
