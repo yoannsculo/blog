@@ -18,6 +18,10 @@ pre {
 	color: white;
 }
 
+blockquote p {
+	font-size:12px;
+}
+
 .well {
 	padding-top: 10px;
 	text-align : justify;
