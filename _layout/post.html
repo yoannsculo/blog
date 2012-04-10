@@ -13,10 +13,10 @@ layout: default
 		{% for s_post in site.posts %}
 			{%- if s_post is sameas post %}
 				{%- if loop.first == False %}
-					<span style="float:right;"><a href="{{ blog.url }}/{{ site.posts[loop.index-2].url }}">Précédent »</a></span>
+					<span><a href="{{ blog.url }}/{{ site.posts[loop.index-2].url }}">« Précédent</a></span>
 				{% endif %}
 				{%- if loop.last == False %}
-					<a href="{{ blog.url }}/{{ site.posts[loop.index].url }}">« Suivant</a>
+					<span style="float:right;"><a href="{{ blog.url }}/{{ site.posts[loop.index].url }}">Suivant »</a></span>
 				{% endif %}
 			{% endif %}
 		{% endfor %}
