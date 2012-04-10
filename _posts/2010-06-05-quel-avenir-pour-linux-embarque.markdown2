@@ -4,7 +4,7 @@ title: Quel avenir pour Linux embarqué ?
 categories: ARM, Freescale, IBM, Linaro, linux, linux embarqué, open source, Samsung, ST-Ericsson, Texas Instruments
 ---
 
-![tux](../images/logos/tux-252x300.jpg)
+![tux]({{blog.images}}/logos/tux-252x300.jpg)
 
 Comment sera le marché de Linux embarqué dans 5 ans ? et dans 10 ans ? Comment
 tout cela va-t-il évoluer ? Ce sont des questions que je me pose depuis
@@ -38,7 +38,7 @@ supplanter les processeurs ARM, car plus puissants et moins gourmands en
 changements radicaux que pourraient subir nos systèmes embarqués
 actuels.
 
-![Logo Linaro](../images/logos/lin-logo.png)
+![Logo Linaro]({{blog.images}}/logos/lin-logo.png)
 
 En parlant justement d'annonce, en voici une fort sympathique. ARM,
 Freescale, IBM, Samsung, ST-Ericsson et Texas Instruments [viennent de

@@ -4,7 +4,7 @@ title: Quick Start Board - La nouvelle carte Cortex A8 de chez Freescale
 categories: ARM, Cortex A8, Embedded World, Freescale, i.MX, i.MX53, imx, linux, linux embarqué, Quick Start, Quick Start Board
 ---
 
-![Quick Start Board](../images/freescale/freescaleimx53quickstart-300x214.jpg)
+![Quick Start Board]({{blog.images}}/freescale/freescaleimx53quickstart-300x214.jpg)
 
 Décidément ! Il pleut des cartes de dev sur le monde de l'embarqué !
 C'est à l'occasion de l'exposition [Embedded World

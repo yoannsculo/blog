@@ -4,7 +4,7 @@ title: Sortie de Buildroot 2010.11
 categories: Sortie de Buildroot 2010.11
 ---
 
-![Logo Buildroot](../images/buildroot/logo_small.png)
+![Logo Buildroot]({{blog.images}}/buildroot/logo_small.png)
 
 Comme prévu, la [nouvelle version de
 Buildroot](http://buildroot.uclibc.org/download.html), la 2010.11 est

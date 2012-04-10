@@ -12,7 +12,7 @@ autour du microcosme Linux embarqué est encore une fois assez chargée.
 
 ### Fusion de la Linux Foundation et le Consumer Electronics Linux Forum (CELF)
 
-![The Linux Foundation](../images/logos/the-linux-foundation-300x115.gif)
+![The Linux Foundation]({{blog.images}}/logos/the-linux-foundation-300x115.gif)
 
 La Linux Foundation a annoncé la fusion de son organisation avec sa
 petite soeur embarquée, le [CELF](http://www.celinuxforum.org/). En
@@ -52,7 +52,7 @@ A lire sur le sujet :
 
 ### The Yocto Project
 
-![The Yocto Project](../images/logos/yocto_project.png "yocto_project")
+![The Yocto Project]({{blog.images}}/logos/yocto_project.png "yocto_project")
 
 L'annonce de cette fusion de la LF et du CELF n'est pas anodine, car
 elle vient avec celle d'un nouveau projet, "[The Yocto
@@ -70,7 +70,7 @@ pour faciliter le processus de développement Linux embarqué. En d'autres
 mots, le projet aurait pour but de standardiser la construction de
 système Linux embarqué.
 
-![Poky Platform Builder](../images/logos/poky.png)
+![Poky Platform Builder]({{blog.images}}/logos/poky.png)
 
 L'intérêt de la plateforme serait d'intégrer des environnements
 d'émulation à base de QEMU, des debuggeurs et un générateur de SDK. Le
@@ -84,7 +84,7 @@ bazar](http://yoctoproject.org/blogs/rpurdie/2010/10/7/embedded-all-so-messy-quo
 l'embarqué mine de rien ! Enfin voilà, nous avons droit à un joli petit
 graphique de présentation de Yocto.
 
-![Architecture de Yocto](../images/lf_yocto_arch1.png)
+![Architecture de Yocto]({{blog.images}}/lf_yocto_arch1.png)
 
 Mais... c'est que tout cela cela m'a tout l'air d'une version "embarqué"
 de Linaro !
@@ -142,7 +142,7 @@ test](http://www.yoannsculo.fr/test-de-meego-pour-netbook-v1-0/) de la
 version Netbook 1.0. J'aimerais notamment tester la version Handset à
 l'occasion :-)
 
-![MeeGo v1.1 Netbook](../images/meego-netbook-myzone.png)
+![MeeGo v1.1 Netbook]({{blog.images}}/meego-netbook-myzone.png)
 
 A lire sur le sujet :
 

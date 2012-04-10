@@ -4,7 +4,7 @@ title: Sortie de Vim 7.3
 categories: 7.3, éditeur, ide, logiciel, vim
 ---
 
-![vim_logo](../images/logos/vim_logo-150x150.png)
+![vim_logo]({{blog.images}}/logos/vim_logo-150x150.png)
 
 Praise Vim ! La version 7.3 de mon éditeur de texte de prédilection est sortie
 dimanche 15 août. Je viens juste de le découvrir ! A cheval entre une

@@ -4,7 +4,7 @@ title: Sortie de la première version de MeeGo Handset UX
 categories: GIT, MeeGo, MeeGo Handset UX
 ---
 
-![meego-handset-home-l](../images/meego-handset-home-l-300x157.png)
+![meego-handset-home-l]({{blog.images}}/meego-handset-home-l-300x157.png)
 
 Le Projet [Meego](http://meego.com/) vient
 d'[annoncer](http://meego.com/community/blogs/valhalla/2010/meego-handset-project-day-1-here)
@@ -20,4 +20,4 @@ téléchargement](http://meego.com/downloads/releases/1.0.80.8/meego-handset-day
 La release de la version en cours de développement (MeeGo 1.1) est
 prévue pour octobre prochain.
 
-![meego-handset-launcher-l](../images/meego-handset-launcher-l-300x157.png)
+![meego-handset-launcher-l]({{blog.images}}/meego-handset-launcher-l-300x157.png)

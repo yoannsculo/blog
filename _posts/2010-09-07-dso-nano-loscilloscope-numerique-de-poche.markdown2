@@ -4,7 +4,7 @@ title: DSO nano - L'oscilloscope numérique de poche
 categories: ARM, DSO nano, électronique, numérique, oscilloscope
 ---
 
-![DSO nano](../images/dsointro-300x225.jpg)
+![DSO nano]({{blog.images}}/dsointro-300x225.jpg)
 
 Je suis tombé sur un petit appareil magique
 [hier](http://www.seeedstudio.com/depot/micro-digital-storage-oscilloscopedso-nano-p-512.html),

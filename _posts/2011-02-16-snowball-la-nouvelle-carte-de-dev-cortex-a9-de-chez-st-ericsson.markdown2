@@ -11,7 +11,7 @@ Board, au processeur ARM Dual Cortex A9 de chez ST-Ericsson arrive avec
 un joli site pour fédérer les utilisateurs de la carte :
 [Igloo Community](http://www.igloocommunity.org/).
 
-![Snowball Board](../images/st-ericsson/board.png)
+![Snowball Board]({{blog.images}}/st-ericsson/board.png)
 
 Deux versions sont prévues
 

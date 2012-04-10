@@ -4,7 +4,7 @@ title: PandaBoard - Adoptez un Panda !
 categories: 4430, ARM, Cortex-A9, Early Adopter Program, OMAP, PandaBoard, PEAP
 ---
 
-![PandaBoard_top_view](../images/pandaboard/PandaBoard_top_view-300x199.png)
+![PandaBoard_top_view]({{blog.images}}/pandaboard/PandaBoard_top_view-300x199.png)
 
 Ladies and gentlemen ! Voici la [PandaBoard](http://pandaboard.org/) !
 Il s'agit d'une nouvelle plateforme de développement OMAP 4. Avec son
@@ -27,5 +27,5 @@ plusieurs cartes en attente :P)
 
 En attendant, vous pouvez tenter votre chance ;)
 
-![PandaBoard](../images/pandaboard/PandaBoard_Setup.png)
+![PandaBoard]({{blog.images}}/pandaboard/PandaBoard_Setup.png)
 
