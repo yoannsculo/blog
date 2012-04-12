@@ -4,7 +4,7 @@ title: Interface GSM sur carte Fox et envoi de SMS
 categories: AT, C, carte fox, foxboard, GSM, linux, SMS
 ---
 
-![Carte Fox](http://www.yoannsculo.fr/wp-content/uploads/2009/05/acme_fox-300x197.jpg)
+![Carte Fox]({{blog.images}}/fox/acme_fox-300x197.jpg)
 
 J'ai été amené à travailler dans le cadre de mes études sur un petit
 projet de développement d'une Interface GSM sur un système Linux
@@ -29,7 +29,7 @@ rapidement des projets de type embarqué.
 
 Modem GSM
 
-![Modem GSM](http://r19649.ovh.net/cs/blog/wp-content/uploads/2009/02/gm862-quad.jpg)
+![Modem GSM]({{blog.images}}/fox/telit.jpg)
 
 Le modem GSM utilisé ici est un modem de la marque Telit. Il est relié à
 la carte FOX par l’intermédiaire d’une carte d’extension. La carte FOX

@@ -4,7 +4,7 @@ title: Simerion – Retour de développement
 categories: Ajax, Jeu en ligne alternatif, Jeu web, Nainwak, PHP, Simerion
 ---
 
-![Logo Simerion](http://www.yoannsculo.fr/wp-content/uploads/2009/05/simerion.jpg)
+![Logo Simerion]({{blog.images}}/simerion/simerion.jpg)
 
 Je me suis lancé en 2005 avec un ami dans le développement d’un jeu par
 navigateur web: [Simerion](http://www.simerion.fr "Simerion") pour les
@@ -247,7 +247,7 @@ développeurs.
 
 ### Se faire soutenir
 
-![Association Nainwak](http://www.nainwak.org/images/stories/nainwaksmall8vc.png)
+![Association Nainwak]({{blog.images}}/simerion/nainwaksmall8vc.png)
 
 Nous avons rejoint dès le départ l’association
 [Nainwak](http://www.nainwak.org "Nainwak"), qui nous a hébergés,

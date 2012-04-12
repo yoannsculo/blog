@@ -26,7 +26,7 @@ Ce n'est pas aussi dur que l'on pourrait imaginer.
 
 Notre ami le robot
 
-![Notre ami le robot](http://www.yoannsculo.fr/wp-content/uploads/2009/05/dsc06935_small.jpg)
+![Notre ami le robot]({{blog.images}}/genesis/dsc06935_small.jpg)
 
 Au départ nous pensions utiliser un pc portable, lui mettre des roues et
 en faire un robot autonome. Nous avons réalisé :
@@ -66,7 +66,7 @@ l'on peut voir juste en dessous sur la photo.
 
 Intérieur du robot avec une vue directe sur la carte SSC-32
 
-![Intérieur du robot](http://www.yoannsculo.fr/wp-content/uploads/2009/05/dsc06934_small.jpg)
+![Intérieur du robot]({{blog.images}}/genesis/dsc06934_small.jpg)
 
 Cette petite carte (pour les fainéants) sort jusqu'à 32 PWM et peut
 communiquer avec un PC en série par commandes ASCII. Il n'y a qu'à

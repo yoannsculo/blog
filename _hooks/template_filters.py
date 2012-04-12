@@ -25,14 +25,7 @@ def dateFormat(dt, format='%d/%m/%Y'):
 
 @templateFilter
 def xmldatetime(dt):
-    """ shameless stolen from http://github.com/lakshmivyas/hyde
-        thanks alot
-    """
-    zprefix = "Z"
-    tz = dt.strftime("%z")
-    if tz:
-        zprefix = tz[:3] + ":" + tz[3:]
-    return dt.strftime("%Y-%m-%dT%H:%M:%S") + zprefix
+    return dt.strftime('%Y-%m-%dT%H:%M:%SZ')
 
 
 @templateFilter

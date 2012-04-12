@@ -4,7 +4,7 @@ title: Détournement de Nabaztag et reverse engineering
 categories: ARM, démontage, électronique, JTAG, nabaztag, reverse engineering, violet
 ---
 
-![Nabaztag](http://www.yoannsculo.fr/wp-content/uploads/2009/05/nabaztag-300x300.jpg)
+![Nabaztag]({{blog.images}}/nabaztag/nabaztag-300x300.jpg)
 
 J'ai reçu à Noël dernier une jolie petite bestiole. Un bon gadget de
 geek :) Le Nabaztag.
@@ -57,11 +57,11 @@ processeur directement.
 
 Nabaztag Démonté
 
-![Nabaztag Démonté](http://www.yoannsculo.fr/wp-content/uploads/2009/05/dsc06946_small.jpg)
+![Nabaztag Démonté]({{blog.images}}/nabaztag/dsc06946_small.jpg)
 
 Carte embarquée du Nabaztag
 
-![Carte embarquée du Nabaztag](http://www.yoannsculo.fr/wp-content/uploads/2009/05/dsc06951_small.jpg)
+![Carte embarquée du Nabaztag]({{blog.images}}/nabaztag/dsc06951_small.jpg)
 
 J'ai pu donc diséquer le lapin et découvrir ce qu'il se trouvait à
 l'intérieur:
@@ -78,7 +78,7 @@ l'intérieur:
 
 MCBSTM32 - Carte de développement pour processeur ARM
 
-![MCBSTM32 - Carte de développement pour processeur ARM](http://www.yoannsculo.fr/wp-content/uploads/2009/05/mcbstm32-150x150.jpg)
+![MCBSTM32 - Carte de développement pour processeur ARM]({{blog.images}}/nabaztag/mcbstm32-150x150.jpg)
 
 Je ne vais pas détailler minutieusement tous les composants de la carte
 principale. Quelqu'un s'en est déjà chargé sur [ce
