@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interface GSM sur carte Fox et envoi de SMS
-categories: AT, C, carte fox, foxboard, GSM, linux, SMS
+keywords: AT, C, carte fox, foxboard, GSM, linux, SMS
 ---
 
 ![Carte Fox]({{blog.images}}/fox/acme_fox-300x197.jpg)

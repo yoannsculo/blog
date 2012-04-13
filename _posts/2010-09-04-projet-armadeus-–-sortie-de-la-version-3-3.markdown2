@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Projet Armadeus – Sortie de la version 3.3
-categories: ARM, Armadeus, Armadeus Project, association, Buildroot, Busybox, carte, linux, U-Boot, uClibc
+keywords: ARM, Armadeus, Armadeus Project, association, Buildroot, Busybox, carte, linux, U-Boot, uClibc
 ---
 
 ![image]({{blog.images}}/logos/armadeus_project.png)

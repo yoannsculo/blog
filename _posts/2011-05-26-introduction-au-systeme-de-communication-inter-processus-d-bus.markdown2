@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction au système de communication inter-processus D-Bus
-categories: Bus, D-Bus, dbus-daemon, IPC, libdbus, linux, processus
+keywords: Bus, D-Bus, dbus-daemon, IPC, libdbus, linux, processus
 ---
 
 Cela faisait quelques temps que je souhaitais rédiger une documentation

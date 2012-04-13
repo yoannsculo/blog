@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Faire un hash md5 d'un string en C
-categories: C, fonction, hash, md5, md5sum, string
+keywords: C, fonction, hash, md5, md5sum, string
 ---
 
 Petit aide mémoire à moi même, et pour les gens qui en auraient besoin un jour.

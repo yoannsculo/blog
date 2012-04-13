@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mass Storage USB sur tous les OS grâce au File-backed Storage Gadget (g_file_storage)
-categories: g_file_storage, linux, Mac, Mass storage, module, storage gadget, USB, Windows
+keywords: g_file_storage, linux, Mac, Mass storage, module, storage gadget, USB, Windows
 ---
 
 Je me suis attelé récemment à la mise en place d’un mass storage (FAT32)

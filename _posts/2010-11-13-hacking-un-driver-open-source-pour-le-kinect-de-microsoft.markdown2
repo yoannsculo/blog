@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hacking - Un driver open source pour le Kinect de Microsoft
-categories: Adafruit, driver, hack, Kinect, linux, open source
+keywords: Adafruit, driver, hack, Kinect, linux, open source
 ---
 
 ![Driver open source du Kinect]({{blog.images}}/open-kinect-300x223.jpg)

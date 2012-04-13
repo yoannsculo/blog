@@ -44,6 +44,15 @@ class Post(Page):
             del self.context['categories']
         self.categories = [c.strip() for c in cats.split(',') if c]
 
+        keywords = ','.join((self.context.get('keyword', ''),
+                             self.context.get('keywords', '')))
+
+        if 'keyword' in self.context:
+            del self.context['keyword']
+        if 'keywords' in self.context:
+            del self.context['keywords']
+        self.keywords = [k.strip() for k in keywords.split(',') if k]
+
     @property
     def date(self):
         return datetime.datetime(int(self.year),

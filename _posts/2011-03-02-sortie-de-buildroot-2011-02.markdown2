@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sortie de Buildroot 2011.02
-categories: 2011.02, Buildroot, crosstool-ng, linux, linux embarqué, release
+keywords: 2011.02, Buildroot, crosstool-ng, linux, linux embarqué, release
 ---
 
 ![Logo Buildroot]({{blog.images}}/buildroot/logo_small.png)

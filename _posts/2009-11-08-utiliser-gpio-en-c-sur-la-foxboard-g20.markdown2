@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Utiliser GPIO en C sur la foxboard G20
-categories: carte fox, foxboard, G20, GPIO, LED, sysfs
+keywords: carte fox, foxboard, G20, GPIO, LED, sysfs
 ---
 
 Après quelques longues recherches ce week-end, j'ai enfin réussi à

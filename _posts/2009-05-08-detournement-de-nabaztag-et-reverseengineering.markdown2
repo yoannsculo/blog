@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Détournement de Nabaztag et reverse engineering
-categories: ARM, démontage, électronique, JTAG, nabaztag, reverse engineering, violet
+keywords: ARM, démontage, électronique, JTAG, nabaztag, reverse engineering, violet
 ---
 
 ![Nabaztag]({{blog.images}}/nabaztag/nabaztag-300x300.jpg)

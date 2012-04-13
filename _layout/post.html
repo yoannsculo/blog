@@ -26,8 +26,8 @@ layout: default
 	<div class="well">
 		<h6>Mots clés</h6>
 		<p>
-			{% for category in post.categories %}
-			<a href="">{{ category }}</a>{%- if loop.last == False %}, {% endif %}
+			{% for keyword in post.keywords %}
+			<a href="{{blog.url}}/{{keyword}}">{{keyword}}</a>{%- if loop.last == False %}, {% endif %}
 			{% endfor %}
 		</p>
 	</div>

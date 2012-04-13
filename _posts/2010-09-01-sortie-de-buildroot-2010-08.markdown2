@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sortie de Buildroot 2010.08
-categories: 2010.08, Buildroot, linux, release
+keywords: 2010.08, Buildroot, linux, release
 ---
 
 ![Buildroot]({{blog.images}}/buildroot/logo_small.png)

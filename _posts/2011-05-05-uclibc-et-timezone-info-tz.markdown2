@@ -1,7 +1,7 @@
 ---
 layout: post
 title: uClibc et Timezone Info (TZ)
-categories: database, glibc, linux, timezone, TZ, uClibc, zoneinfo
+keywords: database, glibc, linux, timezone, TZ, uClibc, zoneinfo
 ---
 
 S'il y a bien des intérêts à utiliser la uClibC, il y a tout de même pas

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cross compiler V8 sur ARM 9 avec uClibc et Buildroot
-categories: ARM, backtrace, Buildroot, cross-compilation, execinfo, Google, uClibc, V8
+keywords: ARM, backtrace, Buildroot, cross-compilation, execinfo, Google, uClibc, V8
 ---
 
 Parce que j'ai mis un moment à trouver les bonnes options pour

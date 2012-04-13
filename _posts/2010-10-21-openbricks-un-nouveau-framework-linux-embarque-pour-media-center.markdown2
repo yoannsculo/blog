@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OpenBricks - Un nouveau Framework Linux embarqué pour Media Center
-categories: Buildroot, distribution, framework, GeeXboX, linux, linux embarqué, Media Center, OpenBricks, OpenEmbedded
+keywords: Buildroot, distribution, framework, GeeXboX, linux, linux embarqué, Media Center, OpenBricks, OpenEmbedded
 ---
 
 ![image]({{blog.images}}/logos/openbricks-400.png)
