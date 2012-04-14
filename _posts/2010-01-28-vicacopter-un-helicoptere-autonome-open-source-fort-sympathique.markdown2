@@ -4,7 +4,7 @@ title: Vicacopter, un hélicoptère autonome open source fort sympathique
 keywords: drone, helicopter, quadrimoteur, vicacopter
 ---
 
-![vicacopter](http://www.yoannsculo.fr/wp-content/uploads/2010/01/vicacopter.jpg)
+![vicacopter]({{blog.images}}/vicacopter.jpg)
 
 [Vicacopter](http://vicacopter.com) est un projet de drone autonome open
 source réalisé par Adam Williams, ouvert aux passionnés prets à

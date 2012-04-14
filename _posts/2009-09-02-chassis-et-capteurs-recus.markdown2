@@ -5,8 +5,9 @@ keywords: capteur, châssis, Robert, robot, Sharp, Ultrason
 ---
 
 J'avais parlé de notre nouveau robot. Voici quelques nouvelles ! Tout
-d'abord nous luis avons trouvé un nom : Robert ! Robert pour **ROB**ot
-d'**E**xploration et de **R**echerche **T**echnologique
+d'abord nous luis avons trouvé un nom : Robert ! Robert pour ROBot
+d'Exploration et de Recherche Technologique
+
 Nous avons réalisé [un site Internet
 dédié](http://r19649.ovh.net/robert/) au projet, que nous complèterons
 au fur et à mesure de l'avancée du projet. Pour l'instant il n'y a pas
@@ -17,19 +18,19 @@ fait sur mesure chez Easyrobotics que voici en partie monté :
 
 Châssis : base du robot
 
-![Châssis : base du robot](http://www.yoannsculo.fr/wp-content/uploads/2009/09/DSC06993_small-1024x768.jpg)
+![Châssis : base du robot]({{blog.images}}/robert/DSC06993_small-1024x768.jpg)
 
 Châssis : Dessous du robot avec ses 2 billes folles
 
-![Châssis : Dessous du robot](http://www.yoannsculo.fr/wp-content/uploads/2009/09/DSC06994_small-1024x768.jpg)
+![Châssis : Dessous du robot]({{blog.images}}/robert/DSC06994_small-1024x768.jpg)
 
 Châssis : roues sur mesure
 
-![Châssis : roues](http://www.yoannsculo.fr/wp-content/uploads/2009/09/DSC06997_small-1024x768.jpg)
+![Châssis : roues]({{blog.images}}/robert/DSC06997_small-1024x768.jpg)
 
 Capteur de distance Sharp
 
-![Capteur de distance Sharp](http://www.yoannsculo.fr/wp-content/uploads/2009/09/24560a-opt.jpg)
+![Capteur de distance Sharp]({{blog.images}}/robert/24560a-opt.jpg)
 
 Nous avons acheté des tiges filtées pour nous faire des étages, mais
 faute de scie à métaux pour l'instant ça sera sans pour ma part :P De
@@ -46,7 +47,7 @@ photos, nous avons déjà 2 supports capteurs :)
 
 Capteur ultrason
 
-![Capteur ultrason](http://www.yoannsculo.fr/wp-content/uploads/2009/09/24500n-opt.jpg)
+![Capteur ultrason]({{blog.images}}/robert/24500n-opt.jpg)
 
 De mon côté j'ai commandé une caméra miniature RS232 chez lextronic.
 Elle me permettra de tester la faisabilité d'une transmission vidéo par

@@ -15,7 +15,7 @@ faire clignoter la led rouge il suffira de changer PB0 par PC7. Je
 mettrai donc à jour l'archive tar.gz au fur et à mesure de mes
 modifications.
 
-![Capteur ultrason](http://www.yoannsculo.fr/wp-content/uploads/2009/09/24500n-opt.jpg)
+![Capteur ultrason]({{blog.images}}/robert/24500n-opt.jpg)
 
 Je me suis également essayé à l'intégration de mes capteurs ultrasons
 [SRF05](http://www.robot-electronics.co.uk/htm/srf05tech.htm), mais je

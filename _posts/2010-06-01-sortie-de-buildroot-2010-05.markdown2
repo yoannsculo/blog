@@ -4,7 +4,7 @@ title: Sortie de Buildroot 2010.05
 keywords: Buildroot, linux, linux embarqué
 ---
 
-![Logo Buildroot](http://www.yoannsculo.fr/wp-content/uploads/2010/06/logo_small.png)
+![Logo Buildroot]({{blog.images}}/buildroot/logo_small.png)
 
 C'est dans le déferlement habituel de patches GIT que vient d'être annoncé la
 sortie de [Buildroot](http://www.buildroot.org/) 2010.05. J'avais même

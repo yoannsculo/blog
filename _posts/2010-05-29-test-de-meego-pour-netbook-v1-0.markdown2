@@ -4,7 +4,7 @@ title: Test de MeeGo pour Netbook v1.0
 keywords: linux, linux embarqué, Maemo, MeeGo, Moblin, netbook
 ---
 
-![MeeGo](http://www.yoannsculo.fr/wp-content/uploads/2010/05/site_name.png)
+![MeeGo]({{blog.images}}/logos/meego.png)
 
 [MeeGo](http://meego.com/) est un nouveau système d'exploitation basé sous Linux à destination des
 appareils mobiles tels que les netbooks, smartphones, télévisions et
@@ -45,15 +45,41 @@ vraiment hâte de pouvoir travailler avec !
 
 Et voici pour la route quelques screenshots pris sur mon EeePC :
 
-![Accueil de Meego](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot6.png)
-![L'interface "réseaux sociaux" de MeeGo](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot1.png)
-![Internet avec Chrome](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot5.png)
-![Gestionnaire multitâches](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot4.png)
-![Terminal de Meego](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot7.png)
-![Calendrier et TodoList](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot8.png)
-![Interface Périphériques](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot9.png)
-![Explorateur de fichiers](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot10.png)
-![Interface réseaux](http://www.yoannsculo.fr/wp-content/uploads/2010/05/Screenshot11.png)
+Accueil de Meego
+
+![Accueil de Meego]({{blog.images}}/meego/Screenshot6.png)
+
+L'interface "réseaux sociaux" de MeeGo
+
+![L'interface "réseaux sociaux" de MeeGo]({{blog.images}}/meego/Screenshot1.png)
+
+Internet avec Chrome
+
+![Internet avec Chrome]({{blog.images}}/meego/Screenshot5.png)
+
+Gestionnaire multitâches
+
+![Gestionnaire multitâches]({{blog.images}}/meego/Screenshot4.png)
+
+Terminal de Meego
+
+![Terminal de Meego]({{blog.images}}/meego/Screenshot7.png)
+
+Calendrier et TodoList
+
+![Calendrier et TodoList]({{blog.images}}/meego/Screenshot8.png)
+
+Interface Périphériques
+
+![Interface Périphériques]({{blog.images}}/meego/Screenshot9.png)
+
+Explorateur de fichiers
+
+![Explorateur de fichiers]({{blog.images}}/meego/Screenshot10.png)
+
+Interface réseaux
+
+![Interface réseaux]({{blog.images}}/meego/Screenshot11.png)
 
 Sinon voici un screencast du fonctionnement de MeeGo
 

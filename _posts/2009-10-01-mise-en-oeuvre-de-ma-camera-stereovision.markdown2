@@ -4,7 +4,7 @@ title: Mise en oeuvre de ma caméra stéréovision
 keywords: anaglyphe, camera, minoru, opencv, stéréovision
 ---
 
-![La caméra Minoru](http://www.yoannsculo.fr/wp-content/uploads/2009/10/DSC07003_small.jpg)
+![La caméra Minoru]({{blog.images}}/minoru/DSC07003_small.jpg)
 
 Comme je l'avais annoncé il y a quelques semaines, je me suis commandé
 la caméra 3D Minoru. Surprise lors du déballage, la caméra est plus
@@ -48,5 +48,5 @@ cela m'offre un système de fixation tout fait !
 
 Vis de fixation de la tête
 
-![Visse de fixation de la tête](http://www.yoannsculo.fr/wp-content/uploads/2009/10/DSC07006_small.jpg)
+![Visse de fixation de la tête]({{blog.images}}/minoru/DSC07006_small.jpg)
 

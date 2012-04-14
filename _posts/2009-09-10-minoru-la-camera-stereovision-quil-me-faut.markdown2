@@ -6,7 +6,7 @@ keywords: camera, minoru, Robert, stéréovision
 
 Voilà quelques temps que je cherche 2 caméras pour faire de la
 stéréovision sur mon prochain robot
-([Robert](http://r19649.ovh.net/robert/)). Je me suis heurté à plusieurs
+([Robert]({{blog.url}}/{{blog.projects_dir}}/robert/)). Je me suis heurté à plusieurs
 problèmes. J'ai tout d'abord réalisé à mon grand dam que 98% des webcam
 du marchés n'était pas fixes sur leur supports, mais bénéficiaient
 toutes d'un ou plusieurs axes de liberté pour pouvoir les diriger dans
@@ -45,4 +45,4 @@ ont déjà travaillé avec cette caméra sous OpenCV. De quoi partir sur de
 très bonnes bases. J'ai donc hâte de pouvoir bidouiller tout ça et
 m'essayer à la stéréovision !
 
-![Minoru, la caméra 3D qu'il me faut !](http://www.yoannsculo.fr/wp-content/uploads/2009/09/minoru.jpg)
+![Minoru, la caméra 3D qu'il me faut !]({{blog.images}}/minoru/minoru-259x300.jpg)
