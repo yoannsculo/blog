@@ -20,6 +20,7 @@
 	<sy:updateFrequency>1</sy:updateFrequency>
 
     {% for post in site.posts|reverse %}
+		{%- if loop.index >= 10 %}{% break %}{% endif %}
 	<item>
 		<title>{{ post.title }}</title>
 		<link>{{ blog.url }}/{{ post.url }}</link>
