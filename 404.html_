@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<div class="container">
+	<div class="well">
+	<h2>Erreur 404</h2>
+		<p>Désolé la page que vous recherchez n'existe pas ou n'existe plus.</p>
+	</div>
+</div>
