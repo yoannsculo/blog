@@ -24,31 +24,31 @@
 
 	<url>
 		<loc>http://www.yoannsculo.fr/Yoann_Sculo_CV.pdf</loc>
-		<lastmod>2010-12-22T00:00:00+00:00</lastmod>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://www.yoannsculo.fr/docs/genesis/Rapport%20TX%20Robot%20Wifi.pdf</loc>
-		<lastmod>2009-07-11T00:00:00+00:00</lastmod>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.5</priority>
 	</url>
 	<url>
 		<loc>http://www.yoannsculo.fr/Yoann_Sculo_CV_Linux_Embarque.pdf</loc>
-		<lastmod>2010-12-22T00:00:00+00:00</lastmod>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://www.yoannsculo.fr/Yoann_Sculo_CV_Linux_Embarque.odt</loc>
-		<lastmod>2010-12-22T00:00:00+00:00</lastmod>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>http://www.yoannsculo.fr/Yoann_Sculo_CV_Linux_Embarque.doc</loc>
-		<lastmod>2010-12-22T00:00:00+00:00</lastmod>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
