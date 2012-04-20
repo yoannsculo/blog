@@ -1,0 +1,51 @@
+---
+layout: post
+title: La plateforme logicielle robotique Urbi passe en Open Source
+keywords: Gostai, open source, robot, Robotique, Urbi
+---
+
+J'ai reçu récemment un communiqué de presse de
+[Gostai](http://gostai.com/)qui annonce le passage de son [framework
+Urbi](http://www.urbiforge.org/) en license open source. L'annonce était
+passée relativement inaperçue en mai dernier dans le milieu. Je trouve
+l'initiative intéressante et me permets de retransmettre l'information.
+Je n'ai toujours pas eu le temps de m'essayer à
+[Urbi](http://www.urbiforge.org/), mais je compte bien prochainement
+tester leur framework. En attendant voici le communiqué :
+
+![Passage d'Urbi en open source]({{blog.images}}/frontpage_os-300x144.jpg)
+
+[Gostai](http://gostai.com/), l’éditeur de logiciel innovant pour la
+robotique et l’IA, annonce que sa technologie d’OS robotique
+[Urbi](http://www.urbiforge.org/) passe en Open Source. Urbi est un
+système d’exploitation avancé pour la robotique, déjà disponible pour un
+grand nombre de robots dont Nao d’Aldebaran®, RMP de Segway®, ou
+Mindstorm de Lego®, parmi un total de 15 robots différents. L’une des
+innovations clefs d’Urbi repose sur un nouveau langage de script pour
+l’orchestration nommé urbiscript, qui intègre des capacités avancées
+pour la gestion du parallélisme et de la programmation événementielle.
+En plus d’Urbi, Gostai propose également les outils de programmation
+graphique Gostai Studio, et une compatibilité avec différents
+simulateurs, faisant de la plateforme Urbi une des solutions pour la
+robotique et la programmation de systèmes complexes les plus avancées et
+complètes à ce jour.
+
+Qui plus est, Urbi est très facile à utiliser, même pour des débutants.
+Il est parfaitement adapté à une utilisation académique ou industrielle
+avancée, ainsi que pour le marché éducatif.
+
+Le code source est couvert par une licence Affero GNU GPL v3 et est
+disponible immédiatement en téléchargement depuis le site de Gostai.
+Cette initiative permettra aux développeurs du monde entier d’accéder
+librement et de participer à la croissance de la solution logicielle la
+plus innovante du marché.
+
+Jean-Christophe Baillie, fondateur et président de Gostai, a annoncé
+lors de la conférence ICRA ’10 en Alaska : "Passer en open source avec
+une licence compatible avec la GNU GPL est le meilleur moyen de
+s’assurer qu’Urbi sera toujours disponible gratuitement pour tous, tout
+en conservant un modèle à double licences apportant un support pour les
+partenaires commerciaux. Gostai, qui est issue du monde académique, a
+toujours cru dans le modèle open source et le partage de l’innovation.
+Nous préparons Urbi depuis longtemps pour ce moment, et il est enfin
+arrivé !”

@@ -1,0 +1,23 @@
+---
+layout: post
+title: Déménagement de serveur
+keywords: none
+---
+
+Et voilà ! Depuis le temps que je cherchais à le faire ! Je viens de
+déménager mon blog (et ma flopée d'autres sites) sur mon nouveau serveur
+mutualisé. J'en avais marre d'administrer mon serveur dédié, car c'est
+du travail, et un métier ... Mon truc c'est plutôt de créer des systèmes
+Linux, mais les administrer c'est moins fun ! C'est comme les légos
+quand j'étais enfant, ça devient moins marrant une fois que tout est
+construit.
+
+Bref, juste pour dire que normalement je devrais :
+
+-   ne plus avoir de problème de Captcha
+-   et ne plus avoir de problème de mails capricieux qui envoient les
+    notifications de commentaires un mois après.
+
+J'en ai même profité pour passer sous Wordpress 3.0.1. Bref, tout est
+bien dans le meilleur des monde :)
+

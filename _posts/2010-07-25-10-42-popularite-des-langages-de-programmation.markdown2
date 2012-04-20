@@ -1,0 +1,25 @@
+---
+layout: post
+title: Popularité des langages de programmation
+keywords: C, classement, Langage, programmation
+---
+
+Il y a toujours eu et il y aura toujours des classements sur les
+langages de programmation, selon leur popularité et leur utilisation par
+les développeurs. Source intarissable de trolls en tous genres.
+Cependant, ce n'est pas [la première
+fois](http://www.eetimes.com/electronics-blogs/industrial-control-designline-blog/4027479/Real-men-program-in-C)
+que je tombe sur des graphiques de ce genre plébiscitant le C. On
+remarque d'ailleurs une très nette percée du C depuis 2008. Ira t-il
+supplanter le Java dans les années à venir ? L'avenir nous le dira
+(j'attends les trolls :)). Ce graphique tiré du site
+[TIOBE](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html)
+va lancer encore de longues discussions interminables. Mais au final je
+suis plutôt ravi d'avoir opté pour une technologie encore très largement
+au goût du jour à la vue de ce graphique, alors que je passais pour un
+illuminé à l'école en optant pour le C plutôt que le Java ou les
+technologies .NET
+
+![Popularité des langages de programmation]({{blog.images}}/tpci_trends.png)
+
+[Source](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html)

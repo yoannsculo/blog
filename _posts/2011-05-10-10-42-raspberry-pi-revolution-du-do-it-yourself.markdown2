@@ -1,0 +1,51 @@
+---
+layout: post
+title: Raspberry Pi - Révolution du Do It Yourself ?
+keywords: ARM, ARM 11, embarqué, linux, low-cost, Pi, Raspberry, Raspberry Pi, Raspberry Pi Foundation
+---
+
+Avec un peu de retard, je viens de tomber sur la carte Raspberry Pi,
+annoncée par [The Raspberry Pi Foundation](http://www.raspberrypi.org/),
+une fondation britannique. Cette dernière, dont le but est de promouvoir
+l'apprentissage de l'informatique, plus particulièrement dans les
+écoles, vient de lancer un gros pavé dans la mare. Elle propose de
+développer et produire un ordinateur ultra ultra low cost d'ici un an.
+
+Il s'agit d'un système basé sur un processeur ARM11 à 700MHz et 128Mo de
+RAM. De la taille d'une clé USB, ils l'annoncent à un prix de £10 à £15
+(soit 17€). Oui 17€ ! Même s'il ne s'agit peut-être là que du prix des
+composants cela reste réellement intéressant.
+
+En voici les specs détaillées :
+
+-   700MHz ARM11
+-   128MB of SDRAM
+-   OpenGL ES 2.0
+-   1080p30 H.264 high-profile decode
+-   Composite and HDMI video output
+-   USB 2.0
+-   SD/MMC/SDIO memory card slot
+-   General-purpose I/O
+-   Open software (Ubuntu, Iceweasel, KOffice, Python)
+
+![Le système Raspberry Pi avec un module caméra]({{blog.images}}/raspberry_pi_pcb.jpg)
+
+Sachant ce que l'on peut faire avec un tel matériel, cela pourrait bien
+devenir un produit révolutionnaire pour la communauté de la bidouille et
+du DIY. Le prix est tellement bas que je me demande \*vraiment\* si ce
+communiqué est vrai et si le projet est économiquement viable. Si tel
+était le cas, on se retrouverait avec un Linux embarqué pour moins cher,
+voir le même prix qu'une Arduino... Oh ! j'en achète une caisse tout de
+suite !
+
+Même si l'approche et beaucoup plus axée éducation, apprentissage de
+l'informatique en générale, et comme ordinateur low-cost du genre
+[OPLC](http://fr.wikipedia.org/wiki/OLPC), je ne peux que voir
+l'avantage d'une telle carte de dev de type ARM à seulement 17€ pour le
+monde de la bidouille. A ce prix, il n'y a plus de limite aux
+possibilités d'une telle carte ! Imaginez le système Raspberry Pi couplé
+à une carte Arduino ! Pour moins de 50€ nous avons le système rêvé de
+tout hacker qui se respecte.
+
+J'ai hâte !
+

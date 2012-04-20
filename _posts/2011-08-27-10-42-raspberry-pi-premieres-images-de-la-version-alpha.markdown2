@@ -1,0 +1,21 @@
+---
+layout: post
+title: Raspberry Pi – Premières images de la version alpha
+keywords: alpha, board, Eben Upton, Raspberry, Raspberry Pi, Raspberry Pi Foundation, video
+---
+
+Et voici quelques news de la Raspberry Pi dont j’[avais parlé](http://www.yoannsculo.fr/raspberry-pi-revolution-du-do-it-yourself/) en mai dernier.
+[Un blog](http://www.raspberrypi.org) a été ouvert il y a un mois. Et depuis, quelques informations arrivent au compte goûte. Après le schéma du PCB,
+
+![raspberry]({{blog.images}}/raspberry1-300x292.png)
+
+Voici les premiers modèles alpha de la Raspberry Pi.
+
+![Raspberry Pi Alpha]({{blog.images}}/DSCF1808-300x225.jpg)
+
+20 % plus grands que les modèles finaux, qui seront de la taille d’une carte de crédit. Eben Upton, le président de la Raspberry Pi foundation, nous présente la carte [en vidéo](http://www.youtube.com/watch?v=Or1-kN2z1iM), qui tourne dès à
+présent sous Debian.
+
+<object width="560" height="345" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/Or1-kN2z1iM?version=3&amp;hl=fr_FR" /><param name="allowfullscreen" value="true" /><embed width="560" height="345" type="application/x-shockwave-flash" src="http://www.youtube.com/v/Or1-kN2z1iM?version=3&amp;hl=fr_FR" allowFullScreen="true" allowscriptaccess="always" allowfullscreen="true" /></object>
+
+Pour ceux que ça intéresse, un concours de [création de logo](http://www.raspberrypi.org/?p=55) a également été ouvert.

@@ -1,0 +1,128 @@
+---
+layout: post
+title: Utiliser GPIO en C sur la foxboard G20
+keywords: carte fox, foxboard, G20, GPIO, LED, sysfs
+---
+
+Après quelques longues recherches ce week-end, j'ai enfin réussi à
+trouver le (un) moyen d'utiliser les entrées / sorties de la foxboard
+G20. J'ai initialement orienté mes recherches sur la documentation du
+kernel qui pointait sur gpio.h. Cependant d'après le site
+d'[avrfreaks](http://www.avrfreaks.net/wiki/index.php/Documentation:Linux/GPIO)
+où j'ai trouvé mon bonheur, gpio.h aurait tout simplement disparu des
+noyaux Atmel au profit de [sysfs](http://fr.wikipedia.org/wiki/Sysfs).
+Ainsi, la gestion I/O se fait par le biais de simples fichiers. J'ai
+donc commencé à me faire une petite bibliohèque de fonctions pour
+manipuler les fichiers sysfs. Ce n'est que le début, ça n'est pas encore
+complètement au point, mais quoi qu'il en soit, le code suivant fait
+déjà clignotter la LED rouge de la fox.
+
+	#include 
+	#include 
+	#include 
+	#include 
+	
+	struct S_GPIO_LINE {
+	    char id_number[4];
+	    int direction;
+	    int value;
+	};
+	typedef struct S_GPIO_LINE S_GPIO_LINE;
+	
+	int load_gpio_line( S_GPIO_LINE *ps_line, char id_number[4], int i_direction )
+	{
+	    FILE *p_gpio_line;
+	    
+	    /* Exporting GPIO line */
+	    if ((p_gpio_line = fopen("/sys/class/gpio/export", "ab")) == NULL)
+	    {
+	        printf("Cannot open export file.\n");
+	        exit(1);
+	    }
+	    rewind(p_gpio_line);
+	    strcpy(ps_line->id_number, id_number);
+	    fwrite(&ps_line->id_number, sizeof(char), 2, p_gpio_line); 
+	    fclose(p_gpio_line);
+	    
+	    set_gpio_direction(ps_line, i_direction);
+	
+	    return 0;
+	}
+	
+	int set_gpio_direction( S_GPIO_LINE *ps_line, int i_direction )
+	{
+	    FILE *p_gpio_direction;
+	    char gpio_direction[35];
+	    char c_direction[4];
+	
+	    sprintf(gpio_direction, "/sys/class/gpio/gpio%s/direction", ps_line->id_number);
+	
+	    /* Setting line direction */ 
+	    if ((p_gpio_direction = fopen(gpio_direction, "rb+")) == NULL)
+	    {
+	        printf("Cannot open direction file.\n");
+	        exit(1);
+	    }
+	    rewind(p_gpio_direction);
+	    if( i_direction ) {
+	        strcpy(c_direction,"in");
+	        ps_line->direction = 1;
+	    }
+	    else{
+	        strcpy(c_direction,"out");
+	        ps_line->direction = 0;
+	    }
+	    fwrite(&c_direction, sizeof(char), 3, p_gpio_direction);
+	    fclose(p_gpio_direction);
+	    
+	    return 0;
+	}
+	
+	
+	int set_gpio_line(S_GPIO_LINE *ps_line, int value )
+	{
+	    FILE *p_gpio_value;
+	    char gpio_value[35];
+	    char c_value[2];
+	
+	    if( ps_line->direction == 0 ) {
+	        sprintf(gpio_value, "/sys/class/gpio/gpio%s/value", ps_line->id_number);
+	        
+	        /* Setting value */
+	        if ((p_gpio_value = fopen(gpio_value, "rb+")) == NULL)
+	        {
+	            printf("Cannot open value file.\n");
+	            exit(1);
+	        }
+	        rewind(p_gpio_value);
+	        sprintf(c_value, "%d", value);
+	        ps_line->value = value;
+	        fwrite(&c_value, sizeof(char), 1, p_gpio_value);
+	        fclose(p_gpio_value);
+	    }
+	    else{
+	        printf("Wrong access.\n");
+	        exit(1);
+	    }
+	    return 0;
+	}
+	
+	int main() {
+	
+	    FILE *fp;
+	    S_GPIO_LINE s_led7;
+	     
+	    load_gpio_line(&s_led7, "103", 0);
+	    
+	    while(1)
+	    {
+	        set_gpio_line(&s_led7, 1);    
+	        usleep(100000);
+	        set_gpio_line(&s_led7, 0);
+	        usleep(100000);
+	    }
+	
+	    return 0;
+	}
+
+Prochaine étape, la lecture de données ;)

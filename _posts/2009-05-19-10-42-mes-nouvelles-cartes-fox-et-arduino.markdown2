@@ -1,0 +1,27 @@
+---
+layout: post
+title: Mes nouvelles cartes - Fox et Arduino
+keywords: Arduino, carte fox, foxboard
+---
+
+![Cartes Fox et Arduino]({{blog.images}}/dsc06969_small.jpg)
+
+Je viens enfin de recevoir ma commande Lextronic ! Dans le colis, les
+deux cartes italiennes tant attendes : la Fox et
+l'[Arduino](http://www.arduino.cc/). Je ne dépends plus des cartes de
+l'UTT pour développer mon robot maintenant. Et après de nombreuses
+recherches de doc, il s'avère que la carte Arduino est vraiment géniale
+en terme de possibilités. J'en dirai un peu plus sur cette nouvelle
+carte dès que je maîtriserai son fonctionnement. Sinon, je suis en train
+de rédiger des tutoriels sur la carte fox. Je compte déjà réaliser un
+tutoriel d'introduction à la carte pour idéalement décliner en plusieurs
+tutoriels par la suite du style :
+
+-   Communiquer avec la carte Fox - Bluetooth, Série, Wifi
+-   Utilisation et mise en place d'un serveur vidéo sur la carte Fox
+-   Utilisation des entrées sorties
+-   Mise en place d'une Interface GSM/GPRS - envoi de SMS
+-   Mise en place d'un serveur web (CGI/PHP)
+-   ...
+
+Suite au prochain épisode :)

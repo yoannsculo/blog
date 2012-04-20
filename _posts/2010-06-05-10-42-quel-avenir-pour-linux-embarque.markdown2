@@ -1,0 +1,72 @@
+---
+layout: post
+title: Quel avenir pour Linux embarqué ?
+keywords: ARM, Freescale, IBM, Linaro, linux, linux embarqué, open source, Samsung, ST-Ericsson, Texas Instruments
+---
+
+![tux]({{blog.images}}/logos/tux-252x300.jpg)
+
+Comment sera le marché de Linux embarqué dans 5 ans ? et dans 10 ans ? Comment
+tout cela va-t-il évoluer ? Ce sont des questions que je me pose depuis
+déjà quelques temps. Il y a deux semaines de cela, PC Inpact faisait une
+[analyse très
+intéressante](http://www.pcinpact.com/actu/news/57129-edito-linux-dominer-le-monde.htm)
+sur Linux, en se demandant sérieusement si Linux ne dominerait-il pas un
+jour le monde. Nous sommes en pleine explosion du marché des appareils
+mobiles et communicants et Linux est partout. Nous faisons maintenant ce
+que nous aurions trouvé incongru sur un ordinateur de bureau il y a de
+cela encore quelques années. Les smartphones sont arrivés avec leurs
+gros sabots, initiant tout un engouement autour des appareils mobiles et
+finalement démarrant en quelque sorte une nouvelle ère pour
+l'informatique embarquée. Du point de vue des netbooks, des tablettes
+tactiles ou des télévisions, le constat est le même. De nouveaux OS
+basés sur Linux et adaptés à la mobilité sont développés (Android,
+MeeGo…) Et comme le monde est très bien fait, leurs éditeurs en
+profitent pour les rendre compatibles pour un certain nombre
+d'architectures stratégiques. Au final, nous allons nous retrouver avec
+des systèmes embarqués aussi puissants que nos ordinateurs de bureau. De
+ce fait, les contraintes apportées par l'embraqué ne pourraient plus
+avoir de raison d'être. Nous pourrions alors très bientôt développer de
+la même façon sur un ordinateur, un téléphone, une télévision ou une
+set-top box.
+
+Si je prends [cet article par
+exemple](http://www.clubic.com/smartphone/actualite-344320-atom-smartphone-conseille-intel.html),
+on nous annonce que certains processeurs Atom x86 d'Intel pourraient
+supplanter les processeurs ARM, car plus puissants et moins gourmands en
+énergie. Ce genre d'annonce a de quoi faire réfléchir sur les
+changements radicaux que pourraient subir nos systèmes embarqués
+actuels.
+
+![Logo Linaro]({{blog.images}}/logos/lin-logo.png)
+
+En parlant justement d'annonce, en voici une fort sympathique. ARM,
+Freescale, IBM, Samsung, ST-Ericsson et Texas Instruments [viennent de
+faire
+savoir](http://www.marketwatch.com/story/arm-freescale-ibm-samsung-st-ericsson-and-texas-instruments-form-new-company-to-speed-the-rollout-of-linux-based-devices-2010-06-02?reflink=MW_news_stmp),
+il y a 2 jours, la création d'une société à but non lucratif, appelée
+[Linaro](http://www.linaro.org/).
+
+**Son but :**
+
+-   Aider au développement de projets open source tournant sur des
+    distributions de type Linux tels qu'Android, LiMo, MeeGo, Ubuntu et
+    webOS.
+-   Fournir un certain nombre d'outils communs pour les différentes
+    distributions Linux et pour les développeurs à un rythme de deux
+    releases par an.
+-   Faciliter le temps de développement des nouveaux produits du marché
+    grâce à leurs outils.
+
+Pour résumer, du point de vue du consommateur, le nombre de produits sur
+le marché va augmenter. Et du point de vue des développeurs, nous allons
+gagner énormément de temps de développement !
+
+Pour luter contre la concurrence (Apple, Microsoft, BlackBerry …),
+Linaro va tenter de regrouper le marché de Linux actuellement très
+segmenté pour en faire un super marché dopé à l'open source. J'aime ça !
+
+Tout cela évolue tellement vite. Où seront-nous dans 5 à 10 ans ? Ce qui
+est certain c'est que le marché aura eu le temps de changer
+radicalement. Je serais quoi qu'il en soit intéressé d'avoir votre avis
+sur la chose.

@@ -1,0 +1,23 @@
+---
+layout: post
+title: Sortie de la première version de MeeGo Handset UX
+keywords: GIT, MeeGo, MeeGo Handset UX
+---
+
+![meego-handset-home-l]({{blog.images}}/meego-handset-home-l-300x157.png)
+
+Le Projet [Meego](http://meego.com/) vient
+d'[annoncer](http://meego.com/community/blogs/valhalla/2010/meego-handset-project-day-1-here)
+la sortie de son portage pour téléphone, MeeGo Handset UX. Pour
+l'occasion nous avons droit à de sympathiques
+[screenshots](http://meego.com/devices/handset/handset-screenshots)
+ainsi qu'à une [vidéo](http://www.youtube.com/watch?v=EW5wpg5epMs) du
+système. L'événement notable est bien évidemment la publication de la
+base du code source du système MeeGo Handset UX auprès de la communauté.
+Tout cela peut se retrouver sur le [GIT](http://meego.gitorious.com/)
+super actif de Meego ou bien en [simple
+téléchargement](http://meego.com/downloads/releases/1.0.80.8/meego-handset-day1-developer-preview).
+La release de la version en cours de développement (MeeGo 1.1) est
+prévue pour octobre prochain.
+
+![meego-handset-launcher-l]({{blog.images}}/meego-handset-launcher-l-300x157.png)

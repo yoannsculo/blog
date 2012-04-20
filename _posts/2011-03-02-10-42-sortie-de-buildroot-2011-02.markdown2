@@ -1,0 +1,38 @@
+---
+layout: post
+title: Sortie de Buildroot 2011.02
+keywords: 2011.02, Buildroot, crosstool-ng, linux, linux embarqué, release
+---
+
+![Logo Buildroot]({{blog.images}}/buildroot/logo_small.png)
+
+Comme tous les 3 mois, [Buildroot](http://buildroot.net) se refait une
+beauté et publie une version stable de son système. [Hier
+soir](http://lists.busybox.net/pipermail/buildroot/2011-February/041662.html),
+nous avons eu droit à la nouvelle version 2011.02. Alors quoi de neuf
+depuis novembre dernier ?
+
+-   Des améliorations dans le support des toolchains externes et de
+    crosstool-ng
+-   Séparation du compilateur croisé et du dossier staging pour l'hôte
+-   Grosse réorganisation de la gestion matérielle des cartes, notamment
+    au niveau de qemu
+-   Le support de Ccache a été retravaillé.
+-   Nouvelle infrastructure cmake
+-   Support de la première architecture sans MMU de Buildroot, Blackfin
+-   Et toujours autant de bumps de packages :)
+
+J'aimerais tellement participer à Buildroot et proposer un certain
+nombre de patchs. Mais j'ai paaaaaas le temps ! Raaaah :( J'avais depuis
+des mois l'intention de générer un patch pour l'ajout de mpd que j'avais
+déjà intégré à mon Buildroot, mais faute de temps il a finalement été
+intégré par quelqu'un d'autre dans la 2011.02 :P. En attendant, je suis
+toujours aussi content de l'utiliser au quotidien. Je suis passé la
+semaine dernière sur 2010.11, mais j'avoue que l'amélioration du support
+de crosstool-ng m'enchante particulièrement. J'ai quelques petits soucis
+ponctuels avec la uClibC depuis un moment, et les tests de passage à la
+glibc via crosstool-ng était un véritable bourbier sur mes précédentes
+versions de Buildroot. J'ai hâte de tester ça !
+
+\[[Voir l'article complémentaire](http://linuxfr.org/news/buildroot 201102-est-sorti) de
+linuxfr\]

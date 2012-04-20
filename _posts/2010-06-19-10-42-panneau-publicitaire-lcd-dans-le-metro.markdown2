@@ -1,0 +1,28 @@
+---
+layout: post
+title: Panneau publicitaire LCD dans le métro
+keywords: RATP Metro Paris Publicité Ecran LCD
+---
+
+Je suis tombé ce soir sur un des panneaux publicitaires LCD présents
+dans certaines stations de métro dans Paris. Jusqu'à présent mes trajets
+ne me faisaient passer que par des couloirs remplis de bonnes vieilles
+pubs papier... Le papier c'est tellement "has-been" !!
+
+<object class="aligncenter" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/0Dd1OFBflSU&amp;hl=fr_FR&amp;fs=1&amp;" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="480" height="385" src="http://www.youtube.com/v/0Dd1OFBflSU&amp;hl=fr_FR&amp;fs=1&amp;" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
+J'avoue que ça fait bizarre quand on voit ça pour la première fois. Je me pose plein de
+questions maintenant :
+
+-   Oh le joli système embarqué que ça doit être !!!
+-   Comment est-ce à l'intérieur ? Y a t-il Linux dedans ? :D
+-   Y a t-il des capteurs de détection de présence ?
+-   Comment la régie publicitaire met-elle à jour son contenu ? Je doute
+    qu'un câble ethernet soit tiré pour chaque écran publicitaire. Je
+    verrais bien la mise à jour par modem GPRS voir 3G, on est plus à ça
+    près. Et puis la vidéo haute définition par GPRS ... ça doit pas
+    être fameux !
+-   Qu'est-ce que j'aimerais bidouiller sur ce genre de système !
+
+Du coup j'ai pas pu regarder plus, mon métro arrivait. Ça sera pour une
+prochaine fois ^^

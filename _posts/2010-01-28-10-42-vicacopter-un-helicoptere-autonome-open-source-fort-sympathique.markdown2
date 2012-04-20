@@ -1,0 +1,38 @@
+---
+layout: post
+title: Vicacopter, un hélicoptère autonome open source fort sympathique
+keywords: drone, helicopter, quadrimoteur, vicacopter
+---
+
+![vicacopter]({{blog.images}}/vicacopter.jpg)
+
+[Vicacopter](http://vicacopter.com) est un projet de drone autonome open
+source réalisé par Adam Williams, ouvert aux passionnés prets à
+construire leur propre mono, tri ou quadrimoteur. Quelle belle
+initiative ! Le projet est hébergé chez Sourceforge et en aidra (a aidé)
+plus d'un, j'en suis sûr. Le projet ne semble pas tout jeune, mais je ne
+suis tombé dessus que récemment au gré de mes pérégrinations sur
+Internet.
+
+J'ai le projet depuis quelques temps déjà de construire mon propre drone
+volant. Mais faute de temps, je ne me suis pas encore lancé dans
+l'aventure. Accessoirement, j'avouerais que la phase d'asservissement me
+rebute tout de même, n'étant absolument pas mon domaine de compétences.
+Mais une telle entreprise doit être vraiment grisante une fois le drone
+fonctionnel. Le rêve de tout gosse (geek avant l'heure) à portée de
+main. Il y a tout de même une bonne dose de connaissances techniques
+nécessaires. Toutefois, plus je vois de vidéos de projets similaires,
+plus l'envie se fait forte. Je me suis lancé dans l'épluchage du code de
+vicacopter.
+
+En fait, il me semble déjà être tombé sur les vidéos du projet sans
+avoir été plus loin. Les vidéos font vraiment envie :
+
+<object class="aligncenter" width="425" height="344"><param name="movie" value="http://www.youtube.com/v/ZfsPDWzJOSo&hl=fr_FR&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/ZfsPDWzJOSo&hl=fr_FR&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
+
+Et je trouve le principe du light painting dans le ciel plutôt original
+:P !
+
+<object class="aligncenter" width="400" height="266"><param name="allowfullscreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=936027&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" /><embed src="http://vimeo.com/moogaloop.swf?clip_id=936027&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="266"></embed></object>
+
+Bref, un projet qui vaut vraiment le détour !

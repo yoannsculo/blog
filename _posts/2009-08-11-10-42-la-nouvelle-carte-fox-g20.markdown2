@@ -1,0 +1,59 @@
+---
+layout: post
+title: La nouvelle carte Fox G20
+keywords: ARM, carte fox, foxboard, G20
+---
+
+Voilà quelques temps que la société Acmesystems avait annoncé la sortie
+de sa nouvelle carte embarquée [Fox
+G20](http://www.acmesystems.it/netus/doku.php?id=products:foxboardg20).
+A vrai dire ils avaient surtout annoncé qu'ils arrêteraient la
+production de carte Fox à la date du 31 Juillet 2010, ce qui laissait
+pas mal de marge. Et j'ai eu la surprise aujourd'hui de découvrir qu'ils
+comptaient mettre en vente leur nouveau modèle G20 dès le mois de
+septembre. Aucune information n'était disponible encore la semaine
+dernière. Donc c'est une bonne surprise, d'autant plus que nous avons
+maintenant les caractéristiques de la G20.
+
+![Carte Fox G20]({{blog.images}}/fox/foxg20.jpg)
+
+Basée sur la même carte que la Foxboard LX, la G20 embarque un module
+CPU, basé sur un processeur ARM9 de chez Atmel.
+
+Au niveau des changements:
+
+-   On gagne 300Mz par rapport à l'ancien modèle, ce qui nous amène à
+    400MHz.
+-   La mémoire est doublée, passant de 32 à 64Mo de SDRAM.
+-   Les ports USB1 passent en USB2
+-   La consommation est presque divisée par 4, passant de 220mA à 60mA,
+    ce qui nous amène à 0.3W ! Fantastique !
+
+Au niveau des nouveautés:
+
+-   On gagne un port USB client
+-   Un lecteur microSD a été installé, qui nous permet de lire des
+    cartes jusqu'à 4Go
+-   Une pile est maintenant présente sur la carte, ce qui nous permettra
+    enfin de gérer correctement la composante temporelle sans ajout de
+    circuit annexe.
+-   On gagne également 2 sorties PWM !
+-   Mais aussi un port série pour gérer un écran oLED 4Dsystem
+-   Ainsi que des entrées analogique avec convertisseur analogique
+    numérique intégré !
+-   Et un port JTAG :)
+
+Le tout fonctionnant sur l'OS Linux [OpenWRT](http://openwrt.org/). Il
+semblerait également que l'on puisse installer simplement d'autres
+distrib telles que Gentoo et KaeilOS. Acmesystems annonce la
+disponibilité de la G20 dès le 21 Septembre chez ses différents
+revendeurs (dont [Lextronic](http://www.lextronic.fr) en France). Le prix
+restant inchangé (139€ HT) par rapport au modèle actuel. Bref tout cela
+pour dire que nous avons là une superbe petite carte, qui va se
+retrouver très bientôt dans mes petits robots. Pour plus d'informations,
+[un nouveau
+Wiki](http://www.acmesystems.it/netus/doku.php?id=products:foxboardg20)
+a été mis en place pour accueillir la nouvelle documentation de la Fox
+G20. Je vais donc surveiller de près ce petit wiki qui est en cours de
+remplissage depuis la semaine dernière.
+

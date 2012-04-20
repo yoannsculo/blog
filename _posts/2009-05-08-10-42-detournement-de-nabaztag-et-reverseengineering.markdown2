@@ -1,0 +1,108 @@
+---
+layout: post
+title: Détournement de Nabaztag et reverse engineering
+keywords: ARM, démontage, électronique, JTAG, nabaztag, reverse engineering, violet
+---
+
+![Nabaztag]({{blog.images}}/nabaztag/nabaztag-300x300.jpg)
+
+J'ai reçu à Noël dernier une jolie petite bestiole. Un bon gadget de
+geek :) Le Nabaztag.
+Très bonne idée à la base, le concept est intéressant, c'est typiquement
+le genre de truc qui m'intéresse. Sauf ... que ce Nabaztag est
+finalement un peu trop inutile à mon goût et surtout bien trop contrôlé
+par la société qui le vend, à savoir la société Violet. Déjà, qu'est-ce
+que cette petite bestiole ? Il s'agit en fait d'un terminal connecté à
+Internet en wifi par lui même et qui peut interagir à la fois avec du
+contenu sur Internet et avec l'utilisateur. Il est alors possible de
+lire la météo, suivre ses emails, écouter la radio, écouter des podcast,
+lire des flux en streaming, suivre des flux RSS, etc. Notre ami lapin
+clignote de partout et bouge les oreilles dans tous les sens et peut
+même lire des puces RFID. Bref une bonne idée dans l'absolu, mais
+finalement ce lapin m'a plus énervé que servi pour l'instant. J'écoute
+beaucoup de webradio sur Internet, on peut charger des radios sans
+problème ... sauf que notre ami lapin lit comme un abruti les trames
+METADATA (titres des musiques entre autres) des flux http des radios. Du
+coup on a droit à des gros parasites aléatoires dans la musique, parce
+que le lapin essaye de faire lire du texte au lieu du flux mp3... ahah
+bien joué !
+
+Second truc qui m'embête pas mal. Le lapin se connecte par Internet au
+serveur de Violet. Le système embarqué au sein du lapin n'est pas super
+puissant, donc tout le traitement a lieu, semblerait-il, de manière
+déportée, le lapin ne reçoit que des commandes.En gros si la société
+fait faillite ou arrête le développement du lapin ... le lapin devient
+hors d'usage. J'ai quand même du mal à me savoir dépendant d'une société
+pour utiliser un objet comme celui-ci. En dehors du fait que le lapin
+n'est pas super fiable, dépend du serveur de violet pour fonctionner
+comme réveil ou lire ses mails etc, le gadget reste intéressant, mais
+hélas ça reste un gadget. Je n'ai pas réussi à l'intégrer dans ma vie de
+tous le jours. Dommage.
+
+En dehors des services de base proposés par Violet pour le nabaztag, la
+société a créé une API pour permettre aux propriétaires de Nabaztag de
+le commander eux mêmes, c'est à dire faire bouger les oreilles, lancer
+des flux mp3 à la demande, lancer le synthétiseur de parole, etc. Mais,
+même problème ce ne sont que de simples requêtes HTTP qui ne permettent
+pas d'aller bien loin. Et puis accessoirement, le lapin est carrément
+manipulable depuis n'importe quel coin de la planète, du moment qu'une
+personne a l'identifiant de votre lapin (sorte d'adresse MAC). Vous avez
+vite fait de tomber par hasard sur l'adresse d'un lapin existant.
+
+Bref, après moins de 2 semaines de tentatives d'utilisation je n'ai pas
+résisté à la tentation de démonter cette petite bestiole. Il s'avère
+qu'elle cache du matériel plutôt sympathique, et j'ai découvert avec
+joie qu'elle disposait d'un port JTAG, permettant de programmer le
+processeur directement.
+
+Nabaztag Démonté
+
+![Nabaztag Démonté]({{blog.images}}/nabaztag/dsc06946_small.jpg)
+
+Carte embarquée du Nabaztag
+
+![Carte embarquée du Nabaztag]({{blog.images}}/nabaztag/dsc06951_small.jpg)
+
+J'ai pu donc diséquer le lapin et découvrir ce qu'il se trouvait à
+l'intérieur:
+
+-   2 moteurs continus pour faire bouger les oreilles
+-   Un lecteur de puce RFID
+-   Un micro
+-   Une prise jack reliée à la carte son
+-   Un potentiomètre pour régler le volume
+-   Une carte wifi
+-   Un haut parleur
+-   Des DELs associées et leurs cônes de direction pour avoir de jolies
+    petits ronds lumineux sur la coque par transparence
+
+MCBSTM32 - Carte de développement pour processeur ARM
+
+![MCBSTM32 - Carte de développement pour processeur ARM]({{blog.images}}/nabaztag/mcbstm32-150x150.jpg)
+
+Je ne vais pas détailler minutieusement tous les composants de la carte
+principale. Quelqu'un s'en est déjà chargé sur [ce
+blog](http://www.petertyser.com/2007/03/11/nabaztag-nabaztagtag-dissection/).
+Je peux lire sur le processeur "OKI L670405I - INNN, ARM 722EBAUJ". Il
+semblerait qu'il s'agisse d'un processeur [ARM7
+TDMI](http://www.arm.com/products/CPUs/ARM7TDMI.html), ce processeur
+pourrait d'après mes recherches (je n'en suis pas sûr) être programmé
+par une [carte de développement](http://embeddedgear.com/mcbstm32.aspx)
+qui vaut 229$. Ahah la bonne blague ! Il doit peut être y avoir moyen de
+trouver un moyen moins cher, mais je ne le connais pas encore.
+Du coup j'essaye de découvrir comment reprogrammer le processeur pour y
+mettre un Firmware maison et libre de surcroit. En gros dans l'idée de
+permettre aux gens d'utiliser leur nabaztag sur des serveurs qui ne sont
+pas ceux de Violet. (Free your rabits !!!) Cela impliquerait un certain
+travail, analyse minutieuse des specifications matérielles,
+reprogrammation des drivers, reprogrammation des protocoles de
+communication, reprogrammation d'un serveur etc. Mais c'est le genre de
+projet qui m'intéresserait vraiment : refaire de A à Z le firmware à des
+fins pédagogiques. J'essaye de contacter des gens sur Internet qui
+semblent intéressés par la libération des lapins, pour l'instant pas de
+réponse positive. Mais je cherche toujours ! Pour l'instant je ne sais
+pas trop par où commencer avec le peu de connaissances et de matériel
+que j'ai à ma disposition. Mais si par hasard, vous êtes intéressé par
+une telle entreprise n'hésitez pas à [me
+contacter](http://www.yoannsculo.fr/contact/).
+

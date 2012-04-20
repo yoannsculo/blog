@@ -1,0 +1,33 @@
+---
+layout: post
+title: DSO nano - L'oscilloscope numérique de poche
+keywords: ARM, DSO nano, électronique, numérique, oscilloscope
+---
+
+![DSO nano]({{blog.images}}/dsointro-300x225.jpg)
+
+Je suis tombé sur un petit appareil magique
+[hier](http://www.seeedstudio.com/depot/micro-digital-storage-oscilloscopedso-nano-p-512.html),
+le DSO nano. Il s'agit d'un oscilloscope numérique de poche. Au premier
+abord on dirait un téléphone portable ou un baladeur mp3. Sauf qu'il
+s'agit bien d'un oscilloscope ! Basé sur un processeur ARM Cortex-M3 et
+équipé d'un écran couleurs 320\*240 pour environ 80$, l'oscilloscope
+offre une bande passante de 1Mhz. C'est assez faible, mais au final
+c'est amplement suffisant pour visualiser des signaux PWM, I2C, ...
+Bref, la solution idéale pour les amateurs, quand on connait le prix
+d'un vrai oscilloscope.
+
+On peut le trouver entre autres sur [Seeed
+Depot](http://www.seeedstudio.com/depot/micro-digital-storage-oscilloscopedso-nano-p-512.html),
+[Sparkfun](http://www.sparkfun.com/commerce/product_info.php?products_id=9625)
+et
+[nkcelectronics](http://www.nkcelectronics.com/micro-digital-storage-oscilloscopedso-nano.html).
+J'ai également repéré [un test
+intéressant](http://www.justblair.co.uk/seeed-studio-dso-nano-pocket-digital-storage-oscilloscope-review.html)
+du produit.
+
+Je n'ai pas d'oscilloscope, vu le prix et l'utilisation épisodique que
+j'en ai. Cependant j'ai toujours été embêté dès que j'ai eu besoin de
+travailler sur des signaux électriques de type PWM ou I2C. Le DSO nano
+semble être exactement ce que je cherchais. Je sens que je vais craquer
+très prochainement et me le procurer :-)

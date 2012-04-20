@@ -1,0 +1,24 @@
+---
+layout: post
+title: Hacking - Un driver open source pour le Kinect de Microsoft
+keywords: Adafruit, driver, hack, Kinect, linux, open source
+---
+
+![Driver open source du Kinect]({{blog.images}}/open-kinect-300x223.jpg)
+
+Après le lancement du Kinect il y a quelques jours, un concours a été
+lancé par la société [Adrafuit Industries](http://www.adafruit.com/)
+mettant en jeu $3,000 pour le premier à réaliser un driver open source.
+A peine ai-je eu le temps d'entendre parler de ce concours que le défi
+avait déjà été relevé :-)
+
+Ainsi un certain Hector Martin, à l'instar de notre ami Johnny Chung Lee
+avec ses détournements de wiimote, [a réussi
+l'exploit](http://git.marcansoft.com/?p=libfreenect.git).
+
+Ah qu'est-ce que j'aimerais avoir du temps pour faire ce genre de hack !
+
+Bref, voici une petite vidéo du résultat :
+
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="385" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/rKhW-cvpkks?fs=1&amp;hl=fr_FR" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="480" height="385" src="http://www.youtube.com/v/rKhW-cvpkks?fs=1&amp;hl=fr_FR" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+

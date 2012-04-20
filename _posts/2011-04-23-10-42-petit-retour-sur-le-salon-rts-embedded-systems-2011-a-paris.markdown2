@@ -1,0 +1,94 @@
+---
+layout: post
+title: Petit retour sur le salon Rts Embedded Systems 2011 à Paris
+keywords: Android, conférence, embarqué, linux, linux embarqué, MeeGo, OpenEmbedded, Réussir son projet, Salon
+---
+
+Je me suis rendu au salon [RTS Embedded Systems
+2011](http://www.salons-solutions-electroniques.com/) en mars dernier
+(uniquement sur la matinée du jeudi). Je n'ai pas eu l'occasion jusque
+là de revenir sur les conférences auxquelles j'ai assisté.
+
+Première conférence vraiment très intéressante de Gilles Blanc
+(Linagora) intitulée « Linux embarqué, Réussir son projet ». Abordant
+des sujets tels que les erreurs fatales, l'évaluation de projet, la
+réalisation de PoC, le calcul de coûts, mais également les nouveaux
+paradigmes autour d'Android, MeeGo and co., les compétences et rôles au
+sein d'une équipe, l'organisation du travail, l'environnement de
+développement. Mais aussi, de façon générale comment mener à bien son
+projet, les cycles de développement, la relation client/fournisseur et
+la gestion proactive.
+
+J'ai appris beaucoup de choses notamment sur les erreurs fatales (Oh
+mince j'en avais déjà expérimenté un paquet :D mais je suis toujours en
+vie ! :D), les coûts cachés et la gestion complexe des licenses en
+embarqué. Point tellement peu maîtrisé par beaucoup d'industriels. Je ne
+pourrais citer que mon propre exemple avec des juristes qui me demandent
+ce qu'est la licence GPL et une licence contaminante... C'est pas
+toujours gagné ! Également intéressant de voir l'intérêt du PoC en
+embarqué pour estimer la charge de travail.
+
+Gilles Blanc a d'ailleurs annoncé qu'il travaillait actuellement sur un
+livre reprenant entre autres les points abordés dans sa présentation.
+Très bonne nouvelle ! Un ouvrage très intéressant en perspective ! Une
+bonne chose quand on voit que la littérature française sur l'embarqué
+n'est pas encore très étendue. Gilles a même utilisé le terme de « Libre
+embarqué » qui m'a beaucoup plu. Il faudrait l'appeler comme ça ton
+livre ;)
+
+Seconde présentation de Christian Charreyre (CIO informatique
+industrielle) sur OpenEmbedded qui m'a presque donné envie de balancer
+mon cher Buildroot à la poubelle :P
+
+Présentation très sympa sur les avantages et inconvénients du projet
+(enfin ... surtout les avantages :D) Mais j'avoue que les éléments
+suivants :
+
+-   gestion de dépendance entre paquets
+-   gestion de la chaîne de compilation
+-   génération de SDK (du staging quoi)
+-   génération de paquets logiciels binaires (.deb)
+-   génération d'image prête à déployer
+-   classification des logiciels par licence (CA c'est la grande classe
+    !)
+-   gestion des dépendances et versions
+-   grande richesse logicielle
+-   prise en compte de l'internationalisation
+-   indépendance vis à vis du poste de développement hôte
+-   moteur écrit en python (bitbake)
+-   Jeu de recettes de paquets pour générer des systèmes adaptés à des
+    besoins particuliers.
+-   gestionnaire de paquets sur la cible (sweet !) avec gestion de
+    dépendances d'installation et de suppression
+
+m'ont vraiment donné envie de tester OpenEmbedded pour mes prochains
+projets. Mais pour ça il va me falloir une nouvelle machine, apparemment
+OpenEmbedded est extrêmement gourmand en espace disque et temps CPU. A
+côté de cette usine à gaz, Buildroot génère des images instantanées et
+un staging ultra light :D
+
+Nous avons eu ensuite droit à une présentation de Wind River par
+Pierre-Henri Stanek à propos du test de systèmes Linux. Si je ne m'abuse
+il s'agissait du système présenté au Mobile World Congres. Bon je vais
+vous avouer que le discours était tout de suite plus commercial (trop
+pour moi) et pas assez technique à mon goût :P
+
+Et enfin la matinée s'est terminée sur une présentation de Jérome
+Letailleur d'Anticyp sur le Debug Kernel portant sur la spécificité de
+la phase Bootloader -\> Kernel -\> Applicatif. En l'occurrence ici, sur
+le moment où la MMU n'est pas encore chargée et où l'on a besoin
+d'investiguer et trouver la source d'un problème bien vicieux et planqué
+au fin fond du Kernel. Bon, sa solution impliquait du plugin Eclipse et
+de l'IDE graphique. Graphique ? Berk ! … Je sais ! Je suis un intégriste
+du vim et de la ligne de commande ! Niark ! Plus sérieusement, je
+regarderai à l'occasion. Ma phase vim me passera peut-être un jour... ou
+pas :D
+
+Bref, une matinée fort intéressante. Je ne suis pas resté l'après midi,
+les sujets abordés m'intéressaient déjà moins. Et j'avais aussi pas mal
+à faire avec la sortie du Karotz ! Je regrette un peu de ne pas avoir pu
+me rentre à la conférence de la veille sur Android et MeeGo.
+
+J'ai déjà repéré un cycle de conférences sur l'embarqué au [Salon
+Solutions Linux / Open Source](http://www.solutionslinux.fr/) le 11 mai
+prochain à Paris. J'ai déjà pris ma journée pour m'y rendre :)

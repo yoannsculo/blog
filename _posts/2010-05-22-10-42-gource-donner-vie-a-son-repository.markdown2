@@ -1,0 +1,20 @@
+---
+layout: post
+title: Gource - Donner vie à son repository
+keywords: GIT, Gource, Simerion, SVN
+---
+
+Je suis récemment tombé sur [Gource](http://code.google.com/p/gource/),
+un outil de visualisation pour systèmes de gestion de version (GIT, SVN,
+CVS, Mercurial, ...) Il représente graphiquement l'arborescence du
+projet sous la forme d'un arbre élastique. On voit les contributeurs du
+projets se balader et modifier les fichiers au fil du temps. Après
+quelques compilations et paramétrages de Gource, je me suis essayé au
+repository de [Simerion](http://www.yoannsculo.fr/projets/simerion/), mon jeu
+web sur lequel j'ai travaillé presque 5 ans, de 2005 à 2009. Le rendu
+est vraiment sympa, je trouve :)
+
+<object class="aligncenter" width="480" height="385"><param name="movie" value="http://www.youtube.com/v/xQsgh5G7dZA&hl=fr_FR&fs=1&"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/xQsgh5G7dZA&hl=fr_FR&fs=1&" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="480" height="385"></embed></object>
+
+On peut voir des vidéos plus impressionnantes d'autres projets sur le
+[wiki de Gource](http://code.google.com/p/gource/wiki/Videos).

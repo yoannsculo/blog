@@ -1,0 +1,59 @@
+---
+layout: post
+title: Châssis et capteurs reçus
+keywords: capteur, châssis, Robert, robot, Sharp, Ultrason
+---
+
+J'avais parlé de notre nouveau robot. Voici quelques nouvelles ! Tout
+d'abord nous luis avons trouvé un nom : Robert ! Robert pour ROBot
+d'Exploration et de Recherche Technologique
+
+Nous avons réalisé [un site Internet
+dédié](http://r19649.ovh.net/robert/) au projet, que nous complèterons
+au fur et à mesure de l'avancée du projet. Pour l'instant il n'y a pas
+grand chose à mettre, mais ça ne saurait tarder.
+
+Nous avons donc reçu les premières pièces du robot. A savoir le châssis,
+fait sur mesure chez Easyrobotics que voici en partie monté :
+
+Châssis : base du robot
+
+![Châssis : base du robot]({{blog.images}}/robert/DSC06993_small-1024x768.jpg)
+
+Châssis : Dessous du robot avec ses 2 billes folles
+
+![Châssis : Dessous du robot]({{blog.images}}/robert/DSC06994_small-1024x768.jpg)
+
+Châssis : roues sur mesure
+
+![Châssis : roues]({{blog.images}}/robert/DSC06997_small-1024x768.jpg)
+
+Capteur de distance Sharp
+
+![Capteur de distance Sharp]({{blog.images}}/robert/24560a-opt.jpg)
+
+Nous avons acheté des tiges filtées pour nous faire des étages, mais
+faute de scie à métaux pour l'instant ça sera sans pour ma part :P De
+plus, nous n'avons pas encore les moteurs, nous devons les commander.
+Vive le mois d'août et ses magasins fermés pendant un mois ... En
+espérant donc que ça ne mette pas trop de temps à arriver. Ensuite nous
+commanderons les encodeurs pour l'odométrie.
+
+Du côté des capteurs nous avons commandé un capteur Sharp et ultrason
+pour tester leur fonctionnement et voir lequel des deux nous pourrions
+utiliser sur le robot. Nous penchons plutôt pour l'utilisation de
+capteurs ultrasons à l'avant du robot. Comme vous pouvez le voir sur les
+photos, nous avons déjà 2 supports capteurs :)
+
+Capteur ultrason
+
+![Capteur ultrason]({{blog.images}}/robert/24500n-opt.jpg)
+
+De mon côté j'ai commandé une caméra miniature RS232 chez lextronic.
+Elle me permettra de tester la faisabilité d'une transmission vidéo par
+câble série. Le but étant de faire un banc stéréo avec 2 caméras pour
+réaliser une acquisition 3D de l'environnement. Bref, je reviendrai
+donner des nouvelles quand je l'aurai reçue !
+
+Donc maintenant il n'y a plus qu'à tester les capteurs pour voir ce que
+ça vaut. Des news au prochain épisode !

@@ -1,0 +1,29 @@
+---
+layout: post
+title: SkypeKit SDK - Embarquer Skype dans l'électronique grand public
+keywords: API, SDK, Skype, SkypeKit
+---
+
+![SkypeKit]({{blog.images}}/logos/SkypeKit.png)
+
+Skype a annoncé en début de semaine [sur son
+blog](http://blogs.skype.com/devzone/2010/06/skypekit_beta.html) son
+nouveau SDK appelé SkypeKit. Son but, permettre aux développeurs et
+constructeurs d'appareils multimédia d'embarquer Skype.
+
+SkypeKit est uniquement disponible sous Linux et pour les entreprises
+dans un premier temps. Mais le sera rapidement sous Windows et Mac.
+
+En plus d'embarquer les fonctionnalités classiques de Skype (voix, vidéo
+et messagerie instantanée), le SDK fournit une implémentation du codec
+audio propriétaire [SILK](http://developer.skype.com/silk).
+
+Jusqu'à présent, interfacer Skype dans les systèmes embarqués était
+chose impossible ou très compliquée. SkypeKit ouvre la voie à tout un
+panel d'applications et de perspectives réellement intéressantes.
+Aujourd'hui les protocoles XMPP, Jingle et SIP nous offrent un bon moyen
+de communication entre appareils multimédia, mais je pense que SkypeKit
+sera accueilli à bras ouverts et ne sera pas de trop. Depuis le temps
+qu'on l'attendait ce SDK ;) !!
+
+J'ai hâte de pouvoir travailler avec :)

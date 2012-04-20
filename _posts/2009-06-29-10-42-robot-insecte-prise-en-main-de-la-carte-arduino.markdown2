@@ -1,0 +1,18 @@
+---
+layout: post
+title: Robot insecte - Prise en main de la carte Arduino
+keywords: antenne, Arduino, insecte, robot
+---
+
+Héhé, au lieu de faire mes cartons pour mon déménagement je me suis
+amusé avec la carte Arduino cet après midi. Cette carte est vraiment
+sympa. Elle permet super rapidement de faire un système embarqué de type
+robot. Pour cette prise en main de la carte je me suis fait rapidement
+un robot insecte qui change de direction lorsqu'il rencontre des
+obstacles. Le châssis est une coque de lecteur de disquette, les
+antennes en légo et la fixation au scotch :) Promis la prochaine fois
+j'essaye de me faire un châssis digne de ce nom :P
+
+En attendant, voici la vidéo. Et moi je retourne à mes cartons ^\_^
+
+<object width="425" height="344" data="http://www.youtube.com/v/HclqF3oxDXQ&amp;hl=fr&amp;fs=1&amp;" type="application/x-shockwave-flash"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/HclqF3oxDXQ&amp;hl=fr&amp;fs=1&amp;" /><param name="allowfullscreen" value="true" /></object>
