@@ -22,6 +22,9 @@
 def dateFormat(dt, format='%d/%m/%Y'):
     return dt.strftime(format)
 
+@templateFilter
+def dateFormatFull(dt, format='%d/%m/%Y %H:%M'):
+    return dt.strftime(format)
 
 @templateFilter
 def xmldatetime(dt):

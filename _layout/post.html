@@ -6,7 +6,7 @@ layout: default
 	<div class="well">
 		
 		<h1>{{ post.title | escape }}</h1>
-		<div style="width: 100%;text-align:right;">{{ post.date | dateFormat }}</div>
+		<div style="width: 100%;text-align:right;">{{ post.date | dateFormatFull }}</div>
 
 		{{ content }}
 
