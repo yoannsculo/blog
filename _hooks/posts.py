@@ -32,7 +32,7 @@ class Post(Page):
         base = os.path.basename(filename)
         ext = os.path.splitext(base)
 
-        self.year, self.month, self.day, self.slug = ext[0].split('-', 3)
+        self.year, self.month, self.day, self.hour, self.min, self.slug = ext[0].split('-', 5)
 
         self.context.post = self
 
@@ -57,7 +57,9 @@ class Post(Page):
     def date(self):
         return datetime.datetime(int(self.year),
                                  int(self.month),
-                                 int(self.day))
+                                 int(self.day),
+                                 int(self.hour),
+                                 int(self.min))
 
     @property
     def url(self):
