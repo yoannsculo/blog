@@ -8,7 +8,15 @@
 	<link rel="alternate" type="application/rss+xml" title="{{ blog.title }} RSS Feed" href="{{ blog.url }}/feed/" />
 	<link rel="alternate" type="application/atom+xml" title="{{ blog.title }} Atom Feed" href="{{ blog.url }}/feed/atom/" />
 
-	<meta name="keywords" content="{{ blog.keywords }}"/>
+
+	{% if post is defined %}
+		<meta name="description" content="{{ post.description }}" />
+		<meta name="keywords" content="{% for keyword in post.keywords %}{{keyword}}{%- if loop.last == False %}, {% endif %}{% endfor %}" />
+	{% else %}
+		<meta name="description" content="{{ blog.description }}" />
+		<meta name="keywords" content="{{ blog.keywords }}"/>
+	{% endif %}
+
 	<link rel="canonical" href="{{ blog.url }}" />
 
 	<link href="{{ blog.url }}/css/bootstrap.css" type="text/css" rel="stylesheet">
