@@ -184,7 +184,7 @@ autonome.
 `C`, `Linux`, `Capteurs de distance`, `Odométrie`, `Stéréovision`
 
 **2009**
-Développement d'un [robot mobile](http://www.yoannsculo.fr/genesis/)
+Développement d'un [robot mobile]({{blog.url}}/projets/genesis/)
 commandé par manette de Wii
 
 `C`, `Linux`, `Wiimote`, `SDL`, `serveur vidéo`, `RS232`, `Bluetooth`, `Wifi`, `PIC18`,
@@ -192,7 +192,7 @@ commandé par manette de Wii
 
 **2009**
 Développement d'un [planificateur d'activités
-touristiques](http://www.yoannsculo.fr/tourismo/) sous Android.
+touristiques]({{blog.url}}/projets/tourismo/) sous Android.
 
 `JAVA`, `Android`
 
@@ -205,7 +205,7 @@ web embarqué`
 
 **2005 - 2009**
 Création et développement du [jeu par navigateur web -
-www.simerion.fr](http://www.yoannsculo.fr/simerion/) Travail amateur en
+www.simerion.fr]({{blog.url}}/projets/simerion/) Travail amateur en
 équipe Spécification, conception, développement et administration du jeu
 Exposant aux festivals du jeu vidéo en 2007 et 2008 à Paris
 

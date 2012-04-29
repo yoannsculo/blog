@@ -27,18 +27,18 @@ buzzer qui fait office de klaxon.
 
 Côté droit du robot
 
-![Côté droit du robot](http://www.yoannsculo.fr/wp-content/uploads/2009/06/dsc06986_small-300x225.jpg)
+![Côté droit du robot](dsc06986_small-300x225.jpg)
 
 Côté gauche du robot
 
-![Côté gauche du robot](http://www.yoannsculo.fr/wp-content/uploads/2009/06/dsc06984_small-300x225.jpg)
+![Côté gauche du robot](dsc06984_small-300x225.jpg)
 
 Le schéma du robot est le suivant:
 
 ![Schéma global du robot Wifi]({{blog.images}}/genesis/schema_global.jpg)
 
-- [Rapport de projet](http://yoannsculo.fr/docs/genesis/Rapport%20TX%20Robot%20Wifi.pdf)
-- [Code source](http://yoannsculo.fr/docs/genesis/TX%20-%20Robot%20Wifi.tar.gz)
+- [Rapport de projet]({{blog.url}}/genesis/Rapport%20TX%20Robot%20Wifi.pdf)
+- [Code source]({{blog.url}}/genesis/TX%20-%20Robot%20Wifi.tar.gz)
 
 Nous avons réalisé différentes vidéos du robot:
 

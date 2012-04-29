@@ -9,11 +9,11 @@ l'interface d'un MMORPG. Le tout était réalisé en Delphi (je n'ai pas
 choisi le langage...). Le projet consistait à travailler sur les aspects
 ergonomiques d'une interface d'utilisateur. J'en ai profité pour
 utiliser les graphismes de
-[Simerion](http://www.yoannsculo.fr/simerion/)et pour travailler sur une
+[Simerion]({{blog.url}}/projets/simerion/)et pour travailler sur une
 approche ergonomique différente de
-[Simerion](http://www.yoannsculo.fr/simerion/).
+[Simerion]({{blog.url}}/projets/simerion/).
 
 Ecran de jeu
 
-![Ecran de jeu](http://www.yoannsculo.fr/wp-content/uploads/2009/05/eg23_screen.jpg)
+![Ecran de jeu]({{blog.url}}/projets/interface-mmorpg/eg23_screen.jpg)
 
