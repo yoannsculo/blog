@@ -20,6 +20,4 @@ de l'embarqué de long en large et en travers.
 
 ![moi](hjsbdlfihssdfsdf.png)
 
-Ou pour les plus geeks :
-
 	EMAIL=$(python -c "print 'eW9hbm4uc2N1bG9AZ21haWwuY29t'.decode('base64')")
