@@ -4,7 +4,7 @@ layout: page
 
 ## Simerion
 
-### ![Logo Simerion](http://www.yoannsculo.fr/wp-content/uploads/2009/05/simerion.jpg "Logo Simerion")
+### ![Logo Simerion]({{blog.url}}/projets/simerion.jpg "Logo Simerion")
 
 [Simerion](http://www.simerion.fr) est un jeu en PHP par navigateur web
 sur lequel j'ai travaillé entre 2005 et 2009. Il s'agit d'un jeu
@@ -15,20 +15,56 @@ interragissent entre eux de manière totalement libre, de telle sorte
 qu'ils sont à même de changer la politique, l'économie, l'évolution du
 jeu en lui même. Par faute de temps, et pour [diverses raisons qui ont
 été abordées sur mon
-blog](http://www.yoannsculo.fr/simerion-retour-de-developpement), j'ai
+blog]({{blog.url}}/simerion-retour-de-developpement), j'ai
 arrêté le développement du jeu au profit d'autres projets.
 
-Une vue de ville de Simerion
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_2.jpg)
 
-![Une vue de ville de Simerion](http://www.yoannsculo.fr/wp-content/uploads/2009/05/simerion_screen3.jpg)
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_4.jpg)
 
-Une vue de plaine dans Simerion
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_5.jpg)
 
-![Une vue de plaine dans Simerion](http://www.yoannsculo.fr/wp-content/uploads/2009/05/simerion_screen2.jpg)
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_8.jpg)
 
-Aperçu de l'interface de jeu et d'une carte de jeu
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_9.jpg)
 
-![Aperçu de l'interface de jeu et d'une carte de jeu](http://www.yoannsculo.fr/wp-content/uploads/2009/05/simerion_screen1.jpg)
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_10.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_11.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_12.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_13.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_14.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_15.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_16.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_17.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_18.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_19.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_20.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_21.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_22.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_23.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_24.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_25.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_26.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_27.jpg)
+
+![Une vue de ville de Simerion]({{blog.url}}/projets/simerion/screenshot_28.jpg)
 
 Et pour finir, voici deux interviews faites avec
 [Prélude](http://radio.prelude.me/) en 2007 en 2008 au festival du jeu
