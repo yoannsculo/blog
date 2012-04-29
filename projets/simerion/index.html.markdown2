@@ -4,7 +4,7 @@ layout: page
 
 ## Simerion
 
-### ![Logo Simerion]({{blog.url}}/projets/simerion.jpg "Logo Simerion")
+![Logo Simerion]({{blog.url}}/projets/simerion/simerion.jpg "Logo Simerion")
 
 [Simerion](http://www.simerion.fr) est un jeu en PHP par navigateur web
 sur lequel j'ai travaillé entre 2005 et 2009. Il s'agit d'un jeu
