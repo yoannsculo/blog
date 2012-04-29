@@ -1,0 +1,96 @@
+---
+layout: post
+title: Nouveau site, nouveau blog, envie de changement ! Hell Yeah !
+keywords: blog, growl, github, cv, jinja2, ucblog
+---
+
+Je n’avais pas touché à mon blog depuis presque 8 mois, hélas pour plusieurs raisons :
+
+J’ai changé de job et je trouve beaucoup moins de temps pour bidouiller, hacker
+et programmer sur mon temps libre. FAUX ! J’ai le temps, mais je préfère faire autre
+chose à vrai dire ! Compiler du kernel tous les jours de la semaine ne donne pas
+particulièrement envie de faire le geek le soir et le week-end. Mais j’ai déjà là
+chance de vivre de ma passion, donc autant profiter du reste du temps pour faire autre chose !
+
+Je réalise surtout que les motivations pour tenir ce blog ont changé depuis sa
+création en 2009. J’étais un étudiant tout fou avec des milliards d’idées et du
+temps libre. Je comptais jouer sur le référencement Google pour trouver du travail.
+Ce qui est chose faite à présent. Mon blog a bien rempli son rôle, et je pense
+qu’il est temps de recadrer son utilisation pour correspondre plus à mes besoin actuels.
+
+De plus, je trouve qu’il n’est pas réellement pertinent de traiter des sujets
+d’actualité sans apporter un petit plus de valeur ajoutée. Recracher des infos
+trouvées sur Internet n’a pas trop d’intérêt pour un blog. Et puis j’ai [twitter](http://twitter.com/yoannsculo)
+pour ça maintenant ! Je trouve que le format est particulièrement adapté à la veille technologique.
+
+Et donc je préfère plutôt partir vers une idée regroupant :
+
+- le portfolio/cv
+- le wiki personnel et professionnel : sorte de retranscripteur d’expérience
+- l’agrégateur d’informations liées à l’embarqué (!= actualité)
+
+En d’autres termes j’aimerais maintenant me concentrer sur du contenu original
+et lié à mon expérience quotidienne de developpeur.
+
+Et puis comme je suis un geek en puissance, que je m’éclate à découvrir de
+nouveaux projet sur github, j’ai fait la connaissance de différents projets
+de génération de sites web statiques. Au même titre que des gens un jour se
+sont dit, tiens et si je me compilais mes documents, en créant LaTeX. Hé bien
+d’autres furieux se sont dit la même chose pour leur site web et page perso de
+développeur. Ce qui revient à bloger sous vim dans un format markup, comme si
+l’on codait, compiler et générer un site tout beau entièrement statique, et
+l’envoyer sur son serveur. Et comme on pousse le vice à fond, autant versionner
+son site web sous github.
+
+Au départ j’étais réticent au modèle et ne voyais pas l’intérêt apporté par un
+tel système. Et surtout pourquoi une telle régression par rapport aux puissants
+langages web actuels ?
+
+Finalement les arguments sont assez nombreux :
+
+- J’en ai marre de backuper mes bases MySQL, de mettre à jour mon wordpress, de
+jouer avec les potentielles failles de sécu. Là c’est statique ! On a juste besoin
+de backuper les sources markup du site, et c’est tout !
+
+- Des pages html à la place de pages php, ça a son avantage. Plus rapide et puis
+plus enclin à être mis sur un serveur web embarqué avec peu de ressources.
+
+- Le site se gère vraiment comme du code et se base sur l’arborescence du filesystem
+pour la génération du site. Entièrement custom ! L’organisation se fait naturellement !
+
+- Quand on utilise vim on est plus à ça près, alors bloger sur vim et déployer en
+ligne de commande devient même carrément sexy.
+
+Bref !
+
+J’ai donc testé [jekyll](https://github.com/mojombo/jekyll) ! Je me suis arraché les cheveux
+à installer l’environnement ruby/gem et à l’utiliser. J’ai fait plusieurs syncopes
+et j’ai désinstallé ce machin !
+
+Puis essayé [growl](https://github.com/xfire/growl) codé en Python mais ça ne correspondait
+pas à tous mes besoins et puis cela nécessitait de faire bon nombre de modifs,
+et j’avais plus envie de faire du C.
+
+Et comme je suis FOU je me suis mis en tête de faire mon propre outil de génération
+de site statique de geek, en C. Sans dépendance, un make et puis c’est tout !
+C'est ainsi qu'est né [ucblog](https://github.com/yoannsculo/ucblog). J'aurai l'occasion
+de reparler de ce projet. J'ai malheureusement réalisé assez vite qu'il n'existait
+pas de moteur de template en C adapté et non buggé (à l'instar de [jinja2](http://jinja.pocoo.org/docs/)
+codé en Python). Devant le gros boulot de code, j'ai capitulé et suis revenu sur growl.
+Ucblog n'est cependant pas complètement abandonné !
+
+Conclusion, mon nouveau blog a été généré par Growl, que j'ai [forké et modifié](https://github.com/yoannsculo/growl).
+Et je ne me contente plus que d'écrire des fichiers markdown qui sont automatiquement
+mis en page comme il faut. Le tout [versionné](https://github.com/yoannsculo/blog) sur github :)
+
+Et comme j'ai la fibre optique dans mon nouvel appart, je suis en train de me rechercher
+un serveur basse consommation pour tout héberger chez moi. En attendant, mon blog reste
+hébergé chez OVH.
+
+J'ai tout fait pour ne pas perdre mon référencement, ce qui m'a pris du temps).
+J'espère que la transition ne sera pas trop dure. J'ai pris la décision de ne
+pas garder les commentaires du blog, car trop galère à récupérer, au profit de Disqus dorénavant.
+Je ne suis pas fan des services externes de type cloud, mais ce ne sont des commentaires.
+Au pire vous pouvez me [contacter ici]({{blog.url}}/a-propos).
+
+Voilà ! A très vite !
