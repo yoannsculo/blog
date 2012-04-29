@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="well">
 	<h1>{{ post.title | escape }}</h1>
 	<div style="width: 100%;text-align:right;">{{ post.date | dateFormatFull }}</div>
@@ -16,8 +15,7 @@ layout: default
 			{%- if loop.last == False %}
 				<span style="float:right;"><a href="{{ blog.url }}/{{ site.posts[loop.index].url }}">Suivant »</a></span>
 			{% endif %}
-		{% endif %}
-	{% endfor %}
+		{% endif %}{% endfor %}
 </div>
 
 <div class="well">
@@ -45,4 +43,3 @@ layout: default
 	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 	<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 </div>
-
