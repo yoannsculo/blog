@@ -3,7 +3,30 @@ layout: default
 ---
 
 <div class="well">
+	<h1>{{ post.title | escape }}</h1>
+	<div style="width: 100%;text-align:right;">{{ post.date | dateFormatFull }}</div>
+
 	{{ content }}
+
+	{% for s_post in site.posts %}
+		{%- if s_post is sameas post %}
+			{%- if loop.first == False %}
+				<span><a href="{{ blog.url }}/{{ site.posts[loop.index-2].url }}">« Précédent</a></span>
+			{% endif %}
+			{%- if loop.last == False %}
+				<span style="float:right;"><a href="{{ blog.url }}/{{ site.posts[loop.index].url }}">Suivant »</a></span>
+			{% endif %}
+		{% endif %}
+	{% endfor %}
+</div>
+
+<div class="well">
+	<h6>Mots clés</h6>
+	<p>
+		{% for keyword in post.keywords %}
+		<a href="{{blog.url}}/{{keyword}}">{{keyword}}</a>{%- if loop.last == False %}, {% endif %}
+		{% endfor %}
+	</p>
 </div>
 
 <div class="well">
