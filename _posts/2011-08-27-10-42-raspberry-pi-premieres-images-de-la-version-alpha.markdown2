@@ -4,7 +4,7 @@ title: Raspberry Pi – Premières images de la version alpha
 keywords: alpha, board, Eben Upton, Raspberry, Raspberry Pi, Raspberry Pi Foundation, video
 ---
 
-Et voici quelques news de la Raspberry Pi dont j’[avais parlé](http://www.yoannsculo.fr/raspberry-pi-revolution-du-do-it-yourself/) en mai dernier.
+Et voici quelques news de la Raspberry Pi dont j’[avais parlé]({{blog.url}}/raspberry-pi-revolution-du-do-it-yourself/) en mai dernier.
 [Un blog](http://www.raspberrypi.org) a été ouvert il y a un mois. Et depuis, quelques informations arrivent au compte goûte. Après le schéma du PCB,
 
 ![raspberry]({{blog.images}}/raspberry1-300x292.png)
