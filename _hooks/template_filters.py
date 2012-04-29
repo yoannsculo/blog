@@ -17,6 +17,10 @@
 # MA 02110-1301, USA.
 #
 
+import re
+def striphtml(data):
+    p = re.compile(r'<.*?>')
+    return p.sub('', data)
 
 @templateFilter
 def dateFormat(dt, format='%d/%m/%Y'):
@@ -30,19 +34,9 @@ def dateFormatFull(dt, format='%d/%m/%Y %H:%M'):
 def xmldatetime(dt):
     return dt.strftime('%Y-%m-%dT%H:%M:%SZ')
 
-
 @templateFilter
-def xtruncate(s, length=255, end='...'):
-    import tidy
-
-    options = dict(output_xhtml=1,
-                   add_xml_decl=1,
-                   indent=1,
-                   show_body_only=1,
-                   tidy_mark=0)
-    return str(tidy.parseString(str(s[:length]) + end, **options))
-
-import re
+def strip(s, length=300):
+    return striphtml(str(s[:length]))+"..."
 
 @templateFilter
 def slugify(inStr):

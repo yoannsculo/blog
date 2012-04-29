@@ -10,7 +10,7 @@
 
 
 	{% if post is defined %}
-		<meta name="description" content="{{ post.description }}" />
+		<meta name="description" content="{{ post.content|strip }}" />
 		<meta name="keywords" content="{% for keyword in post.keywords %}{{keyword}}{%- if loop.last == False %}, {% endif %}{% endfor %}" />
 	{% else %}
 		<meta name="description" content="{{ blog.description }}" />
@@ -57,15 +57,16 @@
 			<a href="{{ blog.url }}/feed"><img style="width:20px;" src="{{ blog.url }}/images/icons/rss-32x32.png" alt="" /></a>
 		</div>
 
-	<div class="navbar-inner">
-		<div class="container-fluid">
-			<div class="nav-collapse">
-				<ul class="nav">
-					<li><a href="{{ blog.url }}">Home</a></li>
-					<li><a href="{{ blog.url }}/mes-projets">Projets</a></li>
-					<li><a href="{{ blog.url }}/a-propos">A propos</a></li>
-					<li><a href="{{ blog.url }}/moncv">CV</a></li>
-				</ul>
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li><a href="{{ blog.url }}">Home</a></li>
+						<li><a href="{{ blog.url }}/mes-projets">Projets</a></li>
+						<li><a href="{{ blog.url }}/a-propos">A propos</a></li>
+						<li><a href="{{ blog.url }}/moncv">CV</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
