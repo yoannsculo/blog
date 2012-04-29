@@ -5,7 +5,7 @@ keywords: ARM, Beagle Board, Cortex, embarqué, système embarqué
 ---
 
 Légèrement plus grosse que la [carte
-Fox](http://www.yoannsculo.fr/la-nouvelle-carte-fox-g20/), la
+Fox]({{blog.url}}/la-nouvelle-carte-fox-g20/), la
 [BeagleBoard-xM](http://beagleboard.org/hardware-xM) est le nouveau
 modèle de la carte low-cost [Beagle Board](http://beagleboard.org/)
 normalement sortie ce lundi 7 juin 2010.

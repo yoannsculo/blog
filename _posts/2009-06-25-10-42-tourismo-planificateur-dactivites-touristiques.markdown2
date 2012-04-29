@@ -8,7 +8,7 @@ J'ai travaillé ce semestre, avec 2 autres étudiants, sur un projet
 d'application mobile sur Android. Il s'agit d'un planificateur
 d'activités touristiques. Le but est de faciliter la démarche du
 touriste et de l'assister dans ses visites. J'explique un peu plus en
-détails le projet sur [cette page](http://www.yoannsculo.fr/projets/tourismo/).
+détails le projet sur [cette page]({{blog.url}}/projets/tourismo/).
 
 ![Carte de Troyes]({{blog.images}}/tourismo/screenmap3-200x300.png)
 ![Parcours du touriste]({{blog.images}}/tourismo/screenchemin1-200x300.png)

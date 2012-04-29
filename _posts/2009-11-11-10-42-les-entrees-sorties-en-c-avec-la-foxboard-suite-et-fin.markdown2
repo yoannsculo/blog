@@ -34,4 +34,4 @@ implémentation. Je vais essayer de me renseigner s'il n'existe pas mieux
 que la fonction clock() pour mesurer des durées de l'ordre de la
 dizaine/centaine de microsecondes. J'espère donc pouvoir utiliser
 rapidement ces capteurs, ils sont à la base du repérage de
-[Robert](http://www.yoannsculo.fr/tag/robert/).
+[Robert]({{blog.url}}/tag/robert/).

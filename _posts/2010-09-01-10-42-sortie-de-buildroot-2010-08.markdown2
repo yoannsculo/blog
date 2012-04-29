@@ -10,7 +10,7 @@ Je suis tellement en retard dans les billets que je souhaiterais écrire que
 j'ai failli rater la sortie aujourd'hui de
 [Buildroot](http://www.buildroot.org/download.html) 2010.08. Les
 modifications sont toutefois moins visibles que la [dernière
-release](http://www.yoannsculo.fr/sortie-de-buildroot-2010-05/) de mai
+release]({{blog.url}}/sortie-de-buildroot-2010-05/) de mai
 dernier. On peut retrouver les détails de la nouvelle version sur [la
 mailing
 list](http://lists.busybox.net/pipermail/buildroot/2010-August/037078.html)

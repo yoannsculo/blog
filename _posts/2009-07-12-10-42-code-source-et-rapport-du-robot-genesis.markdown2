@@ -5,11 +5,11 @@ keywords: code, Genesis, robot
 ---
 
 Voilà ! Depuis le temps que je l'avait dit, j'ai mis en ligne une [page
-dédiée au projet](http://www.yoannsculo.fr/projets/genesis/), j'y ai déposé en
+dédiée au projet]({{blog.url}}/projets/genesis/), j'y ai déposé en
 bas de page le [code
-source](http://www.yoannsculo.fr/docs/genesis/TX%20-%20Robot%20Wifi.tar.gz)
+source]({{blog.url}}/docs/genesis/TX%20-%20Robot%20Wifi.tar.gz)
 ainsi que [le rapport du
-projet](http://www.yoannsculo.fr/docs/genesis/Rapport%20TX%20Robot%20Wifi.pdf).
+projet]({{blog.url}}/docs/genesis/Rapport%20TX%20Robot%20Wifi.pdf).
 Comme ça, si cela peut servir à quelqu'un d'autre après nous c'est super
 ! Quoi qu'il en soit, n'hésitez pas à me faire part de vos avis et /ou
 questions, j'y répondrai avec plaisir !
