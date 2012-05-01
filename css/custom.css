@@ -18,6 +18,12 @@ pre {
 	color: white;
 }
 
+blockquote {
+	background: #e6ecd8;
+	margin-top: 10px;
+	border-radius: 4px 4px 4px 4px;
+}
+
 blockquote p {
 	font-size:12px;
 }
