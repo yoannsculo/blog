@@ -18,6 +18,28 @@ de l'embarqué de long en large et en travers.
 
 ## Contact
 
+Consultez la FAQ avant de me contacter :)
+
 ![moi](hjsbdlfihssdfsdf.png)
 
 	EMAIL=$(python -c "print 'eW9hbm4uc2N1bG9AZ21haWwuY29t'.decode('base64')")
+
+## FAQ
+
+Quelques réponses aux questions et emails que je reçois très régulièrement.
+
+#### Je ne réponds plus favorablement aux demandes d'interview d'étudiants
+
+Si vous êtes étudiant en école d'ingénieur et que l'on vous demande d'interviewer
+un professionnel, j'ai déjà été dans votre cas, je compatis. J'ai déjà rendu la
+pareille à pas mal d'étudiants jusque là. Mais j'en reçois de plus en plus. Cela
+est dû à l'***inconvénient*** d'être très bien référencé, mais ça me prend du temps
+mine de rien, et je ne peux pas aider TOUT le monde malheureusement. Alors je ne
+réponds plus favorablement à ces demandes, désolé...
+
+#### Je ne fournis plus de conseils sur mesure par email
+
+Je reçois régulièrement des emails me demandant conseil sur un problème technique
+complexe, avec choix de matériel, soft, etc. Je répondais au début, mais cela me
+prend du temps (encore trop pour moi). Donc malheureusement, je n'y réponds plus favorablement.
+Par contre je veux bien répondre aux questions posées sur [le forum embarqué](http://www.developpez.net/forums/f1558/general-developpement/programmation-systeme/embarque/) de developpez.com
