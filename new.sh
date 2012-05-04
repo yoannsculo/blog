@@ -7,7 +7,7 @@ if [ ! -d $POSTS ]; then
 	exit -1
 fi
 
-DATE=`date +%Y-%m-%d`
+DATE=`date +%Y-%m-%d-%H-%M`
 FILE="$POSTS/$DATE-new_article.markdown2"
 
 touch $FILE
@@ -16,7 +16,7 @@ cat > $FILE << "EOF"
 ---
 layout: post
 title: 
-categories: 
+keywords: 
 ---
 EOF
 
