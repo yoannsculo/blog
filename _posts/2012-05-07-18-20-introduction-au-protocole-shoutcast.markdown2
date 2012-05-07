@@ -1,0 +1,240 @@
+---
+layout: post
+title: Le protocole SHOUTcast, introduction et décorticage
+keywords: SHOUTcast, shoutcast, protocol, protocole, metadata, reverse engineering, tutorial, explication, détail, Nullsoft, SHOUTcast-Recorder
+publish: false
+---
+
+![SHOUTcast protocol]({{blog.images}}/logos/shoutcast.gif)
+
+Gros utilisateur des webradios du site [di.fm](http://www.di.fm) depuis de
+nombreuses années, je me suis penché il y a quelques temps sur le protocole
+SHOUTcast utilisé par un certain nombre de radios pour streamer du flux audio
+mp3 par HTTP.
+
+Les spécifications du protocole créé par Nullsoft (Winamp) ne sont pas
+clairement définies, ni vraiment publiques. La documentation à ce sujet est
+assez rare et relève plutôt du reverse engineering et de la bidouille avec
+Wireshark :) Je me suis amusé à programmer une application qui parse et enregistre
+les flux SHOUcast, [SHOUTcast Recorder](https://github.com/yoannsculo/SHOUTcast-Recorder). Aujourd’hui je profite de mon expérience
+sur le sujet pour regrouper un peu toutes les informations que j’ai trouvé sur
+ce protocole.
+
+Je tiens tout d’abord à préciser que je ne garantis pas l’exactitude à 100% des
+informations qui vont suivre. Pour comprendre le fonctionnement de SHOUTcast,
+je me suis basé sur les sources de clients classiques, tels que mplayer, vlc mais
+aussi sur différents forums et le peu de documents que j’ai pu repérer sur Internet.
+Si vous détectez la moindre erreur ou inexactitude dans mes propos, n’hésitez
+pas à m’en faire part, que je corrige mon article en conséquence.
+
+### Le protocole
+
+SHOUTcast, initialement appelé I Can Yell (ICY), est donc le protocole utilisé
+pour streamer du son ainsi que, par la même occasion, différentes informations
+textuelles sur le flux en question. Les clients et serveurs SHOUTcast sont disponibles
+sur un certain nombre de plateformes. Mais je vais surtout m’intéresser ici au
+protocole en lui même.
+
+### Premier pas
+
+SHOUTcast n’est autre que de la musique transmise par HTTP. Il suffit d’envoyer
+une simple requête HTTP pour initier la connexion.
+
+Avant toute chose, le serveur va nous renvoyer dans son header HTTP différentes
+informations textuelles sur le flux.
+
+Essayons avec la radio [Chillout](http://www.di.fm/chillout) de [di.fm](http://www.di.fm), mais vous
+en trouverez d'autres sur [Shoutcast.com](http://www.shoutcast.com).
+
+	curl http://scfire-ntc-aa04.stream.aol.com:80/stream/1035 | head
+
+nous retourne
+
+	ICY 200 OK
+	icy-notice1: <BR>This stream requires <a href="http://www.winamp.com/">Winamp</a><BR>
+	icy-notice2: Firehose Ultravox/SHOUTcast Relay Server/Linux v2.6.0<BR>
+	icy-name: Chillout - D I G I T A L L Y - I M P O R T E D - ambient psy chillout, check out our trippy flavors!
+	icy-genre: Electronic Chillout Ambient
+	icy-url: http://www.di.fm/chillout
+	content-type: audio/mpeg
+	icy-pub: 1
+	icy-br: 96
+
+ou plus en détail :
+
+	curl http://scfire-ntc-aa04.stream.aol.com:80/stream/1035 | hexdump -c | head -c 2400
+
+qui nous renvoie :
+
+	00000000  49 43 59 20 32 30 30 20  4f 4b 0d 0a 69 63 79 2d  |ICY 200 OK..icy-|
+	00000010  6e 6f 74 69 63 65 31 3a  20 3c 42 52 3e 54 68 69  |notice1: <BR>Thi|
+	00000020  73 20 73 74 72 65 61 6d  20 72 65 71 75 69 72 65  |s stream require|
+	00000030  73 20 3c 61 20 68 72 65  66 3d 22 68 74 74 70 3a  |s <a href="http:|
+	00000040  2f 2f 77 77 77 2e 77 69  6e 61 6d 70 2e 63 6f 6d  |//www.winamp.com|
+	00000050  2f 22 3e 57 69 6e 61 6d  70 3c 2f 61 3e 3c 42 52  |/">Winamp</a><BR|
+	00000060  3e 0d 0a 69 63 79 2d 6e  6f 74 69 63 65 32 3a 20  |>..icy-notice2: |
+	00000070  46 69 72 65 68 6f 73 65  20 55 6c 74 72 61 76 6f  |Firehose Ultravo|
+	00000080  78 2f 53 48 4f 55 54 63  61 73 74 20 52 65 6c 61  |x/SHOUTcast Rela|
+	00000090  79 20 53 65 72 76 65 72  2f 4c 69 6e 75 78 20 76  |y Server/Linux v|
+	000000a0  32 2e 36 2e 30 3c 42 52  3e 0d 0a 69 63 79 2d 6e  |2.6.0<BR>..icy-n|
+	000000b0  61 6d 65 3a 20 43 68 69  6c 6c 6f 75 74 20 2d 20  |ame: Chillout - |
+	000000c0  44 20 49 20 47 20 49 20  54 20 41 20 4c 20 4c 20  |D I G I T A L L |
+	000000d0  59 20 2d 20 49 20 4d 20  50 20 4f 20 52 20 54 20  |Y - I M P O R T |
+	000000e0  45 20 44 20 2d 20 61 6d  62 69 65 6e 74 20 70 73  |E D - ambient ps|
+	000000f0  79 20 63 68 69 6c 6c 6f  75 74 2c 20 63 68 65 63  |y chillout, chec|
+	00000100  6b 20 6f 75 74 20 6f 75  72 20 74 72 69 70 70 79  |k out our trippy|
+	00000110  20 66 6c 61 76 6f 72 73  21 0d 0a 69 63 79 2d 67  | flavors!..icy-g|
+	00000120  65 6e 72 65 3a 20 45 6c  65 63 74 72 6f 6e 69 63  |enre: Electronic|
+	00000130  20 43 68 69 6c 6c 6f 75  74 20 41 6d 62 69 65 6e  | Chillout Ambien|
+	00000140  74 0d 0a 69 63 79 2d 75  72 6c 3a 20 68 74 74 70  |t..icy-url: http|
+	00000150  3a 2f 2f 77 77 77 2e 64  69 2e 66 6d 2f 63 68 69  |://www.di.fm/chi|
+	00000160  6c 6c 6f 75 74 0d 0a 63  6f 6e 74 65 6e 74 2d 74  |llout..content-t|
+	00000170  79 70 65 3a 20 61 75 64  69 6f 2f 6d 70 65 67 0d  |ype: audio/mpeg.|
+	00000180  0a 69 63 79 2d 70 75 62  3a 20 31 0d 0a 69 63 79  |.icy-pub: 1..icy|
+	00000190  2d 62 72 3a 20 39 36 0d  0a 0d 0a 57 0b 2b 21 ff  |-br: 96....W.+!.|
+	000001a0  9d 6a 9d 35 15 e7 c1 56  c9 b6 54 22 33 b9 ec f5  |.j.5...V..T"3...|
+	000001b0  63 8f a9 dd 4f 15 79 57  f7 4d 55 3d 34 51 3c cd  |c...O.yW.MU=4Q<.|
+	000001c0  ae 9c 72 e7 4d c7 13 0e  d7 d8 fc cb 98 f4 b3 59  |..r.M..........Y|
+	000001d0  1f 48 b3 da b4 24 00 00  01 df c0 0d f3 b1 08 07  |.H...$..........|
+
+Ce header est donc composé de champs icy se terminant tous par un `<CR>` (`\r\n`),
+soit `0d 0a` en hexa. Le début du header commence par le code de réponse
+(similaire à HTTP). Je n’ai pas eu l’occasion de recevoir autre chose que le code 200.
+
+Voici une liste, sans doute non exhaustive, des champs possibles du header.
+
+<table width="100%">
+<tr>
+<td><b>icy-notice1 et icy-notice2</b></td>
+<td>Informations diverses</td>
+</tr>
+<tr>
+<td><b>icy-name</b></td>
+<td>Nom de la radio</td>
+</tr>
+<tr>
+<td><b>icy-genre</b></td>
+<td>Genre</td>
+</tr>
+<tr>
+<td><b>icy-url</b></td>
+<td>Url de la radio</td>
+</tr>
+<tr>
+<td><b>icy-pub</b></td>
+<td>Si le flux est public : 1 ou privé 0</td>
+</tr>
+<tr>
+<td><b>icy-br</b></td>
+<td>Bitrate (échantillonnage)</td>
+</tr>
+<tr>
+<td><b>icy-metaint</b></td>
+<td>Fréquence d’apparition des packets metadata (voir plus loin)</td>
+</tr>
+<tr>
+<td><b>Content-Type</b></td>
+<td>Comme pour HTTP, format du flux</td>
+</tr>
+<tr>
+<td><b>icy-irc</b></td>
+<td>Contact irc</td>
+</tr>
+<tr>
+<td><b>icy-icq</b></td>
+<td>Contact icq</td>
+</tr>
+<tr>
+<td><b>icy-aim</b></td>
+<td>Contact aim (Nullesoft appartient à AOL :p)</td>
+</tr>
+</table>
+
+La fin du header est marquée par un double `<CR>`, c'est à dire la chaîne `\r\n\r\n`,
+ou autrement dit `0d 0a 0d 0a`. Les données brutes mp3 suivent directement après.
+
+Ainsi, une simple redirection de la sortie standard de curl permet d’enregistrer le flux SHOUTcast :
+
+	curl http://scfire-ntc-aa04.stream.aol.com:80/stream/1035 > ./out.mp3
+
+Bien sûr, cette solution enregistre également le header, ce qui occasionne un
+glitch en début de mp3, si vous utilisez cette solution pour enregistrer le flux.
+
+### Aller plus loin, les blocs MetaData
+
+Le protocole SHOUTcast permet également de récupérer des informations sur la
+musique transmise. Il s'agit des MetaData, ce sont des blocs envoyés à
+intervalles réguliers, qui peuvent contenir un message textuel.
+
+Par défaut, les blocs metadatas ne sont pas transmis. Car en effet, ils sont
+envoyés directement dans le flux, entre deux blocs de données mp3. Ainsi,
+s'il on enregistre directement les données issues du serveur, nous avons droit
+à un flux musical interrompu par de petits glitches réguliers. Le client doit
+donc prendre en compte ces blocs et les échapper du flux musical.
+
+Donc, c'est au client de demander ces petits paquets magiques, en rajoutant le
+champ suivant dans la requête HTTP.
+
+	Icy-MetaData:1
+
+En rajoutant ce champ à la requête,  le serveur nous retourne un champ ICY
+supplémentaire, `icy-metaint`. Il s'agit d'un entier correspondant au nombre
+d'octets séparant 2 blocs metadata. Cette valeur dépend complètement des
+serveurs, et doit être à tout prix récupérée si l'on souhaite traiter correctement
+ces blocs.
+
+Par exemple la radio [Chillout](www.di.fm/chillout) nous renvoie 16384, la radio
+[Frequence3](http://www.frequence3.fr), quant à elle, 32768.
+
+### Isoler les blocs MetaData et les lire
+
+Nous avons donc envoyé au serveur une requête HTTP qui demande les blocs metadata,
+nous avons reçu un header qui contient le champ `icy-metaint` que nous avons
+enregistré. Il faut maintenant compter les octets reçus pour savoir quand les blocs
+metadata arriveront. Le compte commence dès le premier octet de flux MP3 reçu.
+C'est à dire, juste après le double `<CR>` `\r\n\r\n`.
+
+Une fois le compte atteint, nous tombons sur un bloc metadata. Ce dernier commence
+par un octet contenant la taille du bloc. Pour avoir la taille en octets du bloc,
+il suffit de multiplier la valeur de ce premier octet par 16. Il n'y a alors plus
+qu'à parcourir le bloc, et de reinitialiser le compteur après le dernier octet de
+metadata reçu. Il n'y a plus qu'à recommencer le compte jusqu'au prochain bloc.
+
+Quand il n'est pas vide, un bloc metadata contient ce genre de chaîne :
+
+	StreamTitle='Pete Namlook & Hubertus Held - Missing You';StreamUrl='';
+
+C'est StreamTitle qui nous intéresse ici, il n'y a plus qu'à l'extraire.
+
+Cependant, 98% du temps, les blocs metadata envoyés par le serveur sont vides et
+contiennent juste un seul octet à 0. Et oui, vu la fréquence d'envoi assez élevée,
+le serveur n'a pas besoin de nous notifier en permanence le nom de la musique.
+
+En pratique, les serveurs envoient un bloc renseigné de metadata à la connexion,
+puis à chaque changement de musique. Certains serveurs sont plus bavards que d'autres.
+Il est même possible de détecter la pub qui est parfois annoncée par metadata !
+
+Voici un schéma qui représente les choses :
+
+![SHOUTcast diagram]({{blog.images}}/SHOUTcast_diag.png)
+
+### Utiliser le protocle SHOUTcast
+
+Il existe de très nombreux logiciels pour lire et même enregistrer les flux
+SHOUTcast. Mais étonnement, je n'ai trouvé que peu de documentation. J'ai avant tout
+développé [SHOUTcast Recorder](https://github.com/yoannsculo/SHOUTcast-Recorder)
+pour le fun et surtout pour comprendre comment fonctionne le protocole. Dans
+sa version actuelle, les mp3 sont enregistrés et coupés à la réception des
+blocs metadata. Malheureusement, les serveurs envoient ces blocs quelques secondes
+avant le changement de musique, et cette période dépend de chaque radio.
+Les logiciels d'enregistrement de flux se basent sur le petit blanc dans le signal
+sonore entre deux musiques pour faire une découpe nette.
+De mon côté, je n'ai pas encore eu le temps de trouver d'autre solution, ni de
+m'essayer à implémenter cette technique overkill. Je ferai ça quand j'aurai le temps.
+
+Amusez-vous bien :D
+
+### Sources
+
+- [http://www.smackfu.com/stuff/programming/shoutcast.html](http://www.smackfu.com/stuff/programming/shoutcast.html)
+- [http://forums.radiotoolbox.com/viewtopic.php?t=74](http://forums.radiotoolbox.com/viewtopic.php?t=74)
