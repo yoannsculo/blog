@@ -16,7 +16,8 @@ cat > $FILE << "EOF"
 ---
 layout: post
 title: 
-keywords: 
+keywords:
+publish: false
 ---
 EOF
 
