@@ -20,7 +20,7 @@ les flux SHOUcast, [SHOUTcast Recorder](https://github.com/yoannsculo/SHOUTcast-
 sur le sujet pour regrouper un peu toutes les informations que j'ai trouvé sur
 ce protocole.
 
-Je tiens tout d'abord à préciser que je ne garantis pas l’exactitude à 100% des
+Je tiens tout d'abord à préciser que je ne garantis pas l'exactitude à 100% des
 informations qui vont suivre. Pour comprendre le fonctionnement de SHOUTcast,
 je me suis basé sur les sources de clients classiques, tels que mplayer, vlc mais
 aussi sur différents forums et le peu de documents que j'ai pu repérer sur Internet.
@@ -37,7 +37,7 @@ protocole en lui même.
 
 ### Premier pas
 
-SHOUTcast n'est autre que de la musique transmise par HTTP. Il suffit d’envoyer
+SHOUTcast n'est autre que de la musique transmise par HTTP. Il suffit d'envoyer
 une simple requête HTTP pour initier la connexion.
 
 Avant toute chose, le serveur va nous renvoyer dans son header HTTP différentes
@@ -99,7 +99,7 @@ qui nous renvoie :
 
 Ce header est donc composé de champs icy se terminant tous par un `<CR>` (`\r\n`),
 soit `0d 0a` en hexa. Le début du header commence par le code de réponse
-(similaire à HTTP). Je n'ai pas eu l’occasion de recevoir autre chose que le code 200.
+(similaire à HTTP). Je n'ai pas eu l'occasion de recevoir autre chose que le code 200.
 
 Voici une liste, sans doute non exhaustive, des champs possibles du header.
 
