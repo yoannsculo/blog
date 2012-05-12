@@ -18,9 +18,9 @@ foi fort sympatique :)
 ## Le Matériel
 
 Alors, tout d'abord : Carte FOX Késako !? Il s'agit d'un système
-embarqué à bas coût utilisant le système d’exploitation Linux. La carte
-est dotée d’un processeur AXIS à 100MHz et de 32 MB de RAM, de
-connectiques USB, Ethernet, d’un port série console ainsi que 40 pins
+embarqué à bas coût utilisant le système d'exploitation Linux. La carte
+est dotée d'un processeur AXIS à 100MHz et de 32 MB de RAM, de
+connectiques USB, Ethernet, d'un port série console ainsi que 40 pins
 pouvant être reliées à plusieurs BUS de données. Elle permet de
 développer en bon nombre de langages : C, C++, PHP, PYTHON, Shell, … et
 permet des connections HTTP, FTP, SSH et TELNET. De petite taille et
@@ -32,8 +32,8 @@ Modem GSM
 ![Modem GSM]({{blog.images}}/fox/telit.jpg)
 
 Le modem GSM utilisé ici est un modem de la marque Telit. Il est relié à
-la carte FOX par l’intermédiaire d’une carte d’extension. La carte FOX
-peut communiquer avec le modem par l’intermédiaire du port série
+la carte FOX par l'intermédiaire d'une carte d'extension. La carte FOX
+peut communiquer avec le modem par l'intermédiaire du port série
 /dev/ttyS2. Une simple utilisation de carte SIM classique permet de se
 connecter au réseau GSM. Il est possible de trouver cette carte seule
 sur le site d'[ACME SYSTEMS](http://foxlx.acmesystems.it/?id=4) à 176 €
@@ -49,20 +49,20 @@ référer à la [doc du
 constructeur](http://www.telit.com/module/infopool/download.php?id=542).
 Ces commandes AT sont donc envoyées via le port série pour soumettre
 différentes commandes au modem. On peut notamment dans notre cas
-manipuler et envoyer des SMS par l’intermédiaire de celles-ci.
+manipuler et envoyer des SMS par l'intermédiaire de celles-ci.
 
 ## Environnement de développement
 
-La compilation d’un programme en C sur la carte fox nécessite un
+La compilation d'un programme en C sur la carte fox nécessite un
 compilateur croisé permettant de compiler le code C pour les processeurs
-AXIS. La compilation directe sur la carte n’étant pas possible, il faut
+AXIS. La compilation directe sur la carte n'étant pas possible, il faut
 par conséquent utiliser un SDK pour compiler le programme. J'ai
 travaillé avec le [SDK Axis](http://foxlx.acmesystems.it/?id=5) fourni
 pour la carte fox.
 
 Avant toute chose il faut se rendre dans le dossier du SDK
 (\~/devboard-R2\_01 pour ma part) et y taper la commande suivante afin
-d’initialiser l’environnement de développement.
+d'initialiser l'environnement de développement.
 
 	. init_env
 
@@ -89,9 +89,9 @@ j'ai créé :
 	rm -f *.o
 	rm -f sms
 
-Il n’y a alors plus qu’à faire un make pour compiler le programme et à
-l’envoyer sur la carte en FTP ou SCP. Ayant dû compiler à de très
-nombreuses reprises mon programme, j’ai rajouté l’envoi du fichier dans
+Il n'y a alors plus qu'à faire un make pour compiler le programme et à
+l'envoyer sur la carte en FTP ou SCP. Ayant dû compiler à de très
+nombreuses reprises mon programme, j'ai rajouté l'envoi du fichier dans
 le makefile via la commande scp. Les fichiers utilisateurs sont déposés
 sur la carte Flash dans le répertoire /mnt/flash. Attention toutefois,
 car la mémoire flash EPROM est limitée en nombre d'écritures. Il vaut
@@ -104,7 +104,7 @@ déposer sur la carte flash afin de ne pas perdre le programme à chaque
 reboot.
 
 La connexion à la carte fox se fait en telnet (ou ssh) simplement à
-l’aide de la commande suivante grâce à un simple telnet
+l'aide de la commande suivante grâce à un simple telnet
 
 	telnet adresse_ip_de_la_fox
 
@@ -121,33 +121,33 @@ plusieurs caractères de contrôle :
 fixée à 13 par défaut. (et peut être changée grâce au paramètre AT S3)
 Sa valeur hexadécimale quant à elle est 0x0D.
 
-`<LF>` : Caractère d’interligne : Sa valeur ASCII en décimal est
+`<LF>` : Caractère d'interligne : Sa valeur ASCII en décimal est
 fixée à 10 par défaut
 
 `<CTRL+Z>` : Combinaison des touches CTRL et Z. Sa valeur hexa est
 0x1A
 
 Ces caractères sont demandés et utilisés par le modem pour identifier
-les commandes AT. Chacune d’entre-elles utilise ces caractères de
+les commandes AT. Chacune d'entre-elles utilise ces caractères de
 contrôle plus ou moins différemment. Voici un aperçu des différentes
-commandes que j’ai utilisées avec leurs caractères de contrôle.
+commandes que j'ai utilisées avec leurs caractères de contrôle.
 
 `ATE0<CR>` : Cette commande permet de désactiver la commande écho (ATE1
 la réactive). Cela demande donc au modem de ne pas répéter
 systématiquement les commandes qui lui sont envoyées.
 
-`AT+CMGF=1<CR>` : Cette commande permet de régler le format de message pour l’envoi de
+`AT+CMGF=1<CR>` : Cette commande permet de régler le format de message pour l'envoi de
 SMS. Par défaut, le modem est en mode PDU (AT+CMGF=0). C'est-à-dire que
-l’envoi de message se fait en hexadécimal. AT+CMGF=1 permet de passer en
+l'envoi de message se fait en hexadécimal. AT+CMGF=1 permet de passer en
 mode texte, ce qui simplifie les manipulations de SMS.
 
-`AT+CMGS="06XXXXXXXX"<CR>` : Cette commande permet de commencer la rédaction d’un SMS. On précise en
+`AT+CMGS="06XXXXXXXX"<CR>` : Cette commande permet de commencer la rédaction d'un SMS. On précise en
 argument le numéro de téléphone choisi. En retour on obtient le
-caractère d’invite de commande « \> » qui nous invite à rentrer le texte
+caractère d'invite de commande « \> » qui nous invite à rentrer le texte
 du SMS.
 
 `Texte du SMS<CTRL+Z><CR>` : Cette fin de commande permet alors de
-préciser le texte et de valider l’envoi du SMS par un CTRL+Z et un
+préciser le texte et de valider l'envoi du SMS par un CTRL+Z et un
 retour chariot.
 
 Il est important de noter que l'envoi de la commande AT d'envoi de SMS
@@ -172,9 +172,9 @@ Ces commandes AT doivent être transmises au modem par le port série
 **Termnetd**
 ([http://foxlx.acmesystems.it/?id=69](http://foxlx.acmesystems.it/?id=69))
 
-Il s’agit d’un processus permettant de relier un port TCP/IP à un port
+Il s'agit d'un processus permettant de relier un port TCP/IP à un port
 série de manière transparente. Une fois que le deamon est lancé sur la
-carte fox, il est possible de se connecter depuis l’extérieur grâce à la
+carte fox, il est possible de se connecter depuis l'extérieur grâce à la
 commande telnet adress\_ip\_fox 7000. Le port 7000 (choisi dans la
 config de termnetd) redirige directement sur le port série et il est
 alors possible de rentrer manuellement des commandes AT et de voir leur
@@ -183,7 +183,7 @@ le fonctionnement des commandes AT.
 
 **Script Chat**
 ([http://linux.about.com/od/commands/l/blcmdl8\_chat.htm](http://linux.about.com/od/commands/l/blcmdl8_chat.htm))
-Il est possible d’utiliser la commande UNIX chat permettant de dialoguer
+Il est possible d'utiliser la commande UNIX chat permettant de dialoguer
 de manière automatisée avec le modem.
 
 	/usr/sbin/chat -V -s -f  > /dev/ttyS2 < /dev/ttyS2 2>
@@ -232,7 +232,7 @@ SMS à distance de manière assistée grâce à des formulaires web !
 
 ## Préparation de la carte FOX
 
-Dernier point de précision: au démarrage, le modem n’est pas allumé ni
+Dernier point de précision: au démarrage, le modem n'est pas allumé ni
 configuré. Il faut par conséquent créer un script de démarrage à déposer
 dans /etc/init.d/boottime . Voici le script que j'ai utilisé:
 
@@ -241,7 +241,7 @@ dans /etc/init.d/boottime . Voici le script que j'ai utilisé:
 	setbits -p b -b 7 -s 1
 	# Lancement de termnetd (pour les tests)
 	/mnt/flash/termnetd
-	# Initialisation série du modem (mon petit programme d’initialisation de la connexion série)
+	# Initialisation série du modem (mon petit programme d'initialisation de la connexion série)
 	/mnt/flash/tx/sms -init
 	sleep 20
 	# Initialisation AT du modem
@@ -254,7 +254,7 @@ On commence par allumer le modem, on initialise la connexion série avec
 le programme en C puis attend 20 secondes que le modem soit identifié
 sur le réseau. Le temps choisi est totalement arbitraire. Cela semble
 fonctionner correctement avec cette période, mais idéalement il serait
-intéressant d’interroger le modem pour déterminer s’il est bien connecté
+intéressant d'interroger le modem pour déterminer s'il est bien connecté
 au réseau. Ensuite on exécute un script chat que voici :
 
 	ABORT BUSY
@@ -266,9 +266,9 @@ au réseau. Ensuite on exécute un script chat que voici :
 	OK 'AT+CMGF=1'
 	OK ''
 
-Ce dernier permet de désactiver l’écho afin de ne pas recevoir mes
-commandes en double, et permet d’activer le mode texte pour l’envoi de
-SMS. Par défaut l’envoi de SMS se fait en mode PDU (sous forme
+Ce dernier permet de désactiver l'écho afin de ne pas recevoir mes
+commandes en double, et permet d'activer le mode texte pour l'envoi de
+SMS. Par défaut l'envoi de SMS se fait en mode PDU (sous forme
 hexadécimale), ce qui est bien plus compliqué à utiliser. Une fois ce
 script exécuté, le modem est prêt à être utilisé. On peut rajouter un
 log à la fin pour identifier le démarrage du modem.

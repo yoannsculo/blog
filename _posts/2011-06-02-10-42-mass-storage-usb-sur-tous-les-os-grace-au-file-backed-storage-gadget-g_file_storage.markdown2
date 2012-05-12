@@ -4,47 +4,47 @@ title: Mass Storage USB sur tous les OS grâce au File-backed Storage Gadget (g_
 keywords: g_file_storage, linux, Mac, Mass storage, module, storage gadget, USB, Windows
 ---
 
-Je me suis attelé récemment à la mise en place d’un mass storage (FAT32)
+Je me suis attelé récemment à la mise en place d'un mass storage (FAT32)
 sur un device Linux grâce au gadget file storage (g\_file\_storage),
-compatible avec Windows, Mac et Linux ! Hé bien, c’est un peu de la
+compatible avec Windows, Mac et Linux ! Hé bien, c'est un peu de la
 tambouille magique pour rendre ça compatible entre OS. Hélas, la
 [documentation](http://www.linux-usb.org/gadget/file_storage.html) que
-l’on retrouve sur Internet ne précise pas forcément les étapes pour
+l'on retrouve sur Internet ne précise pas forcément les étapes pour
 faire fonctionner le mass storage sous tous les OS. En fouinant bien
-j’ai fini par trouver les étapes à suivre pour mettre ça en place !
-C’est plus une question du bon argument à spécifier à la création de la
+j'ai fini par trouver les étapes à suivre pour mettre ça en place !
+C'est plus une question du bon argument à spécifier à la création de la
 partition, mais au final on gagne du temps quand on le sait dès le
-départ ! Parce qu’aller fouiner dans le code source du driver pour voir
-comment ça marche c’est cool, mais un poil prise de tête. (encore que
-mine de rien c’est plutôt bien documenté)
+départ ! Parce qu'aller fouiner dans le code source du driver pour voir
+comment ça marche c'est cool, mais un poil prise de tête. (encore que
+mine de rien c'est plutôt bien documenté)
 
 Voici les étapes :
 ### Préparation du kernel
 
 -   Prendre un kernel bien frais !
 -   Activer le “File-backed Storage Gadget” (USB\_FILE\_STORAGE) dans la
-    catégorie USB support. Dans mon cas j’ai choisi de le mettre en
+    catégorie USB support. Dans mon cas j'ai choisi de le mettre en
     module externe.
 -   recompiler la bête
 -   Et en attendant, préparons la partition de mass\_storage.
 
 ### Préparation de la partition
 
-Jusque là, je n’ai réussi qu’à générer des partitions puissances de 2 au
-niveau de la taille. Avec des unités d’allocation de 4 Ko (par défaut),
+Jusque là, je n'ai réussi qu'à générer des partitions puissances de 2 au
+niveau de la taille. Avec des unités d'allocation de 4 Ko (par défaut),
 il suffit de changer le nombre de têtes (1, 2, 4, ...) pour avoir
-respectivement des mass storage de (4, 8, 16Mo, ...) Je n’ai pas encore
+respectivement des mass storage de (4, 8, 16Mo, ...) Je n'ai pas encore
 complètement compris entièrement le fonctionnement pour tenter de sortir
-des clous avec des partitions exotiques (genre 7Mo si c’est
-envisageable). Si quelqu’un a l’information, je suis preneur ;) Parce
+des clous avec des partitions exotiques (genre 7Mo si c'est
+envisageable). Si quelqu'un a l'information, je suis preneur ;) Parce
 que je me perds un peu avec cette ratatouille de Linux / Windows qui
-n’ont pas les mêmes unités...
+n'ont pas les mêmes unités...
 
 Bref, dans cet exemple je me base sur un
 mass storage de 4 Mo. Mais pour augmenter la taille de celle-ci, il
 suffit de changer la valeur du count dans la commande dd qui va suivre,
 puis le nombre de têtes dans le fdisk. Le max était 255 têtes, soit les
-1020 Mo max du FAT32 pour des unités d’allocation de 4 Ko
+1020 Mo max du FAT32 pour des unités d'allocation de 4 Ko
 
 Créons donc notre périphérique à partir du néant !
 
@@ -117,7 +117,7 @@ Puis lançons fdisk.
 	Synchronisation des disques.
 
 
-Et si l’on souhaite consulter les informations de notre partition :
+Et si l'on souhaite consulter les informations de notre partition :
 
 	$ fdisk -l mass_storage.img
 	Vous devez initialiser cylindres.
@@ -157,20 +157,20 @@ puis on démonte le périphérique virtuel.
 	losetup -d /dev/loop0
 ### Chargement du mass\_storage
 
-Une fois que votre kernel est en place sur votre système, il n’y a plus
-qu’à placer le fichier mass\_storage.img sur le système embarqué et de
+Une fois que votre kernel est en place sur votre système, il n'y a plus
+qu'à placer le fichier mass\_storage.img sur le système embarqué et de
 charger la partition :
 
 	insmod g_file_storage.ko file=/tmp/mass_storage.img stall=0
 
-stall=0 est l’option magique qui fait que le mass\_storage fonctionne
-sous Windows sans mouliner à l’infini en attendant une détection du
+stall=0 est l'option magique qui fait que le mass\_storage fonctionne
+sous Windows sans mouliner à l'infini en attendant une détection du
 filesystem. (boolean to permit the driver to halt bulk endpoints) On
-peut également jouer avec l’option ro pour mettre le mass storage en
+peut également jouer avec l'option ro pour mettre le mass storage en
 read only ou non. De façon générale on peut retrouver de la doc sur le
 driver dans le kernel : drivers/usb/gadget/file\_storage.c
 
-Et voilà, en branchant votre device sur n’importe quel OS, il sera reconnu comme
+Et voilà, en branchant votre device sur n'importe quel OS, il sera reconnu comme
 disque de mass storage appelé “storage” :) Héhé !
 
 Et pour la route, voici les partitions FAT32 finales (vides) :

@@ -24,13 +24,13 @@ intéressants dont voici le sommaire :
 **CONSTRUISEZ UN SYSTÈME :**
 
 - p. 20 Introduction à Buildroot
-- p. 34 Cas pratique d’utilisation de Buildroot
+- p. 34 Cas pratique d'utilisation de Buildroot
 - p. 43 OpenWrt sur ACME Fox
 - p. 48 Mise en œuvre de Linux embarqué sur le processeur softcore libre LEON
 
 **DÉVELOPPEZ POUR LE MATÉRIEL :**
 
-- p. 58 Étude d’un système d’exploitation pour microcontrôleur faible consommation (TI
+- p. 58 Étude d'un système d'exploitation pour microcontrôleur faible consommation (TI
 MSP430) : pilote pour le stockage de masse au format FAT sur carte SD
 - p. 78 Le VHDL pour les débutants
 

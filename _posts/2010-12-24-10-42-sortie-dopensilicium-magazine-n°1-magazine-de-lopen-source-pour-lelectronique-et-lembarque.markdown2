@@ -5,10 +5,10 @@ keywords: embarqué, linux, linux embarqué, Linux Magazine, magazine, OpenSilic
 ---
 
 Nous avions eu droit à une petite pub dans le dernier [Linux Magazine
-Hors-Série]({{blog.url}}/linux-magazine-hors-serie-sur-l’embarque-le-retour/).
+Hors-Série]({{blog.url}}/linux-magazine-hors-serie-sur-l'embarque-le-retour/).
 Aujourd'hui sort le premier numéro d'OpenSilicium Magazine. Cette
-nouvelle monture des éditions diamond est dédiée à l’univers des
-technologies embarquées et de l’open source. Je soutiens tellement
+nouvelle monture des éditions diamond est dédiée à l'univers des
+technologies embarquées et de l'open source. Je soutiens tellement
 l'initiative que je me suis abonné avant hier les yeux fermés. De plus,
 c'est bien souvent la croix et la bannière pour trouver mes Linux Mag en
 kiosque. Donc là, OpenSilicium viendra directement à moi ! Ahah !
@@ -28,8 +28,8 @@ Et voici le sommaire de ce premier numéro :
 
 **Mobilité**
 
--   21 Introduction au développement Android à l’attention de ceux qui
-    n’aiment pas Eclipse
+-   21 Introduction au développement Android à l'attention de ceux qui
+    n'aiment pas Eclipse
 
 **Système**
 
@@ -50,7 +50,7 @@ Et voici le sommaire de ce premier numéro :
 **Repère**
 
 -   54 Implémentation de systèmes critiques dirigée par des modèles
--   74 Implémentation efficace d’algorithmes sur FPGA
+-   74 Implémentation efficace d'algorithmes sur FPGA
 -   79 Conception et applications des LFSR en VHDL
 
 **Réseau**
