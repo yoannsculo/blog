@@ -10,12 +10,12 @@ Je me suis lancé en 2005 avec un ami dans le développement d'un jeu par
 navigateur web: [Simerion](http://www.simerion.fr "Simerion") pour les
 gens qui ne connaissent pas. Il s'agit d'un jeu mélangeant à la fois le
 genre RPG et gestion. L'idée étant d'endosser le rôle d'un colon
-fraichement envoyé sur de nouvelles planètes. Chaque joueur choisit un
+fraîchement envoyé sur de nouvelles planètes. Chaque joueur choisit un
 métier, et le principe est simple : du RolePlay, tout le monde fait ce
 qu'il veut, tout est possible. Bref, dans le principe, le jeu idéal,
 mais hélas pas forcément en pratique.
 
-J'ai quitté l'équipe de Simerion, après 5 ans de conception et
+J'ai quitté l'équipe de Simerion, après 5 ans de conception et de
 développement, il y a un peu plus d'un mois pour différentes raisons que
 j'aborderai plus loin. Mais je profite de ce billet pour faire une sorte
 de bilan du projet, de mon point de vue. L'idée étant de faire un retour
@@ -50,7 +50,7 @@ a rejoint en mars, nous sortons notre première version alpha avec une
 cinquantaine de joueurs.
 
 **Mars 2009** : Plus d'un an et demi plus tard,
-la beta alors que je quitte l'équipe. Voici donc une suite de points,
+la beta sort alors que je quitte l'équipe. Voici donc une suite de points,
 qui maintenant avec le recul me semblent importants à souligner.
 
 ### Travailler en équipe
@@ -72,7 +72,7 @@ de bénéficier d'un jeu accessible partout depuis Internet avec une
 grande interaction avec les joueurs. Pourquoi le PHP ? Parce que ce
 langage m'était déjà familier et était simple à prendre en main.
 Cependant avec le recul, nous n'aurions sans doute pas dû employer
-celui-ci préférant sans doute le JAVA ou le C++ afin de réaliser un
+celui-ci, préférant sans doute le JAVA ou le C++ afin de réaliser un
 véritable MMORPG. A maintes reprises nous nous sommes mordus les doigts
 quant à notre choix de technologie. Nous avons très rapidement atteint
 les limites du PHP et de l'Ajax. Nous avons été bridés par nos choix
@@ -81,7 +81,7 @@ souhaitions réaliser. Mais il était trop tard pour changer. Je conseille
 vraiment au départ de faire le tour de toutes les technologies lorsque
 l'on s'aventure dans un projet web d'ampleur. Chaque langage possède ses
 avantages et inconvénients qu'il faut comparer. Nous ne l'avons pas
-fait, et cela nous a desservis.
+fait, et cela nous a desservi.
 
 ### Ne pas réinventer la roue
 
@@ -90,12 +90,12 @@ des Frameworks PHP et Ajax existants. En jeunes fous que nous étions,
 nous avons créé notre propre moteur de jeu de A à Z et notre propre
 Framework Ajax. Nous avons réinventé la roue et avons perdu un temps
 fou. D'un autre côté, nous ne savions pas forcément que des outils tout
-fait existaient, cela nous a toutefois permis de comprendre le
+faits existaient, cela nous a toutefois permis de comprendre le
 fonctionnement d'un certain nombre de techniques et technologies. Mais
 si c'était à refaire j'utiliserais au maximum des outils déjà
-disponibles. Avant de commencer un projet conséquent. Je pense qu'il
+disponibles. Avant de commencer un projet conséquent, je pense qu'il
 faut vraiment regarder, comparer les outils à sa disposition et ne pas
-fonce dans le tas tête baissée. Utiliser des outils déjà faits peut
+foncer dans le tas tête baissée. Utiliser des outils déjà faits peut
 faire réellement gagner un temps précieux.
 
 ### Utiliser des schémas et diagrammes UML
@@ -108,10 +108,10 @@ si l'on ne change pas d'idée en permanence. Auquel cas, les diagrammes
 sont en permanence remis en cause, ce qui est pour ce coup-ci une grosse
 perte de temps.
 
-### Eviter l'approche du « tout objet »
+### Eviter l'approche du "tout objet"
 
-L'approche objet d'un jeu web est assez complexe. A première vue, le «
-tout objets » peut sembler être une bonne chose, mais les objets ne sont
+L'approche objet d'un jeu web est assez complexe. A première vue, le "
+tout objets" peut sembler être une bonne chose, mais les objets ne sont
 pas les amis des bases de données. Qui dit objets, dit attributs, et qui
 dit attributs dit base de données derrière chargée et mise à jour en
 permanence. Travailler avec les objets et leurs instances implique
@@ -162,7 +162,7 @@ avant de foncer tête baissée sur la sécurité et l'optimisation du jeu.
 Le choix de notre cycle de développement n'a définitivement pas été le
 bon. Et ce dernier est à mon sens la raison de notre (mon) échec. 5 ans
 ! Nous avons passé 5 ans sur ce projet et toujours pas de jeu jouable en
-version publique à mon départ … C'est entre autres une des raisons de
+version publique à mon départ ... C'est entre autres une des raisons de
 mon arrêt. C'est même un exploit d'avoir tenu aussi longtemps. Nous
 avons choisi en effet de n'ouvrir le jeu que lorsqu'une version du jeu
 serait suffisamment jouable pour retenir le joueur. Or, le principe de
@@ -203,7 +203,7 @@ nouveaux membres pour votre équipe de développement.
 
 Cela fait mal à dire, mais la création d'un jeu RPG complexe n'est pas à
 la portée d'une équipe d'amateurs. Qu'on me montre le contraire et j'en
-serais ravis ! Mais le fait est que la création d'images, de décors,
+serais ravi ! Mais le fait est que la création d'images, de décors,
 d'histoires, de scénarios, de quêtes et de missions nécessite un travail
 pharaonique. J'ai les 95% du temps endossé le rôle du développeur, du
 scénariste et de l'illustrateur à la fois. Ceci est quasiment impossible
@@ -215,12 +215,12 @@ hélas, je pense qu'un jeu de l'envergure de type Fallout, Baldur's gate,
 Final Fantasy, ou même Zelda n'auraient pas pu être réalisés par des
 amateurs. Cela demande trop de travail en dehors de la partie
 programmation. Le jeu ultime est à mon sens impossible à développer par
-des amateurs, hélas… A mon sens, un jeu amateur ne doit pas voir trop
+des amateurs, hélas ... A mon sens, un jeu amateur ne doit pas voir trop
 gros dès le départ. Il faut y aller au fur et à mesure, en se faisant
 plaisir et tout en gardant à l'esprit que nous ne pouvons pas rivaliser
 avec les grands. Le jeu ultime amateur n'est pas réalisable, cela
 demande beaucoup trop de travail. Avec Simerion nous sommes partis sur
-un concept trop complexe, trop utopique … La clé de la réussite est un
+un concept trop complexe, trop utopique ... La clé de la réussite est un
 cadrage dès le départ qui trouve un compromis entre un concept novateur
 et le minium de code possible.
 
@@ -254,7 +254,7 @@ Nous avons rejoint dès le départ l'association
 soutenus et conseillés. Nous n'aurions sans doute pas tenu autant de
 temps sans elle. Nous avons même eu la chance grâce à elle d'être
 exposant à 2 reprises au festival du jeu vidéo. Nous avons pu rencontrer
-des professionnels qui ont été intéressés par notre jeu. Cela fut une
+des professionnels qui ont été intéressés par notre jeu. Ce fut une
 expérience très enrichissante. Je conseille vivement à toute personne se
 lançant dans un jeu web sérieux de contacter Nainwak. La mission de
 cette association est d'aider les amateurs, et elle y travaille à
@@ -266,7 +266,7 @@ J'ai complètement arrêté Simerion tout d'abord parce que je ne prenais
 plus aucun plaisir à travailler dessus. Le développement était devenu
 interminable et j'avais besoin de passer à autre chose. A cela se sont
 ajoutés des problèmes de santés plus une saturation du web en général.
-Abandonner Simerion alors que ce projet me tenait tellement à cœur a été
+Abandonner Simerion alors que ce projet me tenait tellement à coeur a été
 une chose très difficile, mais je pense qu'au bout de 5 ans, il fallait
 simplement passer à autre chose. Simerion a été une expérience vraiment
 très enrichissante. J'ai pu apprendre énormément et rencontrer beaucoup
