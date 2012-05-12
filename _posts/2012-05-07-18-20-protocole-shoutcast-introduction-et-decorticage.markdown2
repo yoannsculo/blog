@@ -16,28 +16,28 @@ Les spécifications du protocole créé par Nullsoft (Winamp) ne sont pas
 clairement définies, ni vraiment publiques. La documentation à ce sujet est
 assez rare et relève plutôt du reverse engineering et de la bidouille avec
 Wireshark :) Je me suis amusé à programmer une application qui parse et enregistre
-les flux SHOUcast, [SHOUTcast Recorder](https://github.com/yoannsculo/SHOUTcast-Recorder). Aujourd’hui je profite de mon expérience
-sur le sujet pour regrouper un peu toutes les informations que j’ai trouvé sur
+les flux SHOUcast, [SHOUTcast Recorder](https://github.com/yoannsculo/SHOUTcast-Recorder). Aujourd'hui je profite de mon expérience
+sur le sujet pour regrouper un peu toutes les informations que j'ai trouvé sur
 ce protocole.
 
-Je tiens tout d’abord à préciser que je ne garantis pas l’exactitude à 100% des
+Je tiens tout d'abord à préciser que je ne garantis pas l’exactitude à 100% des
 informations qui vont suivre. Pour comprendre le fonctionnement de SHOUTcast,
 je me suis basé sur les sources de clients classiques, tels que mplayer, vlc mais
-aussi sur différents forums et le peu de documents que j’ai pu repérer sur Internet.
-Si vous détectez la moindre erreur ou inexactitude dans mes propos, n’hésitez
-pas à m’en faire part, que je corrige mon article en conséquence.
+aussi sur différents forums et le peu de documents que j'ai pu repérer sur Internet.
+Si vous détectez la moindre erreur ou inexactitude dans mes propos, n'hésitez
+pas à m'en faire part, que je corrige mon article en conséquence.
 
 ### Le protocole
 
 SHOUTcast, initialement appelé I Can Yell (ICY), est donc le protocole utilisé
 pour streamer du son ainsi que, par la même occasion, différentes informations
 textuelles sur le flux en question. Les clients et serveurs SHOUTcast sont disponibles
-sur un certain nombre de plateformes. Mais je vais surtout m’intéresser ici au
+sur un certain nombre de plateformes. Mais je vais surtout m'intéresser ici au
 protocole en lui même.
 
 ### Premier pas
 
-SHOUTcast n’est autre que de la musique transmise par HTTP. Il suffit d’envoyer
+SHOUTcast n'est autre que de la musique transmise par HTTP. Il suffit d’envoyer
 une simple requête HTTP pour initier la connexion.
 
 Avant toute chose, le serveur va nous renvoyer dans son header HTTP différentes
@@ -99,7 +99,7 @@ qui nous renvoie :
 
 Ce header est donc composé de champs icy se terminant tous par un `<CR>` (`\r\n`),
 soit `0d 0a` en hexa. Le début du header commence par le code de réponse
-(similaire à HTTP). Je n’ai pas eu l’occasion de recevoir autre chose que le code 200.
+(similaire à HTTP). Je n'ai pas eu l’occasion de recevoir autre chose que le code 200.
 
 Voici une liste, sans doute non exhaustive, des champs possibles du header.
 
@@ -130,7 +130,7 @@ Voici une liste, sans doute non exhaustive, des champs possibles du header.
 </tr>
 <tr>
 <td><b>icy-metaint</b></td>
-<td>Fréquence d’apparition des packets metadata (voir plus loin)</td>
+<td>Fréquence d'apparition des packets metadata (voir plus loin)</td>
 </tr>
 <tr>
 <td><b>Content-Type</b></td>
@@ -153,7 +153,7 @@ Voici une liste, sans doute non exhaustive, des champs possibles du header.
 La fin du header est marquée par un double `<CR>`, c'est à dire la chaîne `\r\n\r\n`,
 ou autrement dit `0d 0a 0d 0a`. Les données brutes mp3 suivent directement après.
 
-Ainsi, une simple redirection de la sortie standard de curl permet d’enregistrer le flux SHOUTcast :
+Ainsi, une simple redirection de la sortie standard de curl permet d'enregistrer le flux SHOUTcast :
 
 	curl http://scfire-ntc-aa04.stream.aol.com:80/stream/1035 > ./out.mp3
 
