@@ -79,7 +79,7 @@ la phase Bootloader -\> Kernel -\> Applicatif. En l'occurrence ici, sur
 le moment où la MMU n'est pas encore chargée et où l'on a besoin
 d'investiguer et trouver la source d'un problème bien vicieux et planqué
 au fin fond du Kernel. Bon, sa solution impliquait du plugin Eclipse et
-de l'IDE graphique. Graphique ? Berk ! … Je sais ! Je suis un intégriste
+de l'IDE graphique. Graphique ? Berk ! ... Je sais ! Je suis un intégriste
 du vim et de la ligne de commande ! Niark ! Plus sérieusement, je
 regarderai à l'occasion. Ma phase vim me passera peut-être un jour... ou
 pas :D

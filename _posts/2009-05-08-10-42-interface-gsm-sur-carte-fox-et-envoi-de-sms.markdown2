@@ -22,7 +22,7 @@ embarqué à bas coût utilisant le système d'exploitation Linux. La carte
 est dotée d'un processeur AXIS à 100MHz et de 32 MB de RAM, de
 connectiques USB, Ethernet, d'un port série console ainsi que 40 pins
 pouvant être reliées à plusieurs BUS de données. Elle permet de
-développer en bon nombre de langages : C, C++, PHP, PYTHON, Shell, … et
+développer en bon nombre de langages : C, C++, PHP, PYTHON, Shell, ... et
 permet des connections HTTP, FTP, SSH et TELNET. De petite taille et
 faible consommation électrique (1 W) est idéale pour mettre en place
 rapidement des projets de type embarqué.
