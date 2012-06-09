@@ -1,0 +1,56 @@
+---
+layout: post
+title: Publication des images de Simerion en Creative Commons BY
+keywords: simerion, tiles, images, cc, creative commons, BY, free, gratuit, libre
+publish: true
+---
+
+![Simerion]({{blog.images}}/simerion/simerion_cc.jpg)
+
+
+Entre 2005 et 2009 j'ai travaillé sur un projet de jeu vidéo PHP par navigateur
+web, [Simerion]({{blog.url}}/projets/simerion). Jeu entièrement réalisé en Pixel-Art
+et vue isométrique. Aujourd'hui, 3 ans après avoir passé le flambeau, le jeu
+est malheureusement sur le point de fermer. La personne ayant repris la suite
+a fini par arrêter pour les mêmes raison que moi.
+
+Le jeu fermera définitivement ses portes en juillet prochain. J'ai réalisé
+qu'il serait bien dommage de voir disparaître tout notre travail.
+
+Ainsi j'ai décidé de publier toutes les images, de notre création, en
+Licence Creative Commons CC BY 3.0
+
+Je laisse même le choix entre ces deux licences :
+
+[Licence Creative Commons Attribution 3.0 France](http://creativecommons.org/licenses/by/3.0/fr/)
+
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/fr/"><img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/fr/88x31.png" /></a>
+
+[Licence Creative Commons Attribution 3.0 non transposé](http://creativecommons.org/licenses/by/3.0/)
+
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+
+J'espère ainsi pouvoir aider d'autres développeurs de jeux. Autant que ça serve
+à d'autres !
+
+Vous pouvez :
+
+- les partager, reproduire, distribuer et communiquer
+- les modifier
+- les utiliser à des fins commerciales
+
+Pour plus d'information sur l'utilisation de cette license, je vous invite à
+consulter les liens ci dessus.
+
+Les images [se trouvent ici]({{blog.url}}/ftp/simerion/simerion-cc.tar.gz).
+J'y ai attaché un [README]({{blog.url}}/ftp/simerion/README) explicatif.
+
+md5sum
+
+	96408f3626d5d297e3ae32cc623bc394  simerion-cc.tar.gz
+
+Avec le recul, ce qui est amusant, c'est que mon rapport au Libre a évolué depuis
+2005. A l'époque, j'avais déposé une enveloppe soleau (ci-dessous) avec les images
+imprimées sur papier. 
+
+![Enveloppe soleau]({{blog.images}}/simerion/soleau.jpg)
