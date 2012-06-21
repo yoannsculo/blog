@@ -1,0 +1,41 @@
+---
+layout: post
+title: Linux Embarqué - 4eme Edition
+keywords: linux, embarqué, Pierre Ficheux, livre, eyrolles
+publish: true
+---
+
+[Aujourd'hui sort](http://www.eyrolles.com/Informatique/Livre/linux-embarque-9782212134827)
+la 4eme édition du livre Linux Embarqué de Pierre Ficheux. Le livre était annoncé
+dans les premières pages de du livre [Solutions temps réel sous Linux](http://www.eyrolles.com/Informatique/Livre/solutions-temps-reel-sous-linux-9782212133820)
+de Christophe Blaess (livre dont je parlerai bientôt sur mon blog). J'étais donc
+curieux de voir quand il allait bien pouvoir sortir.
+
+J'imagine donc que la sortie coïncide avec le Salon Solutions Linux de cette année.
+Bref, une mise à jour de l'ouvrage de référence en matière de Linux Embarqué. Cela
+s'annonce bien intéressant !
+
+<center>
+![Linux Embarqué]({{blog.images}}/livres/linux_embarque_4eme_edition.gif)
+</center>
+
+En voici le sommaire :
+
+- Introduction à Linux et aux systèmes embarqués
+	- Les logiciels embarqués et leurs domaines d'application
+	- Linux comme système embarqué
+	- Choix du matériel
+- Mise en place d'un système Linux embarqué
+	- Structure du système Linux
+	- Environnement de développement
+	- Construction de la distribution
+	- Configuration du réseau
+	- Le chargeur de démarrage
+	- Mémoire de masse et système de fichiers
+- Techniques avancées
+	- Utiliser Buildroot
+	- Utiliser OpenEmbedded
+	- Outils de mise au point
+	- Systèmes temps réel
+	- Interface homme-machine
+	- Etude de cas
