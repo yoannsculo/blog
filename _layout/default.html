@@ -3,7 +3,13 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
-	<title>{{ blog.title }}</title>
+	{% if post is defined %}
+		<title>{{ post.title | escape }} | {{ blog.title }}</title>
+	{% elif page is defined and page.title is defined %}
+		<title>{{ page.title | escape }} | {{ blog.title }}</title>
+	{% else %}
+		<title>{{ blog.title }}</title>
+	{% endif %}
 
 	<link rel="alternate" type="application/rss+xml" title="{{ blog.title }} RSS Feed" href="{{ blog.url }}/feed/" />
 	<link rel="alternate" type="application/atom+xml" title="{{ blog.title }} Atom Feed" href="{{ blog.url }}/feed/atom/" />
