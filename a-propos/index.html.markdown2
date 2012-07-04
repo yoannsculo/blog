@@ -17,37 +17,31 @@ de l'embarqué de long en large et en travers.
 
 ## Contact
 
-Consultez la FAQ avant de me contacter :)
-
 ![moi](hjsbdlfihssdfsdf.png)
 
-	EMAIL=$(python -c "print 'eW9hbm4uc2N1bG9AZ21haWwuY29t'.decode('base64')")
+Vous pouvez très facilement me joindre par email ou me contacter sur Twitter
+<a href="http://twitter.com/yoannsculo">@yoannsculo</a>
+Cependant, avant de m'envoyer un mail, consultez la FAQ :)
 
 ## FAQ
 
-#### Je suis une SSII/SSLL/SS${var}, puis-je vous débaucher ?
+#### Je suis RH ou Commercial de SSII/SSLL/SS... ?
 
 Si vous êtes RH/commercial de SSII, je compatis pour vous. Malheureusement je décline
-toutes les offres de SSII. Je ne souhaite pas travailler en SSII. Maintenant vous
+toutes les offres de SSII. Je ne souhaite <span class="label label-important">pas</span> travailler en SSII. Maintenant vous
 pouvez toujours essayer, ça peut marcher. Mais il y a un risque élevé de finir dans
-[mon bétisier]({{blog.url}}/le-grand-betisier-des-recruteurs).
-
-#### Je suis commercial, puis-je vous contacter sur votre mail perso/pro pour essayer de trouver du travail chez votre employeur ?
-
-Bien que je salue l'ingéniosité mise en oeuvre pour tenter d'atteindre mon employeur
-actuel par mon intermédiaire, je ne réponds pas non plus favorablement à ces demandes.
+[mon bétisier]({{blog.url}}/le-grand-betisier-des-recruteurs). Et bien que je salue
+l'ingéniosité mise en oeuvre pour tenter d'atteindre mon employeur actuel par mon
+intermédiaire, je ne réponds pas non plus aux techniques fourbes de prospection.
 
 #### Je suis étudiant en école d'ingé et je dois interviewer un professionnel, pouvez-vous répondre à mon questionnaire ?
 
 Si vous êtes étudiant en école d'ingénieur et que l'on vous demande d'interviewer
 un professionnel, j'ai déjà été dans votre cas, je compatis. J'ai déjà rendu la
 pareille à pas mal d'étudiants jusque là. Mais j'en reçois de plus en plus.
-Mais ça me prend du temps mine de rien, et je ne peux pas aider TOUT le monde
-malheureusement. Alors je ne réponds plus favorablement à ces demandes, désolé...
+Cela me prend trop de temps malheureusement, je n'y réponds plus.
 
 #### J'ai un problème ultra compliqué, pourriez-vous me conseiller ou résoudre mon problème par mail ?
 
-Je reçois régulièrement des emails me demandant conseil sur un problème technique
-complexe, avec choix de matériel, soft, etc. Je répondais au début, mais cela me
-prend du temps (encore trop pour moi). Donc malheureusement, je n'y réponds plus favorablement.
-Par contre je veux bien répondre aux questions posées sur [le forum embarqué](http://www.developpez.net/forums/f1558/general-developpement/programmation-systeme/embarque/) de developpez.com
+Utilisez plutôt [le forum embarqué](http://www.developpez.net/forums/f1558/general-developpement/programmation-systeme/embarque/) de developpez.com
+
