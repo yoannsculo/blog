@@ -1,0 +1,44 @@
+---
+layout: post
+title: Hack de Karotz - Le plaisir de se faire hacker son travail
+keywords: Karotz, hack, brick, lapin, rabbit, OpenRabbit, bricking
+publish: true
+---
+
+<pre>
+	                        _           _    ________________
+	                       / \         / \  /                \
+	                       \  \       /  / |  www.karotz.com  |
+	                        \  \     /  /   \____  __________/
+	                _  __    \  \___/  /    _    /_/        
+	               | |/ /    /         \   | |       
+	               | ' /  __|_  O __O __|  | |_  ____
+	               |  <  / _` || '__|/ _ \ | __||_  /
+	               | . \| (_| || |  | (_) || |_  / / 
+	               |_|\_\\__,_||_|   \___/  \__|/___|
+</pre>
+
+Depuis le temps que j'attendais ça ! Je n'avais plus trop suivi la vie du Karotz
+depuis mon départ de chez Mindscape voilà plus d'un an. Aujourd'hui j'ai découvert
+qu'il avait enfin été hacké. Cela fait bizarre de voir des gens bricoler le
+produit sur lequel on a travaillé, et surtout de rentrer dedans :)
+
+J'en étais resté à ce [post de forum](http://nabaztag.forumactif.fr/t13446-port-serie-uart-du-karotz-boot)
+qui n'avait malheureusement pas été plus loin :(
+
+Je suis ainsi tombé sur ces deux hacks de personnes un peu plus motivées ;)
+
+- [Ultimate guide bricking a Karotz](http://epicmonkey.livejournal.com/40052.html)
+- [OpenRabbit.de](http://openrabbit.de/)
+
+C'est intéressant à voir maintenant avec un peu de recul et d'expérience. C'en
+est même étonnant que personne n'ait essayé plus tôt, dans la mesure où on
+y rentre comme dans un moulin. La consigne était de le protéger uniquement de
+80% des hacks et pas contre les hacks physiques. Et comme l'accès, physique,
+à la console par cable FTDI n'étant pas à la portée de tout le monde, on a
+juste **oublié** de fermer la porte à clef :P
+
+En tout cas, ce qui est assez marrant dans l'histoire du Karotz c'est que
+Mindscape n'ait pas vu l'intérêt de vendre les cartes de Karotz en bulk avec OS
+ouvert, lorsque j'ai proposé ça en janvier 2011. Un an plus tard sortait la
+Raspberry Pi... Mouarf !
