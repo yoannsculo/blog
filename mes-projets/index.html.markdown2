@@ -9,10 +9,22 @@ Voici comment il m'arrive d'occuper mon temps libre :)
 
 ### Open Source
 
-#### ucblog (2012) (<a href="https://github.com/yoannsculo/ucblog">Page du projet</a>)
-ucblog est un générateur de site statique en C. Inspiré de jekyll et growl, il a pour vocation d'être très simple à utiliser, avec un minimum de dépendences. Et comme je vis dans le monde de l'embarqué, il est en partie prédestiné à l'embarqué et à l'autohébergement. Donc juste un Linux, un serveur web et ucblog ! Pas d'autre trucs pénibles à installer comme jekyll.
+#### µcwiki (2012) ([Page du projet](https://github.com/yoannsculo/ucwiki))
+µcwiki est un générateur de wiki/documentation statique en C. Inspiré de [µcblog](https://github.com/yoannsculo/ucblog)
+il prend en entrée une arborescence de fichiers au format markdown et en génère
+un joli site statique html. Pas besoin de serveur web, juste un navigateur web.
+Les pages html peuvent être consultées online/offline, de n'importe quel support
+et surtout transportées. µcwiki me sert essentiellement à rédiger de la documentation,
+que cela soit à titre personnel ou pour le travail.
 
-#### SHOUTcast recorder (2010) (<a href="https://github.com/yoannsculo/SHOUTcast-Recorder">Page du projet</a>)
+#### µcblog (2012) ([Page du projet](https://github.com/yoannsculo/ucblog))
+µcblog est un générateur de site statique en C. Inspiré de jekyll et growl, il
+a pour vocation d'être très simple à utiliser, avec un minimum de dépendences.
+Et comme je vis dans le monde de l'embarqué, il est en partie prédestiné à
+l'embarqué et à l'autohébergement. Donc juste un Linux, un serveur web et
+ucblog ! Pas d'autre trucs pénibles à installer comme jekyll.
+
+#### SHOUTcast recorder (2010) ([Page du projet](https://github.com/yoannsculo/SHOUTcast-Recorder))
 SHOUTcast recorder est une application d’enregistrement de flux MP3 Shoutcast.
 
 #### Foxboard G20 GPIOs (2009) (<a href="https://github.com/yoannsculo/foxg20-gpio">Page du projet</a>)
