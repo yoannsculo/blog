@@ -1,0 +1,52 @@
+---
+layout: post
+title: ucwiki - carnet de note et moteur de wiki statique en C
+keywords: ucwiki, wiki, markdown, doc, documentation, static, C, github, bloc, notes
+publish: true
+---
+
+Je viens de créer un petit logiciel open source, [µcwiki](https://github.com/yoannsculo/ucwiki).
+Petit frère de mon précédent projet [µcblog](https://github.com/yoannsculo/ucblog),
+µcwiki est un moteur de wiki statique en C. Il prend un dossier ou tout une
+arborescence de fichiers au [format markdown](http://daringfireball.net/projects/markdown/syntax/)
+et transforme le tout en un joli site html coin coin avec bootstrap et jquery.
+
+J'ai développé ce logiciel dans une optique de documentation de mon travail
+et de mes lectures. Je réalise que mon cerveau a tout simplement ses limites,
+et que j'oublie facilement des détails, explications, justifications d'une décision
+prise 6 mois plus tôt. J'avais donc besoin de documenter un minimum ce que
+je fais, que cela soit au travail ou à titre personnel. Jusque là, je balançais
+tout ça en vrac dans des fichiers textes, et s'y retrouver devenait assez galère.
+
+L'option wiki commun au travail est intéressante mais pas toujours pertinente
+ni idéale, dans la mesure où dans l'essentiel du temps mes notes ou remarques
+sont plutôt personnelles, et ne concernent personne d'autre que moi. A cela
+s'ajoute la différence de niveau et d'expérience. Il n'est pas toujours utile
+de documenter des point triviaux pour d'autres collègues. Et point encore plus
+important, au même titre que je faisais des fiches de révision pendant mes
+études, j'ai besoin de faire de même avec mon travail de tous les jours. La
+doc y est synthétique et personnelle. Documenter et organiser les informations
+à sa manière aide grandement à revenir sur un sujet 6 mois après.
+
+J'avais regardé du côté de [DokuWiki](https://www.dokuwiki.org/dokuwiki),
+[TiddlyWiki](http://tiddlywiki.com/), [Zim](http://zim-wiki.org/), ... Mais je
+n'ai pas trouvé chaussure à mon pied.
+
+A vrai dire, je voulais un logiciel :
+
+- ne nécessitant aucun serveur web, et qui puisse être offline sur une clé USB par exemple.
+- qui me permette d'écrire ma doc en markdown
+- qui me permette de rédiger mes pages dans vim.
+- qui soit codé en C, j'avais aussi envie de me coder un truc en C ! Oui j'aime le C :)
+
+Voilà pour le contexte ! Voici donc ce que ça donne côté visuel :
+
+[![Screenshot ucwiki]({{blog.images}}/ucwiki/ucwiki_screen_small.jpeg)]({{blog.images}}/ucwiki/ucwiki_screen.png)
+
+Le projet est encore loin d'être terminé, mais il est fonctionnel et je
+commence enfin à l'utiliser. Certains bouts de code sont crades pour le moment,
+mais je compte nettoyer ça au fur et à mesure, je voulais quelque chose de
+fonctionnel assez rapidement. N'hésitez pas à me faire part de retours, critiques, etc.
+
+Les sources et la documentaion sont disponibles sur [github](https://github.com/yoannsculo/ucwiki).
+
