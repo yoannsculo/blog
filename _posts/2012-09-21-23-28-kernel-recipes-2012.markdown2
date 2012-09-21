@@ -1,0 +1,87 @@
+---
+layout: post
+title: Kernel Recipes 2012 - Première conférence dédiée au Kernel à Paris
+keywords: Kernel Recipes 2012, kr2012, kernel, recipes, linux, developer, conference, conférence, développeur, rencontre, noyau
+publish: true
+---
+
+![logo-kernel-recipes]({{blog.images}}/kr2012/kr-logo.png)
+
+J'ai passé ma journée aux [Kernel Recipes](https://kernel-recipes.org/) au
+Carrefour Numérique à la Cité de la Villette. Première conférence
+dédiée au kernel à Paris, et si je ne m'abuse en France. L'événement était
+organisé par la société [Hupstream](http://www.hupstream.com).
+
+Chouette initiative, dans la mesure où la France est plutôt à l'écart de
+ce genre de rencontre généralement. Donc je me suis inscrit, ne sachant pas
+trop à quoi j'aurais affaire. Je redoutais un peu le niveau technique. Je
+travaille sur le Kernel au boulot, mais ce n'est pas encore mon pain quotidien.
+Finalement, très bonne surprise. Même si mes connaissances ne m'ont pas permis
+de suivre à 100% l'intégralité des conférences. C'était néanmoins très
+intéressant, et donnait carrément envie de devenir contributeur du noyau.
+Bon, j'ai pas le temps, mais c'est pas grave ! Ca donnait envie :D
+
+![kernel-recipes]({{blog.images}}/kr2012/IMAG0343.jpg)
+
+Première conférence de David Woodhouse sur la mémoire Flash qui présentait
+le fonctionnement des couches basses et des mécanismes au niveau électronique.
+On en retient qu'UBIFS est maintenant à préconiser avec l'avénement des gros
+chips de NAND, plutôt que JFFS2. Et que les constructeurs de clés USB font un
+peu n'importe quoi, mais qu'au final tout le monde s'en fiche.
+
+Puis est intervenu Willy Tarreau, qui nous a présenté son travail de mainteneur
+de veilles branches du kernel. Vraiment très instructif !
+
+Frédéric Weisbecker nous a ensuite parlé du tick et d’interruption timer. J'ai
+réalisé qu'il fallait vraiment que je liste le livre de Christophe Blaess, parce
+que j'étais un peu largué. Mais je vous jure, ça avait l'air intéressant !
+
+![kernel-recipes]({{blog.images}}/kr2012/IMAG0347.jpg)
+
+Après la pause du midi et un petit café, David Woodhouse et revenu nous parler
+de Linux embarqué et en quoi il n'avait plus grand chose d'embarqué.
+
+Suivi de Jean Delvare qui, tout comme Willy Tarreau, nous a parlé de son
+expérience de mainteneur de sous système. Réellement captivant. Ca m'a tellement
+donné envie de lancer en tant que contributeur ! Mais bon, le temps, tout ça ...
+
+![kernel-recipes]({{blog.images}}/kr2012/IMAG0349.jpg)
+
+Enfin, Samir Bellabes a parlé sécurité et mécanismes de contrôle d’accès du
+kernel. Et surtout de ses idées pour revoir une bonne partie des mécanismes de
+sécurité du kernel. J'ai bien aimé son approche théorique de la théorie des
+ensembles à plusieurs dimensions.
+
+Et comme ce n'était toujours pas fini ! Ahah ! Nous avons eu droit à 3 Lightning
+talks tout aussi intéressants.
+
+Julia Lawall nous a parlé de [Coccinelle](http://coccinelle.lip6.fr/), outil de
+recherche de bug. Héhé ça m'a donné envie de tester ça au boulot tiens :D
+
+Eric Leblond nous a montré à quel point il était galère de trouver et reporter
+une grosse faille de sécu dans le kernel !
+
+Et enfin, Erwan Velu a présenté son projet [Hardware Detection Tool](http://hdt-project.org/)
+qui permet de détecter du hardware depuis un simple module du bootloader. En
+l'occurrence [Syslinux](http://www.syslinux.org). L'idée est chouette !
+
+Et puis voilà ! S'en est suivi le tirage au sort du concours, où nous devions
+trouver quels étaient les 2 personnes célèbres ayant inspiré le nom de
+l'événement. Et ... c'est mon nom qui est sorti ! Cool, j'ai gagné une
+[CuBox](http://www.solid-run.com/products/cubox). Bon, merci quand même à
+Christophe qui m'a mis sur la piste alors que j'étais bien loin de trouver...
+C'était Brian Kernighan et Dennis Ritchie.
+
+Donc c'était une très bonne journée, j'ai pu enfin voir des gens que je ne
+connaissais que d'Internet et puis en rencontrer d'autres. On a eu droit à un
+zouli T-Shirt.
+
+En plus, on avait un mur de tweet sur le côté, de quoi troller pendant les confs
+(conférences sur le kernel qui se déroulaient un vendredi of course !)
+
+![kernel-recipes]({{blog.images}}/kr2012/IMAG0353.jpg)
+
+Bref c'était super ! Il n'y a qu'à souhaiter que l'opération soit réitérée
+l'année prochaine !
+
+Sur ce, je vais me coucher, demain je me rends à l'[Open Bidouille Camp](http://www.ecrans.fr/Open-Bidouille-Camp,15225.html)
