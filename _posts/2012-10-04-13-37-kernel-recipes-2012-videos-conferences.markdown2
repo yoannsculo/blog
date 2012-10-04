@@ -1,0 +1,21 @@
+---
+layout: post
+title: Kernel Recipes 2012 - Les vidéos des conférences
+keywords: Kernel Recipes 2012, kr2012, kernel, recipes, linux, developer, conference, conférence, développeur, rencontre, noyau, vidéo
+publish: true
+---
+
+![logo-kernel-recipes]({{blog.images}}/kr2012/kr-logo.png)
+
+Les vidéos et supports de présentation des conférences de [Kernel Recipes 2012]({{blog.url}}/kernel-recipes-2012)
+sont maintenant disponibles.
+
+- [Hardware Detection Tool](https://kernel-recipes.org/?page_id=427) - Erwan Velu
+- [Maintenir un sous systeme du noyau linux](https://kernel-recipes.org/?page_id=414) - Jean Delvare
+- [Maintenance des branches stables du noyau](https://kernel-recipes.org/?page_id=406) - Willy Tarreau
+- [Interruption timer périodique](https://kernel-recipes.org/?page_id=410) - Frédéric Weisbecker
+- [Flash memory](https://kernel-recipes.org/?page_id=403) - David Woodhouse
+- [Embedded is not special](https://kernel-recipes.org/?page_id=412) - David Woodhouse
+- [Pinhole story](https://kernel-recipes.org/?page_id=425) - Eric Leblond
+- [Coccinelle, a bug finding tool](https://kernel-recipes.org/?page_id=418) - Julia Lawall
+- [Les mécanismes de contrôle d’accès du kernel](https://kernel-recipes.org/?page_id=416) - Samir Bellabes
