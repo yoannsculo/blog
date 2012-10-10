@@ -10,8 +10,8 @@ site=1
 
 if not site:
         Site.CONTEXT.blog = AttrDict(
-                url = '.../blog',
-                images = '.../blog/images',
+                url = 'http://www.yoannsculo.fr',
+                images = 'http://www.yoannsculo.fr/images',
                 title = 'Yoann Sculo - Ingénieur Linux Embarqué',
                 description = 'Yoann Sculo - Blog d\'un Ingénieur Linux Embarqué accro à vim. Bidouille, bricolage, hacking, systèmes embarqués, livres et calembours.',
                 language = 'fr',
