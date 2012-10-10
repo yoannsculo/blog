@@ -7,8 +7,11 @@ title: A-propos
 
 ## A propos
 
-Je m'appelle Yoann Sculo, j'ai 25 ans et je suis ingénieur Linux embarqué, actuellement en
-poste chez [Archos](http://www.archos.com).
+Je m'appelle Yoann Sculo, je suis ingénieur Linux embarqué, passionné par le
+libre et l'open source, les systèmes embarqués, les bricolages en tout genres et
+un paquet d'autres choses.
+
+Je suis actuellement en poste chez [Archos](http://www.archos.com).
 
 Ce site est l’occasion pour moi de partager tout ce qui me tient à coeur, mes
 bidouilles, projets et bricolages en tout genre. Ce blog me permet également
@@ -17,14 +20,12 @@ de l'embarqué de long en large et en travers.
 
 ## Contact
 
-Vous pouvez :
+Vous pouvez me joindre de différentes façons :
 
-- me joindre par email ![moi](hjsbdlfihssdfsdf.png)
-- me contacter sur Twitter <a href="http://twitter.com/yoannsculo">@yoannsculo</a>
-- me trouver sur Freenode sous le pseudo **ysculo**
+- email ![moi](hjsbdlfihssdfsdf.png)
+- [Twitter](http://twitter.com/yoannsculo), [Github](https://github.com/yoannsculo) et [developpez.com](http://www.developpez.net/forums/u82623/aquanum/)
+- irc sur freenode sous le pseudo **ysculo**
 
-## Remarques
+## CV / Resume
 
-- Je ne suis pas actuellement à l'écoute du marché.
-- Je ne souhaite <span class="label label-important">pas</span> travailler en SSII/SSLL/SS...
-
+Il se [trouve ici]({{blog.url}}/moncv) / You can [find it here]({{blog.url}}/moncv)

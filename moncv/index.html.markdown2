@@ -1,16 +1,16 @@
 ---
 layout: page
 title: Mon CV
-categories: C, CV, Emploi, ingénieur, ingénieur C embarqué, ingénieur linux embarqué, ingénieur logiciel embarqué, ingénieur systèmes embarqués, linux, système embarqué, Systèmes Embarqués, technologies mobiles
+categories: C, CV, Emploi, ingénieur, ingénieur C embarqué, ingénieur linux embarqué, ingénieur logiciel embarqué, ingénieur systèmes embarqués, linux, système embarqué, Systèmes Embarqués, technologies mobiles, resume
 ---
 
-## Mon CV
+## CV / Resume
 
-Vous pouvez consulter mon CV sous différents formats :
+#### En Français
 
-- [HTML](cv.html)
-- [PDF (Français)](../Yoann_Sculo_CV_Linux_Embarque.pdf)
-- [PDF (English)](../Yoann_Sculo_Resume_Embedded_Linux.pdf)
-- [ODT (Français)](../Yoann_Sculo_CV_Linux_Embarque.odt)
+- [PDF](../Yoann_Sculo_CV_Linux_Embarque.pdf) - [ODT](../Yoann_Sculo_CV_Linux_Embarque.odt)
 
-Je ne suis actuellement <span class="label label-info">pas</span> à la recherche de nouvelles opportunités d'emploi.
+#### In English
+
+- [PDF](../Yoann_Sculo_Resume_Embedded_Linux.pdf)
+
