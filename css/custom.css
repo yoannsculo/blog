@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {font-size:24px;padding:10px 0; margin:0px 0 0 0;}
 
-h1 span {font-size:14px;float:right;}
+h1 span {font-size:14px;margin-top:-40px;}
 
 .well h1 {font-size:16px; border-bottom:2px solid #000; padding:0px 0; margin-bottom: 10px;}
 
