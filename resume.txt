@@ -1,0 +1,159 @@
+Yoann Sculo                                              Embedded Linux Engineer
+
+Email    : yoann.sculo@gmail.com
+Web      : http://www.yoannsculo.fr
+LinkedIn : http://www.linkedin.com/in/
+GitHub   : http://github.com/yoannsculo
+
+3+ years of embedded systems experience. Skilled in integration and development
+of embedded Linux solutions.
+
+Professional Experience
+================================================================================
+
+Archos                                                       August 2011-present
+Software Engineer - Linux/Android                                    (14 months)
+
+    * Worked on Archos Gen 8, 9 and 10 Android products (10+ devices)
+      From Froyo to Jelly Bean - OMAP 3630/4430/4460/4470
+    * Board bring-up & validation - 2.6.x/3.x kernel development and device
+      drivers.
+    * Low-level userspace development: bootloader, init, recovery, charge loop
+      Android layers: services, daemons, hardware layer
+    * Developing Archos custom Linux OS for production use. Hardware and
+      software validation. Working with production in China to track, fix bugs
+      and deploy production and enduser firmwares. Developed Mac address and
+      HDCP flashing system.
+    * C, Bash, Buildroot, Git/repo - Datasheets and PCB schematics reading
+
+Mindscape                                                 March 2011 - July 2011
+Embedded Software team leader                                         (5 months)
+
+    * Wrote software and hardware specifications for the next product running on
+      Android (never went into production)
+    * Android development on ARM Cortex A8 - Prototyping on the PandaBoard.
+    * Wrote tests, fixed bugs, maintained / improved Karotz product and managed
+      the worldwide developers community.
+
+Mindscape                                           January 2010 - February 2011
+Embedded systems engineer                                            (14 months)
+
+    * Wrote specifications, designed and developed Karotz embedded software
+      architecture.
+    * Created and set up from scratch the embedded Linux system / BSP on
+      ARM 920T and 2.6.28 kernel 
+    * Used Buildroot, uClibC, Busybox and cross-compiled application for ARM
+      target
+    * Set up development environment, YAFFS filesystem, factory system
+      restauration and automatic OS updating system, D-Bus based architecture,
+      serial protocol for the Karotz configuration, network connection
+      (LAN/WLAN), mass storage, Karotz SDK, user applications, ...
+    * Optimized boot time, enhanced system performance and developed inside the
+      Linux kernel (drivers, kernel patching)
+    * Was exhibitor at the CES 2011 in Las Vegas
+    * Played key role in submitting ideas, developing the whole system from
+      scratch and solving deep technical issues
+    * C, Bash, Python, C++ and Javascript programming - Used GIT, Jira
+
+CNES (French Space Agency)                             July 2009 - December 2009
+Intern                                                                (6 months)
+
+    * Long term navigation for a planetary exploration robot
+    * Conceived and implemented algorithms of topographic maps merging for the
+      Exomars mission rover (2016)
+    * Stringent / critical constraints on size and weight - Processor of 30MHz
+      with 5Mb of memory.
+    * Integrated my work into the martian environment simulator.
+    * C programming and optimization for an embedded Linux system target (Leon)
+    * Improved segmentation algorithms for ground numeric models.
+
+Viveris Technologies                                   February 2008 - July 2008
+Intern                                                                (6 months)
+
+    * Developed the works council portal of the company - PHP 5, Zend, Joomla,
+      CVS/SVN, Eclipse, Linux
+    * Developed for Thales an XML file generator in C# for the public transport
+      application of the city of Toronto.
+    * Ported from Visual Basic to C# company’s customer relationship management
+      software.
+
+Education
+================================================================================
+
+University of Technology of Troyes - France                            2005-2009
+    * Master's degree in Information and telecommunication systems
+    * Specialty in mobile technologies and embedded systems
+
+Technische Fachhochschule Berlin - Germany                                  2006
+    * 6 months Erasmus exchange program
+    * General scientific courses
+
+Languages
+================================================================================
+
+French     Native speaker
+English    Fluent - TOEIC: 890/990 in 2009
+German     Fluent in 2006 (can be reactivated)
+           ZERTIFIKAT DEUTSCH: 267/300 in 2005
+
+Computer Skills
+================================================================================
+
+Languages
+    * C, Unix Shells, Java - Web development: PHP/HTML/CSS
+
+Embedded Systems
+
+    * Good knowledge in Linux and embedded use, Linux OS assembly from scratch,
+      and software integration. Device driver and Kernel development
+    * x86, ARM, MIPS, ETRAX targets and PIC/Atmel microcontrollers
+    * Cross compilation toolchains and Linux programming (Android, Buildroot,
+      crosstool-NG, uClibc, glibc, Busybox, bootloaders, etc.)
+
+GNU/Linux tools
+    * make, gcc, gdb, gdbserver, ddd, valgrind, qemu
+
+Tools
+    * Git, repo, SVN, Trac, Jira, vim, Eclipse
+
+Protocols
+    * Wifi, Bluetooth, BLE, RFID, Zigbee, GPS, USB, RS232, ...
+
+Misc
+    * Open-source licenses, digital electronics, datasheets and PCB schematics
+      reading
+
+Projects
+================================================================================
+
+2012 - present
+    * Developping a multi-platforms indie Point & Click game - Java, libgdx
+
+2010 - present
+    * Developped Open Source softwares : SHOUTcast recorder, ucblog, ucwiki
+
+2009 - present
+    * Developped several embedded projects like mobile robots, an embedded SMS
+      server - See my blog
+
+2005 - 2009
+    * Created and developed a web based game - Simerion
+      Handled a team of 4 people - Specified, conceived, developed and
+      administrated the game
+      Exhibitor 2 times at the French video game festival in 2007 and 2008 in
+      Paris
+      PHP / MySQL, Ajax (home-made framework) and Javascript programming - SVN,
+      Trac, Debian
+
+Other
+================================================================================
+
+Voluntary work
+    * Editor and moderator of the embedded sytems section of developpez.com
+      Largest french-speaking community of professional developers
+
+Hobbies
+    * Badminton, Running, Hiking, Music, Drawing, Comics
+    * Robotics, hacking and DIY - Attending technical events and conferences
+      Technical writing / blog
+
