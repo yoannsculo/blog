@@ -20,10 +20,9 @@ Software Engineer - Linux/Android                                    (14 months)
       drivers.
     * Low-level userspace development: bootloader, init, recovery, charge loop
       Android layers: services, daemons, hardware layer
-    * Developing Archos custom Linux OS for production use. Hardware and
-      software validation. Working with production in China to track, fix bugs
-      and deploy production and enduser firmwares. Developed Mac address and
-      HDCP flashing system.
+    * Developing production tools and custom Linux OS for production use
+      (Hardware and software validation). Firmwares and marketing content
+      deployment.
     * C, Bash, Buildroot, Git/repo - Datasheets and PCB schematics reading
 
 Mindscape                                                 March 2011 - July 2011
