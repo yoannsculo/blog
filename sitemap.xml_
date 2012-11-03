@@ -13,21 +13,6 @@
 		<priority>1.0</priority>
 	</url>
 
-	{% for post in site.posts|reverse %}
-	<url>
-		<loc>{{ blog.url }}/{{ post.url }}</loc>
-		<lastmod>{{ post.date }}</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>0.8</priority>
-	</url>
-	{% endfor %}
-
-	<url>
-		<loc>{{blog.url}}/Yoann_Sculo_CV.pdf</loc>
-		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
 	<url>
 		<loc>{{blog.url}}/Yoann_Sculo_CV_Linux_Embarque.pdf</loc>
 		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
@@ -41,16 +26,109 @@
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>{{blog.url}}/Yoann_Sculo_CV_Linux_Embarque.doc</loc>
-		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-	<url>
 		<loc>{{blog.url}}/Yoann_Sculo_Resume_Embedded_Linux.pdf</loc>
 		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
-</urlset>
+	<url>
+		<loc>{{blog.url}}/Yoann_Sculo_Resume_Embedded_Linux.txt</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
 
+	{% for post in site.posts|reverse %}
+	<url>
+		<loc>{{ blog.url }}/{{ post.url }}</loc>
+		<lastmod>{{ post.date }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>0.8</priority>
+	</url>
+	{% endfor %}
+
+	<url>
+		<loc>{{blog.url}}/a-propos</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>{{blog.url}}/divers</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>{{blog.url}}/en</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>{{blog.url}}/mes-projets</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>{{blog.url}}/moncv</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>{{blog.url}}/projets/bloodbox</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>{{blog.url}}/projets/gaias-fight</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>{{blog.url}}/projets/genesis</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>{{blog.url}}/projets/interface-mmorpg</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>{{blog.url}}/projets/mes-sites-web</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>{{blog.url}}/projets/robert</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>{{blog.url}}/projets/simerion</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+</urlset>
