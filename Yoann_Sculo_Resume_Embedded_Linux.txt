@@ -32,7 +32,7 @@ Embedded Software team leader                                         (5 months)
       Android (never went into production)
     * Android development on ARM Cortex A8 - Prototyping on the PandaBoard.
     * Wrote tests, fixed bugs, maintained / improved Karotz product and managed
-      the worldwide developers community.
+      the worldwide developer community.
 
 Mindscape                                           January 2010 - February 2011
 Embedded systems engineer                                            (14 months)
@@ -58,7 +58,7 @@ CNES (French Space Agency)                             July 2009 - December 2009
 Intern                                                                (6 months)
 
     * Long term navigation for a planetary exploration robot
-    * Conceived and implemented algorithms of topographic maps merging for the
+    * Conceived and implemented algorithms of topographic map merging for the
       Exomars mission rover (2016)
     * Stringent / critical constraints on size and weight - Processor of 30MHz
       with 5Mb of memory.
@@ -126,7 +126,7 @@ Projects
 ================================================================================
 
 2012 - present
-    * Developping a multi-platforms indie Point & Click game - Java, libgdx
+    * Developping a multi-platform indie Point & Click game - Java, libgdx
 
 2010 - present
     * Developped Open Source softwares : SHOUTcast recorder, ucblog, ucwiki
@@ -139,7 +139,7 @@ Projects
     * Created and developed a web based game - Simerion
       Handled a team of 4 people - Specified, conceived, developed and
       administrated the game
-      Exhibitor 2 times at the French video game festival in 2007 and 2008 in
+      Twice an exhibitor at the French video game festival in 2007 and 2008 in
       Paris
       PHP / MySQL, Ajax (home-made framework) and Javascript programming - SVN,
       Trac, Debian
