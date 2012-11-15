@@ -1,0 +1,28 @@
+---
+layout: post
+title: Compte-rendu du premier Meetup Paris Embedded
+keywords: Meetup, rencontre, Paris, embarqué, linux, hacking, bricolage, bidouille, embedded, systèmes embarqués
+publish: true
+---
+
+![Paris Embedded](http://joshfire.com/files/2012/11/Logo-Paris-embedded-BD.jpg?84cd58)
+
+Mardi soir avait lieu le [premier Meetup Paris Embedded]({{blog.url}}/parisembedded-n1-mignon-petit-meetup-hacking-systèmes-embarqués)
+organisé par Joshfire. L'événement s'est tenu dans leurs locaux bien sympathiques
+près de République. Malheureusement, mes photos sont toutes ratés et/ou floues.
+Il faut vraiment que je pense à ramener un vrai appareil photo et pas mon
+portable pour ce genre d'événement.
+
+Nous avons eu droit à plusieurs présentations :
+
+- #openpicus + #nocean
+- algorithmes de détection de son
+- mesh network et beagleboard
+- MyRobotics .NET
+- TeleCaster project
+- RoseAce project (+vidéo)
+
+Vidéo complète des présentations.
+
++ Bilan
+
