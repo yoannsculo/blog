@@ -1,0 +1,74 @@
+---
+layout: post
+title: Compte-rendu du premier Meetup Paris Embedded
+keywords: Meetup, rencontre, Paris, embarqué, linux, hacking, bricolage, bidouille, embedded, systèmes embarqués
+publish: true
+---
+
+![Paris Embedded]({{blog.images}}/parisembedded/Paris-embedded-logo.jpg)
+
+Mardi soir avait lieu le [premier Meetup Paris Embedded]({{blog.url}}/parisembedded-n1-mignon-petit-meetup-hacking-systèmes-embarqués)
+organisé par [Joshfire](http://joshfire.com). L'événement s'est tenu dans leurs
+locaux bien sympathiques près de République. Malheureusement, mes photos sont
+toutes ratées et/ou floues. Il faut vraiment que je pense à ramener un vrai
+appareil photo et pas mon portable pour ce genre d'événement.
+
+![Début de la rencontre]({{blog.images}}/parisembedded/13-11-2012/A7mo8PwCYAAnD6G_small.jpg)
+(Photo de [Sylvain Zimmer](https://twitter.com/sylvinus/status/268431405770498048))
+
+Nous avons eu droit à six présentations :
+
+- Les gens de chez [G-media](http://www.g-media.fr) nous ont présenté des boards
+à base d'[Open Picus](http://www.openpicus.com/) et de techno sans fils [EnOcean](http://www.g-media.fr/developpeurs/enocean.html)
+pour faire de la domotique.
+- Boris Defréville de chez [ORELIA](http://www.orelia.fr) nous a présenté son
+système de détection de sons.
+- Nous avons eu ensuite une démonstration de mesh network intelligent à base de
+beagleboard, de Thomas Claveirole de chez [Green Communication](http://www.green-communications.fr)
+- Deux étudiants nous ont présenté leur startup, [MyRobotics](http://myrobotics.fr/)
+évoluant dans la robotique grand public et l'internet des objets. Il a été plus
+question de leur carte de dev à base d'ARM et de framework .NET
+- Guillaume Pellerin nous a alors fait une démonstration de sa [malette MacGyver](http://parisson.com/products/tc-202-case-1/)
+et du soft TeleCaster qui tourne dessus. L'idée étant d'offrir une solution
+simple de streaming de cours/présentations à l'attention de professeurs ou
+conférenciers.
+- Et pour finir, projet super cool que je connaissais déjà, mais que je n'avais pas vu en
+vrai. Le projet [RoseAce](http://roseace.telecom-paristech.fr/) du cours de
+systèmes embarqués [Rose](http://rose.eu.org) de Télécom ParisTech. Cours
+prolifique en terme de projets cool ! Donc il s'agissait d'une ligne de 128 LED
+rotative utilisant la persistance rétinienne pour afficher une image ou vidéo.
+Badass ! J'en ai filmé un bout :
+
+<iframe width="420" height="315" src="http://www.youtube.com/embed/DvIsrq-wiz0" frameborder="0" allowfullscreen></iframe>
+
+Et comme Guillaume avait sa malette d'espion qui tournait pendant les
+présentations, il a pu nous fournir une vidéo presque complète des présentations.
+Il manque cependant la dernière présentation. En montant un peu le son, vous
+pouvez écouter ce qu'il s'est dit mardi. Merci à lui en tout cas.
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/Z30bi49lCSY" frameborder="0" allowfullscreen></iframe>
+
+Une fois tout ça terminé on a pu sauter sur les pizzas et les bières :) Nous
+étions moins que les 45 personnes inscrites, je pense, mais cela commençait à
+faire du monde. J'ai pu revoir des gens et rencontrer de nouvelles personnes
+intéressantes. Il est toujours marrant de découvrir que beaucoup de personnes se
+connaissent déjà et de voir à quel point les réseaux se croisent. Bref, j'ai
+passé une très bonne soirée, et je suis reparti avec un stock de cartes de
+visites :D Merci à Joshfire pour l'initiative et l'organisation !
+
+Avec un peu de recul, je pense que pour la prochaine fois, il serait intéressant
+de planifier des présentations plus courtes et de proposer un peu plus
+de technique et de pratique et moins de présentations issues (directement ou
+indirectement) de sociétés. Ce n'est pas pour autant une critique, il faut que
+les choses s'organisent et prennent forme. Mais je pense qu'il serait sympa
+d'avoir des démos avec plus de "pratique", notamment pour ceux qui étaient venus
+pour découvrir un peu l'embarqué. C'était assez hétérogène, donc pas simple de
+contenter tout le monde. Néanmoins, essayer de proposer pour tous les niveaux
+serait plutôt sympa pour la prochaine fois.
+
+Tout ça m'a donné bien envie de présenter un truc au prochain meetup. J'ai un
+truc en tête plutôt sympa, ça va demander du travail, mais ça pourrait être
+idéal pour une soirée comme ça.
+
+A lire également, [un autre compte-rendu](http://nuit-blanche.blogspot.fr/2012/11/hardware-hacking-parisembedded-meetup-1.html)
+de la soirée par Igor Carron.
