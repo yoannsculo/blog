@@ -12,7 +12,7 @@ Professional Experience
 ================================================================================
 
 Archos                                                       August 2011-present
-Software Engineer - Linux/Android                                    (14 months)
+Software Engineer - Linux/Android                                    (17 months)
 
     * Worked on Archos Gen 8, 9 and 10 Android products (10+ devices)
       From Froyo to Jelly Bean - OMAP 3630/4430/4460/4470
