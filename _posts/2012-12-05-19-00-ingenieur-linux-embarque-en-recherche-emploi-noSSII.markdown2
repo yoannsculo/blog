@@ -1,0 +1,44 @@
+---
+layout: post
+title: Ingénieur Linux embarqué en recherche d'emploi (noSSII)
+keywords: ingénieur, linux, embarqué, systèmes embarqués, emploi, Archos, licenciement, plan social, Android, bas niveau
+publish: true
+---
+
+Et voilà ! J'ai droit à mon second licenciement économique ! Vous avez peut-être
+entendu parler dans la presse du plan de réorganisation d'Archos. La moitié de
+la R&D est atomisée. L'équipe bas niveau disparaît, et moi avec. Joyeux Noël !
+
+Bref, me revoilà sur le marché de l'emploi. Je serai disponible dès le 4
+février !
+
+Je recherche un poste de développement/intégration bas niveau en IDF.
+J'interviens aussi bien sur le portage, l'intégration de solutions Linux/FOSS
+(mise en place de toolchain, environnement de dev, construction/configuration
+d'OS Linux custom) que sur la conception et le développement d'applications
+embarquées (bootloader, kernel, init, système, userspace). Mes compétences en
+embarqué sont transversales et me permettent d'intervenir sur toutes les couches
+logicielles. Mais je désire rester, avant tout, proche du matériel. Tout cela
+inclut également Android et ses couches basses (kernel, init, daemons, etc.)
+Mais je ne suis pas intéressé par ce qui se trouve au dessus :)
+
+En 3 ans, j'ai eu l'occasion de travailler sur plus d'une dizaines de produits
+d'électronique grand public. J'ai été amené à développer des produits de A à Z,
+du board bring-up à la gestion de la production. Et j'aimerais bien continuer
+sur de nouveaux projets ! :)
+
+Je cherche une société ayant une bonne/forte culture du libre, open source.
+Idéalement avec possibilité de contribuer à la communauté, dans le contexte du
+travail.
+
+Je ne suis pas intéressé par les SSII/SS* pour le moment. J'ai bon espoir de
+trouver directement un industriel encore vivant en France :)
+
+Dernière précision, je ne souhaite pas faire de développement applicatif
+Android, ni iOS, ni de web et encore moins de .NET
+
+Donc si jamais vous recrutez, ou que vous connaissez quelqu'un qui recrute,
+n'hésitez pas à [me contacter]({{blog.url}}/a-propos). Voici
+[mon CV]({{blog.url}}/moncv).
+
+![koala]({{blog.images}}/koala.jpg)
