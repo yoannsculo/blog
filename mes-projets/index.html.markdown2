@@ -9,6 +9,12 @@ Voici comment il m'arrive d'occuper mon temps libre :)
 
 ### Open Source
 
+
+#### uCAM (2012) ([Page du projet](https://github.com/yoannsculo/uCAM))
+uCAM est une bibliothèque en C sous Linux pour la caméra μCAM (microCAM) série
+JPEG de 4D Systems (basé sur les spécifications de 4D Systems). Le projet est en
+cours de développement.
+
 #### µcwiki (2012) ([Page du projet](https://github.com/yoannsculo/ucwiki))
 µcwiki est un générateur de wiki/documentation statique en C. Inspiré de [µcblog](https://github.com/yoannsculo/ucblog)
 il prend en entrée une arborescence de fichiers au format markdown et en génère
