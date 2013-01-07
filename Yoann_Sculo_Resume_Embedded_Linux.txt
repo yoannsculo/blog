@@ -11,8 +11,8 @@ of embedded Linux solutions.
 Professional Experience
 ================================================================================
 
-Archos                                                       August 2011-present
-Software Engineer - Linux/Android                                    (17 months)
+Archos                                                August 2011 - January 2013
+Software Engineer - Linux/Android                                    (18 months)
 
     * Worked on Archos Gen 8, 9 and 10 Android products (10+ devices)
       From Froyo to Jelly Bean - OMAP 3630/4430/4460/4470
@@ -23,13 +23,15 @@ Software Engineer - Linux/Android                                    (17 months)
     * Developing production tools and custom Linux OS for production use
       (Hardware and software validation). Firmwares and marketing content
       deployment.
+    * Prototyped a home automation gateway running OpenWrt - TP-Link TL-WR703N -
+      Bluetooth Low Energy (BLE), Zigbee
     * C, Bash, Buildroot, Git/repo - Datasheets and PCB schematics reading
 
 Mindscape                                                 March 2011 - July 2011
 Embedded Software team leader                                         (5 months)
 
     * Wrote software and hardware specifications for the next product running on
-      Android (never went into production)
+      Android.
     * Android development on ARM Cortex A8 - Prototyping on the PandaBoard.
     * Wrote tests, fixed bugs, maintained / improved Karotz product and managed
       the worldwide developer community.
