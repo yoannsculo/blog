@@ -1,0 +1,107 @@
+---
+layout: post
+title: Fosdem 2013 - Petit compte rendu
+keywords: fosdem, 2013, libre, open source, Bruxelles, linux, conférence, talk, présentation
+publish: true
+---
+
+![Fosdem 2013]({{blog.images}}/fosdem-2013/P1020727.JPG)
+
+J'étais le week-end dernier au Fosdem 2013. Mon premier \o/ ! Cela faisait un
+moment que je souhaitais m'y rendre, mais n'avais pas encore entrepris
+réellement d'y aller.
+
+Bref, 2 jours assez fatigants, mais très intéressants ! Pour une première fois,
+j'ai rempli mon emploi du temps à fond pour assister à un maximum de
+conférences. Ce qui donnait ça :
+
+Saturday
+
+- 10:30/10:55 Welcome to FOSDEM 2013
+- 11:00/11:30 The web is the platform
+- 11:30/12:00 FirefoxOS: Port it… Build it… Flash it…
+- 12:00/13:00 Emdedded distro shootout: buildroot vs. Debian
+- 14:00/15:00 Baserock Embedded Linux - an introduction
+- 16:30/17:00 Bootstrapping Debian-based distributions for new architectures
+- 17:20/17:35 Crypto.cat
+- 17:50/18:10 Combining Open Source ethics with private interests
+- 18:10/18:35 Assholes are killing your project
+
+Sunday
+
+- 09:30/10:30 Pandora - a mobile Linux computer including gaming controls
+- 10:30/11:00 Why you no host?
+- 11:00/11:50 Static site generation for the masses
+- 13:00/13:50 FreedomBox 1.0
+- 14:00/14:50 Vroom! Free Software in your car
+- 16:00/16:30 Open Source Support for 400+ million users
+- 16:40/16:55 Interactive musical improvisation
+
+Néanmoins, les conférences étaient très inégales en terme de qualité et
+d'intérêt. Donc la prochaine fois j'étudierai plus le contenu, les speakers et
+si j'ai le background pour suivre.
+
+J'ai pu voir pas mal de personnes que je connaissais, en rencontrer de
+nouvelles. J'ai vu un sacré paquets de barbus aux cheveux longs, de mecs en
+kilt. J'ai croisé un mec pieds-nus ainsi que Richard Stallman.
+Je suis passé devant une file d'attente de gens échangeant leurs clés GPG avec
+passeport/carte d'identité à l'appui. Il y avait un nom de chan IRC sur les
+poubelles pour indiquer quand elles étaient pleines.
+Je ne pouvais même plus me connecter à Freenode à un moment, trop de connexions
+^^
+Bref, je peux largement estimer que c'était l'événement le plus geek auquel j'ai
+assisté !
+
+Chapeau pour le wifi de qualité sur tout le campus ! Il n'y avait que dans
+l'immense salle Janson que le wifi était souffreteux, mais je ne sais pas
+combien de centaines nous étions.
+
+![Fosdem 2013]({{blog.images}}/fosdem-2013/P1020722.JPG)
+
+J'ai assisté à des conférences sur Firefox OS et pu tester sur téléphone sur le
+stand Mozilla. A part le bouton retour qui ne marchait pas, l'expérience était
+plutôt sympa. Flasher son téléphone avec Firefox OS est encore très risqué et
+bricker son device est assez courant. Donc je vais éviter de faire ça chez moi
+:)
+
+J'ai bien aimé les présentations "Combining Open Source ethics with private
+interests" et "Assholes are killing your project". La salle était tellement
+bondée que je n'ai hélas pas pu entendre tout ni voir tout l'écran. Si jamais
+les confs ont été filmées, cela vaudrait le coup de les revoir. Mais je peux
+m'estimer heureux, plein de gens n'ont juste pas pu rentrer dans la salle
+tellement c'était rempli.
+
+![Fosdem 2013]({{blog.images}}/fosdem-2013/P1020729.JPG)
+
+Présentation également intéressante sur les sites statiques et nanoc. D'ailleurs
+je ne pensais pas qu'il y avait autant de SSG (static site generators)
+aujourd'hui ! Growl, que j'utilise pour ce blog n'est même pas dans la liste...
+Ça m'a donné envie de reprendre mon projet de SSG. Pfff comme si j'avais le
+temps ! :)
+
+![Fosdem 2013]({{blog.images}}/fosdem-2013/P1020730.JPG)
+
+Eben Moglen et Bdale Garbee ont présenté la Freedombox. Le talk était sympa,
+bien qu'un peu trop idéologique. J'aurais aimé avoir une démo / présentation
+plus technique. J'ai une image de la FreedomBox sur carte SD vu que j'avais
+soutenu le projet sur kickstarter, mais je n'ai toujours pas pris le temps de la
+tester. C'est dommage, j'aurais aimé avoir un avant goût du travail réalisé.
+Mais je vais tâcher de me trouver du temps pour installer une FreedomBox sur une
+de mes cartes. Mais d'après ce qu'ils ont expliqué, il y a juste besoin d'une
+Debian. Ca va :) ça ne devrait pas être trop problématique.
+
+J'ai pu discuter avec les gens d'owncloud / unhosted. J'aurais bien envie de
+contribuer à owncloud, donc je vais sans doute me pencher plus sur la question
+dans les semaines à venir.
+
+J'ai pu pas mal discuter logiciel libre et je me demande d'ailleurs si je ne
+vais pas non plus adhérer à la FSFE.
+
+Donc de façon général, l'intérêt de l'événement était plus social à mes yeux
+que pour ses présentations. Car j'ai été un peu déçu par certaines d'entre
+elles. En tout cas, je pense que je remettrai ça l'année prochaine. Et d'ici là,
+il y a les RMLL au même endroit cet été si je ne m'abuse. Je tâcherai de m'y
+rendre aussi.
+
+Sinon, comme à chaque fois, certaines des présentations [ont été filmées](http://video.fosdem.org/2013/).
+
