@@ -11,9 +11,6 @@ of embedded Linux solutions.
 Professional Experience
 ================================================================================
 
-JCDecaux                                                 February 2013 - Present
-Linux Expert
-
 Archos                                                August 2011 - January 2013
 Software Engineer - Linux/Android                                    (18 months)
 
