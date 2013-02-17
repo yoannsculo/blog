@@ -6,12 +6,12 @@ publish: true
 ---
 
 J'ai retrouvé du travail ! Je vais rejoindre JCDecaux. J'ai choisi de mettre de
-côté le développement bas niveau pour faire plus d'intégration, ce qui me plaît
-beaucoup plus avec un léger recul. Je pense que c'était le bon moment pour
-bifurquer et partir dans une voie qui m'attire plus. Je réalise qu'à travers mes
-premières expériences j'ai pu cerner où j'étais le plus à l'aise. Et donc je
-crois que la conception et l'intégration dans un contexte embarqué / industriel
-est bien plus mon élément que celui du développement kernel / bas niveau pur.
+côté le développement bas niveau / kernel pour faire plus d'intégration, ce qui
+me plaît beaucoup plus avec un léger recul. Je pense que c'était le bon moment
+pour bifurquer et partir dans une voie qui m'attire plus. Je réalise qu'à
+travers mes premières expériences j'ai pu cerner où j'étais le plus à l'aise. Et
+donc je crois que la conception et l'intégration dans un contexte embarqué /
+industriel est bien plus mon élément que celui du développement kernel pur.
 
 Par ce billet je tenais surtout à préciser que j'avais trouvé et donc mettre fin
 à ma recherche d'emploi, recevant encore des propositions suite à [cet article]({{blog.url}}/ingenieur-linux-embarque-en-recherche-emploi-noSSII).
