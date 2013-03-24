@@ -9,13 +9,7 @@ Voici comment il m'arrive d'occuper mon temps libre :)
 
 ### Open Source
 
-
-#### uCAM (2012) ([Page du projet](https://github.com/yoannsculo/uCAM))
-uCAM est une bibliothèque en C sous Linux pour la caméra μCAM (microCAM) série
-JPEG de 4D Systems (basé sur les spécifications de 4D Systems). Le projet est en
-cours de développement.
-
-#### µcwiki (2012) ([Page du projet](https://github.com/yoannsculo/ucwiki))
+#### µcwiki (2012) - [Page du projet](https://github.com/yoannsculo/ucwiki)
 µcwiki est un générateur de wiki/documentation statique en C. Inspiré de [µcblog](https://github.com/yoannsculo/ucblog)
 il prend en entrée une arborescence de fichiers au format markdown et en génère
 un joli site statique html. Pas besoin de serveur web, juste un navigateur web.
@@ -23,46 +17,51 @@ Les pages html peuvent être consultées online/offline, de n'importe quel suppo
 et surtout transportées. µcwiki me sert essentiellement à rédiger de la documentation,
 que cela soit à titre personnel ou pour le travail.
 
-#### µcblog (2012) ([Page du projet](https://github.com/yoannsculo/ucblog))
+#### uCAM (2012) - [Page du projet](https://github.com/yoannsculo/uCAM)
+uCAM est une bibliothèque en C sous Linux pour la caméra μCAM (microCAM) série
+JPEG de 4D Systems (basé sur les spécifications de 4D Systems). Le projet est en
+cours de développement.
+
+#### µcblog (2012) - [Page du projet](https://github.com/yoannsculo/ucblog)
 µcblog est un générateur de site statique en C. Inspiré de jekyll et growl, il
 a pour vocation d'être très simple à utiliser, avec un minimum de dépendences.
 Et comme je vis dans le monde de l'embarqué, il est en partie prédestiné à
 l'embarqué et à l'autohébergement. Donc juste un Linux, un serveur web et
 ucblog ! Pas d'autre trucs pénibles à installer comme jekyll.
 
-#### SHOUTcast recorder (2010) ([Page du projet](https://github.com/yoannsculo/SHOUTcast-Recorder))
+#### SHOUTcast recorder (2010) - [Page du projet](https://github.com/yoannsculo/SHOUTcast-Recorder)
 SHOUTcast recorder est une application d’enregistrement de flux MP3 Shoutcast.
 
-#### Foxboard G20 GPIOs (2009) ([Page du projet](https://github.com/yoannsculo/foxg20-gpio))
+#### Foxboard G20 GPIOs (2009) - [Page du projet](https://github.com/yoannsculo/foxg20-gpio)
 Quelques lignes de code assez simple pour manipuler en C les GPIOs de la Foxboard G20.
 
 ** **
  
 ### Hacking et bricolage
 
-#### Robert (2009/2010) ([Page du projet]({{ blog.url }}/{{ blog.projects_dir }}/robert))
+#### Robert (2009/2010) - [Page du projet]({{ blog.url }}/{{ blog.projects_dir }}/robert)
 Robert, pour ROBot d'Exploration et de Recherche Technologique - Robot mobile autonome d'exploration.
 
-#### Genesis (2009) ([Page du projet]({{ blog.url }}/{{ blog.projects_dir }}/genesis))
+#### Genesis (2009) - [Page du projet]({{ blog.url }}/{{ blog.projects_dir }}/genesis)
 Mon premier robot mobile wifi commandé par wiimote
 
-#### Serveur GSM (2009) ([Page du projet]({{ blog.url }}/interface-gsm-sur-carte-fox-et-envoi-de-sms))
+#### Serveur GSM (2009) - [Page du projet]({{ blog.url }}/interface-gsm-sur-carte-fox-et-envoi-de-sms)
 Envoi de sms depuis un modem GSM installé sur un système linux embarqué.
 
 ** **
 
 ### Jeux vidéo
 
-#### Simerion (2005/2009) ([Page du projet]({{ blog.url }}/{{ blog.projects_dir }}/simerion))
+#### Simerion (2005/2009) - [Page du projet]({{ blog.url }}/{{ blog.projects_dir }}/simerion)
 Jeu web en ligne en PHP
 
-#### Interface d’un MMORPG en Delphi (2009) ([Page du projet]({{ blog.url }}/{{ blog.projects_dir }}/interface-mmorpg))
+#### Interface d’un MMORPG en Delphi (2009) - [Page du projet]({{ blog.url }}/{{ blog.projects_dir }}/interface-mmorpg)
 Interface d’un MMORPG en Delphi réalisée en cours d'ergonomie des terminaux à l'UTT.
 
-#### Bloodbox (2008) ([Page du projet]({{ blog.url }}/{{ blog.projects_dir }}/bloodbox))
+#### Bloodbox (2008) - [Page du projet]({{ blog.url }}/{{ blog.projects_dir }}/bloodbox)
 RPG diablo-like en C#
 
-#### Gaia’s Fight (2003) ([Page du projet]({{ blog.url }}/{{ blog.projects_dir }}/gaias-fight))
+#### Gaia’s Fight (2003) - [Page du projet]({{ blog.url }}/{{ blog.projects_dir }}/gaias-fight)
 Jeu en réseau GTA2-like où s’affrontent animaux et chasseurs.
 
 ** **
