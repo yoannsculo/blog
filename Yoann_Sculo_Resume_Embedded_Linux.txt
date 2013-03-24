@@ -2,7 +2,7 @@ Yoann Sculo                                              Embedded Linux Engineer
 
 Email    : yoann.sculo@gmail.com
 Web      : http://www.yoannsculo.fr
-LinkedIn : http://www.linkedin.com/in/
+LinkedIn : http://www.linkedin.com/in/yoannsculo/
 GitHub   : http://github.com/yoannsculo
 
 3+ years of embedded systems experience. Skilled in integration and development
