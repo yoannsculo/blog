@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="fr-FR">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+	{% if post is defined %}
+		<title>{{ post.title | escape }} | {{ blog.title }}</title>
+		<link rel="canonical" href="{{ blog.url }}/{{post.url}}" />
+	{% elif page is defined and page.title is defined %}
+		<title>{{ page.title | escape }} | {{ blog.title }}</title>
+		<link rel="canonical" href="{{ blog.url }}/{{page.url}}" />
+	{% else %}
+		<title>{{ blog.title }}</title>
+		<link rel="canonical" href="{{ blog.url }}" />
+	{% endif %}
+
+	<link rel="alternate" type="application/rss+xml" title="{{ blog.title }} RSS Feed" href="{{ blog.url }}/feed/" />
+	<link rel="alternate" type="application/atom+xml" title="{{ blog.title }} Atom Feed" href="{{ blog.url }}/feed/atom/" />
+
+	{% if post is defined %}
+		<meta name="description" content="{{ post.content|strip }}" />
+		<meta name="keywords" content="{% for keyword in post.keywords %}{{keyword}}{%- if loop.last == False %}, {% endif %}{% endfor %}" />
+	{% else %}
+		<meta name="description" content="{{ blog.description }}" />
+		<meta name="keywords" content="{{ blog.keywords }}"/>
+	{% endif %}
+
+	<link href="{{ blog.url }}/css/yoann.css" type="text/css" rel="stylesheet">
+
+	{% if blog.remote == 'True' %}
+	<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		    _gaq.push(['_setAccount', 'UA-8731325-1']);
+		      _gaq.push(['_trackPageview']);
+
+		        (function() {
+			    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			              })();
+
+	</script>
+	{% endif %}
+
+</head>
+
+<body>
+
+<div class="container">
+	<div class="menu">
+		<img style="width:50%;" src="{{ blog.images }}/logo.png">
+		<h1>Yoann Sculo</h1>
+		<h2>Ingénieur Linux embarqué</h2>
+		<ul id="menu">
+			<li><a href="{{ blog.url }}">Blog</a></li>
+			<li><a href="{{ blog.url }}/mes-projets">Projets</a></li>
+			<li><a href="{{ blog.url }}/divers">Divers</a></li>
+			<li><a href="{{ blog.url }}/liens">Liens</a></li>
+			<li><a href="{{ blog.url }}/a-propos">A propos</a></li>
+			<li><a href="{{ blog.url }}/moncv">CV</a></li>
+		</ul>
+		<p><a href="http://twitter.com/yoannsculo">@yoannsculo</a></p>
+	</div>
+
+		<!--
+		<div style="float:right;padding-top:10px;padding-right:10px;">
+			<a href="{{ blog.url }}/en"><img style="width:20px;" src="{{ blog.url }}/images/icons//flag_us.png"><a/>
+			<a href="http://twitter.com/yoannsculo"><img style="width:20px;" src="{{ blog.url }}/images/icons/twitter-32x32.png" alt="" /></a>
+			<a href="http://www.linkedin.com/in/yoannsculo"><img style="width:20px;" src="{{ blog.url }}/images/icons/linkedin-32x32.png" alt="" /></a>
+			<a href="http://www.viadeo.com/fr/profile/yoann.sculo"><img style="width:20px;" src="{{ blog.url }}/images/icons/viadeo-32x32.png" alt="" /></a>
+			<a href="http://yoannsculo.developpez.com/"><img style="width:20px;" src="{{ blog.url }}/images/icons/developpez-32x32.png" alt="" /></a>
+			<a href="https://github.com/yoannsculo"><img style="width:20px;" src="{{ blog.url }}/images/icons/github-32x32.png" alt="" /></a>
+			<a href="http://coderwall.com/yoannsculo"><img style="width:20px;" src="{{ blog.url }}/images/icons/coderwall.png" alt="" /></a>
+			<a href="{{ blog.url }}/feed"><img style="width:20px;" src="{{ blog.url }}/images/icons/rss-32x32.png" alt="" /></a>
+		</div>
+		-->
+</div>
+
+<div class="container">
+	{{ content }}
+</div>
+
+<div class="container">
+	<footer>
+		<div class="well">
+			Ce site est magiquement propulsé par <a href="{{ blog.github_growl }}">growl</a> et <a href="http://twitter.github.com/bootstrap">Bootstrap</a>
+				<!--<li>(bientôt) gentiment hébergé par un mignon petit serveur embarqué.</li>
+				<li>(bientôt) nourri à la fibre optique</li>-->
+		</div>
+	</footer>
+</div>
+
+</html>

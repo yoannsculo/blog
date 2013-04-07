@@ -1,0 +1,85 @@
+
+.menu {
+	z-index: 100000;
+	width: 250px;
+	display: inline-block;
+	position: fixed;
+	top: 10px;
+	line-height: 20px;
+	letter-spacing: -1px;
+	margin-top:10px
+}
+
+.menu h1 {
+	margin:0;
+	font-weight: 500;
+	font-size:35px;
+}
+
+.menu h2 {
+	margin-top:2;
+	margin-bottom:10;
+	font-weight: 500;
+	font-size:18px;
+}
+
+ul#menu {
+	list-style-type: none;
+	margin: 20px 0 0 20px;
+	padding: 0;
+}
+
+ul#menu a {
+	text-decoration: none;
+	color: #000;
+	padding-left: 20px;
+	background: url(../images/puce0.gif) center left no-repeat;
+}
+	 
+ul#menu a:hover {
+	background-image: url(../images/puce1.gif);
+}
+
+.label {
+        padding: 1px 4px 2px;
+        border-radius: 3px 3px 3px 3px;
+	background-color: rgb(153, 153, 153);
+	color: rgb(255, 255, 255);
+	line-height: 14px;
+	vertical-align: baseline;
+	font-size: 10.998px;
+}
+
+body {
+	font-family: Helvetica,"Helvetica Neue",arial,sans-serif;
+	padding-bottom: 40px;
+	color: rgb(110, 110, 110);
+}
+
+a, a:visited, a:active {
+	cursor: pointer;
+	text-decoration: none;
+	color: rgb(0, 165, 165);
+	transition: color 0.15s linear 0s;
+}
+
+.container {
+	position: relative;
+	width: 850px;
+	margin: 0px auto;
+}
+
+.well {
+	margin-left:250px;
+	width:auto;
+	display:block;
+	letter-spacing:0;
+	padding-top: 10px;
+	text-align: justify;
+	font-size:14px;
+}
+
+.well img {
+	max-width: 100%;
+}
+
