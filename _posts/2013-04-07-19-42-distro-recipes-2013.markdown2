@@ -1,0 +1,65 @@
+---
+layout: post
+title: Distro Recipes 2013
+keywords: distro recipes, distribution, Linux, open source, conférence
+publish: true
+---
+
+![logo-kernel-recipes]({{blog.images}}/dr2013/dr-logo.png)
+
+J'étais cette semaine à [Distro Recipes 2013](https://distro-recipes.org) à la
+Villette. Comme j'avais pu l'annoncer [précédemment]({{blog.url}}/distro-recipes-premiere-conference-multi-distributions),
+ces deux journées faisaient suite à Kernel Recipes qui avait lieu en [en septembre dernier]({{blog.url}}/kernel-recipes-2012).
+Même format, mais thème et public différents. Cette fois, les distributions en
+général étaient à l'honneur (Debian, Suse, Fedora, Mageia, Arch Linux, ...)
+
+![logo-kernel-recipes]({{blog.images}}/dr2013/IMAG0547.jpg)
+
+Le monde de l'embarqué évolue un peu à part du monde des distributions. Nous
+n'avons pas réellement les mêmes problématiques. J'y allais par curiosité, j'ai
+pu avoir un aperçu des mécanismes de construction, de cycle de vie, et de
+maintenance de distributions. Ces deux journées ont donc été fort instructives !
+La contribution à une distrib me paraissait particulièrement complexe et
+rebutante. Finalement cela ne me semble plus si insurmontable ! Maintenant que
+j'ai eu un premier aperçu de leurs mécanismes internes, j'aurais presque envie
+de contribuer :)
+
+![logo-kernel-recipes]({{blog.images}}/dr2013/IMAG0557.jpg)
+
+Intéressant également lorsque l'on est développeur de voir le point de vue des
+distributions pour l'intégration de ses paquets !
+
+J'ai beaucoup aimé les présentations de Dodji Seketeli sur gcc 4.8 et de
+Sylvestre Ledru sur Debian et clang/llvm. La compétition clang/gcc semble
+pousser par le haut la qualité des compilateurs. Je n'ai pas encore eu
+l'occasion de bricoler avec clang, mais c'est maintenant dans ma liste de trucs
+à tester ! Nous avons également eu un retour d'expérience de Frédéric Crozat sur
+la mise en place SecureBoot dans Suse. Bricoler de futurs PC avec UEFI et Secure
+Boot activé s'annonce bien folklo ! Bruno Cornec de HP nous a fait part du point
+de vue d'un constructeur et de son rapport à l'open source. Il nous a d'ailleurs
+expliqué pourquoi il n'y avait pas de marché Linux pour les PC grand public chez
+HP :( Ce qui n'est pas le cas pour le monde de l'entreprise. Et tout plein
+d'autres présentations ! D'ailleurs, ne trouvant toujours pas de projet dans
+lequel m'impliquer, cela m'a encore redonné envie de trouver chaussure à mon
+pied !
+
+![logo-kernel-recipes]({{blog.images}}/dr2013/IMAG0546.jpg)
+
+![logo-kernel-recipes]({{blog.images}}/dr2013/IMAG0559.jpg)
+
+![logo-kernel-recipes]({{blog.images}}/dr2013/IMAG0561.jpg)
+
+![logo-kernel-recipes]({{blog.images}}/dr2013/IMAG0568.jpg)
+
+Sinon, la présentation d'Arch Linux m'a bien donné envie d'utiliser autre chose
+que Debian et Ubuntu :)
+
+A priori nous devrions avoir les vidéos des présentations dans les semaines à
+venir, j'aurai l'occasion d'en reparler.
+
+Je tiens à remercier Hupstream pour ces deux journées très intéressantes !
+En plus, si j'ai bien compris, nous aurons droit un Kernel Recipes en septembre
+2013 ;) A dans 6 mois alors !
+
+(Désolé pour la piètre qualité de mes photos...)
+
