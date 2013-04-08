@@ -1,4 +1,4 @@
-Yoann Sculo                                              Embedded Linux Engineer
+Yoann Sculo                                    Embedded Linux & Android Engineer
 
 Email    : yoann.sculo@gmail.com
 Web      : http://www.yoannsculo.fr
@@ -6,10 +6,18 @@ LinkedIn : http://www.linkedin.com/in/yoannsculo/
 GitHub   : http://github.com/yoannsculo
 
 3+ years of embedded systems experience. Skilled in integration and development
-of embedded Linux solutions.
+of embedded Linux & Android solutions.
 
 Professional Experience
 ================================================================================
+
+JCDecaux                                              February 2013 - April 2013
+Systems Integration Engineer - Linux/Android                          (2 months)
+
+    * Conceived, integrated and maintained Linux distributions for digital urban
+      panels and billboards.
+    * Worked on remote control and updating systems.
+    * Android & Fedora - Spacewalk, CFEngine & Rudder - Bash/Git/rpm
 
 Archos                                                August 2011 - January 2013
 Software Engineer - Linux/Android                                    (18 months)
