@@ -1,4 +1,4 @@
-Yoann Sculo                                    Embedded Linux & Android Engineer
+Yoann Sculo                                              Embedded Linux Engineer
 
 Email    : yoann.sculo@gmail.com
 Web      : http://www.yoannsculo.fr
@@ -10,6 +10,9 @@ of embedded Linux & Android solutions.
 
 Professional Experience
 ================================================================================
+
+Bookeen                                                     April 2013 - present
+Embedded Linux Engineer
 
 JCDecaux                                              February 2013 - April 2013
 Systems Integration Engineer - Linux/Android                          (2 months)
