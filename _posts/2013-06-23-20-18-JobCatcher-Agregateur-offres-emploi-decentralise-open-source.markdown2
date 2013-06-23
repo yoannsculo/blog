@@ -1,0 +1,59 @@
+---
+layout: post
+title: JobCatcher - Agrégateur d'offres d'emploi décentralisé et open source 
+keywords: job, emploi, daemon, recherche d'emploi, bot
+publish: true
+---
+
+### JobCatcher
+
+Je viens de publier [sur Github](https://github.com/yoannsculo/JobCatcher) un projet perso sur lequel je travaille depuis quelques mois, **JobCatcher**.
+
+JobCatcher est une application codée en Python qui agrège des flux d'offres d'emploi de job boards et les stocke dans une base de données locale sqlite.
+A partir de ces données, l'application peut générer des rapports HTML en fonction de mots clés. Ces rapports peuvent être également filtrés grâce à une liste de sociétés à bloquer. JobCatcher peut alors rechercher du travail à votre place pendant que vous regardez des vidéos de lolcats sur Internet.
+
+Le second but de cette appli est de générer des statistiques à partir de ces offres d'emploi pour en tirer des tendances (moyennes de salaires, état du marché de l'emploi, sociétés qui recrutent le plus, etc.) En temps normal, ces informations sont difficiles à obtenir et nous devons nous fier aux données publiées par certains job boards, données que j'aimerais pouvoir vérifier par moi même.
+
+### Pourquoi ce projet ?
+
+J'ai commencé à travailler dessus après mon second licenciement économique en janvier dernier. Chercher du travail est long et fastidieux. Et lorsque l'on ne veut pas travailler en SSII comme moi, cela devient un enfer de rechercher du travail sur les job boards. Les offres intéressantes sont noyées parmi les offres de SSII. Donc la première raison était de pouvoir filtrer toutes ces offres en bloquant celles des SSII. On m'avait demandé pourquoi j'avais [constitué cette liste]({{blog.url}}/liste-ssii-en-france-one-list-to-rule-them-all). Voilà enfin pourquoi !
+
+De plus, je m'aperçois que dans mon entourage les gens qui recherchent du travail reviennent très régulièrement sur les sites d'offres d'emploi pour effectuer toujours les mêmes requêtes. Et surtout, la problématique des sociétés de services ne s'applique pas uniquement à l'informatique. On retrouve ce problème dans tous les domaines de l'ingénierie. Donc je pense que le besoin est bien présent.
+
+Il existe énormément de job boards, sites sur lesquels il faut généralement s'inscrire pour enregistrer ses recherches avancées. La recherche au quotidien se transforme alors en visite de job board en job board. C'est extrêmement chronophage ! Alors évidemment on trouve également des agrégateurs d'offres d'emplois indeed, keljob, ... Mais cela ne me convenait pas, car je souhaitais faire un outil décentralisé que l'on puisse contrôler à 100% et héberger chez soi ou sur n'importe quel serveur dédié.
+
+Attention toutefois aux licences des flux RSS mis à disposition par les job boards. En l'occurrence l'Apec [n'autorise pas](http://cadres.apec.fr/delia/core/common/site/ApecViewDetailConseil/currentArticle_ART_46448/Voir+les+conditions+g%C3%A9n%C3%A9rales+d+utilisation.html) à utiliser n'importe comment ses données.
+
+	"l'APEC accorde à l'Utilisateur une licence d'utilisation gratuite [...] dans le cadre d'un usage strictement personnel, privé et non commercial"
+
+D'où la pertinence d'un serveur décentralisé et personnel pour pouvoir exploiter ce genre d'informations.
+
+### État du projet
+
+JobCatcher est loin d'être terminé, il manque beaucoup de fonctionnalités. Toutefois j'ai choisi de rendre le projet public aujourd'hui, car je pense que plus c'est tôt mieux c'est pour un projet open source.
+Pour le moment, seul le site de l'apec.fr est géré, mais j'aimerais ajouter tout plein d'autres job boards. Les job boards fournissent généralement des flux RSS de leurs dernières offres. Je télécharge ces flux et utilise BeautifulSoup pour parser les dernières offres d'emploi. J'utilise [l'API Nominatim](http://nominatim.openstreetmap.org/) d'[OpenStreetMap](http://www.openstreetmap.org/) pour localiser les offres et injecte le tout en base de données sqlite. L'idée étant également de pouvoir placer les offres sur un fond OpenStreetMap.
+Il s'agit de mon premier réel projet en Python, je n'ai très certainement pas codé ça dans les règles de l'art du "pythonic code", j'y travaille. Si vous avez des remarques à faire sur le code ou si vous souhaitez participer au projet, n'hésitez pas à me contacter ;) !
+
+Voici un aperçu d'un rapport d'offres filtrées :
+
+[![JobCatcher]({{blog.images}}/jobcatcher/jobcatcher_preview_small.jpg)]({{blog.images}}/jobcatcher/jobcatcher_preview.jpg)
+
+### Pour tester JobCatcher
+
+Pour [tester JobCatcher](https://github.com/yoannsculo/JobCatcher) vous avez besoin des paquets :
+
+	python-html2text, python-requests, python-beautifulsoup
+
+Et voici comment utiliser l'application (dans son état actuel de développement)
+
+	./jobcatcher.py -c # Pour créer la base de données
+	./jobcatcher.py -b # Pour charger la liste de SSII dans la table blocklist
+	./jobcatcher.py -s # Pour récupérer les dernières offres
+	./jobcatcher.py -r # Pour générer les rapports
+
+Ces derniers apparaissent alors dans le dossier courant **www**
+
+- **report_full.html** pour les offres brutes
+- **report_filtered.html** pour les offres filtrées à partir de la liste de SSII
+
+En l'état, rien est automatisé (j'utilise crontab) et la recherche par mots clés n'est pas implémentée. Mais cela devrait arriver très vite.
