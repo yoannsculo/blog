@@ -9,6 +9,10 @@ Voici comment il m'arrive d'occuper mon temps libre :)
 
 ### Open Source
 
+#### JobCatcher (2013) - [Page du projet](https://github.com/yoannsculo/JobCatcher)
+JobCatcher est un agrégateur d'offres d'emploi décentralisé et open source.
+[Voir l'article à ce sujet]({{blog.url}}/JobCatcher-Agregateur-offres-emploi-decentralise-open-source).
+
 #### µcwiki (2012) - [Page du projet](https://github.com/yoannsculo/ucwiki)
 µcwiki est un générateur de wiki/documentation statique en C. Inspiré de [µcblog](https://github.com/yoannsculo/ucblog)
 il prend en entrée une arborescence de fichiers au format markdown et en génère
