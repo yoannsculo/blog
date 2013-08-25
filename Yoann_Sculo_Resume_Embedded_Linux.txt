@@ -5,7 +5,7 @@ Web      : http://www.yoannsculo.fr
 LinkedIn : http://www.linkedin.com/in/yoannsculo/
 GitHub   : http://github.com/yoannsculo
 
-3+ years of embedded systems experience. Skilled in integration and development
+4 years of embedded systems experience. Skilled in integration and development
 of embedded Linux & Android solutions.
 
 Professional Experience
@@ -13,6 +13,14 @@ Professional Experience
 
 Bookeen                                                     April 2013 - present
 Embedded Linux Engineer
+
+    * Development and integration of embedded Linux platforms for e-reader
+      products - OMAP 3621 / E-Ink screens
+    * Bootloader (U-boot), Linux kernel (2.6.32), device drivers (touchscreen,
+      wlan, led, ...) and userspace development.
+    * Factory, test and update tools development.
+    * Energy consumption optimisation
+    * C, shell, Buildroot, Git/repo
 
 JCDecaux                                              February 2013 - April 2013
 Systems Integration Engineer - Linux/Android                          (2 months)
@@ -142,7 +150,11 @@ Projects
     * Developping a multi-platform indie Point & Click game - Java, libgdx
 
 2010 - present
-    * Developped Open Source softwares : SHOUTcast recorder, ucblog, ucwiki
+    * Developped Open Source softwares :
+        JobCatcher:            https://github.com/yoannsculo/JobCatcher
+        SHOUTcast recorder:    https://github.com/yoannsculo/SHOUTcast-Recorder
+        ucblog:                https://github.com/yoannsculo/ucblog
+        ucwiki:                https://github.com/yoannsculo/ucwiki
 
 2009 - present
     * Developped several embedded projects like mobile robots, an embedded SMS
