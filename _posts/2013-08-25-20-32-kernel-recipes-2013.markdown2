@@ -1,0 +1,31 @@
+---
+layout: post
+title: Kernel Recipes 2013
+keywords: kernel recipes, kernel, recipes, conférence, présentation, linux, salon, kr2013, développeur, rencontre, noyau
+publish: true
+---
+
+![logo-kernel-recipes]({{blog.images}}/kr2012/kr-logo.png)
+
+Je sors mon blog de son état léthargique pour répandre la bonne parole.
+Hupstream avait organisé l'année dernière [Kernel Recipes 2012]({{blog.url}}/kernel-recipes-2012/),
+première du nom. Pour présenter un peu les choses aux personnes n'ayant jamais
+entendu parler de l'événement, Kernel Recipes est un ensemble de conférences sur
+le kernel (sur des sujets assez divers à l'attention des développeurs du noyau
+Linux, des mainteneurs, des développeurs de drivers, des contributeurs, des
+utilisateurs avancés).
+
+Cette année [Kernel Recipes a 2013](https://kernel-recipes.org/fr/2013/)
+a lieu les **24 et 25 septembre prochains** toujours au même endroit, au
+Carrefour Numérique, à La villette à Paris. Cette fois-ci sur le modèle de [Distro Recipes]({{blog.url}}/distro-recipes-2013/),
+c'est à dire sur deux jours. A noter que cette édition est à présent payante,
+ce qui me semble normal (10€ la journée). Il y a déjà du beau monde inscrit, et
+[le programme](https://kernel-recipes.org/fr/2013/conferences/) promet un
+événement tout aussi intéressant que l'année dernière. Il y a encore des
+créneaux vides car la programmation ne semble pas complètement finalisée.
+
+[Les inscriptions](https://kernel-recipes.org/fr/2013/event-registration/) sont
+donc ouvertes, et il y a encore beaucoup de places.
+
+Vous pourrez m'y croiser encore cette année. Et cette fois-ci je n'ai même pas
+eu besoin de poser de jours de congés \o/
