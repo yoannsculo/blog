@@ -328,3 +328,4 @@ RedirectPermanent /tag/zoneinfo http://www.yoannsculo.fr
 
 ErrorDocument 404 {{blog.url}}/404.html
 
+RedirectPermanent /jour-ou-je-me-suis-fait-expulser-manu-militari-de-developpez-com {{blog.url}}/pourquoi-je-quitte-developpez-com
