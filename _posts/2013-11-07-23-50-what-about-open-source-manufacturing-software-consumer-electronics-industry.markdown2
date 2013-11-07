@@ -1,0 +1,137 @@
+---
+layout: post
+title: What about an open source manufacturing software for the consumer electronics industry?
+keywords: manufacturing, software, embedded, linux, tool, production, test, validation, hardware, PCB, PCBA, electronics
+publish: true
+---
+
+## What I do
+
+I have worked for 3 different companies that produce and sell consumer
+electronics devices with Linux as their operating system. Part of my
+job for the last 4 years has been to develop and maintain custom Linux
+systems that test and validate hardware in production. First, I need to
+check IC soldering, connectivity and global quality of the PCB
+assembly. Then I have to make sure the embedded software is properly
+running. This way, we can ensure the product is fully functional.
+
+There are plenty of elements to test, for instance that touchscreens,
+GPS, buttons, connectors, etc. are responding. If those tests detect a
+problem, the device can be reworked before the end of production line.
+Believe me, you don’t want to manually rework tens of thousand devices
+later in your warehouse. Or worst, discover a hardware issue once the
+product is sold to the customer. This is part of the quality process.
+Mass recall is your worst company’s nightmare.
+
+Another aspect of my job is to inject data into the device during
+production. Serial numbers, mac addresses, PCB and components
+revisions/versions and even marketing content.
+
+## Observation
+
+Every time I changed job, I found a new home-made system. Either I had
+to maintain an existing project or I had to build a new one from
+scratch.
+
+Recently I changed job and inherited a new home-made system to
+maintain. At this point I just realized we (embedded linux developers)
+were developing the same thing again and again. When I started to ask
+other engineers around me I understood many people were doing the same
+thing. With many levels of complexity, from the quick and dirty shell
+script to an elaborate GUI with full interactive interface.
+
+Therefore I started to search for an open source project that could do
+the work. I didn't find anything: unfortunately, there are so many
+features and bricks that I need I never find together in the same
+software.
+
+Today I'm wondering if there are other people like me with the same
+need. I would be glad to contribute to an open source project if I
+could find one. But actually, it seems that such a software doesn't
+exist... yet!
+
+So, here is the idea: what about a generic, lightweight and
+customizable manufacturing software for production and PCB assembly? It
+could be even used for tests during development or to easily
+find/locate bugs.
+
+## What I need
+
+Here is what I have in mind. The ideal software I’d love to use on a
+daily basis.
+
+### Features
+
+* Manual or automatic hardware tests in production to validate PCB and
+  PCB assembly (PCBA)
+* Manual or automatic software tests in production to validate the
+  embedded firmware.
+* Standardized test reports
+	* Standardized protocol to communicate with an external computer
+	  (USB/RS232)
+	* To store data such as serials, mac addresses, marketing content, etc.
+	  (with protections against viruses)
+	* To retrieve data such as test reports
+	* To control and remotely run diagnostics / tests from an external
+	  computer.
+* Universal interface for all possible devices :
+	* framebuffer console interface for devices with a screen
+	* feedback with led for devices without screens
+	* remote control for devices without human-readable outputs
+* Development / diagnostics features
+	* Energy consumption tests and measurement
+	* Whiteboard tool (to draw on the screen and test touchscreens)
+	* RAM tests with memtester to stress test new RAM chips
+	* Certification tests such as CE / FCC / ...
+
+### Hardware tests
+
+A sample list of possible tests to offer
+
+* net
+	* wifi / calibration
+	* bluetooth
+	* ethernet
+* sensors
+	* gps
+	* accelerometer
+* input
+	* button
+	* touchscreen / calibration
+	* camera
+* output
+	* led
+	* mic
+	* jack
+	* speakers
+* display
+	* screen
+		* tft/lcd screens
+		* e-paper screens
+	* hdmi connector
+* storage
+	* sd card
+	* mmc
+	* mass-storage
+	* eeprom
+* misc
+	* usb-port (detection, charge, …)
+	* i2c (chip enumeration/detection)
+
+## Let’s do it!
+
+I really don't know if this kind of application would be helpful to big
+companies. But from what I saw, small companies that produce hardware
+could need such a software. So people like me could focus on something
+else than writing crappy scripts/code to test hardware. I'm the only
+embedded Linux developer in my company, and I have to handle so many
+things / projects that having a powerful tool that eases my work would
+be great! We could benefit from everyone's work and have a very
+powerful generic tool. (like u-boot, buildroot, etc.)
+
+Feel free to tell me what do you think about this idea! Especially if
+you could have such a need. And please, tell me if you think it's a bad
+idea! Or if you know something that already does the job! I guess it
+could be very useful to developers like me, working in the consumer
+electronics industry.
+
