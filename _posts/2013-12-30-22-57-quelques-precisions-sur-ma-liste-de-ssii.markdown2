@@ -1,0 +1,76 @@
+---
+layout: post
+title: Quelques précisions sur ma liste de SSII
+keywords: liste, SSII, ESN, Société de service
+publish: true
+---
+
+Je répertorie depuis un moment toutes les sociétés assimilées SSII / ESN. J'en
+ai fait un [repository public sur github](https://github.com/yoannsculo/emploi),
+que je mets à jour régulièrement. On peut retrouver également cette liste (plus
+rarement actualisée) [sur mon blog]({{blog.url}}/liste-ssii-en-france-one-list-to-rule-them-all/).
+Cette liste de SSII, ainsi que [celle des sociétés liées à l'embarqué]({{blog.url}}/liste-entreprises-systemes-embarques-france/),
+me génère une bonne partie du trafic de mon blog.
+
+Et dans ces visites, il y a des recruteurs et commerciaux de SSII.
+J'ai été contacté à plusieurs reprises afin que je retire leurs sociétés de la
+liste. Ces sociétés m'indiquant ne pas être vraiment des SSII. Alors que faire ?
+Quels sont les critères de la liste ?
+
+Plus j'avance dans le monde professionnel, plus je réalise que le marché du
+travail est complexe. Que le monde n'est pas manichéen (qui l'eut cru ?). Ma
+position initiale de la SSII = « mal absolu » a bien changé depuis que je suis
+sorti de l'école. J'ai même dû recruter cette année et j'ai démarché des SSII
+pour cela. A vrai dire, on trouve de tout dans les SSII. Du très mauvais comme
+du très bon. J'ai même envisagé d'en rejoindre une il y a un an après mon
+dernier licenciement économique. Bref, tout ça pour dire que mon discours a
+changé.
+
+A titre personnel, je peux et préfère éviter  travailler en SSII. En tant que
+«client » qui a eu besoin de recruter quelqu'un pour agrandir mon équipe
+temporairement, je réalise que c'est tout de même un mal nécessaire.
+
+###L'intérêt
+
+J'ai constitué cette liste car j'ai toujours souhaité travailler directement
+chez des industriels pour faire de l'embarqué. Pas au sein de sociétés de
+service, au sens étymologique du terme.
+
+Chercher du travail avec une telle contrainte est une plaie lorsqu'il s'agit de
+consulter des job boards. Les offres de SSII cachent l'essentiel des offres
+d'emploi d'industriels. Cette liste avait donc pour but, à terme, d'en faire un
+mécanisme de filtrage pour les sites d'offres d'emploi. Pour me faciliter mes
+propres recherches. Tout simplement.
+
+Mon projet [Jobcatcher](https://github.com/yoannsculo/JobCatcher) est d'ailleurs
+l'aboutissement de cette liste. Je peux filtrer les offres d'emploi à la
+recherche d'industriels et d'éditeurs de logiciels.
+
+###Les critères
+
+Dans l'échange que j'avais eu suite à [cet article]({{blog.url}}/liste-ssii-en-france-one-list-to-rule-them-all/),
+j'avais tenté de lister les critères permettant d'y faire figurer une société.
+Mais je me suis un peu fourvoyé dans ma tentative d'explication.
+
+Comme je l'expliquais précédemment, on peut trouver du très bon comme du très
+mauvais. Et il est en effet assez réducteur de mettre tout le monde dans le même
+panier sans pouvoir en saisir les subtilités. Toutefois, mon but n'est pas de
+trier les sociétés de service, ni de juger leur qualité ou bien leur culture
+d'entreprise.
+
+Je préfère donc garder cette liste la plus objective possible et y faire figurer
+simplement et uniquement toutes les sociétés de service, au sens étymologique du
+terme, qui fournissent un service via des consultants. Quand bien même elles
+fonctionneraient en partie ou intégralement au forfait. Cette liste se veut la
+plus objective possible et a pour seul but de lister de façon neutre toutes les
+sociétés de services de France.
+
+Les gens seront libres de faire la part des choses au sein de cette liste. Je
+n'ai malheureusement ni le temps, ni l'envie de faire la distinction entre les
+bonnes et mauvaises SSII. D'autant plus que ce n'est pas la qualité qui
+m'intéresse ici mais le mode de fonctionnement de la société (service en
+opposition à l'industrie).
+
+Pour information, j'ai placé [toutes mes listes](https://github.com/yoannsculo/emploi)
+sous licence [Creative Commons autorisant le partage et la modification sous conditions](http://creativecommons.org/licenses/by-sa/3.0)
+(CC BY-SA 3.0) ou au choix, [la version française](http://creativecommons.org/licenses/by-sa/3.0/fr/) (CC BY-SA 3.0 FR)
