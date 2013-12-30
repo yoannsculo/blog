@@ -1,0 +1,20 @@
+---
+layout: post
+title: ParisEmbedded n°3
+keywords: Meetup, Embedded, Linux, hacking, rencontre, Paris
+publish: true
+---
+
+![Paris Embedded]({{blog.images}}/parisembedded/Paris-embedded-logo.jpg)
+
+Long time no see ! Le meetup ParisEmbedded revient le 7 janvier prochain. C'est
+toujours à Joshfire. Et cette fois-ci j'ai proposé de faire une présentation :
+
+« Manufacturing in China, what the hell ! »
+
+L'idée est de faire un petit retour d'expérience sur la production de produits
+d'électronique grand public en Chine. Et surtout les spécificités et
+problématiques bien particulières que l'on y rencontre. Tout ça du point de vue
+de l'ingénieur Linux embarqué que je suis.
+
+[Pour les inscriptions](http://www.meetup.com/ParisEmbedded/events/154892252/), il y a encore pas mal le place.
