@@ -5,18 +5,28 @@ title: Divers
 
 ## Divers
 
-### Images
+### Talks
 
-- 2012 - [Publication des images de Simerion en Creative Commons BY]({{ blog.url }}/publication-des-images-de-simerion-en-creative-commons-by)
+- [ParisEmbedded #3](http://www.meetup.com/ParisEmbedded/events/154892252/), 07/01/2014 » "Manufacturing in China, what the hell !" - slides
 
 ### Articles
 
-Articles publiés sur developpez.com
+Articles anciennement publiés sur developpez.com et la [raison pour laquelle]({{blog.url}}/pourquoi-je-quitte-developpez-com) je n'y suis plus.
 
-- 2012 - [Le protocole SHOUTcast, introduction et décorticage](http://yoannsculo.developpez.com/tutoriels/general/protocole-shoutcast-introduction-decorticage/)
-- 2012 - [Retour d'expérience sur le développement d'un jeu amateur](http://yoannsculo.developpez.com/tutoriels/jeux/retour-experience-sur-developpement-jeu-amateur/)
-- 2011 - [Introduction à D-Bus](http://yoannsculo.developpez.com/tutoriels/linux/introduction-dbus/)
-- 2009 - [Introduction à la carte FOX LX832](http://yoannsculo.developpez.com/tutoriels/linux/introduction-carte-fox-lx832/)
+- 2012 » [Le protocole SHOUTcast, introduction et décorticage](http://yoannsculo.developpez.com/tutoriels/general/protocole-shoutcast-introduction-decorticage/)
+- 2012 » [Retour d'expérience sur le développement d'un jeu amateur](http://yoannsculo.developpez.com/tutoriels/jeux/retour-experience-sur-developpement-jeu-amateur/)
+- 2011 » [Introduction à D-Bus](http://yoannsculo.developpez.com/tutoriels/linux/introduction-dbus/)
+- 2009 » [Introduction à la carte FOX LX832](http://yoannsculo.developpez.com/tutoriels/linux/introduction-carte-fox-lx832/)
+
+### Emploi
+
+- [Liste](https://github.com/yoannsculo/emploi/blob/master/ssii/ssii.mkd) de SSII en France - Voir l'[article à ce sujet]({{blog.url}}/liste-ssii-en-france-one-list-to-rule-them-all) et [sa mise à jour]({{blog.url}}/quelques-precisions-sur-ma-liste-de-ssii/).
+- [Liste](https://github.com/yoannsculo/emploi/blob/master/societes/france.mkd) de Sociétés liées aux systèmes embarqués en France - Voir l'[article à ce sujet]({{blog.url}}/liste-entreprises-systemes-embarques-france/).
+- [Liste](https://github.com/yoannsculo/emploi/blob/master/cabinets/cabinets.mkd) de cabinets de recrutement en France - Voir l'[article à ce sujet]({{blog.url}}/liste-entreprises-systemes-embarques-france/).
+
+### Images
+
+- 2012 » [Publication des images de Simerion en Creative Commons BY]({{ blog.url }}/publication-des-images-de-simerion-en-creative-commons-by)
 
 ### Idées de projets
 
@@ -31,7 +41,3 @@ si ça vous intéresse aussi pour échanger dessus ! :)
 ### Autres
 
 - [Ma collection de BD](http://bd.sculo.fr) (on sait jamais si jamais vous voulez m'en offrir une :P)
-- Listes thématiques d'entreprises :
-	* [Liste](https://github.com/yoannsculo/emploi/blob/master/ssii/ssii.mkd) de SSII en France - Voir l'[article à ce sujet]({{blog.url}}/liste-ssii-en-france-one-list-to-rule-them-all).
-	* [Liste](https://github.com/yoannsculo/emploi/blob/master/societes/france.mkd) de Sociétés noSSII en France - Voir l'[article à ce sujet]({{blog.url}}/liste-entreprises-systemes-embarques-france/).
-	* [Liste](https://github.com/yoannsculo/emploi/blob/master/cabinets/cabinets.mkd) de cabinets de recrutement en France - Voir l'[article à ce sujet]({{blog.url}}/liste-entreprises-systemes-embarques-france/).
