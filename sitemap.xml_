@@ -62,6 +62,21 @@
 	</url>
 
 	<url>
+		<loc>{{blog.url}}/liens</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>{{blog.url}}/devices</loc>
+		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+
+	<url>
 		<loc>{{blog.url}}/en</loc>
 		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
 		<changefreq>daily</changefreq>
