@@ -41,7 +41,8 @@ def xmldatetime(dt):
 
 @templateFilter
 def strip(s, length=300):
-    return striphtml(str(s[:length]))+"..."
+    text=striphtml(str(s)).decode('utf-8')
+    return text[:length]+"..."
 
 @templateFilter
 def slugify(inStr):
