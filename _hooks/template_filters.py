@@ -1,4 +1,5 @@
 # vim:syntax=python:sw=4:ts=4:expandtab
+# -*- coding: utf-8 -*-
 #
 # Copyright (C) 2009 Rico Schiekel (fire at downgra dot de)
 #
@@ -27,7 +28,7 @@ def dateFormat(dt, format='%d/%m/%Y'):
     return dt.strftime(format)
 
 @templateFilter
-def dateFormatFull(dt, format='%d/%m/%Y %H:%M'):
+def dateFormatFull(dt, format=ur'Le %d/%m/%Y à %H:%M'):
     return dt.strftime(format)
 
 @templateFilter
