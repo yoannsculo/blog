@@ -5,37 +5,50 @@ title: Liens
 
 ## Liens
 
-#### Blogs et sites
+Des liens en vrac sur un peu tout et n'importe quoi. Enfin, surtout de
+l'embarqué !
+
+N'hésitez pas pas à [me faire part]({{blog.url}}/a-propos) de liens intéressants, que je pourrais rajouter ici.
+
+#### Blogs et sites sur l'embarqué
 
 - [Free Electrons](http://free-electrons.com/)
 - [Embedded Linux Wiki (elinux)](http://elinux.org)
-
 - [Linux Embedded](http://www.linuxembedded.fr/)
-- [Embedded weblog](http://gillesblanc.com/weblog)
-- [Embedded Linux News](http://www.emlinews.net/)
 - [Christophe Blaess](http://www.blaess.fr/christophe/)
 - [Marcin Juszkiewicz](http://marcin.juszkiewicz.com.pl)
 - [eddy33's Blog](http://eddy33.eddy33.free.fr/weblog/)
 - [random hacks](http://ormz.blogspot.fr)
 - [Koen's blog](http://dominion.thruhere.net/koen/cms)
-- [AmBadAtSystems](http://ambadatsystems.tarinbansal.com)
 - [Embedded Bits](http://www.embedded-bits.co.uk/tech-blog/)
 - [LinuxGizmos](http://linuxgizmos.com)
-
-
 - [Questions/Réponses Open Silicium](http://askopensi.unixgarden.com)
 
-#### Cartes de dev pour bricoler
 
-- Arduino
-- BeagleBone
-- BeagleBoard
-- Foxboard
-- Maple
+- [Embedded Linux News](http://www.emlinews.net/)
 
-#### Livres
+### Des conférences et meetups (en France et Belgique)
 
-#### IRC
+- [ParisEmbedded](http://www.meetup.com/ParisEmbedded/)
+- [iotparis](http://www.meetup.com/Internet-of-Things-Paris/)
+- [Fosdem](https://fosdem.org)
+- [RMLL](http://rmll.info)
+
+### Des magazines sur l'embarqué
+
+- [Open Silicium](http://www.unixgarden.com/index.php/category/open-silicium)
+
+#### Des livres
+
+- **Linux embarqué** » Pierre Ficheux
+- **Linux embarqué: Comprendre, développer, réussir** » Gilles Blanc
+- **Building Embedded Linux Systems** » Karim Yaghmour, Jon Masters, Gilad Ben-Yossef, Philippe Gerum
+- **Embedded Android** » Karim Yaghmour
+- **Embedded Linux System Design and Development** » Sriram Neelakandan
+- **Linux Device Drivers** » Jonathan Corbet, Alessandro Rubini, Greg Kroah-Hartman
+- **Coder Proprement** » Robert C.Martin
+
+#### Des canaux IRC sur l'embarqué
 
 Sur Freenode
 
