@@ -49,9 +49,10 @@
 
 <div class="container">
 	<div class="menu">
-		<img style="width:50%;" src="{{ blog.images }}/logo.png">
+		<!-- <img style="width:50%;" src="{{ blog.images }}/logo.png"> -->
 		<h1>Yoann Sculo</h1>
 		<h2>Ingénieur Linux embarqué</h2>
+
 		<ul id="menu">
 			<li><a href="{{ blog.url }}">Blog</a></li>
 			<li><a href="{{ blog.url }}/mes-projets">Projets</a></li>
@@ -61,7 +62,16 @@
 			<li><a href="{{ blog.url }}/moncv">CV</a></li>
 			<li><a href="{{ blog.url }}/devices">Devices</a></li>
 		</ul>
-		<p><a href="http://twitter.com/yoannsculo">@yoannsculo</a></p>
+
+		<div style="margin-top:40px;">
+			<a href="{{ blog.url }}/en"><img style="width:20px;" src="{{ blog.url }}/images/icons//flag_us.png"><a/>
+			<a href="http://twitter.com/yoannsculo"><img style="width:20px;" src="{{ blog.url }}/images/icons/twitter-32x32.png" alt="" /></a>
+			<a href="http://www.linkedin.com/in/yoannsculo"><img style="width:20px;" src="{{ blog.url }}/images/icons/linkedin-32x32.png" alt="" /></a>
+			<a href="http://www.viadeo.com/fr/profile/yoann.sculo"><img style="width:20px;" src="{{ blog.url }}/images/icons/viadeo-32x32.png" alt="" /></a>
+			<a href="https://github.com/yoannsculo"><img style="width:20px;" src="{{ blog.url }}/images/icons/github-32x32.png" alt="" /></a>
+			<a href="{{ blog.url }}/feed"><img style="width:20px;" src="{{ blog.url }}/images/icons/rss-32x32.png" alt="" /></a>
+		</div>
+
 	</div>
 
 		<!--
@@ -86,8 +96,6 @@
 	<footer>
 		<div class="well">
 			Ce site est magiquement propulsé par <a href="{{ blog.github_growl }}">growl</a>
-				<!--<li>(bientôt) gentiment hébergé par un mignon petit serveur embarqué.</li>
-				<li>(bientôt) nourri à la fibre optique</li>-->
 		</div>
 	</footer>
 </div>
