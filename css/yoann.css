@@ -144,8 +144,8 @@ pre {
 }
 
 blockquote {
-        margin-top: 10px;
-        border-radius: 4px 4px 4px 4px;
+	margin-top: 10px;
+	white-space: normal;
 }
 
 blockquote p {
