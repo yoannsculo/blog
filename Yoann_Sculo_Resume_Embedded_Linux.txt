@@ -23,7 +23,7 @@ Embedded Linux Engineer
     * C, shell, Buildroot, Git/repo
     * C, shell, Python, Buildroot, Git/repo, Jenkins - OMAP 3611, Allwinner A13
 
-    Products : Cybook Ocean, NolimBook, NolimBook+, Cybook Odyssey Frontlight
+    Products : Cybook Ocean, Nolimbook, Nolimbook+, Cybook Odyssey Frontlight
 
 JCDecaux                                              February 2013 - April 2013
 Systems Integration Engineer - Linux/Android                          (3 months)
