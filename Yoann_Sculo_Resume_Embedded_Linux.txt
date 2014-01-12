@@ -5,8 +5,8 @@ Web      : http://www.yoannsculo.fr
 LinkedIn : http://www.linkedin.com/in/yoannsculo/
 GitHub   : http://github.com/yoannsculo
 
-4 years of embedded systems experience. Skilled in integration and development
-of embedded Linux & Android solutions.
+4+ years experience in embedded Linux integration and development.
+18 consumer electronics devices experience.
 
 Professional Experience
 ================================================================================
@@ -15,20 +15,25 @@ Bookeen                                                     April 2013 - present
 Embedded Linux Engineer
 
     * Development and integration of embedded Linux platforms for e-reader
-      products - OMAP 3621 / E-Ink screens
-    * Bootloader (U-boot), Linux kernel (2.6.32), device drivers (touchscreen,
+      products with E Ink & O-paper (OED) screens
+    * Loader, bootloader (U-boot), kernel 2.6.32/3.x, drivers (touchscreen,
       wlan, led, ...) and userspace development.
-    * Factory, test and update tools development.
-    * Energy consumption optimisation
+    * Production tools (flashing, test, serials), update tools, energy
+      consumption optimization.
     * C, shell, Buildroot, Git/repo
+    * C, shell, Python, Buildroot, Git/repo, Jenkins - OMAP 3611, Allwinner A13
+
+    Products : Cybook Ocean, NolimBook, NolimBook+, Cybook Odyssey Frontlight
 
 JCDecaux                                              February 2013 - April 2013
-Systems Integration Engineer - Linux/Android                          (2 months)
+Systems Integration Engineer - Linux/Android                          (3 months)
 
     * Conceived, integrated and maintained Linux distributions for digital urban
       panels and billboards.
     * Worked on remote control and updating systems.
     * Android & Fedora - Spacewalk, CFEngine & Rudder - Bash/Git/rpm
+
+    Products : Intelligent Street Furniture
 
 Archos                                                August 2011 - January 2013
 Software Engineer - Linux/Android                                    (18 months)
@@ -46,34 +51,35 @@ Software Engineer - Linux/Android                                    (18 months)
       Bluetooth Low Energy (BLE), Zigbee
     * C, Bash, Buildroot, Git/repo - Datasheets and PCB schematics reading
 
-Mindscape                                                 March 2011 - July 2011
-Embedded Software team leader                                         (5 months)
+    Products : Home automation Gateway, Archos 101 XS, Archos 97 XS,
+               Archos 116 XS, Archos TV Connect, Archos 101 G9,
+               Archos 101 G9 250Go, Archos 80 G9, Archos 80 G9 250Go,
+               Archos 70 IT2, Archos 70 IT2 250Go
 
-    * Wrote software and hardware specifications for the next product running on
-      Android.
-    * Android development on ARM Cortex A8 - Prototyping on the PandaBoard.
-    * Wrote tests, fixed bugs, maintained / improved Karotz product and managed
-      the worldwide developer community.
+Mindscape                                               January 2010 - July 2011
+Embedded Software team leader                                        (19 months)
 
-Mindscape                                           January 2010 - February 2011
-Embedded systems engineer                                            (14 months)
+     * Wrote specifications, designed and developed Karotz embedded software
+       architecture.
+     * Created and set up from scratch the embedded Linux system / BSP on
+       ARM 920T and 2.6.28 kernel
+     * Used Buildroot, uClibC, Busybox and cross-compiled application for ARM
+       target
+     * Set up development environment, YAFFS filesystem, factory system
+       restauration and automatic OS updating system, D-Bus based architecture,
+       serial protocol for the Karotz configuration, network connection
+       (LAN/WLAN), mass storage, Karotz SDK, user applications, ...
+     * Optimized boot time, enhanced system performance and developed inside
+       the Linux kernel (drivers, kernel patching)
+     * Was exhibitor at the CES 2011 in Las Vegas - Managed the worldwide
+       developer community.
+     * Played key role in submitting ideas, developing the whole system from
+       scratch and solving deep technical issues
+     * Wrote software and hardware specifications for the next product running
+       on Android (Major Alfred)
+     * C, Bash, Python, C++ and Javascript programming - GIT, Jira
 
-    * Wrote specifications, designed and developed Karotz embedded software
-      architecture.
-    * Created and set up from scratch the embedded Linux system / BSP on
-      ARM 920T and 2.6.28 kernel 
-    * Used Buildroot, uClibC, Busybox and cross-compiled application for ARM
-      target
-    * Set up development environment, YAFFS filesystem, factory system
-      restauration and automatic OS updating system, D-Bus based architecture,
-      serial protocol for the Karotz configuration, network connection
-      (LAN/WLAN), mass storage, Karotz SDK, user applications, ...
-    * Optimized boot time, enhanced system performance and developed inside the
-      Linux kernel (drivers, kernel patching)
-    * Was exhibitor at the CES 2011 in Las Vegas
-    * Played key role in submitting ideas, developing the whole system from
-      scratch and solving deep technical issues
-    * C, Bash, Python, C++ and Javascript programming - Used GIT, Jira
+     Products : Karotz, Major Alfred
 
 CNES (French Space Agency)                             July 2009 - December 2009
 Intern                                                                (6 months)
@@ -120,7 +126,7 @@ Computer Skills
 ================================================================================
 
 Languages
-    * C, Unix Shells, Java - Web development: PHP/HTML/CSS
+    * C, Unix Shells, Python, Java - Web development: PHP/HTML/CSS
 
 Embedded Systems
 
@@ -137,7 +143,7 @@ Tools
     * Git, repo, SVN, Trac, Jira, vim, Eclipse
 
 Protocols
-    * Wifi, Bluetooth, BLE, RFID, Zigbee, GPS, USB, RS232, ...
+    * Wifi, Bluetooth, BLE, RFID, Zigbee, GPS, I2C, USB, RS232, ...
 
 Misc
     * Open-source licenses, digital electronics, datasheets and PCB schematics
@@ -146,11 +152,14 @@ Misc
 Projects
 ================================================================================
 
+2013 - present
+    * Contributor on OpenStreepMap
+
 2012 - present
     * Developping a multi-platform indie Point & Click game - Java, libgdx
 
 2010 - present
-    * Developped Open Source softwares :
+    * Developped Free softwares :
         JobCatcher:            https://github.com/yoannsculo/JobCatcher
         SHOUTcast recorder:    https://github.com/yoannsculo/SHOUTcast-Recorder
         ucblog:                https://github.com/yoannsculo/ucblog
@@ -171,10 +180,6 @@ Projects
 
 Other
 ================================================================================
-
-Voluntary work
-    * Editor and moderator of the embedded sytems section of developpez.com
-      Largest french-speaking community of professional developers
 
 Hobbies
     * Badminton, Running, Hiking, Music, Drawing, Comics
