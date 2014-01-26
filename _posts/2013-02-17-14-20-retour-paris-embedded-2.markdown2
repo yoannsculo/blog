@@ -13,7 +13,7 @@ d'écrire un petit compte rendu qu'aujourd'hui.
 J'avais prévu de faire une présentation et bricolage avec Pierre, mais faute de
 temps j'ai remis ça au prochain épisode.
 
-![Début de la rencontre]({{blog.images}}/parisembedded/12-02-2012/IMAG0518.jpg)
+![Début de la rencontre]({{blog.images}}/parisembedded/12-02-2013/IMAG0518.jpg)
 Nous avons eu trois présentations. La première de Jordan McRae qui nous a fait
 un retour d'expérience sur son produit [B-Squares](http://www.b-squares.com/),
 propulsé grâce à Kickstarter. Il s'agit d'un système électronique modulaire,
@@ -21,12 +21,12 @@ sorte de brique Lego magnétique pour se bricoler facilement des montages façon
 Arduino. La présentation était plus orientée sur son expérience Kickstarter et
 la mise en place du projet et de sa société. Très intéressant feedback !
 
-![Début de la rencontre]({{blog.images}}/parisembedded/12-02-2012/IMAG0520.jpg)
+![Début de la rencontre]({{blog.images}}/parisembedded/12-02-2013/IMAG0520.jpg)
 Ensuite, Pierre Ficheux, nous a parlé de temps réel et de Preempt_RT sur une
 carte Raspberry Pi. On peut retrouver ses bricolages
 [sur le blog linuxembedded.fr](http://www.linuxembedded.fr/2013/01/preempt-rt-sur-raspberry-pi/)
 
-![Début de la rencontre]({{blog.images}}/parisembedded/12-02-2012/IMAG0521.jpg)
+![Début de la rencontre]({{blog.images}}/parisembedded/12-02-2013/IMAG0521.jpg)
 Et pour finir, Igor Carron, nous a fait un
 [retour d'expérience](http://goo.gl/K3Kks) sur les réussites et échecs de
 plusieurs de ses projets. Expériences en avion (vols paraboliques), dans
