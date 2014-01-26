@@ -9,6 +9,7 @@ Voici comment il m'arrive d'occuper mon temps libre :)
 
 ### Open Source
 
+- [Massprod]({{blog.url}}/what-about-open-source-manufacturing-software-consumer-electronics-industry) » Outil de validation et de test hardware pour ligne de production (en cours de dev).
 - [JobCatcher](https://github.com/yoannsculo/JobCatcher) » agrégateur d'offres d'emploi décentralisé et open source.
 - [µcwiki](https://github.com/yoannsculo/ucwiki) » générateur de wiki/documentation statique en C.
 - [uCAM](https://github.com/yoannsculo/uCAM) » bibliothèque en C sous Linux pour la caméra μCAM (microCAM) série JPEG de 4D Systems
