@@ -1,0 +1,59 @@
+---
+layout: post
+title: ParisEmbedded n°3 - Petit compte-rendu
+keywords: Meetup, Embedded, Linux, embarqué, hacking, rencontre, Paris, Chine, production, manuf
+publish: true
+---
+
+![Paris Embedded]({{blog.images}}/parisembedded/Paris-embedded-logo.jpg)
+
+Mieux vaut tard que jamais. Je me suis rendu à la troisième édition de
+[ParisEmbedded](http://www.meetup.com/ParisEmbedded/events/154892252/) le 7
+janvier dernier. Cette fois-ci, j’avais prévu une présentation / retour
+d’expérience sur les interactions avec la Chine dans mon métier d’ingénieur
+linux embarqué. Et notamment toutes les problématiques que l’on rencontre à
+cause des différences culturelles et techniques, de la distance, etc.
+
+Joshfire a filmé les présentations. Soyez indulgents, c’était ma première
+présentation en anglais depuis un paquet d’années ^^
+
+![Manufacturing in China, what the hell ! - Yoann Sculo]({{blog.images}}/parisembedded/07-01-2014/highres_322480582.jpeg)
+
+[Slides de la présentation]({{blog.url}}/talks/2014-01-07-parisembedded/slides.pdf)
+- [Vidéo de la présentation](http://www.youtube.com/watch?v=J8-QZIY3vAM&feature=youtu.be)
+
+Martin Bonnin a ensuite présenté des techniques de bricolage de PCB à la maison.
+Je n’ai pas non plus de super souvenirs avec le perchlo :P Mais j’avoue que
+j’opterais aujourd’hui pour le PCB fait sur mesure en Chine.
+
+![Building your circuit boards at home - Martin Bonnin]({{blog.images}}/parisembedded/07-01-2014/highres_322480612.jpeg)
+
+[Slides de la présentation](http://slid.es/mbonnin/building_pcb_at_home)
+- [Vidéo de la présentation](http://www.youtube.com/watch?v=qJ-VmsXX78k&feature=youtu.be)
+
+Suivi d’une présentation très intéressante de Benjamin Joffe, qui retrouve les
+mêmes problématiques que moi en Chine. Il nous a parlé de
+[HAXLR8R](http://www.haxlr8r.com/), son incubateur de startups hardware. Et
+comment il aide ces startups à faire les bons choix et éviter les pièges là bas.
+
+![Lean Hardware 101 - Benjamin Joffe]({{blog.images}}/parisembedded/07-01-2014/highres_322480592.jpeg)
+
+[Slides de la présentation](http://www.slideshare.net/haxlr8r/great-makers-ship)
+- [Vidéo de la présentation](http://youtu.be/GlUv67GLPoI)
+
+Et pour finir, Maurice Svay nous a parlé de sa dernière acquisition, le
+[Spark Core](https://www.spark.io/). Petite carte de dev wifi, programmable à
+distance sur un IDE web.
+
+(désolé, je n'ai pas de photo)
+
+[Slides de la présentation](https://speakerdeck.com/mauricesvay/spark-core-demo-at-parisembedded)
+- [Vidéo de la présentation](http://youtu.be/n8Z0Ioq_kiI)
+
+Comme d’habitude, c’était super intéressant. C’est toujours l’occasion de revoir
+plein de monde et rencontrer de nouvelles personnes. Bref toujours un plaisir de
+venir !
+
+Merci encore à Joshfire et merci à
+[Robert Salita](http://www.meetup.com/ParisEmbedded/members/2807529/) pour ses photos.
+
