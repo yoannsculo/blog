@@ -1,0 +1,96 @@
+---
+layout: post
+title: Fosdem 2014
+keywords: Fosdem, 2014, Bruxelles, libre, open source, compte-rendu
+publish: true
+---
+
+![Fosdem 2014]({{blog.images}}/fosdem-2014/IMAG1186.jpg)
+
+J'étais au Fosdem 2014 le week-end dernier. Bien épuisant, mais toujours aussi
+intéressant ! Comme [l'année dernière]({{blog.url}}/fosdem-2013-petit-compte-rendu),
+niveau conférences c'était parfois très inégal. Il y a du très bon comme du pas
+franchement passionnant, ni préparé. Rageant lorsque l'on doit faire un choix
+entre plusieurs présentations se déroulant en même temps. Mais parlons plutôt de
+ce qui m'a plu !
+
+### Firefox OS
+
+Firefox OS attire du monde ! J'ai commencé les talks samedi par une conférence
+Firefox OS. La salle [était bien remplie](https://twitter.com/mozilla_fr/status/429580938755211264).
+
+![State of Firefox OS]({{blog.images}}/fosdem-2014/P1020786.JPG)
+
+J'étais curieux de savoir où en était Firefox OS, car j'ai hâte de quitter
+Android. Fabien Cazenave nous a expliqué que les efforts de Mozilla n'étaient
+pas centrés sur le portage de Firefox OS sur les téléphones actuels. Mais plutôt
+sur le développement de leurs propres produits pour les marchés émergents. De la
+même façon, Mozilla ne s'intéresse pas aux tablettes pour le moment, mais compte
+sur la communauté pour l'aider. Ils [vont proposer](http://hacks.mozilla.org/)
+dans les semaines qui viennent un programme incitant les développeurs
+volontaires à participer à l'effort de guerre sur tablette, en fournissant du
+matériel aux motivés.
+
+J'ai pu à nouveau m'amuser avec un téléphone ZTE, si je ne m'abuse. Bon, le
+hardware ne vend vraiment pas du rêve, mais le système a tout ce dont j'aurais
+besoin sur un téléphone. Mon prochain smartphone tournera sous Firefox OS je
+l'espère ! Il va juste falloir encore attendre un peu.
+
+### Jenkins
+
+J'ai mis en place [Jenkins](http://jenkins-ci.org/) au travail, mais ne
+l'utilise qu'à 10 % de ses capacités. Je me posais un certain nombre de
+questions pour utiliser toute la puissance de l'outil. Ça tombe bien, j'ai pu
+demander directement aux développeurs ! :)
+
+### LAVA
+
+![LAVA]({{blog.images}}/fosdem-2014/IMAG1198.jpg)
+
+Dans le même esprit que Jenkins, j'ai découvert le projet [LAVA](https://wiki.linaro.org/Platform/LAVA)
+de Linaro. C'est un framework en Python qui permet de faire du test et de
+l'intégration continue sur du hardware.
+
+*Exactement* ce dont j'aurais besoin ! J'ai bon espoir de pluger cet outil sur
+mon Jenkins et [mon projet en cours de développement]({{blog.url}}/what-about-open-source-manufacturing-software-consumer-electronics-industry)
+afin de me faire un système de build et de qualif du tonnerre ! Je vais regarder
+ça en détails dès que j'ai un peu de temps.
+
+### Energy consumption
+
+Mon dimanche a débuté sur des conférences axées sur la consommation d'énergie,
+et les techniques pour la mesurer de façon précise et peu intrusive. 
+
+![Energy consumption]({{blog.images}}/fosdem-2014/P1020803.JPG)
+
+Leurs propos portaient sur le fait que les développeurs software, contrairement
+aux gens du hardware, ne sont pas habitués à penser « consommation d'énergie ».
+On nous a alors présenté le projet open source [MAGEEC](http://mageec.org/),
+ayant pour premier axe de travail l'optimisation de la compilation à des fins
+d'économie d'énergie. Le second aspect du projet est le développement d'une
+[board open source](https://github.com/mageec/powersense-shield) de mesure de
+consommation, que voici : 
+
+![MAGEEC]({{blog.images}}/fosdem-2014/IMAG1185.jpg)
+
+J'aurais beaucoup aimé me rendre au workshop l'après midi, et repartir avec une
+board. Mais j'ai choisi d'aller voir du côté d'Allwinner.
+
+### Allwinner
+
+Je me suis senti tout de suite moins seul après [la présentation](https://fosdem.org/2014/schedule/event/arm_allwinner_sunxi_socs/attachments/slides/386/export/events/attachments/arm_allwinner_sunxi_socs/slides/386/Allwinner_sunxi.pdf)
+d'Olliver Schinagl ! Allwinner fait de l'open source, mais en pratique la
+qualité des livrables est tellement mauvaise que le travail des développeurs
+devient un enfer. Sans compter toutes les problématiques de blobs et de non
+respect des licences GPL. J'ai découvert, avec soulagement, que je n'étais pas
+le seul à pester et que la [communauté sunxi](http://linux-sunxi.org), autour
+des processeurs Allwinner, avait les mêmes problèmes que moi. Leur wiki m'avait
+beaucoup aidé cet été, mais je pense aller bientôt discuter directement avec
+eux. Leur code semble être en avance de phase sur le code fourni par Allwinner.
+Que cela soit sur le bootloader et le kernel. Ô joie !
+
+### Vidéos
+
+Vous pouvez retrouver [les vidéos des présentations](http://video.fosdem.org/2014/)
+en ligne. Toutefois, je n'ai pas de son sur les vidéos. Je ne sais pas si ça
+vient de chez moi où s'il y a un soucis d'encodage.
