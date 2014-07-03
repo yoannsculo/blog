@@ -1,0 +1,223 @@
+---
+layout: post
+title: adb pour les produits non Android
+keywords: adb, adbd, portage, Android, non Android, ARM, cross-compiler, embarqué, linux, Gadget, File-backed, Storage
+publish: true
+---
+
+Lorsque l'on travaille sur des produits embarqués d'électronique grand public, débugger et développer peut s'avérer particulièrement fastidieux.
+Les besoins du développeur sont généralement assez basiques, avoir une console et être en mesure de déposer / récupérer des fichiers. En pratique cela peut s'avérer particulièrement lourd.
+Généralement, voici les possibilités s'offrent à nous :
+
+- La console UART
+- La console USB
+- Le réseau (ssh, telnet, NFS)
+- Le support de stockage (USB, carte SD, ...)
+
+Chacune possède des avantages et inconvénients. Une nouvelle solution avec pas mal d'avantages est maintenant envisageable, adb.
+
+## ADB (Android Debug Bridge)
+
+Android vient avec un petit utilitaire bien pratique de debug, [adb](http://developer.android.com/tools/help/adb.html) (Android Debug Bridge).
+Il permet, entre autres, d'ouvrir un shell via USB ou TCP et de transférer des fichiers.
+C'est ce qui m'intéresse ici. Avec l'USB, on bénéficie d'un meilleur débit qu'à 115200 bauds via la console physique,
+et son usage est déconcertant de facilité. On branche l'USB et on tape ``adb shell`` dans une console de la machine HOST.
+Pas besoin de démonter le produit, d'y souder des fils qui vont s'arracher au fur et à mesure des manips.
+Plus besoin d'effectuer des transferts de fichiers par carte SD ou par le réseau.
+Bref, un énorme gain de temps pour le développeur.
+
+## Fonctionnement d'adb
+
+![fonctionnement d'adb]({{blog.images}}/adb/adb.png)
+
+adb est une application client-serveur qui se décompose en trois éléments :
+
+- Un serveur : qui tourne en tâche de fond sur votre machine HOST, il se comporte comme une sorte de proxy
+- Un client : qui se lance sur la machine HOST et se connecte au serveur. On peut en lancer plusieurs en même temps.
+- Un daemon adbd : qui tourne sur la target et va exécuter les commandes lancées par le HOST.
+
+Celui qui m'intéresse ici c'est le daemon adbd, côté target, et non adb côté host (PC). On trouve bon nombre de projets qui proposent la compilation d'adb côté host, mais ces derniers délaissent systématiquement adbd.
+La raison est simple, la mode est à Android et adbd est déjà packagé dans AOSP. L'industrie met de l'Android partout à toutes les sauces. Les bon vieux Linux embarqués n'héritent pas forcément d'outils sympa apportés par la déferlante Android.
+Ainsi adb va de soi pour les développeurs qui font de l'embarqué sur Android. Sauf qu'il subsiste des gens, comme moi, développant des produits qui ne tournent pas sous Android, et qui gagneraient à utiliser adb.
+
+L'idée initiale de porter adbd pour des produits non Android vient de mon ancien collègue [Guillaume Revaillot](http://fr.linkedin.com/in/grevaillot), qui avait déjà effectué le portage il y a deux ans.
+Sachant que c'était faisable, je me suis donc attelé à la tâche pour le rendre open source. A première vue, cela peut sembler incongru de mettre un daemon "Android" dans un produit qui ne l'est pas, mais les avantages sont multiples. Il serait dommage de s'en priver !
+
+L'activation d'adb/adbd se fait à deux endroits:
+
+- dans le kernel
+- en userspace
+
+### Côté kernel
+
+Nous avons besoin du driver Gadget Android (option ``CONFIG_USB_G_ANDROID``). Ce dernier ne semble pas vouloir compiler autrement qu'en builtin dans ma version actuelle du kernel.
+
+Pour ma part, la config du ``USB_G_ANDROID`` a hérité d'une dépendance à l'option SWITCH dans drivers/usb/gadget/Kconfig, je me suis contenté de la supprimer.
+J'explorerai à l'occasion cette piste pour comprendre la raison de son existence et l'impact de la suppression du ``depends on SWITCH``
+
+	diff --git a/drivers/usb/gadget/Kconfig b/drivers/usb/gadget/Kconfig
+	index 26ab1e3..2985fe1 100755
+	--- a/drivers/usb/gadget/Kconfig
+	+++ b/drivers/usb/gadget/Kconfig
+	@@ -963,7 +963,6 @@ config USB_G_PRINTER
+	 
+	 config USB_G_ANDROID
+	        boolean "Android Gadget"
+	-       depends on SWITCH
+	        help
+	          The Android gadget driver supports multiple USB functions.
+	          The functions can be configured via a board file and may be
+
+Ce driver apporte diverses fonctionnalités
+
+- adb : Android Debug Bridge
+- acm : (Abstract Control Model) pour émuler du RS232 par USB
+- mtp : transfert de fichiers
+- ptp : transfert de fichiers
+- rndis : tethering
+- mass_storage : transfert de fichiers
+- accessory : Android USB accessories
+
+Ce qui m'intéresse ici c'est adb et le mass storage. Car en définitive, le module Gadget Android remplace le module classique File-backed Storage Gadget de mass storage en rajoutant de nouvelles options.
+Perso je n'ai pas besoin du reste, on pourrait même envisager de désactiver des pans entiers du driver pour ne garder qu'adb et le mass storage. J'ai vu dans le driver que le défrichage serait assez simple.
+
+### Côté userspace
+
+Le code source d'Adb se trouve dans le core d'[AOSP](https://source.android.com/). Il est intégré au processus de build d'Android et se compile grâce aux Android.mk
+Bien que proches des GNU Makefiles, les Makefiles d'Android n'en sont pas, et la compilation d'adb avec des GNU Makefile nécessite leur réécriture.
+
+J'ai forké le core :
+
+	https://android.googlesource.com/platform/system/core.git
+
+et ai légèrement bricolé le code pour permettre la compilation via un [GNU Makefile](https://github.com/yoannsculo/adbd/blob/gingerbread-adbd/adb/Makefile). Je n'ai pas énormément de mérite, je me suis fortement [inspiré du travail de cette personne](https://hev.cc/2227.html).
+
+Vous pouvez retrouver [le code source sur github](https://github.com/yoannsculo/adbd).
+
+Il y a juste à se rendre dans le dossier adb, d'exporter vos variables d'environnement pour votre toolchain et openssl
+
+	export TOOLCHAIN=<your_toolchain_path_with_prefix>
+	export OPENSSL_DIR=<path_to_openssl>
+
+et faire un make.
+
+J'ai initialement commencé sur la toute dernière branche d'Android. adb est tellement imbriqué dans le code spécifique à Android que le portage est une horreur.
+J'ai remonté le temps et me suis placé sur la branche gingerbread, ce qui correspond à la version 1.0.26 d'adb. Le portage a été bien plus simple.
+Dès que j'aurai plus de temps, je tâcherai de remonter la timeline d'Android pour fournir un adbd plus récent.
+En attendant, cela fonctionne. Mis à part un gros bug sur lequel je ne me suis pas encore penché.
+Lorsque l'on tente de transférer un dossier de façon récursive, et que l'on atteint une certaine taille (semblerait-il) le daemon adbd explose et la connexion s'interrompt.
+Je suis carrément preneur d'aide la dessus ;)
+
+### Utiliser adb
+
+Une fois adbd intégré à la target, les choses intéressantes commencent. La configuration du driver se fait via sysfs.
+Alors bien évidemment, si l'on ne souhaite pas trop se prendre la tête, on peut indiquer tout en dur dans le driver ou via des platform data.
+Ce qui évite d'avoir trop de bricolages à faire à l'init. J'ai choisi l'option sysfs histoire d'expliquer à quoi servent les différents champs.
+
+La première étape est de démarrer adbd
+
+	ifconfig lo up
+	adbd &
+
+Je n'ai pas encore trop cherché la raison exacte, mais l'interface de loopback est nécessaire. Sinon pas content le adbd !
+Ensuite, la configuration d'adb se fait de la façon suivante :
+
+	echo 0 > /sys/devices/virtual/android_usb/android0/enable
+	echo 18d1 > /sys/class/android_usb/android0/idVendor
+	echo 1 > /sys/class/android_usb/android0/idProduct
+	echo "MyCompany" > /sys/class/android_usb/android0/iManufacturer
+	echo "MyProduct" > /sys/class/android_usb/android0/iProduct
+	echo "0123456789" > /sys/class/android_usb/android0/iSerial
+	echo "adb" > /sys/class/android_usb/android0/functions
+	echo 1 > /sys/devices/virtual/android_usb/android0/enable
+
+J'ai gardé 0x18d1 comme VendorId. C'est celui de Google. Je n'ai pas essayé de changer, mais une fois le service adbd le produit apparaît comme un périphérique Google. (cf résultat d'un lsusb)
+
+	Bus 002 Device 097: ID 18d1:0001 Google Inc.
+
+Par contre, l'usb énumérera un périphérique custom tout mignon à votre nom :)
+
+	[286392.560081] usb 2-1.5.1.2: new high-speed USB device number 97 using ehci-pci
+	[286392.652892] usb 2-1.5.1.2: New USB device found, idVendor=18d1, idProduct=0001
+	[286392.652897] usb 2-1.5.1.2: New USB device strings: Mfr=2, Product=3, SerialNumber=4
+	[286392.652900] usb 2-1.5.1.2: Product: MyProduct
+	[286392.652903] usb 2-1.5.1.2: Manufacturer: MyCompany
+	[286392.652905] usb 2-1.5.1.2: SerialNumber: 0123456789
+
+Et pour couper le service :
+
+	echo 0 > /sys/devices/virtual/android_usb/android0/enable
+	killall -9 adbd
+	echo "" > /sys/class/android_usb/android0/functions
+
+### Utiliser le mass storage
+
+Pour le mass storage, la manipulation est similaire :
+
+	echo 0 > /sys/devices/virtual/android_usb/android0/enable
+	echo 525 > /sys/class/android_usb/android0/idVendor
+	echo 1265 > /sys/class/android_usb/android0/idProduct
+	echo "MyCompany" > /sys/class/android_usb/android0/iManufacturer
+	echo "MyProduct" > /sys/class/android_usb/android0/iProduct
+	echo "0123456789" > /sys/class/android_usb/android0/iSerial
+	echo "mass_storage" > /sys/class/android_usb/android0/functions
+	echo "/dev/<...>" > /sys/devices/virtual/android_usb/android0/f_mass_storage/lun/file
+	echo "/dev/<...>" > /sys/devices/virtual/android_usb/android0/f_mass_storage/lun1/file
+	echo 1 > /sys/devices/virtual/android_usb/android0/enable
+
+ou ``"/dev/<...>"`` est votre partition à exporter en mass storage. Ici je peux exporter une seconde partition (carte SD par exemple) sur lun1.
+
+Ce qui nous donne l'énumération suivante
+
+	[286815.281120] usb 2-1.5.1.2: USB disconnect, device number 97
+	[286820.341156] usb 2-1.5.1.2: new high-speed USB device number 98 using ehci-pci
+	[286820.433975] usb 2-1.5.1.2: New USB device found, idVendor=0525, idProduct=1265
+	[286820.433980] usb 2-1.5.1.2: New USB device strings: Mfr=2, Product=3, SerialNumber=4
+	[286820.433982] usb 2-1.5.1.2: Product: MyProduct
+	[286820.433985] usb 2-1.5.1.2: Manufacturer: MyCompany
+	[286820.433987] usb 2-1.5.1.2: SerialNumber: 0123456789
+
+et pour couper le mass storage
+
+	echo 0 > /sys/devices/virtual/android_usb/android0/enable
+	echo "" > /sys/class/android_usb/android0/functions
+	echo "" > /sys/devices/virtual/android_usb/android0/f_mass_storage/lun/file
+	echo "" > /sys/devices/virtual/android_usb/android0/f_mass_storage/lun1/file
+
+Je ne suis pas sûr que les ``echo ""`` soient vraiment fonctionnels/nécessaires. Il faudrait que je vérifie leur utilité.
+
+### Utiliser adb et le mass storage en même temps
+
+Cette option est possible, et est censée fonctionner de la façon suivante :
+
+	echo "adb,mass_storage" > /sys/class/android_usb/android0/functions
+
+mais j'avoue avoir eu des soucis pour faire marcher ça sous Windows ET Linux à cause des product et vendor id.
+J'explorerai ça à l'occasion, mais Android le fait donc ce n'est qu'une question de configuration à priori.
+
+### Conclusion
+
+Tout ça marche super bien sous Linux. Sous Windows c'est tout de suite plus tricky. J'ai rencontré [les mêmes soucis]({{blog.url}}/mass-storage-usb-sur-tous-les-os-grace-au-file-backed-storage-gadget-g_file_storage) qu'il y a quelques années.
+La configuration précédente marche sous Windows seven, j'ai pas testé plus loin pour le moment.
+
+J'ai utilisé le [vendor id](http://www.linux-usb.org/usb.ids) de Netchip Technology pour déclarer comme mass storage (0x0525/0x1265). S'il y a une façon plus propre, je suis preneur :)
+
+Sous Windows, trouver des drivers adb est assez pénible. J'ai trouvé le site [adbdriver.com](http://adbdriver.com/), site qui fait franchement peur tellement ça sent le malware à plein nez.
+Le hic c'est que ça marche ! Je n'ai pas trouvé d'autre source plus fiable. Donc je suis preneur si jamais vous avez des trucs qui inspirent plus confiance.
+D'un autre côté, si vous êtes quelqu'un de normal, vous développez sous Linux pour une target Linux. Le problème ne devrait donc pas se poser :D
+
+A noter que le mass storage et adb correspondent à 2 fonctionnements distincts et donc à deux drivers.
+
+Et voilà ! Maintenant adb fonctionne comme un périphérique Android.
+
+``adb devices`` retournera la valeur indiquée dans le fichier iSerial. Tout beau tout propre.
+
+	List of devices attached 
+	0123456789	device
+
+``adb shell`` vous donnera un shell tout mignon par USB sans avoir à charcuter le casing de votre produit :)
+
+N'hésitez pas à me faire part de vos remarques/critiques. Et je suis également preneur de pull requests ;)
+
+
+
