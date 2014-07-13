@@ -1,0 +1,59 @@
+---
+layout: post
+title: Etude sur l'évolution des emplois et des formations en Systèmes Embarqués - OPIIEC
+keywords: systèmes embarqués, étude, sondage, marché, secteur
+publish: true
+---
+
+Je viens de tomber via LinkedIn, et par l'intermédiaire de Christophe Blaess, sur une [étude super intéressante sur le marché des systèmes embarqués en France](http://www.fafiec.fr/81-l-observatoire-opiiec/etudes/metiers-de-l-ingenierie/211-evolution-metiers-besoins-systemes-embarques.html).
+L'étude réalisée par l'OPIIEC est particulièrement détaillée, on y apprend pas mal de choses.
+
+Dans les grandes lignes on y lit qu'en France, la filière Systèmes Embarqués regroupe 1,3% des actifs, soit 387.500 personnes.
+Qu'il y a eu une croissance de 76% de ces effectifs en 6 ans, soit 9,9% par an.
+
+En 2014, le salarié type en Systèmes Embarqués...
+
+- travaille en en Île-de-France (exemple du plateau de Saclay), dans le Sud-Est (Grenoble ou Sophia-Antipolis) ou dans le Sud-Ouest (Bordeaux ou Toulouse - dynamisme du secteur aéronautique)
+- est ingénieur ou cadre (72% des effectifs) avec un niveau important d’expérience (46% ont plus de 5 ans dans les Systèmes Embarqués)
+- occupe une fonction d’ingénieur R&D électrique / électronique / mécanique ou de concepteur / développeur logiciel
+
+![Métiers]({{blog.images}}/opiiec/metiers.png)
+
+Le secteur connaît moins la crise que la moyenne. En effet, le nombre de demandeurs d’emploi des familles professionnelles des Systèmes Embarqués (informatique / électronique) est de 2 à 10 fois inférieur à la moyenne nationale.
+
+9,1% des offres APEC publiées correspondent à des postes en Systèmes Embarqués. La répartition géographique des offres d'emplois en France parle d'elle même !
+
+![Apec]({{blog.images}}/opiiec/apec.png)
+
+Le salaire moyen à l’entrée dans la vie active est de 37897€ (la moyenne nationale étant à 35184 € d’après l’Usine Nouvelle)
+
+L'étude dresse un portrait des différents acteurs du secteur. D'ailleurs, de nouveaux noms vont bientôt atterrir [dans ma liste](https://github.com/yoannsculo/emploi/blob/master/societes/france.json) ;) Merci !
+
+Le rapport qui liste des besoins en matières premières (matériaux/terres rares) et leur criticité et très instructif !
+
+On nous confirme que le marché français des fournisseurs de composants est un marché de niche.
+Les acteurs se comptent sur les doigts de la main. Je connaissais Eolane, mais je découvre Asteelflash et Cofidur.
+On cherchait justement la semaine dernière au [ParisEmbedded #4](http://www.meetup.com/ParisEmbedded/events/185373622/)
+des noms d'usines en France pouvant produire des quantité d'environ 1000 produits. La discussion était très intéressante et édifiante d'ailleurs. En dessous de 1000 par de soucis.
+Au dessus c'est trop, et il faut aller en Chine. 1000 est une quantité bâtarde qui n'intéresse pas la Chine et qui est au delà des capacités de production de sociétés françaises.
+L'étude illustre bien ce constat assez désespérant.
+
+Cette dernière confirme également la montée en puissance de l'Open source dans le secteur. En 2013, 47% des projets Embarqués avait un OS libre contre 36% en 2009.
+
+Hélas je ne suis pas forcément super convaincu que cette croissance est due à une adoption subite du Libre et de sa culture...
+Mais plutôt au fait qu'Android et Linux sont des solutions "Open Bar" et tout bénef pour les industriels. Bon en réalité même s'ils s'y retrouvent au final, ils se font rattrapper par la réalité des coûts cachés :D
+
+Près de 76000 entreprises sont aujourd’hui impliquées dans les Systèmes Embarqués en France d'après l'étude. Hé bien je ne suis pas prêt d'avoir fini ma liste !
+Mais on y trouve toujours autant de SSII :(
+
+![Emplois]({{blog.images}}/opiiec/emplois.png)
+
+95% des postes à pourvoir en systèmes embarqués sur l’APEC le sont en CDI. En effet, je n'ai jamais entendu parler de CDD dans le secteur. a part à l'ANSSI. Mais c'est un cas particulier !
+
+Sinon le marché a l'air de s'améliorer pour les ingénieurs en informatique.
+
+![Marché]({{blog.images}}/opiiec/marche.png)
+
+Bref ! L'étude est assez conséquente voir presque indigeste à lire d'un coup, mais est vraiment intéressante lorsque l'on évolue dans ce secteur.
+
+Vous pouvez retrouver tous les PDF [sur le site du Fafiec](http://www.fafiec.fr/81-l-observatoire-opiiec/etudes/metiers-de-l-ingenierie/211-evolution-metiers-besoins-systemes-embarques.html).
