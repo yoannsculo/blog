@@ -1,0 +1,38 @@
+---
+layout: post
+title: EmbeddedMap - Une carte des sociétés en Systèmes Embarqués
+keywords: embedded, map, carte, sociétés, France, liste
+publish: true
+---
+
+Je référence depuis quelques années les sociétés liées aux systèmes embarqués [dans une liste]({{blog.url}}/liste-entreprises-systemes-embarques-france) que j'ai déjà publié dans mon blog l'année dernière.
+
+Je contribue à mes heures perdues à OpenStreetMap depuis déjà plus d'un an. J'ai voulu il y a quelques mois m'amuser avec les API web, notamment [Leaflet](http://leafletjs.com/). Et j'ai réalisé que je pouvais matérialiser ma liste sur une carte de la France en y plaçant un curseur pour chaque société. Au début c'était pour le fun et par curiosité. J'ai passé un moment à noter chaque adresse postale puis les convertir en coordonnées GPS. J'ai été agréablement surpris par le résultat !
+
+[![EmbeddedMap]({{blog.images}}/embeddedmap/embeddedmap_preview.png)](http://embeddedmap.sculo.fr)
+
+Résultat qui ressemble étrangement aux cartes issues de [l'étude récente de l'OPIIEC]({{blog.url}}/etude-evolution-emplois-formations-systemes-embarques-OPIIEC-2014).
+
+![Apec]({{blog.images}}/opiiec/apec.png)
+
+En effet, on peut facilement repérer les régions dont la concentration de société est forte et inversement. J'ai même découvert la présence de sociétés, dont j'ignorais l'emplacement, à côté de chez moi. Je réalise que l'outil peut être particulièrement utile lors des recherches d'emploi où même  pour savoir où déménager en fonction de la présence de sociétés dans les environs.
+
+Et donc j'ai mis à disposition cette carte sur mon serveur : [embeddedmap.sculo.fr](http://embeddedmap.sculo.fr)
+
+[![EmbeddedMap]({{blog.images}}/embeddedmap/embeddedmap_preview_paris.png)](http://embeddedmap.sculo.fr)
+
+Le travail est loin d'être terminé. Il n'y a pour l'instant que 124 sociétés dont j'ai récupéré les coordonnées GPS.
+J'y vais progressivement, dans la mesure où c'est particulièrement long et répétitif à faire.
+Mais le résultat est déjà montrable, raison pour laquelle je partage cela maintenant.
+
+A terme, j'aimerais pouvoir :
+
+- rajouter des catégories (Industriels / service / éditeurs / OEM & Equipementiers / ...)
+- rajouter des secteurs d'activité
+- permettre le tri par catégories et secteurs
+- rajouter les salons et événements liés à l'embarqué
+- rajouter plus d'informations sur les sociétés
+
+J'ai [déposé les sources](https://github.com/yoannsculo/embeddedmap) (très basiques) de la page, ainsi que [les données au format json](https://github.com/yoannsculo/emploi/tree/master/societes) sur github.
+
+N'hésitez pas à me faire par de vos remarques voir à m'aider en contribuant sur le projet ;) Il y a notamment beaucoup de travail sur la récupération d'informations sur les sociétés.
