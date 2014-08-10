@@ -6,13 +6,15 @@ categories: C, CV, Emploi, ingénieur, ingénieur C embarqué, ingénieur linux 
 
 ## Devices & Projects
 
-19 Linux based projects I have been working on since 2009.
+21 Linux based projects I have been working on since 2009.
 
 <ul class="devices">
-	<li>Bookeen Cybook Ocean » OMAP 3611 (2014)<span><img src="./products/bookeen_cybook_ocean.jpg" /></span></li>
-	<li>Nolimbook » Allwinner A13 (2013)<span><img src="./products/carrefour_nolimbook.png" /></span></li>
-	<li>Nolimbook+ » OMAP 3611 (2013)<span><img src="./products/carrefour_nolimbook_plus.png" /></span></li>
-	<li>Bookeen Cybook Odyssey Frontlight » OMAP 3611 (2013)<span><img src="./products/bookeen_cybook_odyssey_hd_fl.jpg" /></span></li>
+	<li>Saraiva Lev com luz (CYBOY4F-SA) » Allwinner A13 (2014)<span><img src="./products/saraiva_lev_com_luz.jpg" /></span></li>
+	<li>Saraiva Lev (CYBOY4S-SA) » Allwinner A13 (2014)<span><img src="./products/saraiva_lev.jpg" /></span></li>
+	<li>Bookeen Cybook Ocean (CYBON1F-BK) » OMAP 3611 (2014)<span><img src="./products/bookeen_cybook_ocean.jpg" /></span></li>
+	<li>Carrefour Nolimbook (CYBOY4S-CF) » Allwinner A13 (2013)<span><img src="./products/carrefour_nolimbook.png" /></span></li>
+	<li>Carrefour Nolimbook+ (CYBOY4F-CF) » OMAP 3611 (2013)<span><img src="./products/carrefour_nolimbook_plus.png" /></span></li>
+	<li>Bookeen Cybook Odyssey Frontlight (CYBOY4F-BK) » OMAP 3611 (2013)<span><img src="./products/bookeen_cybook_odyssey_hd_fl.jpg" /></span></li>
 	<li>Mobilier Urbain Intelligent JCDecaux » Android / Fedora 18 (2013)<span><img src="./products/jcdecaux.jpg" /></span></li>
 	<li>Archos Home Automation » Atheros AR7240 (2012)<span><img src="./products/no_picture.gif" /></span></li>
 	<li>Archos TV Connect » OMAP 4470 (2012)<span><img src="./products/archos-tv-connect.jpg" /></span></li>
