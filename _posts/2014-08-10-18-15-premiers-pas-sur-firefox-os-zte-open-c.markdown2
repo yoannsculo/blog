@@ -1,0 +1,185 @@
+---
+layout: post
+title: Premiers pas sur Firefox OS - ZTE Open C
+keywords: firefox, os, ZTE, Open, C, test, libre
+publish: true
+---
+
+![zte open c]({{blog.images}}/firefoxos/zte-open-c.jpg)
+
+J'ai fait l'acquisition, la semaine dernière, du premier téléphone vendu en France, faisant tourner Firefox OS. Le [ZTE Open C](https://www.mozilla.org/fr/firefox/os/devices/#zte_openc)
+
+Si vous ne connaissez pas Firefox OS, je vous invite à consulter l'article très intéressant de Flaburgan, qui [explique bien le projet et sa finalité](http://geexxx.fr/2014/07/24/quest-ce-que-le-projet-firefox-os/).
+
+J'avais pu tester rapidement Firefox OS aux FOSDEM [2013]({{blog.url}}/fosdem-2013-petit-compte-rendu/) et [2014]({{blog.url}}/fosdem2014), mais je souhaitais aller plus loin, tant l'idée du projet me plaisait ! Voici un premier bilan après une semaine d'utilisation.
+
+##Le téléphone ZTE Open C
+
+Je me suis donc procuré le ZTE pour tester Firefox OS sans réelle volonté, pour le moment, de remplacer mon vieux HTC Desire HD au quotidien. Je voulais simplement tester ce concept d'OS libre. Et puis j'étais sacrément curieux de voir les rouages du système. Après tout, c'est mon métier :)
+
+Je ne vais pas m'étendre sur le hardware. Le téléphone est juste un prétexte pour tester l'OS. A 69€ je ne m'attendais pas à une bête de course. Toutefois je reste agréablement surpris par le rapport qualité prix. Le téléphone fonctionne bien et j'ai pu tenir une semaine sans être (trop) frustré.
+
+Le seul élément hardware gênant est l'appareil photo. L'APN de 2 Mpx du ZTE est, pour mon utilisation personnelle, clairement un frein à son usage quotidien. Ainsi, pour de bonnes photos, il faudra viser d'autres téléphones de meilleure facture.
+
+Je tiens à préciser que le marché de Firefox OS s'adresse normalement pour le moment aux pays émergents et aux gens souhaitant acheter leur premier smartphone. Ainsi tout est relatif, car le ZTE l'a rien à envier à mon premier smartphone Android ! Je trouve que l'approche de Mozilla est ici très judicieuse, car il n'est pas question d'entrer en concurrence frontale avec Android et IOS sur un marché bien verrouillé. En partant de marchés émergents, Firefox OS va pouvoir mûrir et progressivement se faire sa place. Alors que se jeter directement dans le grand bain serait un peu trop ambitieux.
+
+Je pense que ZTE joue ici la carte des early adopters. Et, comme nous allons le voir dans la suite de cet article, Firefox OS fonctionne plutôt bien. Il peut convenir à un certain nombre d'usages et de personnes en France.
+
+##Usage
+
+Je suis en train de quitter Google progressivement, depuis presque un an. Et Firefox OS est une des solutions envisageables pour me débarrasser de cette dépendance. Je ne pense pas avoir de profil classique, dans la mesure où je n'utilise que très peu d'applications et jeux sur Android.
+
+Mon usage se résume :
+
+- aux emails
+- aux photos
+- au calendrier
+- à la gestion de contacts
+- aux SMS/MMS et aux appels
+- au web
+- à Twitter
+- à afficher la carte du métro de temps en temps
+- et parfois jouer à des petits jeux comme 2048.
+
+En théorie je pourrais amplement me passer d'Android. Voyons voir ce que ça donne en pratique
+
+##Configurer le wifi
+
+Première galère, l'écriture dans les champs texte de Firefox OS. Ça vaut pour toutes les applications. Pour revenir sur une zone et éditer un mot déjà écrit, il n'y a pas de flèches gauche/droite ni de loupe. Il faut cliquer directement au bon endroit ou un peu après pour effacer pour recommencer. Donc pour rentrer une longue clé ça devient un peu chiant si on se trompe. Surtout si l'on souhaite vérifier que le début de la chaîne est bon. Car il a disparu bien à gauche, et sans flèche pour s'y rendre bah en cas d'erreur on efface tout et on recommence.
+
+![zte open c]({{blog.images}}/firefoxos/screenshot-wifi.png)
+
+Deuxième point concernant les champs textes, c'est que les lettres du clavier sont en majuscules, mais génèrent des minuscules. La touche SHIFT qui permet de faire des majuscules ne change pas pour autant l'aspect du clavier. Quand on est habitué à Android, on est un peu frustré. Mais on s'y fait.
+
+Troisième élément, il n'y a pas de copier coller pour le moment. [Apparemment ça arrive](https://twitter.com/AhmedNefzaoui/status/495307461541515264)
+
+Mis à part ça, tout marche bien pour le wifi :)
+
+##Twitter
+
+![toto]({{blog.images}}/firefoxos/screenshot-tweet.png)
+
+
+J'ai commencé par Twitter, histoire de faire mon malin à poster mon premier Tweet depuis Firefox OS. Il est assez agréable d'utiliser le clavier lorsque l'on a compris comment fonctionnait l’auto complétion. Malheureusement on a droit à une ponctuation forcée à l'américaine. Donc même si on met un espace avant les points d'exclamation et d'interrogation, le système nous colle ça automatiquement au mot d'avant. C'est lourd !
+
+Mis à part ça, c'est Twitter, et ça marche bien pour mon usage !
+
+##Emails
+
+Outch ! Alors là j'ai pas de chance. J'ai configuré l'application Courriel sur mon compte mail OVH. J'ai récupéré mes emails sans aucun soucis. Par contre, pas moyen de lire leur contenu, ni de les supprimer, ni d'envoyer d'email… J'ai recommencé la manipulation, pareil. En patientant sur l'écran de chargement pendant 30 minutes, l'email finit par s'afficher. Tout comme le reste des emails. Par contre pas moyen de supprimer ni d'envoyer d'email.
+
+![Bug email]({{blog.images}}/firefoxos/screenshot-bug-email.png)
+
+J'ai cherché [dans la FAQ](https://support.mozilla.org/fr/products/firefox-os). Rien. Et j'ai fini par tomber sur l'encart tout [en bas de cette page](https://developer.mozilla.org/fr/Firefox_OS). C'était bien caché ! Après avoir donc fait un tour sur IRC sur #b2g on m'a envoyé sur bugzilla. J'ai failli abandonner la recherche de mon bug dans la liste [tellement il y en avait](https://bugzilla.mozilla.org/buglist.cgi?product=Firefox%20OS&component=Gaia%3A%3AE-Mail&resolution=---&list_id=10898145). Mais par magie je suis tombé [sur mon bug](https://bugzilla.mozilla.org/show_bug.cgi?id=1018550) et j'ai découvert que [je n'étais pas le seul](https://support.mozilla.org/en-US/questions/1003653)
+
+En l'état, le seul moyen que ça fonctionne est de passer en POP3, mais l'IMAP semble très capricieux ! Ça commence bien ! Donc pour le moment je peux juste consulter mes emails. Cela semble spécifique à mon compte email. Donc il y a des chances que ça marche avec d'autres configurations.
+
+J'en ai profité pour fournir des logs. Et cela m'a permis de découvrir plusieurs trucs.
+
+- Qu'il y a adbd sur FirefoxOS et que ça marche bien. Damn ! [Si j'avais su]({{blog.url}}/adb-produits-non-android) ! Mais on me l'avait appris dans les commentaires de mon article sur adb.
+- Que remonter un bug avec logs est [particulièrement lourd](https://wiki.mozilla.org/Gaia/Email/RequiredBugInfo) et pas à la portée de n'importe qui. D'autant plus que j'ai pesté un moment à ouvrir un compte sur [le support Mozilla](https://support.mozilla.org/fr) qui m'obligeait à créer un ticket pour répondre à un ticket...
+- Que l'on peut prendre des captures d'écran avec le bouton home et le bouton power
+
+##Mass storage
+
+Aucun soucis. Ouf ! Pas de mtp.
+
+##Le Web
+
+Aucun soucis. C'est Firefox :)
+
+##Calendrier
+
+![Agenda]({{blog.images}}/firefoxos/screenshot-agenda.png)
+
+J'ai branché mon Calendar Google pour le moment. Ça marche très bien.
+On peut également rajouter un calendrier CalDav, option dispo sur mon NAS.
+
+Je trouve même que le rendu du calendrier est mieux que celui de mon HTC Desire HD sous Android.
+
+##Les applications
+
+Il existe deux façons d'installer des applications :
+
+- le Marketplace
+- la recherche adaptative
+
+###Le Marketplace
+
+Rien de plus classique, c'est un magasin d'applications.
+
+J'ai été juste un peu dérouté. Les applications s'installent comme ça, sans permissions. A la différence d'Android, on peut accepter d'installer une application mais en refuser certains accès. Si un jeu demande d'accéder aux coordonnées GPS, on peut l'envoyer bouler. C'est ensuite à l'application de gérer le refus de l'utilisateur. J'aime bien ce système, c'est juste qu'avec le passif d'Android ça fait bizarre d'installer directement une application de cette façon.
+
+![zte open c]({{blog.images}}/firefoxos/screenshot-market.png) ![zte open c]({{blog.images}}/firefoxos/screenshot-pegi.png)
+
+Chaque application est estampillée d'un label PEGI. C'est bien, sauf que « 3 ans et plus » apparaît sur 80 % des applications. Le label PEGI semble étonnamment plus important que la description de l'application. Il faut cliquer sur chaque application pour savoir ce qu'elle fait. C'est assez lourd.
+
+Je ne vais pas mentir en disant que le store est jeune et encore bien vide. Il est rempli de pâles copies de jeux populaires. Mais ça reste le lot de n'importe quel magasin d'applications. Cela fait complètement Android à ses débuts.
+
+Pour mon usage, j'ai trouvé tout ce dont j'avais besoin. Donc je suis complètement satisfait !
+
+Mais pour les amateurs d'applications et de jeux il faudra attendre que plus de développeurs s'approprient Firefox OS pour bénéficier d'un store d'applications de qualité.
+
+###La recherche adaptative
+
+![zte open c]({{blog.images}}/firefoxos/screenshot-recherche.png) ![zte open c]({{blog.images}}/firefoxos/screenshot-recherche2.png) ![zte open c]({{blog.images}}/firefoxos/screenshot-recherche3.png)
+
+Cette fonctionnalité permet d'effectuer des recherches sur des site mobiles qui peuvent être installés et utilisés comme applications.
+
+De cette façon j'ai installé :
+
+- Duckduckgo
+- iMDB
+- la version officielle de 2048
+
+J'ai joué pendant une semaine à 2048, j'avais l'impression d'être offline en y jouant. Donc j'en ai bien conclu que l'application avait été sauvegardée pour être lancée en offline.
+
+Pour Duckduckgo, je dois systématiquement attendre que le site de duckduckgo.com se charge pour pouvoir lancer une recherche.
+
+Gros regret tout de même, que Firefox OS ne mette pas en avant Duckduckgo. Il n'y a qu'un seul moteur de recherche, Google. Il n'y a pas encore d'application Duckduckgo sur le Market. J'espère que ça arrivera vite !
+
+##Divers
+
+On retrouve une application native de suivi de conso. C'est bien pratique. Par contre, pas de calculatrice. Mais on en trouve sur le market.
+
+![zte open c]({{blog.images}}/firefoxos/screenshot-conso.png) ![zte open c]({{blog.images}}/firefoxos/screenshot-calculatrice.png)
+
+Pour mon plan de métro en PDF, on oublie. Le chargement se compte en minutes. Il faudra attendre une application RATP ou équivalent.
+
+##Le téléphone en lui même
+
+![zte open c]({{blog.images}}/firefoxos/screenshot-tel.png)
+
+J'ai importé mes contacts Google et ça a marché super. J'ai appelé, on m'a appelé. J'ai échangé SMS et MMS. RAS là dessus. C'est même très ergonomique ! Reste un manque, les timestamp des SMS pour resituer les derniers messages envoyés/reçus. Mais j'imagine que c'est le genre de chose qui pourrait apparaître dans de prochaines mises à jour.
+
+##Conclusion
+
+Concevoir un OS ergonomique et exempt de bugs est un travail colossal. J'admire le travail réalisé. En l'état, Firefox OS est largement utilisable pour les gens patients. Il y a des bugs, les applications sont souvent assez basiques et il y a énormément de perspectives d'améliorations. Mais ça fait globalement bien son travail ! A mes yeux il y a donc un énorme potentiel ! De plus, même avec plein d'applications lancées en même temps, le système n'a jamais ramé comme pourrait le faire Android !
+Je suis agréablement surpris par la qualité du ZTE et de Firefox OS. A 69€ je savais à quoi m'attendre. J'estime en avoir eu pour mon argent.
+
+Je pense néanmoins qu'il est encore trop top pour mettre Firefox OS dans toutes les mains et surtout celles des gros consommateurs d'applications. La marche d'Android/iOS vers FirefoxOS est encore trop importante, et il serait même anti-productif de pousser ce genre d'utilisateur vers ce nouveau système.
+
+Cela résume l'usage actuel de Firefox OS à deux types d'utilisateurs :
+
+1. les personnes n'ayant jamais eu de smartphone et/ou ayant un usage très simple de leur téléphone, voir n'utilisant pas de data.
+2. les libristes / early-adopters / les développeurs / les personnes soucieuses de leur vie privée.
+
+ZTE/Firefox OS est une combinaison de téléphone / OS que je conseillerais par exemple à mes parents. Simple à utiliser, mine de rien plutôt ergonomique et sans fioritures.
+
+Firefox répond ainsi à la pluspart de mes besoins. Mais bien que rentrant dans la seconde catégorie sus-citée, aujourd'hui je fais le choix l'arrêter d'utiliser le ZTE au quotidien pour deux raisons :
+
+- L'appareil photo n'est pas d'assez bonne résolution pour mon usage personnel. Mais ça, je le savais dès le départ. Toutefois, cela pourrait par contre convenir à la première catégorie d'utilisateurs.
+- Le client mail n'est pas complètement fonctionnel pour ma configuration de mail. Mais ça reste temporaire, les bugs sont dans bugzilla et devraient être corrigés dans de prochaines versions. Juste une question de temps pour que l'on atteigne une qualité similaire à K-9 Mail sous Android, je l'espère.
+
+Je vais maintenant tester [Cyanogenmod](http://fsfe.org/campaigns/android/android.html) que j'ai flashé sur mon HTC pendant que j'utilisais Firefox OS comme téléphone principal. Je vais ainsi expérimenter un Android sans Google au quotidien, ce qui sera l'occasion d'un second billet bientôt.
+
+Je garde mon ZTE dans un coin et compte attendre les prochaines mises à jour pour les tester et remonter des bugs au fur et à mesure. Lorsque le client mail sera réparé et que des téléphones avec de bons capteurs d'appareil photo seront dispo en France, la question de l'usage au quotidien se reposera très clairement !
+
+En attendant, j'ai Cyanogenmod et [F-Droid](https://f-droid.org/) à tester. Je compte également regarder d'un peu plus près la structure du système et le code de Firefox OS, ce qui sera peut-être le sujet d'un prochain article.
+
+Et pour la route, des liens intéressants :
+
+- [Communauté francophone](http://forums.mozfr.org/viewforum.php?f=33)
+- [Le support de Mozilla](https://support.mozilla.org/fr/products/firefox-os)
+- [Le bugtracker de Mozilla](https://bugzilla.mozilla.org/)
+- [Un peu de doc pour bricoler dans Firefox OS](https://developer.mozilla.org/en-US/Firefox_OS/Firefox_OS_build_prerequisites)
