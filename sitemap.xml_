@@ -31,12 +31,6 @@
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
-	<url>
-		<loc>{{blog.url}}/Yoann_Sculo_Resume_Embedded_Linux.txt</loc>
-		<lastmod>{{ site.now|xmldatetime() }}</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
 
 	{% for post in site.posts|reverse %}
 	<url>
