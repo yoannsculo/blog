@@ -3,13 +3,11 @@ layout: page
 title: A-propos
 ---
 
-![moi](me.jpg)
-
 ## A propos
 
 Je m'appelle Yoann Sculo, je suis ingénieur Linux embarqué, passionné par le
 libre et l'open source, les systèmes embarqués, les bricolages en tout genre,
-mais aussi par un paquet d'autres choses.
+mais aussi par un paquet d'autres choses. Je travaille actuellement chez [Bookeen](http://www.bookeen.com).
 
 Ce site est l’occasion pour moi de partager tout ce qui me tient à coeur, mes
 bidouilles, projets et bricolages en tout genre. Mon blog me permet également
@@ -22,7 +20,7 @@ d'expression personnel et ne représente pas les positions et opinions de mon
 employeur actuel.
 
 J'évolue dans le secteur de l'électronique grand public. J'ai travaillé jusque
-là sur un peu plus d'[une quizaine de produits]({{blog.url}}/devices).
+là sur un peu plus d'[une vingtaine de produits]({{blog.url}}/devices).
 
 ## Contact
 
