@@ -15,7 +15,11 @@ categories: C, CV, Emploi, ingénieur, ingénieur C embarqué, ingénieur linux 
 	<li>Carrefour Nolimbook (CYBOY4S-CF) » Allwinner A13 (2013)<span><img src="./products/carrefour_nolimbook.png" /></span></li>
 	<li>Carrefour Nolimbook+ (CYBOY4F-CF) » OMAP 3611 (2013)<span><img src="./products/carrefour_nolimbook_plus.png" /></span></li>
 	<li>Bookeen Cybook Odyssey Frontlight (CYBOY4F-BK) » OMAP 3611 (2013)<span><img src="./products/bookeen_cybook_odyssey_hd_fl.jpg" /></span></li>
+</ul>
+<ul class="devices">
 	<li>Mobilier Urbain Intelligent JCDecaux » Android / Fedora 18 (2013)<span><img src="./products/jcdecaux.jpg" /></span></li>
+</ul>
+<ul class="devices">
 	<li>Archos Home Automation » Atheros AR7240 (2012)<span><img src="./products/no_picture.gif" /></span></li>
 	<li>Archos TV Connect » OMAP 4470 (2012)<span><img src="./products/archos-tv-connect.jpg" /></span></li>
 	<li>Archos 101 XS » OMAP 4470 (2012)<span><img src="./products/101xs.jpg" /></span></li>
@@ -27,7 +31,11 @@ categories: C, CV, Emploi, ingénieur, ingénieur C embarqué, ingénieur linux 
 	<li>Archos 80 G9 250Go » OMAP 4 (2011-2012)<span><img src="./products/80g9.png" /></span></li>
 	<li>Archos 70 IT2 » Android 3.2.1 - OMAP 3630 (2011)<span><img src="./products/70b.png" /></span></li>
 	<li>Archos 70 IT2 250Go » Android 3.2.1 - OMAP 3630 (2011)<span><img src="./products/70b.png" /></span></li>
+</ul>
+<ul class="devices">
 	<li>Major Alfred » (2011)<span><img src="./products/no_picture.gif" /></span></li>
 	<li>Karotz » Samsung S3C2440 (2010-2011)<span><img src="./products/mindscape_karotz.jpg" /></span></li>
+</ul>
+<ul class="devices">
 	<li>Exomars Rover » Leon (2009)<span><img src="./products/exomars.jpg" /></span></li>
 </ul>
