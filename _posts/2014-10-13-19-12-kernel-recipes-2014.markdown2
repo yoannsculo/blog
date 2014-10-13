@@ -38,8 +38,8 @@ et de Jiri Slaby :
 
 ![Jiri Slaby]({{blog.images}}/kr2014/Jiri_Slaby.jpg)
 
-Les conférences étaient très variées, ce qui était super. Il était tout de même difficile de rentrer *toutes* les présentations lorsque l'on ne travaille pas dans le domaine.
-J'étais donc pas mal largué lors des présentations sur la sécurité, réseau, cloud et driver NVIDIA. [La présentation sur les instructions x86](https://kernel-recipes.org/fr/2014/encodage-des-instructions-x86-et-hacks-kernel/) était trop hardcore pour moi.
+Les conférences étaient très variées, ce qui était super. Il était tout de même difficile de comprendre et de bien suivre *toutes* les présentations.
+Ces dernières pouvaient être très techniques et j'étais donc pas mal largué sur les sujets relatifs à la sécurité, le réseau et le cloud. [La présentation sur les instructions x86](https://kernel-recipes.org/fr/2014/encodage-des-instructions-x86-et-hacks-kernel/) était super hardcore à suivre.
 Néanmoins, je trouve bien qu'il y en ait pour tous les goûts !
 
 Greg Kroah-Hartman nous a parlé de l'[Eudyptula Challenge](http://eudyptula-challenge.org/). Ça m'a vraiment donné envie de participer :) J'en suis à l'étape 1, et pour l'instant je n'arrive pas à trouver le temps de travailler dessus. Mais je compte bien aller plus loin ;)
@@ -48,3 +48,5 @@ Merci
 
 - à Hupstream pour l'organisation de Kernel Recipes (c'était vraiment très sympa !) et pour les [photos](https://www.flickr.com/photos/hupstream/sets/72157648227236192)
 - et à [Samir Bellabes](https://twitter.com/ackrst) pour la [super pano]({{blog.images}}/kr2014/kr2014_panoramique.jpg) ;)
+
+A l'année prochaine !
