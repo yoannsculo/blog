@@ -1,0 +1,50 @@
+---
+layout: post
+title: Kernel Recipes 2014
+keywords: kernel recipes, linux, meetup
+publish: true
+---
+
+![Panoramique Kernel Recipes]({{blog.images}}/kr2014/kr2014_panoramique.jpg)
+
+J'étais à la [3eme édition de Kernel Recipes](https://kernel-recipes.org/fr/2014/) fin septembre. Une édition encore très réussie.
+90 personnes dans les super locaux de Mozilla à Paris. Deux journées vraiment très intéressantes sur des sujets vraiment très variés.
+
+[Les slides et vidéos des conférences](https://kernel-recipes.org/fr/2014/Programme/) ainsi que [des photos des deux journées](https://kernel-recipes.org/fr/2014/images/) ont été mises en lignes.
+
+Coup de cœur pour les présentations de [Greg Kroah-Hartman](http://en.wikipedia.org/wiki/Greg_Kroah-Hartman) :
+
+- [Le développement du kernel](https://kernel-recipes.org/fr/2014/le-developpement-du-kernel/)
+- [Enseigner le noyau Linux, un exercice à la fois](https://kernel-recipes.org/fr/2014/enseigner-le-noyau-linux-un-exercice-a-la-fois/)
+
+![Greg Kroah-Hartman]({{blog.images}}/kr2014/gkh.jpg)
+
+et de Hans Verkuil :
+
+- [Tester les applications et pilotes Video4Linux](https://kernel-recipes.org/fr/2014/tester-les-applications-et-pilotes-video4linux/)
+- [Ecrire du code : faire court, c’est simple !](https://kernel-recipes.org/fr/2014/ecrire-du-code-le-conserver-court-cest-simple/)
+
+![Hans Verkuil]({{blog.images}}/kr2014/Hans_Verkuil.jpg)
+
+Chouettes présentations de Maxime Ripard également :
+
+- [Allwinner, un état des lieux du support et du développement](https://kernel-recipes.org/fr/2014/allwinner-un-etat-des-lieux-du-support-et-du-developpement/)
+
+![Maxime Ripard]({{blog.images}}/kr2014/maxime_ripard.jpg)
+
+et de Jiri Slaby :
+
+- [kGraft : patcher le noyau en temps réel](https://kernel-recipes.org/fr/2014/patcher-le-noyau-en-temps-reel/)
+
+![Jiri Slaby]({{blog.images}}/kr2014/Jiri_Slaby.jpg)
+
+Les conférences étaient très variées, ce qui était super. Il était tout de même difficile de rentrer *toutes* les présentations lorsque l'on ne travaille pas dans le domaine.
+J'étais donc pas mal largué lors des présentations sur la sécurité, réseau, cloud et driver NVIDIA. [La présentation sur les instructions x86](https://kernel-recipes.org/fr/2014/encodage-des-instructions-x86-et-hacks-kernel/) était trop hardcore pour moi.
+Néanmoins, je trouve bien qu'il y en ait pour tous les goûts !
+
+Greg Kroah-Hartman nous a parlé de l'[Eudyptula Challenge](http://eudyptula-challenge.org/). Ça m'a vraiment donné envie de participer :) J'en suis à l'étape 1, et pour l'instant je n'arrive pas à trouver le temps de travailler dessus. Mais je compte bien aller plus loin ;)
+
+Merci
+
+- à Hupstream pour l'organisation de Kernel Recipes (c'était vraiment très sympa !) et pour les [photos](https://www.flickr.com/photos/hupstream/sets/72157648227236192)
+- et à [Samir Bellabes](https://twitter.com/ackrst) pour la [super pano]({{blog.images}}/kr2014/kr2014_panoramique.jpg) ;)
