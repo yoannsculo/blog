@@ -1,0 +1,91 @@
+---
+layout: post
+title: De l'intérêt de ne pas nommer ses branches git avec des chaînes hexadécimales
+keywords: git, astuce, problème, hexa, reference is not a tree
+publish: true
+---
+
+Je me suis arraché les cheveux pendant un moment sur un problème de git. Avec le recul, le problème était évident mais m'a bien fait perdre mon temps.
+
+Voilà, on utilise des codes pour nommer nos projets au travail.
+
+	Exemple: N1, NC1NC2, P1P2, A1A2, ...
+
+Chaque repository (j'en ai un paquet) possède une branche du nom du produit. J'ai donc des branches n1, nc1nc2, p1p2, a1a2, ...
+
+J'ai commencé il y a un moment avec les projets n1, nc1nc2 et p1p2. Je n'ai pas rencontré de problème particulier. J'ai enchaîné avec le nouveau projet a1a2. J'ai alors, comme à mon habitude, créé ma branche de la façon suivante :
+
+	git checkout -b a1a2
+
+puis j'ai pushé ma branche distante. Jusque là, aucun soucis.
+
+Dès que j'ai voulu récupérer les sources depuis une autre machine, j'ai eu droit à l'erreur suivante :
+
+	$ git checkout a1a2
+	fatal: reference is not a tree: a1a2
+
+Cette erreur n'arrivant *que* dans le repository de mon kernel et pas dans mes autres repositories pourtant bien fournis en fichiers et en commits... Curieux !
+
+J'ai commencé à suspecter le fait que ma branche était une chaîne hexadécimale et que ça devait poser problème d'une façon où d'une autre. Pourtant pas le moindre hash de commit ne contenait de bloc **a1a2** dans l'arbre de mon kernel...
+
+Et là on m'a soufflé qu'il fallait peut-être regarder du côté des objets git.
+
+	$ git rev-list --objects --all | grep a1a2
+	1ca63b3e5635bec2c763e4ae93e1155f32a1a295 Documentation/arm/Samsung-S3C24XX/Suspend.txt
+	5a2758ab055e613d42e619b797ba1a28d020ec53 arch/arm/mach-exynos4/irq-combiner.c
+	111caa1a2efb4105aa0e45ae8552c8de6e5497a1 arch/cris/arch-v32/kernel/fasttimer.c
+	31180c321a1a29b1f7c5d7a2c1b1a5f6188ee0ed arch/mips/mti-malta/malta-init.c
+	7bafbf2ec0f92712aac0a1a259b22e1dd3de4b7f arch/powerpc/platforms/83xx/mpc837x_rdb.c
+	184fde16913282c76e51c6ba1a2ddab1d267d789 arch/sh/boards/mach-migor/setup.c
+	6c2239cca1a2d86204a52ecef53ab5514f8a6073 arch/sh/include/asm/ptrace_32.h
+	fbb0a045a1a23bc9bdc2f9dd23c6c9673e2e13f7 arch/x86/kernel/syscall_table_32.S
+	62122a1a2f7a6416f1105ff88dae672ccac8a5dd crypto/algif_hash.c
+	f37878c9c06eb43812b022ba72a034418a1a238e drivers/infiniband/core/mad_rmpp.c
+	a4390a1a2a9fbb214b89fcb9fc3d47d7133cfc01 drivers/net/wireless/mwifiex/11n.h
+	9d75dc8ca602995826b80c842e40edfea1a2d866 drivers/pci/search.c
+	a1a278bc340dbfd0ff6814c8bcfec577f6137c85 drivers/rtc/rtc-mc13xxx.c
+	5175e67a6d28f71a1a21410cdc0a7f770ac30cd4 drivers/staging/brcm80211/include/bcmsdpcm.h
+	47bf08dc75665a1a2163ff63145cca89bf900a7e include/linux/dlmconstants.h
+	889c3e93e0f4a9df2a1a2007799f2a2f13e8a496 net/mac80211/chan.c
+	172c4d6b1ad1d8f1d2694f51169218fa1a25d2cf sound/pci/hda
+	df370286694f89de7dbfce2cba1a29ae3dfcf7ee sound/soc/mid-x86/sst_platform.h
+	8957bbfe5acd33286aea1a2d5cfd16e620e38496 drivers
+
+Bingo !
+
+git checkout va chercher dans les noms des branches, les hash de commit **ET** les hashs d'objets git !
+
+Pour un projet tout récent et tout vide de fichiers et de commits, il y a très peu de chances qu'une des branches coincide avec une partie de chaîne de hash de commit ou d'objet. Par contre, quand on importe un kernel avec plusieurs milliers de fichiers et un historique important, le risque devient réel !
+
+Ainsi je peux, sans problème, créer une branche locale **a1a2** et la rendre distante. Par contre, la commande ``git checkout`` est incapable de savoir si on parle d'un object git ou bien d'une branche.
+
+A moins de faire de la façon suivante :
+
+	$ git checkout refs/heads/a1a2 
+	Note: checking out 'refs/heads/a1a2'.
+
+	You are in 'detached HEAD' state. You can look around, make experimental
+	changes and commit them, and you can discard any commits you make in this
+	state without impacting any branches by performing another checkout.
+
+	If you want to create a new branch to retain commits you create, you may
+	do so (now or later) by using -b with the checkout command again. Example:
+
+	  git checkout -b new_branch_name
+
+	HEAD is now at ..........
+
+Mais comme l'indique le warning, on se retrouve en
+
+	# HEAD detached at refs/heads/a1a2
+
+Dans mes codes de projets, j'avais jusque là, et par chance, toujours un caractère non hexadécimal. Mais sans faire attention, je me suis mis dans un cas ambigu avec mon projet a1a2.
+
+Je suis néanmoins étonné que git ne me mette pas de warning suite à la création d'une branche nommée a1a2, car il y a un risque réel de mettre le boxon !
+
+Conclusion:
+
+- **toujours** avoir au moins un caractère **non-hexadécimal** dans ses noms de branches.
+- exclure de la même façon les branches nommées exclusivement avec des caractères numériques.
+
+Bref, finalement ça va de soi, mais on ne pense pas initialement que le nom de la branche pourrait poser problème...
