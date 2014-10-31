@@ -1,0 +1,208 @@
+---
+layout: post
+title: repo - gérer des repositories git multiples sans trop s'arracher de cheveux
+keywords: repo, git
+publish: true
+---
+
+Maintenir un projet sur un repository git c'est cool. Quand on a plusieurs projets qui font 300 repositories et qui traînent une ribambelle de branches, c'est une autre histoire à maintenir !
+Il existe plusieurs outils pour nous sauver un peu la vie lorsqu'on en arrive là.
+Chacun a des avantages et inconvénients. Mais je n'ai pas encore vu de logiciel sortir vraiment du lot.
+
+- [Git submodules](http://codingkilledthecat.wordpress.com/2012/04/28/why-your-company-shouldnt-use-git-submodules/), mais qui me fout des boutons.
+- [Git Subtree](http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/) existe également, que je n'ai pas encore testé faute de temps.
+- [Google repo](https://source.android.com/source/downloading.html), solution dont je vais parler ici, et que je commence à bien connaître.
+
+`repo` est une application en Python développée par Google, historiquement pour gérer les centaines de repositories git d'Android. J'ai commencé à l'utiliser pour compiler des firmwares Android, et j'ai fini par m'en servir sur des projets non Android. L'outil n'est franchement pas parfait mais fait son travail si l'on est un minimum rigoureux.
+
+Le but de cet article est de lister quelques astuces et pointer les difficultés que l'on peut rencontrer en utilisant l'outil.
+
+Pour créer un projet avec repo, il faut déjà [télécharger l'application ici](https://source.android.com/source/downloading.html#installing-repo).
+
+Eviter d'aller chopper des vieilleries dans les versions de repo ! Il peut y avoir de sacrées différences entre des versions de repo assez éloignées, j'en ai fait les frais.
+De toute façon, repo vérifie régulièrement l'existence de mises à jour sur le net. S'il trouve une update, vous serez notifié à chaque exécution du soft.
+
+# Utilisation de repo - la théorie
+
+repo [fournit quelques commandes](https://source.android.com/source/developing.html) pour manipuler les repositories :
+
+	  abandon        Permanently abandon a development branch
+	  branch         View current topic branches
+	  branches       View current topic branches
+	  checkout       Checkout a branch for development
+	  cherry-pick    Cherry-pick a change.
+	  diff           Show changes between commit and working tree
+	  diffmanifests  Manifest diff utility
+	  download       Download and checkout a change
+	  grep           Print lines matching a pattern
+	  info           Get info on the manifest branch, current branch or unmerged branches
+	  init           Initialize repo in the current directory
+	  list           List projects and their associated directories
+	  overview       Display overview of unmerged project branches
+	  prune          Prune (delete) already merged topics
+	  rebase         Rebase local branches on upstream branch
+	  smartsync      Update working tree to the latest known good revision
+	  stage          Stage file(s) for commit
+	  start          Start a new branch for development
+	  status         Show the working tree status
+	  sync           Update working tree to the latest revision
+	  upload         Upload changes for code review
+
+
+
+L'usage classique est le suivant :
+
+	mkdir myproject
+	cd myproject
+
+repo utilise un fichier xml (manifest) qui va définir exactement où trouver nos repositories, quelle branche récupérer, où déposer les dossiers, etc. On initialise le projet de la façon suivante :
+
+	repo init -u git@github.com:yoannsculo/manifest.git
+
+On synchronise ensuite les sources
+
+	repo sync
+
+On se place sur la branche de notre choix (ici master) sur les repos.
+
+	repo start master --all 
+
+On peut se faire une idée de l'état du projet avec
+
+	repo status
+
+On peut alors développer de façon classique sur git, et synchroniser ses sources avec repo sync.
+
+# Utilisation de repo - la pratique
+
+Bien qu'il y ait peu de commandes, repo s'avère un peu capricieux à l'usage. Je vais donc détailler comment je fonctionne.
+
+## Le manifest
+
+La première étape est la création du fichier manifest (fichier `default.xml`) qui va référencer les projets à synchroniser.
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<manifest>
+	    <remote name="github" fetch="ssh://git@github.com:yoannsculo"/>
+	    <remote name="buildroot" fetch="git://git.buildroot.net/buildroot"/>
+
+	    <default revision="master" remote="github" sync-j="8"/>
+
+	    <project name="JobCatcher.git" remote="github" path="job/jobcatcher" revision="unstable">
+		<copyfile src="README.md" dest="README.md" />
+	    </project>
+
+	    <project name="emploi.git" remote="github" path="job/emploi" />
+	    <project name="SHOUTcast-Recorder.git" remote="github" path="dev/SHOUTcast-Recorder" />
+	    <project name="adbd.git" remote="github" path="dev/android/adbd" revision="gingerbread-adbd" />
+	    <project name="buildroot.git" remote="github" path="dev/buildroot" /> 
+
+	</manifest>
+
+Je me suis construit un exemple à partir de divers projets github. J'ai créé un [repository github](https://github.com/yoannsculo/manifest) pour cet article, où j'y ai déposé le fichier `default.xml`
+
+Juste pour se faire une idée, voici le [manifest par défaut d'Android](https://android.googlesource.com/platform/manifest/+/master/default.xml)
+
+Le manifest default.xml est le manifest appelé si l'on ne spécifie pas de manifest particulier. Pour pas mal de projets, un seul manifest peut suffir. Il est possible de demander un autre manifest avec l'option -m
+Par exemple, si je rajoute un second manifest sur mon repository github, je peux choisir un nouvel ensemble de projets et de branches spécifiques.
+
+	repo init -u git@github.com:yoannsculo/manifest.git -m new_project.xml
+
+Personnellement, je posède un seul repository privé qui centralise tous mes projets.
+
+## Récupération des sources
+
+Après avoir récupéré les sources
+
+	repo sync
+
+on se retrouve alors avec l'arborescence suivante :
+
+	.
+	├── dev
+	│   └── SHOUTcast-Recorder
+	├── job
+	│   ├── emploi
+	│   └── jobcatcher
+	└── README.md
+
+J'utilise systématiquement repo sync -j8 et repo status -j8 parce que j'ai 8 processeurs et qu'on gagne un temps fou si on ne le fait pas en parallèle !
+
+## Se place sur une branche
+
+Si je rentre dans le projet jobcatcher, par exemple, un **git status** me retourne
+
+	# Not currently on any branch.
+	nothing to commit, working directory clean
+
+Par défaut, nous ne sommes sur aucune branche. En regardant de plus près avec un **git branch -avv**,
+
+	* (no branch)             11d0b5d Happy new year!!
+	  remotes/github/master   9de3e04 Merge pull request #91 from guillaumerose/patch-1
+	  remotes/github/unstable 11d0b5d Happy new year!!
+	  remotes/m/master        -> github/unstable
+
+nous avons un résultat légèrement différent par rapport au résultat d'un `git clone` sur le même répository git :
+
+	* master                  9de3e04 [origin/master] Merge pull request #91 from guillaumerose/patch-1
+	  remotes/origin/HEAD     -> origin/master
+	  remotes/origin/master   9de3e04 Merge pull request #91 from guillaumerose/patch-1
+	  remotes/origin/unstable 11d0b5d Happy new year!!
+
+Cette différence est source de soucis par la suite. Non seulement il faut se placer sur la branche qui nous intéresse (master n'est pas choisie par défaut), mais repo va créer une branche `remotes/m/master` qui va pointer sur la branche qui a été spécifiée dans le fichier manifest. La branche unstable ici. Alors qu'un simple git clone va automatiquement créer une branche de suivi master, ce que ne fait pas repo.
+
+Pour se placer sur la branche unstable, il suffit de faire
+
+	repo start unstable JobCatcher.git
+
+Les commandes repo peuvent être exécutées à n'importe quel niveau de l'arborescence du projet principal.
+Cela donne le résultat suivant (git branch -avv) :
+
+	* unstable                11d0b5d Happy new year!!
+	  remotes/github/master   9de3e04 Merge pull request #91 from guillaumerose/patch-1
+	  remotes/github/unstable 11d0b5d Happy new year!!
+	  remotes/m/master        -> github/unstable
+
+Personnellement j'ai du mal à comprendre pourquoi cela a été conçu de cette façon.
+J'ai tendance à faire légèrement différemment en faisant un git checkout moi même, afin de récupérer le tracking de la branche distante :
+
+	git checkout unstable
+
+me donne alors le résultat suivant :
+
+	* unstable                11d0b5d [github/unstable] Happy new year!!
+	  remotes/github/master   9de3e04 Merge pull request #91 from guillaumerose/patch-1
+	  remotes/github/unstable 11d0b5d Happy new year!!
+	  remotes/m/master        -> github/unstable
+
+ce que je préfère.
+
+Suivant les projets il se peut que tous les repositories soient sur la même branche. Autant cela est possible sur Android qui centralise ses sources, autant la chose est tout de suite moins simple s'il s'agit de récupérer les sources d'un autre projet distant, que l'on ne peut ou ne veut pas héberger chez soi. Par exemple buildroot, où je veux autre chose que la branche master.
+
+La documentation de repo est assez laconique car adaptée à Android, où l'on se place sur une branche de la façon suivante :
+
+	repo start <newbranchname> [--all | <project>...]
+
+Si l'on souhaite se placer sur la branche master partout il suffit alors de faire :
+
+	repo start master --all
+
+
+
+
+Attention, tous les dossiers .git sont des liens symboliques qui pointent vers le dossier .repo à la racine du projet.
+
+parler du /m/master
+
+Attention au repo start ... ... si la branche recherchée n'est pas sur le même commit que la branche master. Le repo start va créer une nouvelle branche du même nom... mais désynchronisée.
+Il semblerait donc que repo ne permette pas de changer simplement d'une branche à une autre. Sans quoi on perd le tracking des branches distantes.
+Il faut donc bien spécifier la bonne branche dans le manifest sans quoi on aura de salles surprises, avec des branches désynchronisées.
+
+Ne JAMAIS faire de git init dans un projet repo lorsque l'on veut regarder des hooks.
+
+Eviter des push -f C'est tout de suite plus galère de gérer les conflits à l'échelle de repo.
+
+Attention, tester le coup des branches qui évoluent et se détrackent de la branche distante
+
+Il semblerait qu'utiliser plusieurs éléments default pour plusieurs remote ne fonctionne pas.
+
