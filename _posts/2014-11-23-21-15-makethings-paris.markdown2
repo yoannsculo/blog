@@ -1,0 +1,59 @@
+---
+layout: post
+title: Make Things Paris
+keywords: hacking, arduino, bricolage, électronique, maker, DIY, RFID, Nabaztag, stamp, tag
+publish: true
+---
+
+![Make Things]({{blog.images}}/makethings/logo.png)
+
+Samedi 15 novembre avait lieu la première édition de [Make Things](http://www.makethings.io/) à [Paris](http://www.makethings.io/paris). Il s'agit d'un événement ouvert à toutes les personnes souhaitant s'initier au monde du hardware, au Do It Yourself (DIY) et à la programmation.
+
+Make Things Paris ciblait les grands débutants n'ayant jamais fait de programmation ni de bricolage à base d'Arduino et autres petites cartes mignonnes de leur vie. La journée s'est articulée autour de 6 workshops de différentes difficultés. Mais c'était globalement pensé pour un public de débutants et de bricoleurs amateurs.
+
+Cela se déroulait donc à l'[Usine.io](http://usine.io), que je n'avais toujours pas eu l'occasion de visiter (pourtant je travaille à côté !).
+
+![Usine.IO]({{blog.images}}/makethings/20141115_083624.jpg)
+
+Voici le programme des workshops qui était proposé :
+
+- Construction d'une manette de jeu avec un Arduino
+- Programmer l'ouverture d'une serrure avec des puces RFID
+- Quizz. construisez votre propre jeu
+- Conception de sa boite Arduino, découpe laser et assemblage
+- Jeu de rapidité à base d'Arduino
+- Atelier Wearable
+
+Les supports des workshops ont été [mis à disposition](https://drive.google.com/folderview?id=0B3RJk3rTbCSXUlhIU1lobHBVa3M&usp=sharing#list).
+
+![Plein de matos]({{blog.images}}/makethings/20141115_100708.jpg)
+
+J'ai animé le workshop sur le RFID. Merci à toi Pierre pour la préparation ;) J'ai récupéré des lecteurs RFID de vieux Nabaztag et des stamps qui dormaient dans mon placard et me disant que l'on pourrait bien en faire quelque chose !
+
+![Workshop RFID]({{blog.images}}/makethings/20141115_094005.jpg)
+
+L'idée était donc de simuler une serrure RFID. En passant un tag préconfiguré sur le lecteur on pouvait actionner un servomoteur, simulant une ouverture/fermeture de porte. Attention, événement d'importance, j'ai utilisé un MAC pour la 2eme ou 3eme fois de ma vie :P
+
+![Workshop RFID]({{blog.images}}/makethings/20141115_111145.jpg)
+
+Apparemment les gens ont trouvé ça cool :) Je suis bien content !
+
+Certains des participants ont même été jusqu'à bricoler plus loin le workshop pour rajouter des LEDs quand la serrure est ouverte ou fermée.
+
+![Workshop RFID]({{blog.images}}/makethings/20141115_161721.jpg)
+
+Je n'ai pas eu le temps de tester les autres workshops ni de me balader beaucoup. Mais j'ai pu prendre quelques photos du reste de l'événement.
+
+![Workshop Sparkcore]({{blog.images}}/makethings/20141115_115628.jpg)
+
+![Le Quizz]({{blog.images}}/makethings/20141115_115654.jpg)
+
+![Le Quizz]({{blog.images}}/makethings/20141115_115936.jpg)
+
+![Le Quizz]({{blog.images}}/makethings/20141115_143528.jpg)
+
+![Atelier Wearable]({{blog.images}}/makethings/20141115_144939.jpg) ![Découpe laser]({{blog.images}}/makethings/20141115_174656.jpg)
+
+Bref c'était une journée très chouette ! Cela faisait un bon moment que je n'avais pas touché à des cartes Arduino et des breadboards. C'était très sympa d'apprendre aux gens à bricoler et j'ai rencontré des gens intéressants :)
+
+Peut-être à une prochaine fois !
