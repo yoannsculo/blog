@@ -2,7 +2,7 @@
 layout: post
 title: repo - gérer des repositories git multiples sans trop s'arracher de cheveux
 keywords: repo, git
-publish: true
+publish: false
 ---
 
 Maintenir un projet sur un repository git c'est cool. Quand on a plusieurs projets qui font 300 repositories et qui traînent une ribambelle de branches, c'est une autre histoire à maintenir !
