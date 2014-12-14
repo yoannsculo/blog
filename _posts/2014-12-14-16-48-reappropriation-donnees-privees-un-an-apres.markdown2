@@ -1,0 +1,267 @@
+---
+layout: post
+title: Réappropriation de mes données privées, un an après
+keywords: privacy, google, données privées, google, quadrature, DuckDuckGo, CyanogenMod, NAS, Firefox, OVH, OpenStreetMap, Android, FirefoxOS, F-Droid, Wallabag, FSFE
+publish: true
+---
+
+J'ai pris la décision fin 2013 de reprendre le contrôle de mes données privées, il y a exactement un an.
+
+J’avais prévu d’écrire un article de blog à ce sujet il y a bien longtemps, mais ce dernier est resté à l’état d’ébauche pendant un bon moment. Une année m’a permis de tester plusieurs solutions et alternatives à Google et consorts. Je prends le temps aujourd'hui de faire un premier bilan.
+
+## Raisons et explications
+
+J’ai décidé de quitter Google et tous les autres services centralisés ne respectant pas ou menaçant ma vie privée. Jusque là, je reportais mon départ car je ne trouvais rien d'aussi confortable que l'écosystème de Google. Mais à vouloir absolument garantir une transition confortable, la migration n'a jamais lieu. A mes yeux, les violations et menaces de la vie privée sont devenues bien plus importantes que mon petit confort **gracieusement** offert par Google.
+
+Voici quelques explications et informations très intéressantes sur la question de la vie privée :
+
+- [La campagne "Dégooglisons Internet" de Framasoft](http://degooglisons-internet.org)
+- [Contrôle tes données](http://www.controle-tes-donnees.net/) : site de campagne de la Quadrature du Net.
+- [Le wiki de la Quadrature du net](https://wiki.laquadrature.net/PrivacyNightmare%28fr%29) qui répertorie des articles, études et rapports faisant état des risques et dérives entraînés par une faible protection des données personnelles.  
+
+Et si vous vous dites "De toute façon, je n'ai rien à cacher", je vous invite à consulter les liens suivants :
+
+- [Conférence "Je n’ai rien à cacher"](http://ldn-fai.net/je-nai-rien-a-cacher)
+- [Conférence "Libérer Internet : Sexe, alcool et vie privée"](http://ldn-fai.net/video-de-liberer-internet-sexe-alcool-et-vie-privee-a-diffuser/)
+- [Conférence "Si, vous avez quelque chose à cacher"](https://www.youtube.com/watch?v=BbkbdYoffX4)
+- [Rien à cacher - Jérémie Zimmermann et la Parisienne Libérée](https://www.youtube.com/watch?v=rEwf4sDgxHo)
+- [A partir de janvier 2014, vous devrez déposer un double de vos clés en mairie](http://jcfrog.com/blog/a-partir-de-janvier-2014-vous-devrez-deposer-un-double-de-vos-cles-en-mairie/)
+
+## Mon bilan
+
+Mon but pour 2014 était de ne plus utiliser les outils de Google à moyen/long terme. M’en séparer dès que possible. Nous allons voir que j'ai réussi en partie et que je travaille toujours à une transition complète. Je vais tâcher de rendre cet article le plus accessible et le moins complexe possible. Comprendre pas **trop** technique.
+
+[Je lisais récemment](http://ecrans.liberation.fr/ecrans/2014/11/25/60-des-internautes-connaissent-edward-snowden-mais-ils-n-ont-pas-change-pas-leur-habitudes_1150523) que, 62% des Français sont au courant de l’existence de l’informaticien américain Edward Snowden. Mais que 23% d'entre eux ont pris effectivement des mesures pour protéger leur vie privée en ligne. C'est ridiculement bas. Cela m'a poussé à ressortir mon article des cartons et d'essayer à ma façon de faire grossir ce pourcentage.
+
+## Sommaire
+
+Je vais donc aborder point par point les transitions réussies ou ratées et vous faire part de mon ressenti un an après.
+
+La partie simple
+
+- Soutenir la Quadrature du Net
+- Stopper la traque automatique
+- La recherche - DuckDuckGo
+- Le navigateur web - Firefox
+- L’email - Par un fournisseur de noms de domaine français
+- Les cartes - OpenStreetMap
+- Magasin en ligne - Au revoir Amazon
+- Autres services - Read it later, RSS, ...
+
+La partie plus complexe
+
+- Utilisation d'un NAS
+- Le téléphone - CyanogenMod, F-Droid et FirefoxOS
+
+## Soutenir la Quadrature du Net
+
+![Quadrature du Net]({{blog.images}}/vie-privee/logo_laquadrature-net_horiz_moyen.png)
+
+Ce qui a fait le déclic dans ma tête il y a un an c'est [la promulgation de la loi de programmation militaire](https://www.laquadrature.net/fr/lpm-promulguee-la-derive-du-politique-vers-la-surveillance-generalisee). J'y songeais depuis un moment, j'ai donc décidé [de soutenir financièremenrt la Quadrature du Net](https://soutien.laquadrature.net/), qui lutte :
+
+- Pour une vraie protection de la neutralité du Net et la non-discrimination des données ;
+- Pour la protection du droit à la vie privée contre la surveillance des États et des entreprises ;
+- Pour l'adaptation du droit d'auteur aux pratiques culturelles actuelles et la légalisation du partage non marchand des œuvres numériques entre individus ;
+- Pour la liberté d'expression contre la censure ;
+- Pour l'exclusion des dispositions mettant en danger nos droits fondamentaux des accords internationaux (TAFTA, CETA, TISA, ACTA, etc) ;
+- Pour la participation de tous à la vie démocratique et au débat public ;
+- Pour la défense de l'Internet que nous aimons et qui nous respecte <3
+
+[Vous pouvez faire de même](https://soutien.laquadrature.net/) !
+
+## Stopper la traque automatique
+
+Google, Facebook et autres nous traquent en permanence. La première chose à faire est de ne plus se connecter systématiquement et automatiquement à leurs services.
+
+Pour Google, cela consiste à ne plus utiliser le bouton "Connexion" et donc ne plus indiquer à Google qui on est lorsque l'on fait des recherches.
+
+![Connexion Google]({{blog.images}}/vie-privee/connexion_google.png)
+
+Idem pour Facebook et autres qui nous traquent partout ailleurs sur le net.
+
+Pour me connecter sur Gmail, par exemple, j'utilise la fonctionnalité de navigation privée de mon navigateur. Elle permet de cloisonner la connexion à Google. Et je fais le reste de ma navigation sur le navigateur standard. De cette façon, je ne suis plus identifié par Google et autres lors de la visite de sites tiers.
+
+Ce n'est pas une solution parfaite pour être anonyme, mais déjà un bon départ pour cloisonner sa navigation.
+
+## La recherche - DuckDuckGo
+
+![DuckDuckGo]({{blog.images}}/vie-privee/duckduckgo.png)
+
+Je ne me sers plus la recherche Google pour mon utilisation personnelle. J’utilise maintenant [DuckDuckGo](https://duckduckgo.com). Après un an, je peux complètement me passer de Google pour mes recherches. Je ne bascule sur Google qu’à de très rares occasions.
+
+Par contre, pour un usage professionnel, il est assez difficile de n’utiliser que [DuckDuckGo](https://duckduckgo.com). Certaines recherches techniques retournent des résultats bien plus pertinents chez Google.
+
+### Le navigateur web - Firefox
+
+![Firefox]({{blog.images}}/vie-privee/Mozilla_Firefox_logo_2013.png)
+
+Je n’utilise plus Chrome mais [Firefox](https://www.mozilla.org/fr/firefox/new/). Et cela, bien que je trouve le premier plus rapide et plus stable que le second sur mes machines Ubuntu chez moi et au travail.
+
+J’utilise les plugins suivants :
+
+- [Adblock Plus](https://addons.mozilla.org/fr/firefox/addon/adblock-plus) pour bloquer la publicité.
+- [Ghostery](https://addons.mozilla.org/fr/firefox/addon/ghostery/) pour bloquer les mouchards et les cookies.
+- [WOT](https://addons.mozilla.org/fr/firefox/addon/wot-safe-browsing-tool) pour me renseigner sur la réputation des sites Web avant que je ne les visite.
+- [Terms of Service; Didn’t Read](https://addons.mozilla.org/fr/firefox/addon/terms-of-service-didnt-read) qui m'indique la note relative à la politique de vie privée des sites que je consulte.
+- [DuckDuckGo Plus](https://addons.mozilla.org/fr/firefox/addon/duckduckgo-for-firefox/) qui intègre DuckduckGo dans Firefox.
+
+J’ai utilisé pendant un moment [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript) mais c’était l’horreur. Je me suis fait avoir pas mal de fois lors de mes paiements bancaires où la transition n’a pas eu lieu à cause des blocages du Javascript par défaut. Je passais mon temps à activer/désactiver des domaines pour pouvoir faire fonctionner les sites que je visitais. C’était bien trop lourd. A mes yeux c’est un plugin trop extrémiste qui m’a fait perdre plus de temps au quotidien.
+
+La combinaison de ces cinq plugins me plaît beaucoup et j’ai trouvé mon équilibre comme ça.
+
+De plus, je n’utilise plus de page par défaut externe chargeant la page de Google. J’ai une page html (sur mon ordinateur) dans laquelle j’ai agencé les liens que je visite régulièrement. Lorsque je veux faire une recherche je rentre ma recherche dans la barre de recherche ou me rend directement sur le site que je veux visiter via ma page d’accueil customisée. De cette façon j'ai moins tendance à passer par un moteur de recherche pour visiter des sites qui peuvent être atteints directement avec la bonne url. Comme ça, moins de traces.
+
+## L’email - Par un fournisseur de noms de domaine français
+
+[La Quadrature du Net explique très bien la démarche](http://www.controle-tes-donnees.net/outils/Nom_de_domaine.html) au grand public.
+
+Je suis passé chez [OVH](http://www.ovh.com/fr), mais j'aurais pu aller chez [Gandi](https://www.gandi.net/). J’ai bénéficié des 2Go et de l’adresse mail fournie avec mon domaine sculo.fr chez OVH. Pour info, l’adresse email en .fr seule avec le domaine coûte 9,58 € TTC par an chez OVH. Mon email me coûte maintenant 0.79€/mois
+
+Quand on compare 2Go avec les 15Go de gmail on se dit que c’est trop peu. En fait non !
+
+- **Je fais le ménage régulièrement dans mes emails**, ce que je ne faisais jamais avec Gmail.
+- **Je supprime les emails reçus que je ne relirai jamais**, ce que je ne faisais pas avant non plus.
+- **Je supprime surtout les emails avec pièces jointes**. Je stocke tout sur mon ordinateur et mon NAS (voir plus loin dans l'article). Pour moi, la boîte mail n’est pas un espace de stockage de fichiers zip, pdf et photos. On me parle souvent de l’aspect pratique de pouvoir retrouver beaucoup de choses facilement dans gmail. Comme par exemple des photos, un CV, des RIB, etc. Notre société a dévié tellement vers l’instantané, le tout tout de suite qu’on en oublie qu’il est parfaitement envisageable d’attendre la fin de sa journée pour faire une recherche de document sur son ordinateur ou son NAS. Et puis en cas de piratage de compte email, le pirate a accès à tout plein de données privées. Bravo !
+- **Je supprime tous les emails envoyés**. Généralement la réponse contient l’email envoyé. A quoi bon conserver le message original. Je ne garde mes message envoyés qu’en de rares cas de correspondances importantes. Le reste du temps j’efface tout.
+
+Après un an d’utilisation, ma boîte email me prend **30 Mo sur 2Go**. A cette vitesse, je remplirai ma boîte mail en plus de 60 ans.
+
+Pour la lecture d’emails, j’utilise :
+
+- [Thunderbird](https://www.mozilla.org/fr/thunderbird/) chez moi
+- [Le webmail roundcube](http://roundcube.net/) fourni par OVH sur d’autres ordinateurs que le mien.
+- [K-9 mail](https://f-droid.org/posts/k-9-mail/) via [F-Droid](https://f-droid.org/) sur Android.
+
+Je me suis essayé à [mutt](https://en.wikipedia.org/wiki/Mutt_%28email_client%29). En tant qu'utilisateur de [vim](http://www.vim.org/) je trouvais le concept super. Mais le tout clavier commence à m'épuiser (enfin surtout mes doigts et mes poignets, j'en suis très triste en tant que pro-vim). J'aspire à utiliser des logiciels ergonomiques. Je suis donc resté sur Thunderbird que j'utilise déjà pour mes emails pro.
+
+Je suis très très très satisfait de K-9 mail. J’ai l‘impression d’utiliser l’ergonomie de Gmail sur mon téléphone, sauf que je n’utilise pas Gmail :)
+
+L’avantage d’OVH c’est que mon adresse email vient avec 2000 alias. Avec ça je peux créer jusqu’à 2000 adresses emails redirigées vers l’email de mon choix. Je m’en donne à coeur joie. A chaque fois que je fournis un email à un nouveau service, je créé un alias et de cette façon je maîtrise le spam. Je peux surtout supprimer mes alias après usage. Même si le subterfuge se devine facilement, cela limite la casse en cas de vol de mot de passe sur un service tiers. Et cela dans la mesure où j’utilise à chaque fois un email par service. Et comme le vol de mots de passe du côté fournisseur des service arrive souvent ...
+
+Quitter gmail reste long et laborieux. Après un an, je reçois toujours des emails dessus. Mais c'est de la newsletter et des sites marchands, des recruteurs qui ont mon CV en base de donnée, et quelques rares sites sont j'avais oublié l'existence. Ma boîte gmail s'est transformée en boîte de spam où j'y fais atterrir tout ce qui n'est pas "safe" pour ma boîte mail officielle.
+
+Après un an d'utilisation je suis particulièrement content de la transition ! Je ne pense pas fermer mon compte gmail, car j'ai besoin d'utiliser les comptes Google de temps à autres. Mais ce n'est plus mon email principal, et je consulte ma boîte que rarement à présent.
+
+## Les cartes - OpenStreetMap
+
+![OpenStreetMap]({{blog.images}}/vie-privee/osm.png)
+
+J’utilise [OpenStreetMap](http://www.openstreetmap.org) pour remplacer Google Map. Quand il manque des informations, [je contribue](http://wiki.openstreetmap.org/wiki/FR:Beginners%27_guide) et modifie la base en conséquence. J’utilise parfois Google Street View lorsque je dois repérer des lieux à l’avance. Mais OpenStreetMap est maintenant ma référence. Lorsque je dois parler d’un endroit particulier, j’utilise les fonctionnalités de partage d’OSM. Exemple :
+
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.openstreetmap.org/export/embed.html?bbox=-4.50265645980835%2C48.390757308139044%2C-4.4719719886779785%2C48.40352272032579&amp;layer=mapnik&amp;marker=48.397140414617546%2C-4.487314224243164" style="border: 1px solid black"></iframe><br/><small><a href="http://www.openstreetmap.org/?mlat=48.3971&amp;mlon=-4.4873#map=16/48.3971/-4.4873">Afficher une carte plus grande</a></small>
+
+[Vous pouvez également vous faire une idée](http://mc.bbbike.org/mc/?lon=102.6921&lat=25.06514&zoom=15&num=2&mt0=mapnik&mt1=google-map) de la différence de couverture et de détails entre Google Map et OpenStreetMap.
+
+Par contre, je n'ai rien trouvé pour mobile sous Android :( Je dois passer par [osm.org](http://www.osm.org) sur Firefox.
+
+## Magasin en ligne - Au revoir Amazon
+
+Je n’ai rien acheté chez Amazon depuis un an. J'achète BD et livres dans des librairies physiques. De cette façon mes achats ne sont plus centralisés chez une seule société. Je n’utilise plus non plus leur wishlist et j’ai constitué la mienne que je mets à jour dans un fichier texte que je partage avec mon entourage. J’utilise [SensCritique](http://www.senscritique.com) pour lister les bien culturels que je consomme et mes envies. Et ça le temps que je développe / trouve un équivalent décentralisé !
+
+## Autres services - Read it later, RSS, ...
+
+- J'utilise [Wallabag](https://www.wallabag.org) pour stocker les articles à lire plus tard.
+- J'utilise [Selfoss](http://selfoss.aditu.de/) comme lecteur de flux RSS.
+- Je ne me suis pas complètement désinscrit de Facebook. Je m'y connecte une fois tous les deux mois pour avoir deux trois news de personnes qui utilisent Facebook.
+
+## Utilisation d'un NAS
+
+![NAS]({{blog.images}}/vie-privee/synology.jpg)
+
+Je centralise mes données chez moi [sur un NAS](https://fr.wikipedia.org/wiki/Serveur_de_stockage_en_r%C3%A9seau). Je ne dépose surtout pas mes données sur un cloud de type Dropbox / Google Drive / OneDrive / ...
+
+D'ailleurs je ne devrais pas dire **Cloud**, mais **ordinateur de quelqu'un d'autre**. Car en définitive il faut appeler les choses comme elles sont.
+
+Je n'ai pas ouvert mon NAS vers l'extérieur. En conséquence, je dois m'assoir sur bon nombre de fonctionnalités bien cool sur le papier. C'est dommage. Mais je pense que mes données privées doivent rester chez moi. Si je suis en déplacement, et bien ce n'est pas grave. J'attendrai d'être chez moi pour consulter mes données. Risquer d'exposer mes données sur Internet par confort est pour moi une assez mauvaise idée.
+
+L'avantage du NAS est que je bénéficie de sauvegardes de toutes mes données régulièrement. Et je peux laisser tourner ça la nuit de façon automatisée.
+
+Les seuls inconvénients dans l'histoire sont :
+
+- le prix du matériel
+- la consommation électrique, entre 30 à 40W en permanence ce qui fait environ 30 à 40€ par an en France.
+
+## Le téléphone - CyanogenMod, F-Droid et FirefoxOS
+
+On rentre dans la partie compliquée. Quitter Android n'est pas une mince affaire !
+
+![Free your Android]({{blog.images}}/vie-privee/freeyourandroid.png)
+
+La Free Software Foundation Europe (FSFE) a mis en place [la campagne Free Your Android](http://fsfe.org/campaigns/android/android.html). Je vous invite à aller y faire un tour.
+
+J'ai commencé par basculer mon ancien téléphone HTC Desire HD sous [CyanogenMod](http://www.cyanogenmod.org/). La manipulation, simple pour moi, n'est clairement pas grand public.
+Dans la manipulation, on risque de briquer/bloquer son téléphone. Accessoirement, on perd toute garantie en faisant cela. Mon téléphone avait presque 4 ans, je me suis lancé, n'ayant pas grand chose à perdre.
+
+Le gain était intéressant au premier abord. Une interface bien plus customisable avec plus de fonctionnalités. Je n'ai pas réinstallé le Google Play Store pour tester un Android sans Google. J'y ai mis [F-Droid](https://f-droid.org/) à la place.
+
+**Les inconvénients**
+
+Se passer du store officiel de Google reste très très difficile.
+
+- On doit dire adieu à l'application Twitter
+- ainsi qu'aux applications bien pratiques comme RATP et Transilien.
+- mais aussi à tout ce qui peut être sympa comme CapitaineTrain, l'appli de sa Banque, les jeux, etc.
+- Il n'y a plus d'agenda. Je n'ai rien trouvé de qualité pour remplacer l'application Google Agenda.
+- Plus d'application Google Map. Et je n'ai pas retrouvé d'équivalent pour OpenStreetMap.
+- Malheureusement, j'ai dû hériter d'un soucis de surconsommation avec CyanogenMod sur mon téléphone, qui vidait sa batterie à la vitesse de la lumière. Alors que la version officielle de HTC était correcte.
+
+**Les avantages**
+
+- K9-mail via F-Droid est génial pour gérer les mails
+- J'ai trouvé un clone de 2048, sur F-Droid, très bien foutu qui nécessite aucun accès à mes données privées, alors que l'application officielle est un peu trop curieuse.
+- J'ai accès à un terminal et peux bricoler plus mon téléphone
+- Je n'ai plus de dépendance à Google
+
+**Conclusion**
+
+J'ai arrêté l'expérience ici. La perte de fonctionnalité était trop importante. Et accessoirement mon téléphone n'était plus utilisable, la batterie se vidait en quelques heures / minutes, contre une journée auparavant. Ceci-dit, le soucis devait très certainement être lié à mon modèle et pas à CyanogenMod en lui même.
+
+![FirefoxOS]({{blog.images}}/vie-privee/firefoxos.png)
+
+J'ai acheté ensuite le premier téléphone FirefoxOS vendu en France, le ZTE Open C, pour lequel [j'ai écrit un test sur mon blog]({{blog.url}}/premiers-pas-sur-firefox-os-zte-open-c/).
+Je vous invite à lire l'article pour plus de détails. C'était une expérience très intéressante, FirefoxOS a un superbe potentiel ! Je ne suis pas resté dessus pour une simple raison, l'appareil photo.
+
+J'utilise trop mon téléphone comme appareil photo. La qualité du capteur du ZTE Open C est tellement médiocre qu'il n'était pas question de basculer définitivement sous FirefoxOS. Cet achat était avant tout pour tester FirefoxOS.
+
+Comme mon HTC Desire HD était plus où moins HS à cause de sa batterie qui se déchargeait en quelques minutes/heures, je me suis acheté un Galaxy S4. Je voulais un super appareil photo, et j'en suis ravi. Mais niveau applications à la con préinstallées, j'ai touché le jackpot ! Les cordonniers sont les plus mal chaussés, comme on dit. J'ai désinstallé un maximum de trucs, mais je n'ai pas encore rooté mon téléphone pour virer ces conneries de Samsung. Et mon téléphone étant sous garantie, je ne souhaite pas encore trop charcuter le firmware.
+
+Mon usage d'Android, aujourd'hui se résume à quelques applications qui craignent un peu niveau vie privée:
+
+- Ratp / Transilien
+- Twitter
+- Mon appli bancaire
+- Google Map de temps en temps. Je n'ai rien trouvé pour utiliser OpenStreetMap sur mobile (hors version web) ...
+- Gmail pour recevoir du spam de temps en temps, et des mails de gens qui n'ont toujours pas pris en compte mon changement d'email.
+
+J'ai installé F-Droid en plus du google store, et j'utilise :
+
+- K9-mail (oh yeah)
+- mon clone de 2048
+- des applications basiques du store F-Droid comme la boussole, la calculatrice, etc.
+
+Lorsque je pourrai installer FirefoxOS sur Galaxy S4 sans trop de perte de performance, que je pourrai faire tourner un client mail de qualité comme K9-mail et que je pourrai prendre des photos de qualité, je n'hésiterai plus un instant.
+
+**Conclusion**
+
+FirefoxOS est sur une très bonne voie. Je suis impatient que le système arrive à maturité pour que je puisse basculer complètement dessus. En attendant, j'utilise des applications bien sales comme celles de la RATP et Twitter, faute de trouver mieux.
+
+## Ce qu'il reste à faire !
+
+J'ai encore un travail énorme.
+
+- **VPN** : Je voudrais utiliser un [VPN](https://fr.wikipedia.org/wiki/R%C3%A9seau_priv%C3%A9_virtuel) sur mon téléphone, et pourquoi pas chez moi. Je songe souscrire à [celui de FDN](http://www.fdn.fr/-VPN-.html) pour accéder à des réseaux Wifi ouverts qui ne sont pas de confiance. Mais même pour une utilisation classique afin d'avoir un accès Internet neutre.
+- **DNS** : Il faudrait que je quitte le [DNS](https://fr.wikipedia.org/wiki/Domain_Name_System) de mon Fournisseur d'Accès à Internet, au profit de celui de FDN par exemple.
+- **Google Agenda** : Je souhaite déplacer mon agenda Google vers un serveur à moi (pas auto hébergé). Mais je souhaite garder une certaine sécurité et ergonomie, je n'ai rien trouvé de bien pour le moment.
+- **Google Drive** : Je veux basculer le peu de documents Google que j'ai sur un éditeur hébergé sur un serveur perso.
+- **Google Contacts** : Il faudrait que j'arrête d'utiliser les contacts Google pour avoir mon propre serveur de contacts.
+- **Google Analytics** : Il faut que je bascule mon serveur sur [Piwik](http://piwik.org/). Mais je traîne des pieds, j'aime pas MySQL, j'aimerais utiliser SQLite à la place.
+- **Gmail** : Je dois trier tous les emails de ma boîte Gmail et transférer les correspondances importantes sur ma boîte OVH.
+- **Twitter** : Je songe à mettre en place un script qui va supprimer tous mes tweets au bout d'une à deux semaines.
+- **SensCritique** : Ma copine est en train de développer une version libre et décentralisée de SensCritique. J'ai hâte de pouvoir l'utiliser.
+
+## Conclusion
+
+Il me reste encore plein de choses à faire pour me réapproprier complètement mes données privées. Mais je suis en bonne voie. La clé de la démarche est de ne plus mettre tous ses oeufs dans le même panier !
+Mais ce qui est sûr, c'est que je suis vraiment ravi de mon passage de Gmail à mon propre email.
+
+> La route est longue mais la voie est libre
