@@ -1,0 +1,654 @@
+---
+layout: post
+title: repo - un outil pour gérer de multiples repositories git sans trop s'arracher de cheveux
+keywords: repo, git, repositories, multiples, git-repo, manifest, repo sync, repo init
+publish: true
+---
+
+Maintenir un projet sur un repository git c'est cool. Quand on a plusieurs projets qui font 300 à 500 repositories et qui traînent une ribambelle de branches, c'est une autre histoire à maintenir ! Accessoirement, ça commence déjà à être compliqué à une dizaine.
+Il existe plusieurs outils pour nous sauver un peu la vie lorsqu'on en arrive là.
+Chacun a des avantages et inconvénients. Mais je n'ai pas encore vu de logiciel sortir vraiment du lot.
+
+- [Git submodules](http://codingkilledthecat.wordpress.com/2012/04/28/why-your-company-shouldnt-use-git-submodules/) me fout des boutons.
+- [Git Subtree](http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/) existe également. Je ne l'ai pas encore testé faute de temps.
+- [Google repo](https://source.android.com/source/downloading.html) est la solution dont je vais parler ici et que je commence à bien connaître.
+
+**repo**, « The Multiple Git Repository Tool », est une application en Python [développée par Google](https://gerrit.googlesource.com/git-repo), historiquement pour gérer les centaines de repositories d'Android. J'ai commencé à l'utiliser pour compiler des firmwares Android, et j'ai fini par m'en servir sur des projets non Android. L'outil n'est franchement pas parfait mais fait son travail si l'on est un minimum rigoureux. Et surtout si on sait à quel moment utiliser et *ne pas utiliser* repo.
+
+Le but de cet article est de présenter l'outil, lister quelques astuces et de
+pointer les difficultés que l'on peut rencontrer en utilisant cette application.
+
+Pour créer un projet avec repo, il faut déjà [télécharger l'application](https://source.android.com/source/downloading.html#installing-repo).
+
+Je conseille d'éviter d'aller chopper des vieilleries dans les versions de repo.
+Il peut y avoir de sacrées différences entre des versions de repo assez éloignées, j'en ai fait les frais.
+De toute façon, repo vérifie régulièrement l'existence de mises à jour sur le net. S'il trouve une mise à jour, vous serez notifié à chaque exécution du soft.
+
+Voici le plan de mon article, pour mieux s'y retrouver dans le pavé qui suit :
+
+- TLDR - Too long; didn't read
+- Utilisation de repo - la théorie
+- Utilisation de repo - la pratique
+ - Le manifest
+ - Récupération des sources
+ - Se placer sur une branche
+- Utilisation de repo - quelques remarques et astuces
+ - Désynchronisation de branche au repo start
+ - Désynchronisation de branche lors du développement
+ - Tagger des repositories multiples avec repo
+ - Connaître l'état de ses repositories
+ - Limites du manifest
+ - Le repository du manifest
+ - Aller plus loin : le manifest local
+- Conclusion - Retour sur mon propre usage
+
+# TLDR - Too long; didn't read
+
+**repo** est un super outil qui peut s'avérer être une plaie à utiliser si l'on ne connaît pas bien ses limites.
+
+- J'utilise repo (repo sync) pour synchroniser mon code, effectuer des actions rébarbatives sur tous les repostories en un coup, maintenir à jour mon serveur Jenkins et générer des firmwares from scratch.
+- J'utilise uniquement des commandes git lorsque je manipule des branches et souhaite récupérer les modifications de mes collègues.
+
+# Utilisation de repo - la théorie
+
+repo [fournit un lot commandes](https://source.android.com/source/developing.html) pour manipuler plusieurs repositories à la fois :
+
+	  abandon        Permanently abandon a development branch
+	  branch         View current topic branches
+	  branches       View current topic branches
+	  checkout       Checkout a branch for development
+	  cherry-pick    Cherry-pick a change.
+	  diff           Show changes between commit and working tree
+	  diffmanifests  Manifest diff utility
+	  download       Download and checkout a change
+	  grep           Print lines matching a pattern
+	  info           Get info on the manifest branch, current branch or unmerged branches
+	  init           Initialize repo in the current directory
+	  list           List projects and their associated directories
+	  overview       Display overview of unmerged project branches
+	  prune          Prune (delete) already merged topics
+	  rebase         Rebase local branches on upstream branch
+	  smartsync      Update working tree to the latest known good revision
+	  stage          Stage file(s) for commit
+	  start          Start a new branch for development
+	  status         Show the working tree status
+	  sync           Update working tree to the latest revision
+	  upload         Upload changes for code review
+
+
+
+L'usage classique de repo est le suivant :
+
+	mkdir myproject
+	cd myproject
+	repo init -u [url]
+	repo sync
+	repo start master --all
+
+repo utilise un fichier xml (manifest) qui va définir exactement où trouver nos repositories, quelles branches récupérer, où créer les dossiers, etc. On initialise le projet de la façon suivante :
+
+	repo init -u git@github.com:yoannsculo/manifest.git
+
+On synchronise ensuite tous les repositories
+
+	repo sync
+
+On se place alors sur la branche de notre choix (ici master) sur tous les repos.
+
+	repo start master --all 
+
+On peut se faire une idée de l'état du projet avec
+
+	repo status
+
+On peut alors développer comme d'habitude, en utilisant git individuellement sur chacun des repositories.
+Les commandes classiques fonctionnent. Mais si on doit faire 500 **git pull** individuellement, repo prend tout son sens et **repo sync** nous permet de synchroniser tous les repositories d'un coup.
+
+Il est bon de savoir que toutes les commandes **repo command** peuvent être lancées depuis n'importe quel niveau de l'arborescence du projet.
+
+# Utilisation de repo - la pratique
+
+Bien qu'il y ait peu de commandes, repo s'avère un peu capricieux à l'usage. Je vais donc détailler comment je fonctionne.
+D'ailleurs je reste ouvert à toute remarque ;)
+
+## Le manifest
+
+Pour un projet qui existe déjà, il s'agit d'initialiser le projet grâce à une url qui pointe sur le bon manifest.
+Juste pour se faire une idée, voici le [manifest par défaut d'Android](https://android.googlesource.com/platform/manifest/+/master/default.xml).
+On en est à environ 500 repositories git !
+
+On peut trouver plus d'informations sur les manifests [dans les spécifications](https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.txt) se trouvant dans les sources du projet de Google.
+
+Lorsque l'on part de zéro, il faut créer ce manifest. La première étape est donc la création de ce fichier (fichier **default.xml**) qui va référencer les projets à synchroniser.
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<manifest>
+	    <remote name="github" fetch="https://github.com/yoannsculo"/>
+	    <remote name="buildroot" fetch="git://git.buildroot.net"/>
+
+	    <default revision="master" remote="github" sync-j="8"/>
+
+	    <project name="JobCatcher.git" remote="github" path="job/jobcatcher" revision="unstable">
+		<copyfile src="README.md" dest="README.md" />
+	    </project>
+
+	    <project name="emploi.git" remote="github" path="job/emploi" />
+	    <project name="SHOUTcast-Recorder.git" remote="github" path="dev/SHOUTcast-Recorder" />
+	    <project name="adbd.git" remote="github" path="dev/adbd" revision="gingerbread-adbd" />
+	    <project name="buildroot.git" remote="buildroot" path="dev/buildroot" />
+
+	</manifest>
+
+Je me suis construit un exemple à partir de divers projets github. J'ai créé un [repository github](https://github.com/yoannsculo/manifest) pour cet article, où j'y ai déposé le fichier **default.xml**
+
+repo init ne fonctionne qu'avec une url de repository git, je n'ai pas encore trouvé de moyen de bricoler un manifest sans commiter systématiquement chacune de mes modifications.
+
+Le manifest default.xml est le manifest appelé si l'on ne spécifie pas de manifest particulier. Pour bon nombre de projets, un seul manifest peut suffire. Mais il est possible de demander un autre manifest avec l'option -m
+Par exemple, si je rajoute un second manifest sur mon repository github, je peux choisir un nouvel ensemble de projets et de branches spécifiques.
+
+	repo init -u git@github.com:yoannsculo/manifest.git -m new_project.xml
+
+Personnellement, je possède un seul repository privé qui centralise tous mes projets. Je n'ai qu'à appeler le bon fichier de manifest xml.
+
+## Récupération des sources
+
+Après avoir récupéré les sources de cette façon,
+
+	repo sync
+
+on se retrouve alors avec l'arborescence suivante :
+
+	.
+	├── dev
+	│   ├── adbd
+	│   ├── buildroot
+	│   └── SHOUTcast-Recorder
+	├── job
+	│   ├── emploi
+	│   └── jobcatcher
+	└── README.md
+
+J'utilise systématiquement l'argument **-j8** à mes commandes repo. C'est à dire **repo sync -j8**, **repo status -j8**, etc. Parce que j'ai 8 cœurs et qu'on gagne **un temps fou** si on ne le fait pas en parallèle !
+
+Si on regarde les fichiers cachés, on s'aperçoit qu'un dossier .repo a été créé à la racine de l'arbre des sources.
+
+	.
+	├── dev
+	│   ├── adbd
+	│   ├── buildroot
+	│   └── SHOUTcast-Recorder
+	├── job
+	│   ├── emploi
+	│   └── jobcatcher
+	├── README.md
+	└── .repo
+	    ├── manifests
+	    ├── manifests.git
+	    ├── manifest.xml -> manifests/default.xml
+	    ├── project.list
+	    ├── project-objects
+	    ├── projects
+	    ├── repo
+	    └── .repopickle_fetchtimes
+
+repo init créé automatiquement ce dossier qui va contenir tous les objets git. En effet, si on rentre dans le dossier .git de l'appli SHOUTcast-Recorder, on peut voir que ce dernier contient des liens symboliques vers le dossier .repo principal.
+
+	.
+	├── config -> ../../../.repo/projects/dev/SHOUTcast-Recorder.git/config
+	├── description -> ../../../.repo/project-objects/SHOUTcast-Recorder.git.git/description
+	├── HEAD
+	├── hooks -> ../../../.repo/project-objects/SHOUTcast-Recorder.git.git/hooks
+	├── index
+	├── info -> ../../../.repo/project-objects/SHOUTcast-Recorder.git.git/info
+	├── logs -> ../../../.repo/projects/dev/SHOUTcast-Recorder.git/logs
+	├── objects -> ../../../.repo/project-objects/SHOUTcast-Recorder.git.git/objects
+	├── packed-refs -> ../../../.repo/projects/dev/SHOUTcast-Recorder.git/packed-refs
+	├── refs -> ../../../.repo/projects/dev/SHOUTcast-Recorder.git/refs
+	├── rr-cache -> ../../../.repo/project-objects/SHOUTcast-Recorder.git.git/rr-cache
+	├── shallow -> ../../../.repo/projects/dev/SHOUTcast-Recorder.git/shallow
+	└── svn -> ../../../.repo/project-objects/SHOUTcast-Recorder.git.git/svn
+
+Les objets git de tous les repositories sont donc centralisés à un seul et unique endroit (le dossier .repo) et plus dans chacun des repositories git.
+C'est important à savoir, car cela change la façon d'appréhender certaines manipulation sur les repositories git.
+
+On peut très bien supprimer le dossier dev/SHOUTcast-Recorder par exemple. Un repo sync fera réapparaître le dossier dans la mesure où ses objets git n'avaient pas été supprimés.
+
+## Se placer sur une branche
+
+Si je rentre dans le projet jobcatcher, juste après le **repo sync -j8**,
+
+	$ git status
+	# Not currently on any branch.
+	nothing to commit, working directory clean
+
+Par défaut, nous ne sommes sur aucune branche. Regardons de plus près.
+
+	$ git branch -avv
+	* (no branch)             11d0b5d Happy new year!!
+	  remotes/github/master   9de3e04 Merge pull request #91 from guillaumerose/patch-1
+	  remotes/github/unstable 11d0b5d Happy new year!!
+	  remotes/m/master        -> github/unstable
+
+Comparons avec la même commande, mais effectuée à la suite d'un **git clone** du repository récupéré individuellement.
+
+	$ git clone git@github.com:yoannsculo/JobCatcher.git
+	Cloning into 'JobCatcher'...
+	remote: Counting objects: 1954, done.
+	remote: Total 1954 (delta 0), reused 0 (delta 0)
+	Receiving objects: 100% (1954/1954), 1.14 MiB | 966.00 KiB/s, done.
+	Resolving deltas: 100% (1208/1208), done.
+	Checking connectivity... done
+
+	$ git branch -avv
+	* unstable                11d0b5d [origin/unstable] Happy new year!!
+	  remotes/origin/HEAD     -> origin/unstable
+	  remotes/origin/master   9de3e04 Merge pull request #91 from guillaumerose/patch-1
+	  remotes/origin/unstable 11d0b5d Happy new year!!
+
+Nous avons un résultat légèrement différent. Cette différence est source de problèmes par la suite. Non seulement il faut se placer sur la branche qui nous intéresse (master ou unstable ne sont pas choisies par défaut), mais repo va automatiquement créer une branche **remotes/m/master** qui va pointer sur la branche qui a été spécifiée dans le fichier manifest. La branche unstable ici. Alors qu'un simple git clone va automatiquement créer une branche de suivi master, ce que ne fait pas repo.
+
+Pour se placer sur la branche unstable, il suffit de faire
+
+	$ repo start unstable JobCatcher.git
+
+Les commandes repo peuvent être exécutées à n'importe quel niveau de l'arborescence du projet principal.
+
+Le repository est alors initialisé à la bonne branche.
+
+	$ git branch -avv
+	* unstable                11d0b5d Happy new year!!
+	  remotes/github/master   9de3e04 Merge pull request #91 from guillaumerose/patch-1
+	  remotes/github/unstable 11d0b5d Happy new year!!
+	  remotes/m/master        -> github/unstable
+
+Personnellement j'ai du mal à comprendre pourquoi cela a été conçu de cette façon.
+J'ai tendance à faire légèrement différemment en faisant un git checkout moi même, afin de récupérer le tracking de la branche distante :
+
+	$ git checkout unstable
+	$ git branch -avv
+	* unstable                11d0b5d [github/unstable] Happy new year!!
+	  remotes/github/master   9de3e04 Merge pull request #91 from guillaumerose/patch-1
+	  remotes/github/unstable 11d0b5d Happy new year!!
+	  remotes/m/master        -> github/unstable
+
+ce que je préfère. Mais nous verrons par la suite dans quel cas cela peut poser des problèmes.
+
+Après ces quelques explications, revenons à la méthode officielle de création de branches avec repo.
+
+La documentation de repo est assez laconique car adaptée à Android qui possède des branches harmonisées sur tous les repositories.
+Ainsi on se place sur une branche de la façon suivante :
+
+	$ repo start <newbranchname> [--all | <project>...]
+
+Si l'on souhaite se placer sur la branche master partout il suffit alors de faire :
+
+	$ repo start master --all
+
+Cela fonctionne plutôt bien si on a un paquet de repositories dont le workflow git est assez basique. Mais pour des projets plus complexes, il n'est pas garanti que l'on retrouve une branche distante identique sur tous les repositories. Et si les repositories utilisés ne sont pas hébergés sur nos propres serveurs, la création de branche distante n'est pas envisageable.
+
+Il faut alors spécifier soi-même la branche à utiliser, comme précédemment dans cet article.
+
+	$ repo start unstable JobCatcher.git
+
+Sur plusieurs de mes projets, lors de la première synchro, je commence systématiquement par
+
+	$ repo start <branche_majoritaire> --all
+
+suivi de commandes plus spécifiques pour les repositories pour lesquels je veux une branche spécifique
+
+	$ repo start <autre_branche> projet.git
+	$ repo start <autre_branche_bidule> projet2.git
+	$ ...
+
+Honnêtement ça peut rapidement devenir assez pénible. Donc généralement je fork tous les projets extérieurs et je créé systématiquement une branche pour mon projet sur mon propre serveur git. Cela me permet d'avoir un simple
+
+	$ repo start <ma_branche_commune> --all
+
+lors de l'initialisation des sources.
+
+L'inconvénient de cette solution c'est que ça pollue mes repositories avec de nombreuses branches, juste pour simplifier l'usage de repo...
+
+# Utilisation de repo - quelques remarques et astuces
+
+## Désynchronisation de branche au repo start
+
+Attention au repo start ! La commande **repo start** va créer une branche locale synchronisée avec la branche distante. Et cela uniquement si la branche correspond à celle indiquée dans le manifest. Autrement, une branche du même nom et désynchonisée sera créée à partir du dernier commit de la branche indiquée par défaut dans le manifest. Il faut donc bien spécifier la bonne branche dans le manifest sans quoi on aura de sales surprises avec des branches désynchronisées.
+
+Ce n'est sans doute pas clair. Rien de mieux qu'un exemple pour illustrer cette spécificité. Prenons un manifest basique, avec un projet **test-repo.git** qui possède deux branches : master et branche-A. Nous sommes synchronisés sur la branche master.
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<manifest>
+	    <remote name="github" fetch="https://github.com/yoannsculo"/>
+	    <default revision="master" remote="github" sync-j="8"/>
+	    <project name="test-repo.git" remote="github" path="test-repo" />
+	</manifest>
+
+J'initialise le repo. Le repsitory du manifest est un brouillon pour l'exemple. Il aura été supprimé de github d'ici à ce que je publie l'article.
+
+	repo init -u https://github.com/yoannsculo/manifest-2.git
+	repo sync -j8
+	repo start master test-repo.git
+
+ce qui donne l'historique suivant :
+
+	* de585a0 (github/branche-A) A: commit 3
+	* 42d70f0 A: commit 2
+	* f377cca A: commit 1
+	* a0a11f4 (HEAD, m/master, github/master, master) first commit
+
+Je suis bien sur la branche master
+
+	$ git branch -avv
+	* master                   a0a11f4 first commit
+	  remotes/github/branche-A de585a0 A: commit 3
+	  remotes/github/master    a0a11f4 first commit
+	  remotes/m/master         -> github/master
+
+Maintenant je vais modifier le repository test-repo.git, mais sans passer par repo. Je clone le repository autre part et vais rajouter un commit sur master.
+Ce qui donne l'arborescence suivante sur ce repo individuel git.
+
+	* 29c3d97 (HEAD, origin/master, master) master: new commit
+	| * de585a0 (origin/branche-A, branche-A) A: commit 3
+	| * 42d70f0 A: commit 2
+	| * f377cca A: commit 1
+	|/  
+	* a0a11f4 first commit
+
+Je retourne à mon projet repo et fais un **repo sync -j8** pour répercuter mes modifs
+
+	* 29c3d97 (HEAD, m/master, github/master, master) master: new commit
+	| * de585a0 (github/branche-A) A: commit 3
+	| * 42d70f0 A: commit 2
+	| * f377cca A: commit 1
+	|/  
+	* a0a11f4 first commit
+
+Le résultat est le même, tant mieux :) C'était pour montrer le cas qui marche !
+
+Maintenant je recommence tout mais je **ne vais pas** demander à me placer sur la branche master.
+
+	repo init -u https://github.com/yoannsculo/manifest-2.git
+	repo sync -j8
+	repo start branche-A test-repo.git
+
+et là c'est le drame
+
+	* 29c3d97 (HEAD, m/master, github/master, branche-A) master: new commit
+	| * de585a0 (github/branche-A) A: commit 3
+	| * 42d70f0 A: commit 2
+	| * f377cca A: commit 1
+	|/  
+	* a0a11f4 first commit
+
+Nous avons bien une branche locale qui s'appelle branche-A, mais elle n'est pas du tout synchronisée avec la branche distante branche-A. Elle a été créée à partir du dernier commit de master (branche par défaut dans le manifest).
+
+Donc la première difficulté avec repo, c'est que repo start se manipule avec la plus grande attention. On peut créer des branches locales, mais la synchronisation avec la branche distante n'est pas automatique si on demande une branche qui est différente de celle indiquée dans le manifest (master dans notre cas).
+
+Je vais maintenant modifier le fichier manifest pour spécifier, cette fois-ci, la branche-A comme branche par défaut.
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<manifest>
+	    <remote name="github" fetch="https://github.com/yoannsculo"/>
+	    <default revision="master" remote="github" sync-j="8"/>
+	    <project name="test-repo.git" remote="github" path="test-repo" revision="branche-A" />
+	</manifest>
+
+On recommence la manipulation
+
+	repo init -u https://github.com/yoannsculo/manifest-2.git
+	repo sync -j8
+	repo start branche-A test-repo.git
+
+Nous avons une branche bien synchronisée
+
+	* 29c3d97 (github/master) master: new commit
+	| * de585a0 (HEAD, m/master, github/branche-A, branche-A) A: commit 3
+	| * 42d70f0 A: commit 2
+	| * f377cca A: commit 1
+	|/  
+	* a0a11f4 first commit
+
+On voit donc que la branche spécifiée dans le manifest est importante.
+
+Comme je l'indiquais précédemment, repo va automatiquement créer une branche **remotes/m/master** qui va pointer sur la branche qui a été spécifiée dans le fichier manifest.
+
+	* branche-A                de585a0 A: commit 3
+	  remotes/github/branche-A de585a0 A: commit 3
+	  remotes/github/master    29c3d97 master: new commit
+	  remotes/m/master         -> github/branche-A
+
+Le choix du nom **m/master** n'est pas super judicieux et porte à confusion lorsque l'on quitte un workflow git basique (c'est à dire quasiment tout le temps dès que l'on a un gros probjet entre les mains). Il faut donc faire attention à cette particularité de repo. Sinon on passe son temps à resynchroniser ses branches manuellement.
+
+## Désynchronisation de branche lors du développement
+
+Ce problème de désynchronisation apparaît également lorsque l'on utilise repo en même temps que l'on développe dans les repositories. C'est à dire tout le temps en fait :) Raison pour laquelle tout utilisateur de repo est devenu fou à un moment ou à un autre.
+Je vais tâcher d'illustrer ce qui s'avère être l'aspect le plus pénible de repo. Nous verrons également que nous arrivons à une limite de l'outil et qu'il faut savoir **ne pas utiliser** repo dans certains cas.
+
+Nouvel exemple. Partons de l'état suivant :
+
+	* 1dc67f8 (github/master) master: commit 2
+	* 6025629 master: commit 1
+	| * e891433 (HEAD, m/master, github/branche-A) branche-A: commit 2
+	| * b25bd14 branche-A: commit 1
+	|/  
+	* 75d5550 some stuff
+
+où branche-A est la branche par défaut de repo sur ce repository.
+
+Si je me place sur master,
+
+	$ git checkout master
+
+	* 1dc67f8 (HEAD, github/master, master) master: commit 2
+	* 6025629 master: commit 1
+	| * e891433 (m/master, github/branche-A) branche-A: commit 2
+	| * b25bd14 branche-A: commit 1
+	|/  
+	* 75d5550 some stuff
+
+que je commence à travailler dessus et que quelqu'un fait des modifications entre temps sur cette branche distante master. Je cherche alors à récupérer les nouveautés de cette façon :
+
+	$ repo sync -j8
+	Fetching project test-repo.git 
+	remote: Counting objects: 3, done.
+	remote: Compressing objects: 100% (1/1), done.
+	remote: Total 3 (delta 1), reused 3 (delta 1)
+	Unpacking objects: 100% (3/3), done.
+	From https://github.com/yoannsculo/test-repo
+	   1dc67f8..253a10b  master     -> github/master
+	Fetching projects: 100% (1/1), done.  
+
+	test-repo/: manifest switched refs/heads/master...branche-A
+	project test-repo/
+	First, rewinding head to replay your work on top of it...
+	Applying: master: commit 1
+	Applying: master: commit 2
+
+ça sent très mauvais ! En effet regardons ce que nous a fait le repo sync
+
+	* be7476d (HEAD, master) master: commit 2
+	* 1e05acc master: commit 1
+	* e891433 (m/master, github/branche-A) branche-A: commit 2
+	* b25bd14 branche-A: commit 1
+	| * 253a10b (github/master) master: commit 3
+	| * 1dc67f8 master: commit 2
+	| * 6025629 master: commit 1
+	|/  
+	* 75d5550 some stuff
+
+Berk. Notre branche master locale a été rebasée sur branche-A, sans pour autant prendre le commit 3 qui nous intéressait.
+
+A vrai dire c'est normal, il fallait s'y attendre. Car nous étions resté sur master avant de faire le **repo sync**
+Avant de faire le repo sync, il faut donc revenir sur la branche par défaut, ici la branche-A (git checkout branche-A).
+De cette façon, pas de soucis de rebasing sur la mauvaise branche
+
+	* 0993c09 (github/master) master: commit 3
+	* 1dc67f8 (master) master: commit 2
+	* 6025629 master: commit 1
+	| * e891433 (HEAD, m/master, github/branche-A, branche-A) branche-A: commit 2
+	| * b25bd14 branche-A: commit 1
+	|/  
+	* 75d5550 some stuff
+
+Bon ! Cette fois, on a récupéré correctement le code sur la bonne branche. Mais la branche master locale se retrouve désynchronisée et est bêtement restée sur le commit 2 ...
+Généralement, je ne m'embête pas trop dans ce cas et je fais
+
+	git branch -D master
+	git checkout master
+
+Tout ceci est bien laborieux pour un repository git. Alors imaginez que vous avez travaillé sur plusieurs repositories et que vous souhaitez récupérer les modifs de vos collègues.
+Il faut penser à se placer sur la branche par défaut du manifest, puis supprimer la branche de travail et la recréer ... Ça devient rapidement galère.
+
+**repo** vient avec une commande super pratique, **repo forall**. Pour une raison inconnue, la commande qui est sans doute la plus utilisée et la plus pratique n'est même pas documentée dans **repo help** ...
+Bref, repo forall permet de lancer des commandes sur tous les repositories git en une fois.
+
+Par exemple, nous pouvons nous placer sur la branche branche-A sur tous les repositories en une seule commande
+
+	repo forall -c git checkout branche-A
+
+Il est donc possible d'automatiser la suppression de la branche master désynchronisée puis sa recréation. Mais tout cela commence à être lourd à l'usage !
+
+Ce problème de désynchronisation des branches est le principal défaut de repo. Pour moi, repo n'est pas fait pour le développement au quotidien. C'est un super outil dont il faut connaître les limites. Ses commandes n'utilisent avec parcimonie.
+
+Pour ne pas subir les problèmes de désynchronisation, je fonctionne ainsi de la façon suivante :
+
+**J'utilise repo** et donc repo sync pour récupérer tout le code source sur une nouvelle machine de dev ou pour récupérer un projet clean.
+Pour tenir à jour le projet sur mes serveurs d'intégration continue et donc pour générer un firmware compilé from scratch en quelques lignes de commandes
+
+**J'utilise les commandes git** (et surtout pas repo) pour développer, créer des branches par feature/bug et changer régulièrement de contexte et appliquer des patchs. Pour récupérer les modifications de mes collègues j'utilise plutît **git fetch -a** et **git pull --rebase origin ma_branche**.
+Il m'arrive même de cloner les repositories à l'extérieur du projet repo pour travailler sereinement dedans.
+
+Normalement, en suivant ce schéma de travail, repo n'est pas une source de problème et s'avère être très utile !
+
+## Tagger des repositories multiples avec repo
+
+La commande repo forall est super pratique, je m'en sers pour tagger mes repositories en une seule ligne de commande.
+Pour ça j'ai écrit rapidement deux scripts.
+
+**tag-add.sh**
+
+	#!/bin/bash
+
+	REMOTE=$(git remote)
+	BRANCH=$(git branch | grep '*' | sed 's/* //')
+	TAG=$1
+	MSG=$2
+
+	if [ $# -eq 0 ]; then
+		echo 'Missing parameters'
+		exit 0
+	fi
+
+	git tag -a $TAG -m "$MSG"
+	git push $REMOTE --tags
+
+	exit 0
+
+**tag-rm.sh**
+
+	#!/bin/bash
+
+	REMOTE=$(git remote)
+	BRANCH=$(git branch | grep '*' | sed 's/* //')
+	TAG=$1
+
+	if [ $# -eq 0 ]; then
+		echo 'Missing parameters'
+		exit 0
+	fi
+
+	git tag -d $TAG
+	git push $REMOTE :refs/tags/$TAG
+
+	exit 0
+
+Je peux alors ajouter un tag
+
+	repo forall -c /.../.../tag-add.sh "TAG123456" "TAG: Super tag pour mon repo"
+
+Et le supprimer
+
+	repo forall -c /.../.../tag-rm.sh "TAG123456"
+
+Attention, ça part tout seul !
+
+## Connaître l'état de ses repositories
+
+La commande **repo status** revient à faire un git status sur tous les repositories. Mais cette dernière ne retournera rien si nous ne sommes pas passés par un **repo start** sur chacun des repositories.
+
+La commande suivante, bien pratique, me permet de connaître les hashs de commits à un instant donné pour tout le projet.
+
+	repo forall -c 'echo `git log --pretty=format:'%h' -n 1` $(basename `pwd`)'
+
+Cela donne la liste suivante avec mon projet repo de test
+
+	fbd9354 SHOUTcast-Recorder
+	c5d1b30 adbd
+	1c34119 buildroot
+	bf7f7e6 emploi
+	11d0b5d jobcatcher
+
+En stockant cela dans un fichier à chaque build du projet, on peut aisément connaître l'état du projet lors de sa compilation, sans avoir à tagger chaque build du projet.
+
+## Limites du manifest
+
+Il semblerait qu'utiliser plusieurs éléments default pour plusieurs remote ne fonctionne pas.
+
+C'est à dire qu'il n'est pas possible de faire ça
+
+	<default revision="master" remote="github" sync-j="8"/>
+	<default revision="ma-branche-custom" remote="buildroot" sync-j="8"/>
+
+C'est bien dommage ! Et donc je dois spécifier le champ **revision** dans toutes mes entrées **project** de mes manifests.
+
+## Le repository du manifest
+
+Dans la mesure où il n'est pas possible (jusqu'à preuve du contraire) de fournir un chemin local à **git init**, la configuration du repository du manifest se fait souvent en plusieurs temps.
+
+> "Oh j'ai oublié un truc, ah et puis zut il faut rajouter ça ..."
+
+En voulant faire quelque chose de propre, on est tenté de réécrire les commits pushés sur le serveur avec avec **git push -f**.
+
+**Mauvaise idée !!** Même si on est seul à jouer sur la branche. repo gère mal la réécriture d'historique et ça explose dans **.repo/manifests.git**.
+C'est là-bas qu'il faut aller résoudre l'hécatombe, en corrigeant la désynchronisation de la branche default.
+
+Mon conseil est de faire plusieurs commits, tant pis si l'historique n'est pas beau. On s'en fiche un peu ce n'est qu'un manifest. Personne ne regarde son historique :P
+
+## Aller plus loin : le manifest local
+
+Je découvre à la toute fin de la rédaction de cet article l'existence du manifest local [dans la documentation de repo](https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.txt).
+En déposant des manifest *.xml dans le dossier **.repo/local_manifests** on peut rajouter projets et remotes.
+
+Je n'ai pas encore testé, mais je pense que ça peut être assez utile lorsque l'on souhaite adapter une petite partie d'un très gros projet, en local.
+Voir même, justement, pour mettre en forme son fichier manifest sans avoir à pusher 20 commits pour chaque nouveau test.
+
+Un peu de doc à ce sujet
+
+- [sur la wiki de Cyanogenmod](http://wiki.cyanogenmod.org/w/Doc:_Using_manifests).
+- [sur stackoverflow](http://stackoverflow.com/questions/5672394/using-a-local-manifest-xml-with-repo)
+
+Je testerai ça à l'occasion et complèterai sans doute mon article dès que j'aurai bien joué avec.
+
+# Conclusion - Retour sur mon propre usage
+
+Pour moi repo est un peu un sorte de bazooka qui permet d'effectuer des tâches grossières sur de très gros projets. Je le trouve particulièrement adapté :
+
+- à la syncho de code source de gros projet sur son PC de dev super facilement
+- à la génération de firmwares
+- à la compilation sur serveur d'intégration de type Jenkins. On charge un projet on se place sur la bonne branche et on lance le build.
+- à la manipulation automatisée sur repositories (ajout de branches, de tags, etc.)
+
+J'utilise donc **repo sync -j8**
+
+- quand je suis sur mon serveur de build ou sur un dossier clean de ma machine de dev.
+- quand je synchronise le projet pour la première fois.
+
+Par contre, le bazooka devient trop bourrin et anti-productif dès qu'il s'agit de travailler finement et individuellement sur des repositories git.
+En fait dès que l'on se met à *développer*, repo perd alors son utilité, et les commandes git classiques redeviennent adaptées pour :
+
+- créer des branches par feature/bug
+- changer régulièrement de contexte et appliquer des patchs
+- récupérer les modifications de ses collègues
+
+Pour simplifier les choses, je conseille également d'héberger soi même tous les repositories sur ses propres serveurs git. Cela facilite le travail et cela permet de déposer tags et branches custom.
+
