@@ -1,6 +1,6 @@
 ---
 layout: post
-title: repo - un outil pour gérer de multiples repositories git sans trop s'arracher de cheveux
+title: repo - un outil pour gérer des repositories git multiples sans trop s'arracher de cheveux
 keywords: repo, git, repositories, multiples, git-repo, manifest, repo sync, repo init
 publish: true
 ---
@@ -644,7 +644,7 @@ J'utilise donc **repo sync -j8**
 - quand je synchronise le projet pour la première fois.
 
 Par contre, le bazooka devient trop bourrin et anti-productif dès qu'il s'agit de travailler finement et individuellement sur des repositories git.
-En fait dès que l'on se met à *développer*, repo perd alors son utilité, et les commandes git classiques redeviennent adaptées pour :
+En fait dès que l'on se met à *développer*, repo perd alors son utilité. Il faut alors privilégier les commandes git classiques pour :
 
 - créer des branches par feature/bug
 - changer régulièrement de contexte et appliquer des patchs
