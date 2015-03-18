@@ -7,10 +7,16 @@ title: Mes projets
 
 Voici comment il m'arrive d'occuper mon temps libre :)
 
-### Open Source
+### Actuellement
 
-- [Massprod]({{blog.url}}/what-about-open-source-manufacturing-software-consumer-electronics-industry) » Outil de validation et de test hardware pour ligne de production (en cours de dev).
-- [EmbeddedMap](http://embeddedmap.sculo.fr) » Carte interactive des sociétés en Systèmes Embarqués.
+- [Embedded Map](http://www.embeddedmap.org) » Cartographie communautaire des sociétés de l'embarqué.
+- [Paris Embedded Meetup](http://www.parisembedded.fr) » Organisation du Meetup parisien. Présentations et conférences sur le domaine des systèmes embarqués, en particulier les projets libres et orientés sur Linux.
+
+### C'était avant
+
+#### Open Source
+
+- [Massprod]({{blog.url}}/what-about-open-source-manufacturing-software-consumer-electronics-industry) » Outil de validation et de test hardware pour ligne de production (en pause).
 - [adbd]({{blog.url}}/adb-produits-non-android) » Portage du daemon adbd (côté target) pour produits non Android.
 - [JobCatcher](https://github.com/yoannsculo/JobCatcher) » agrégateur d'offres d'emploi décentralisé et open source.
 - [µcwiki](https://github.com/yoannsculo/ucwiki) » générateur de wiki/documentation statique en C.
