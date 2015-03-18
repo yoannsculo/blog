@@ -6,19 +6,31 @@ categories: C, CV, Emploi, ingénieur, ingénieur C embarqué, ingénieur linux 
 
 ## Devices & Projects
 
-21 Linux based projects I have been working on since 2009.
+28 Linux based projects and devices I have been working on since 2009.
 
+<b>Bookeen</b>
 <ul class="devices">
-	<li>Saraiva Lev com luz (CYBOY4F-SA) » Allwinner A13 (2014)<span><img src="./products/saraiva_lev_com_luz.jpg" /></span></li>
-	<li>Saraiva Lev (CYBOY4S-SA) » Allwinner A13 (2014)<span><img src="./products/saraiva_lev.jpg" /></span></li>
-	<li>Bookeen Cybook Ocean (CYBON1F-BK) » OMAP 3611 (2014)<span><img src="./products/bookeen_cybook_ocean.jpg" /></span></li>
-	<li>Carrefour Nolimbook (CYBOY4S-CF) » Allwinner A13 (2013)<span><img src="./products/carrefour_nolimbook.png" /></span></li>
-	<li>Carrefour Nolimbook+ (CYBOY4F-CF) » OMAP 3611 (2013)<span><img src="./products/carrefour_nolimbook_plus.png" /></span></li>
-	<li>Bookeen Cybook Odyssey Frontlight (CYBOY4F-BK) » OMAP 3611 (2013)<span><img src="./products/bookeen_cybook_odyssey_hd_fl.jpg" /></span></li>
+	<li>CYBFT1F-AL (2014) » Letto Frontlight<span><img src="./products/letto-frontlight.jpg" /></span></li>
+	<li>CYBFT1F-CF (2014) » Nolimbook + HD<span><img src="./products/carrefour-nolimbook-hdp-hand.jpg" /></span></li>
+	<li>CYBFT1S-CF (2014) » Nolimbook HD<span><img src="./products/carrefour-nolimbook-hdp-hand.jpg" /></span></li>
+	<li>CYBON1F-BK (2014) » Bookeen Cybook Ocean » OMAP 3611<span><img src="./products/bookeen_cybook_ocean.jpg" /></span></li>
+	<li>CYBFT1F-BK (2014) » Cybook Muse FrontLight</li>
+	<li>CYBFT1S-BK (2014) » Cybook Muse Essential</li>
+	<li>CYBOY5F-BK (2014) » Cybook Odyssey FrontLight 2 </li>
+	<li>CYBOY5S-BK (2014) » Cybook Odyssey Essential</li>
+	<li>CYBOY4F-SA (2014) » Saraiva Lev com luz » Allwinner A13<span><img src="./products/saraiva_lev_com_luz.jpg" /></span></li>
+	<li>CYBOY4S-SA (2014) » Saraiva Lev » Allwinner A13<span><img src="./products/saraiva_lev.jpg" /></span></li>
+	<li>CYBOY4S-CF (2013) » Carrefour Nolimbook » Allwinner A13<span><img src="./products/carrefour_nolimbook.png" /></span></li>
+	<li>CYBOY4F-CF (2013) » Carrefour Nolimbook+ » OMAP 3611<span><img src="./products/carrefour_nolimbook_plus.png" /></span></li>
+	<li>CYBOY4F-BK (2013) » Bookeen Cybook Odyssey Frontlight » OMAP 3611<span><img src="./products/bookeen_cybook_odyssey_hd_fl.jpg" /></span></li>
 </ul>
+
+<b>JCDecaux</b>
 <ul class="devices">
 	<li>Mobilier Urbain Intelligent JCDecaux » Android / Fedora 18 (2013)<span><img src="./products/jcdecaux.jpg" /></span></li>
 </ul>
+
+<b>Archos</b>
 <ul class="devices">
 	<li>Archos Home Automation » Atheros AR7240 (2012)<span><img src="./products/no_picture.gif" /></span></li>
 	<li>Archos TV Connect » OMAP 4470 (2012)<span><img src="./products/archos-tv-connect.jpg" /></span></li>
@@ -32,10 +44,14 @@ categories: C, CV, Emploi, ingénieur, ingénieur C embarqué, ingénieur linux 
 	<li>Archos 70 IT2 » Android 3.2.1 - OMAP 3630 (2011)<span><img src="./products/70b.png" /></span></li>
 	<li>Archos 70 IT2 250Go » Android 3.2.1 - OMAP 3630 (2011)<span><img src="./products/70b.png" /></span></li>
 </ul>
+
+<b>Mindscape</b>
 <ul class="devices">
 	<li>Major Alfred » (2011)<span><img src="./products/no_picture.gif" /></span></li>
 	<li>Karotz » Samsung S3C2440 (2010-2011)<span><img src="./products/mindscape_karotz.jpg" /></span></li>
 </ul>
+
+<b>CNES</b>
 <ul class="devices">
 	<li>Exomars Rover » Leon (2009)<span><img src="./products/exomars.jpg" /></span></li>
 </ul>
